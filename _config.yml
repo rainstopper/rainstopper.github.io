@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Spirit Time Room
-subtitle: Sunyt's space
+title: 精神时光屋
+subtitle: 雨停的精神时光屋
 description: ''
 keywords:
-author: Sunyt
+author: 雨停
 language: zh-CN
 timezone: ''
 
@@ -93,7 +93,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: hueman
+theme: matery
 # theme: landscape
 # RSS
 plugin:
@@ -103,6 +103,11 @@ feed:
   type: atom
   path: atom.xml
   limit: 20
+
+# matery主题的搜索配置
+search:
+  path: search.xml
+  field: post
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
