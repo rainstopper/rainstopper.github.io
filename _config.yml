@@ -45,12 +45,18 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: true
+  enable: false # 关闭默认的代码高亮配置
   line_number: true
   auto_detect: false
   tab_replace: ''
   wrap: true
   hljs: false
+
+prism_plugin:
+  mode: 'preprocess' # realtime/preprocess
+  theme: 'tomorrow'
+  line_number: true # default false
+  custom_css:
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -113,5 +119,6 @@ search:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/rainstopper/rainstopper.github.io.git
-  branch: master
+  repo:
+    github: git@github.com:rainstopper/rainstopper.github.io.git,master
+    coding: git@e.coding.net:rainstopper/rainstopper.git,master
