@@ -3,7 +3,7 @@ title: Hexo搭建
 date: 2020-01-24 05:54:13
 categories:
 - [Hexo]
-tags: [Hexo, 个人博客, 博客搭建]
+tags: [Hexo, 博客, 个人博客, 博客搭建]
 ---
 今天是2020年的除夕。时光犹如白驹过隙，转眼又将开启崭新的一年。
 
@@ -377,7 +377,7 @@ layout: tags
 └── package.json
 ```
 
-该主题的更多用法，还可以参照[Matery](https://github.com/blinkfox/hexo-theme-matery)文档继续尝试。
+该主题的更多用法，还可以参照[Matery](https://github.com/blinkfox/hexo-theme-matery)文档继续体验。
 
 ---
 
@@ -542,7 +542,7 @@ git push
 
 最常用的域名是 `.com` ，价格比较昂贵；其次是 `.com.cn` 、 `.cn` 和 `.net` 。然而这些常用的域名大多都已经被注册了。
 
-剩下的还有 `.site` 、 `.top` 、 `.vip` 等域名，只要能备案就行。我买的是 `sunyt.site` （以我中文名的缩写命名）。
+剩下的还有 `.site` 、 `.top` 、 `.vip` 等域名，只要能[备案](https://beian.aliyun.com/)就行。我买的是 `sunyt.site` （以我中文名的缩写命名）。
 
 ### 域名解析
 

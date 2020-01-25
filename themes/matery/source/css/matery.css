@@ -172,7 +172,7 @@ code {
     z-index: 1;
     filter: invert(50%);
     cursor: pointer;
-} 
+}
 
 .code-expand {
     position: absolute;
@@ -321,7 +321,7 @@ header .side-nav .mobile-head img {
 }
 
 header .side-nav .mobile-head .logo-name {
-    margin-top: -30px;
+    /* margin-top: -30px; */
     padding-left: 10px;
     font-size: 1.5rem;
 }
