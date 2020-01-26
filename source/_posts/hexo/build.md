@@ -1,5 +1,5 @@
 ---
-title: Hexo搭建
+title: Hexo博客搭建
 date: 2020-01-24 05:54:13
 categories:
 - [Hexo]
@@ -7,9 +7,11 @@ tags: [Hexo, 博客, 个人博客, 博客搭建]
 ---
 今天是2020年的除夕。时光犹如白驹过隙，转眼又将开启崭新的一年。
 
-过去的25年是美好而短暂的，美在成就了如今的我，短于日子走得太快，忘了仔细地去记录。这也是偶尔令我感到些许遗憾的。人们常说 *“种一棵树最好的时间是十年前，其次是现在”* ，经营一片自己专属的地界亦如是。由此，我花了些时间搭建了自己的第一个博客，并写下此文加以记录。
+过去的25年是美好而短暂的，美在成就了如今的我，短于日子走得太快，忘了仔细地去记录。这也是偶尔令我感到些许遗憾的。
 
-## 博客选型
+人们常说 *“种一棵树最好的时间是十年前，其次是现在”*，经营一片自己专属的地界亦如是。于是我花了些时间搭建了自己的第一个博客，并写下此文加以记录。
+
+## 1 博客选型
 
 现如今，市面上博客相关的工具和产品繁多，涵盖了[语雀](https://www.yuque.com/)、[简书](https://www.jianshu.com/)、[博客园](https://www.cnblogs.com/)、[掘金](https://juejin.im/)、[知乎](https://www.zhihu.com/)等在线承载文字平台，也包括了[Gitbook](https://www.gitbook.com/)、[Hexo](https://hexo.io/)、[Jekyll](http://jekyllcn.com/)、[Vuepress](https://vuepress.vuejs.org/)等静态独立博客工具，更有[Ghost](http://www.ghostchina.com/)这样支持后台的博客系统。
 
@@ -176,11 +178,11 @@ tags: [Hexo, 博客, 个人博客, 博客搭建]
 
 简书、博客园这些平台可以直接注册使用，写文章发表的用户交互好，SEO做得也不错，但缺点是容易受到平台的约束，还有广告。而自己租赁服务器、购买域名搭建博客，尽管自由度高，但成本昂贵，开发和维护也很耗费精力和时间。相较这两种，还有一个折中的方案，就是将生成的静态页面托管在Github、Coding等平台上。
 
-我本是 **信息管理** 专业出身，校园里有幸拜师入门习得一知半解，毕业后去动物园做起 **程序猿** 。学信管的，本身便懂些信息存取的法门；编程又是一项很实用的技能。两者结合，既考虑信息的存取成本和展现形式，又追求技术上的前卫和开放自由。搭建博客的目的 *不是折腾技术，而是记录所见所想、多输出一些高质量的文章* 。于是我选择了Hexo——由 `Node.js` 支持、简单而功能强大的博客框架，以便更专注于写作。
+我本是信息管理专业出身，校园里有幸拜师入门习得一知半解，毕业后去动物园做起程序猿。学信管的，本身便懂些信息存取的法门；编程又是一项很实用的技能。两者结合，既考虑信息的存取成本和展现形式，又追求技术上的前卫和开放自由。搭建博客的目的 *不是折腾技术，而是记录所见所想、多输出一些高质量的文章*。于是我选择了Hexo——由 `Node.js` 支持、简单而功能强大的博客框架，以便更专注于写作。
 
 ---
 
-## Hexo简介
+## 2 Hexo简介
 
 依照[官网文档](https://hexo.io/zh-cn/docs/)的说明，Hexo是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。
 
@@ -188,15 +190,15 @@ tags: [Hexo, 博客, 个人博客, 博客搭建]
 
 ---
 
-## 安装
+## 3 安装
 
 Hexo的安装非常容易，有编程基础的朋友也可以参照[Hexo官网文档](https://hexo.io/zh-cn/docs/)完成此步骤。
 
-### 准备工作
+### 3.1 准备工作
 
 在安装Hexo前，我们需要先安装[Git](https://git-scm.com/)和[Node.js](https://nodejs.org/en/)。这两样工具的安装相对简单，只需移步至其官网，下载对应操作系统的安装包，按照引导完成安装即可。此处不做赘述。
 
-### 安装Hexo
+### 3.2 安装Hexo
 
 安装完 `Node.js` 后，就可以通过 `npm` 安装Hexo了。
 
@@ -210,7 +212,7 @@ npm install -g hexo-cli
 
 ---
 
-## 创建项目
+## 4 创建项目
 
 安装完成后，便可以依照[文档](https://hexo.io/zh-cn/docs/setup)开始建站了。
 
@@ -237,7 +239,7 @@ npm install
 
 ---
 
-## 本地运行
+## 5 本地运行
 
 打开命令行，cd至项目所在目录，执行命令。
 
@@ -268,7 +270,7 @@ hexo server
 
 ---
 
-## 基本用法
+## 6 基本用法
 
 执行如下命令创建一篇新文章或者新的页面。
 
@@ -306,7 +308,7 @@ hexo new [layout] <title>
 
 ---
 
-## 更换主题
+## 7 更换主题
 
 Hexo有丰富的[主题](https://hexo.io/themes/)，默认的是 `landscape` ，可以根据自己的喜好挑选和更换。
 
@@ -381,7 +383,7 @@ layout: tags
 
 ---
 
-## 部署至GitHub
+## 8 部署至GitHub
 
 经过前面的努力，我们的博客已经可以在本地运行了。
 
@@ -389,11 +391,11 @@ layout: tags
 
 接下来，我们将博客部署至GitHub，让朋友们都能访问。
 
-### 创建GitHub个人仓库
+### 8.1 创建GitHub个人仓库
 
 登录[GitHub](https://github.com/)，点击 `New repository` 创建一个名为 `<username>.github.io` 的仓库。其中 `username` 是用户名，比如我的GitHub用户名是 `rainstopper` ，我创建的仓库名称就是 `rainstopper.github.io` 。
 
-### 添加GitHub SSH配置
+### 8.2 添加GitHub SSH配置
 
 为GitHub添加SSH配置，可以在后续Git代码进行 `push` 操作时，跳过用户名和密码的输入，更加便利。不介意每次提交都输密码，或者有安全及其他方面考虑的，也可以跳过此步骤。
 
@@ -437,7 +439,7 @@ ssh -T git@github.com
 
 ![](http://q4kbn37nl.bkt.clouddn.com/test-github-ssh.png?e=1579891976&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:v38GguGs12J7jfuwfowPInGShZc)
 
-### 将Hexo生成的静态页面托管至GitHub
+### 8.3 将Hexo生成的静态页面托管至GitHub
 
 有了GitHub仓库，我们就能将Hexo生成的静态页面托管至GitHub。
 
@@ -487,7 +489,7 @@ hexo deploy
 
 ---
 
-## 多终端工作
+## 9 多终端工作
 
 经过上面的操作，我们已经完成了GitHub的部署，让朋友们都能访问我们的博客了。
 
@@ -495,13 +497,13 @@ hexo deploy
 
 这时，我们可以利用GitHub分支来实现源代码的管理，以便在多个终端下都能进行写作。
 
-### 创建GitHub分支
+### 9.1 创建GitHub分支
 
 进入我们之前创建好的GitHub仓库，在 `Code` 菜单下点击 `Branch:master` 按钮，新建一个名为 `hexo-source` 的分支，并将其设置为默认分支。
 
 ![](http://q4kbn37nl.bkt.clouddn.com/github-branch-hexo-source.png?e=1579894028&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:p8fSwlsoS5MJA2UTKOVNUg5tJco)
 
-### 上传源代码
+### 9.2 上传源代码
 
 执行以下命令将仓库 `clone` 到本地（会自动命名为 `<username>.github.io` ），其中的链接就是GitHub仓库的https链接。
 
@@ -524,7 +526,7 @@ git push
 
 建议每次完成写作时，都依次执行上述命令，将自己的源文件 `push` 至GitHub仓库中，以防丢失。
 
-### 更换终端
+### 9.3 更换终端
 
 当我们需要更换终端时，依次安装 `Git` 和 `Node.js` ，执行 `npm install -g hexo-cli` 命令安装Hexo，设置GitHub的SSH Key，再将GitHub仓库 `clone` 到本地，即可继续博客的写作。
 
@@ -532,19 +534,29 @@ git push
 
 ---
 
-## 设置个人域名
+## 10 设置个人域名
 
 我觉得 `<username>.github.io` 这个地址不够逼格，想要一个自己专属的域名，用它来访问我们的博客。
 
-### 购买域名
+### 10.1 购买域名
 
 我们可以在[阿里云](https://wanwang.aliyun.com/)上查询和购买域名。
 
 最常用的域名是 `.com` ，价格比较昂贵；其次是 `.com.cn` 、 `.cn` 和 `.net` 。然而这些常用的域名大多都已经被注册了。
 
-剩下的还有 `.site` 、 `.top` 、 `.vip` 等域名，只要能[备案](https://beian.aliyun.com/)就行。我买的是 `sunyt.site` （以我中文名的缩写命名）。
+剩下的还有 `.site` 、 `.top` 、 `.vip` 等域名，只要能备案就行。我买的是 `sunyt.site` （以我中文名的缩写命名）。
 
-### 域名解析
+### 10.2 域名备案
+
+国家要求，即使是个人非商业用途的网站，也需要将域名进行备案。
+
+我们在阿里云上购买域名后，应该尽快进行[备案](https://beian.aliyun.com/)。备案前需要购买先服务器，我买的是相对便宜的云虚拟主机。
+
+当然，未备案的域名也可以继续下面的步骤，但回头记得去[备案](https://beian.aliyun.com/)。
+
+*在完成备案前，应当尽可能减少域名的解析。*
+
+### 10.3 域名解析
 
 购买完成后，需要先进行实名认证，再进入[阿里云控制台](https://dns.console.aliyun.com/)的域名解析设置菜单，做域名解析的配置。
 
@@ -554,13 +566,13 @@ git push
 
 其中的记录值，我们可以先在命令行中通过 `ping <username>.github.io` 获取到项目在GitHub服务器上所在的IP地址，将其填入。
 
-### 修改GitHub仓库配置
+### 10.4 修改GitHub仓库配置
 
 在GitHub仓库的 `Settings` 菜单下找到 `Custom domain` ，设置域名并保存。
 
 ![](http://q4kbn37nl.bkt.clouddn.com/github-settings-custom-domain.png?e=1579896418&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:xBGBLkVCOB_Xqruz4Wvz7iOezqo)
 
-### 修改项目配置并重新部署
+### 10.5 修改项目配置并重新部署
 
 在项目 `source` 目录下新建一个名为 `CNAME` 的文件（注意没有后缀名），在文件内写上自己的域名，比如 `sunyt.site` 。
 
@@ -591,15 +603,15 @@ hexo deploy
 
 ---
 
-## 部署至Coding实现国内外分流
+## 11 部署至Coding实现国内外分流
 
 我们已经将Hexo博客部署在GitHub上了，但GitHub是国外的，而且百度的蜘蛛不能爬取GitHub。如果希望我们的博客被百度收录，而且能更快地访问，可以同时在国内的[Coding](https://coding.net/)平台做托管。这么一来，在国内访问的是Coding，国外就走GitHub。
 
-### 创建Coding项目
+### 11.1 创建Coding项目
 
 申请一个Coding账户，然后创建一个项目，项目的名称可以是任意的，我创建的项目名称与此前在GitHub上的用户名相同。
 
-### 添加SSH配置
+### 11.2 添加SSH配置
 
 这一步也和GitHub一样。添加完成后，验证一下是否生效。
 
@@ -607,7 +619,7 @@ hexo deploy
 ssh -T git@e.coding.net
 ```
 
-### 修改项目配置实现多平台部署
+### 11.3 修改项目配置实现多平台部署
 
 修改项目 `_config.yml` 文件中的配置。其中 `github` 和 `coding` 分别填写GitHub仓库和Coding项目的ssh链接。
 
@@ -637,7 +649,7 @@ hexo deploy
 
 ![](http://q4kbn37nl.bkt.clouddn.com/coding-deploy-setting.png?e=1579899019&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:OyAp31x2qJBjjqs52UNHOhts1H4)
 
-### 修改域名解析配置
+### 11.4 修改域名解析配置
 
 回到[阿里云控制台](https://dns.console.aliyun.com/)，将原来指向GitHub配置的解析路线改为 `境外` ，再分别添加主机记录为 `@` 和 `www` 的两条记录，记录类型选择 `默认` ，记录值填写Coding项目的静态网站域名。
 
