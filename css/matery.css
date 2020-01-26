@@ -68,7 +68,7 @@ h4 {
 }
 
 h5 {
-    margin: 28px 0 8px -4px;
+    margin: 28px 0 20px -4px;
     font-size: 1.2rem;
     font-weight: bold;
     line-height: 1.2rem;
@@ -1217,6 +1217,10 @@ article .article-tags .chip {
 
 #articleContent ul ul li {
     list-style-type: circle;
+}
+
+#articleContent table {
+  margin-bottom: 20px;
 }
 
 #articleContent table,
