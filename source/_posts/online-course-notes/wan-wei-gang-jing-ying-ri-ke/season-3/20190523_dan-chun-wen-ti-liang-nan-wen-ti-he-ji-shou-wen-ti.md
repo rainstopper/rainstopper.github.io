@@ -5,6 +5,7 @@ categories:
 - [课程笔记]
 - [万维钢·精英日课3]
 tags: [问题管理, 得到, 万维钢]
+summary: 《万维钢·精英日课3：单纯问题、两难问题和“棘手”问题》课程笔记
 ---
 ##### 《万维钢·精英日课3：单纯问题、两难问题和“棘手”问题》课程笔记
 
@@ -78,12 +79,6 @@ tags: [问题管理, 得到, 万维钢]
 
 **殊不知，那些顶着骂名，从来没做过一件快意事，小心翼翼永远不敢用力过猛，明知根本就没有什么胜利的彼岸等着他，还在那吭哧吭哧地维持着局面的人，才是真正值得尊敬的。**
 
-## 5 参考文献
-
-[1] Horst W.J. Rittel and Melvin M. Webber, Dilemmas in a General Theory of Planning, Policy Sciences Vol. 4, No. 2 (Jun., 1973), pp. 155-169.
-
-[2] John C. Camillus, Strategy as a Wicked Problem, Harvard Business Review, May 2008.
-
 ## 学习心得
 
 | 问题种类 | 问题根源       | 应对心态  | 应对方式    | 应对后       | 例子                      |
@@ -92,10 +87,16 @@ tags: [问题管理, 得到, 万维钢]
 | 两难问题 | 没有敌人       | 迷茫      | 两难的取舍  | 往前看       | 买房选址、家庭决策         |
 | 棘手问题 | 没有问题本身   | 喵喵喵？   | 管理问题    | 压根解决不了 | 社会贫富差距增大、全球变暖  |
 
-此前，我很可能是课程中提到的“单纯问题的思维模式”。
+此前，我很可能是这一课中提到的“单纯问题的思维模式”。
 
 ### 学会给问题分类
 
 这是我第一次意识到，原来可以从这个角度对问题进行分类，然后用适当的方法去应对。
 
 工作中很少碰见棘手问题，可能是我的工作太基层，而公司的管理层已经把问题拆解了。而学会给问题分类，有助于更深入地理解问题，没准还能悟出点“管理层思维”。
+
+## 参考文献
+
+[1] Horst W.J. Rittel and Melvin M. Webber, Dilemmas in a General Theory of Planning, Policy Sciences Vol. 4, No. 2 (Jun., 1973), pp. 155-169.
+
+[2] John C. Camillus, Strategy as a Wicked Problem, Harvard Business Review, May 2008.

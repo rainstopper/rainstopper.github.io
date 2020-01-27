@@ -4,6 +4,7 @@ date: 2020-01-24 05:54:13
 categories:
 - [Hexo]
 tags: [Hexo, 博客, 个人博客, 博客搭建]
+summary: 描述了一个博客网站诞生的过程
 ---
 今天是2020年的除夕。时光犹如白驹过隙，转眼又将开启崭新的一年。
 
@@ -325,7 +326,7 @@ theme: matery
 
 这样便完成了更换主题的操作。
 
-Matery主题提供了相对美观的菜单、封面、主页、视频和音乐等组件。我们可以在 `themes/matery/_config.yml` 主题配置文件里更改相关的配置，来更改这些组件的配置和个人信息的配置。
+Matery主题提供了相对美观的菜单、封面、主页、视频和音乐等组件。我们可以在主题配置文件 `themes/matery/_config.yml` 里更改相关的配置，来更改这些组件的配置和个人信息的配置。
 
 此外，我们还需对 `标签` 、 `分类` 、 `关于` 、 `留言板` 和 `友情链接` 菜单，创建相应的界面文件。
 
@@ -711,4 +712,29 @@ prism_plugin:
 hexo cl
 hexo g
 hexo s
+```
+
+### 文章字数统计 2020.1.27
+
+为了在文章开头处展示文章字数、阅读时长信息，需要安装 `hexo-wordcount` 插件。
+
+```bash
+npm install hexo-wordcount --save
+```
+
+然后修改主题配置文件 `themes/matery/_config.yml` 中的信息。
+
+```yaml
+# Post word count, reading duration, site total word count.
+# Before you activate, please confirm that you have installed the hexo-wordcount plugin,
+# install the plugin command: `npm i --save hexo-wordcount`.
+# 文章字数统计、阅读时长、总字数统计等
+# 文章信息--若要开启文章字数统计，需要安装 hexo-wordcount 插件，安装命令: `npm i --save hexo-wordcount`
+postInfo:
+  date: true # 发布日期
+  update: false # 更新日期
+  wordCount: true # 文章字数统计
+  totalCount: false # 站点总文章字数
+  min2read: true # 文章阅读时长
+  readCount: true # 文章阅读次数
 ```
