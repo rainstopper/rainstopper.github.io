@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="Hexo博客搭建, 精神時光屋">
-    <meta name="description" content="描述了一个博客网站诞生的过程">
+    <meta name="description" content="精神時光屋的诞生过程">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -36,6 +36,8 @@
         <div id="navContainer" class="nav-wrapper head-container">
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.svg" class="logo-img" alt="LOGO">
                     
                     <span class="logo-span">精神時光屋</span>
                 </a>
@@ -132,6 +134,8 @@
 <div id="mobile-nav" class="side-nav sidenav">
 
     <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.svg" class="logo-img circle responsive-img">
         
         <div class="logo-name">精神時光屋</div>
         <div class="logo-desc">
@@ -238,7 +242,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('http://q4kbn37nl.bkt.clouddn.com/jing-shen-shi-guang-wu.jpg?e=1580247922&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:Z8FZdNQ7yKUvPUgUIBWdd7_Sadg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -312,7 +316,7 @@
     }
 
     #toc-content .toc-link:hover {
-        color: #42b983;
+        color: #E88C30;
         font-weight: 700;
         text-decoration: underline;
     }
@@ -323,11 +327,11 @@
     }
 
     #toc-content .is-active-link {
-        color: #42b983;
+        color: #E88C30;
     }
 
     #toc-content .is-active-link::before {
-        background-color: #42b983;
+        background-color: #E88C30;
     }
 
     #floating-toc-btn {
@@ -384,8 +388,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Hexo/" class="post-category">
-                                Hexo
+                            <a href="/categories/%E7%B2%BE%E7%A5%9E%E6%97%B6%E5%85%89%E5%B1%8B/" class="post-category">
+                                精神时光屋
                             </a>
                         
                     </div>
@@ -406,14 +410,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    5.1k
+                    5.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    19 分
+                    22 分
                 </div>
                 
 
@@ -906,6 +910,39 @@ hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
 <p><img src="http://q4kbn37nl.bkt.clouddn.com/article-comments.png?e=1580185433&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:I1g1rc1WLuGJDNjEQWwvUPZ49P8" alt=""></p>
 <p>编辑评论前需要登录自己的GitHub账户。</p>
 <p>此时，打开GitHub仓库的 <code>Issues</code> 菜单，会发现Gitalk对博客的每篇文章都创建了一个独立的Issue。这给了我们一个线索。如果小伙伴们对评论的实现方式充满好奇，可以自行研究。</p>
+<h3 id="添加《龙珠》素材-2020-1-29"><a href="#添加《龙珠》素材-2020-1-29" class="headerlink" title="添加《龙珠》素材 2020.1.29"></a>添加《龙珠》素材 2020.1.29</h3><p>在内容管理上添加《龙珠》<a href="/tools/map/">素材</a>，用动漫中的概念类比博客的文章和分类，使内容更有趣。</p>
+<p>修改 <code>themes/matery/source/css/matery.css</code> 文件，使主题样式的色调为橙色系，更贴近“龙珠”主题。</p>
+<p>其中的LOGO，我通过一款<a href="https://svg.wxeditor.com/" target="_blank" rel="noopener">svg在线编辑工具</a>，使用简单的圆、五角星和曲线，绘制了一个“龙珠”的图标。</p>
+<p><img src="http://q4kbn37nl.bkt.clouddn.com/svg-wxeditor.png?e=1580256074&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:keM96mJ9YV3Qhx2MO8a9I2mGHTg" alt=""></p>
+<p>将图标保存为 <code>logo.svg</code> 文件后，用编辑器打开，可以查看它的源代码。将其中 <code>&lt;path&gt;</code> 元素的 <code>stroke</code> 属性值修改为 <code>#fff</code> 白色即可。</p>
+<pre class="line-numbers language-svg"><code class="language-svg"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>svg</span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>200<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>200<span class="token punctuation">"</span></span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://www.w3.org/2000/svg<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token comment" spellcheck="true">&lt;!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ --></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>defs</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>radialGradient</span> <span class="token attr-name">cy</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>0.25<span class="token punctuation">"</span></span> <span class="token attr-name">cx</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>0.382<span class="token punctuation">"</span></span> <span class="token attr-name">spreadMethod</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>pad<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>svg_8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>stop</span> <span class="token attr-name">offset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>0<span class="token punctuation">"</span></span> <span class="token attr-name">stop-color</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#ffffff<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>stop</span> <span class="token attr-name">offset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span> <span class="token attr-name">stop-color</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>rgba(255, 255, 255, .3)<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>radialGradient</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>defs</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>g</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>background<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>rect</span> <span class="token attr-name">x</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>-1<span class="token punctuation">"</span></span> <span class="token attr-name">y</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>-1<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>202<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>202<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>canvas_background<span class="token punctuation">"</span></span> <span class="token attr-name">fill</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>none<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>g</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>canvasGrid<span class="token punctuation">"</span></span> <span class="token attr-name">display</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>none<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>rect</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>svg_6<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>100%<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>100%<span class="token punctuation">"</span></span> <span class="token attr-name">x</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>0<span class="token punctuation">"</span></span> <span class="token attr-name">y</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>0<span class="token punctuation">"</span></span> <span class="token attr-name">stroke-width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>0<span class="token punctuation">"</span></span> <span class="token attr-name">fill</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>url(#gridpattern)<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>g</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>g</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>g</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>Layer 1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ellipse</span> <span class="token attr-name">fill-opacity</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>0.6<span class="token punctuation">"</span></span> <span class="token attr-name">fill</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>url(#svg_8)<span class="token punctuation">"</span></span> <span class="token attr-name">stroke-width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>8<span class="token punctuation">"</span></span> <span class="token attr-name">cx</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>100<span class="token punctuation">"</span></span> <span class="token attr-name">cy</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>99.609375<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>svg_1<span class="token punctuation">"</span></span> <span class="token attr-name">rx</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>90<span class="token punctuation">"</span></span> <span class="token attr-name">ry</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>90<span class="token punctuation">"</span></span> <span class="token attr-name">stroke</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#fff<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>path</span> <span class="token attr-name">fill</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#ffffff<span class="token punctuation">"</span></span> <span class="token attr-name">stroke-width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>5<span class="token punctuation">"</span></span> <span class="token attr-name">d</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>m51.03751,91.14299l37.81491,0l11.6851,-35.92401l11.6851,35.92401l37.81491,0l-30.59285,22.202l11.6857,35.92401l-30.59286,-22.20261l-30.59286,22.20261l11.68571,-35.92401l-30.59286,-22.202z<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>svg_2<span class="token punctuation">"</span></span> <span class="token attr-name">fill-opacity</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>0.3<span class="token punctuation">"</span></span> <span class="token attr-name">stroke</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#fff<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>path</span> <span class="token attr-name">fill</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#ffffff<span class="token punctuation">"</span></span> <span class="token attr-name">stroke-width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>4<span class="token punctuation">"</span></span> <span class="token attr-name">stroke-opacity</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>null<span class="token punctuation">"</span></span> <span class="token attr-name">fill-opacity</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>0.3<span class="token punctuation">"</span></span> <span class="token attr-name">d</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>m38.77375,53.14875l14.36866,0l4.44003,-13.65017l4.44003,13.65017l14.36866,0l-11.62447,8.43618l4.44026,13.65017l-11.62448,-8.43641l-11.62447,8.43641l4.44026,-13.65017l-11.62448,-8.43618z<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>svg_3<span class="token punctuation">"</span></span> <span class="token attr-name">stroke</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#fff<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>path</span> <span class="token attr-name">fill</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#ffffff<span class="token punctuation">"</span></span> <span class="token attr-name">stroke-width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>3<span class="token punctuation">"</span></span> <span class="token attr-name">stroke-opacity</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>null<span class="token punctuation">"</span></span> <span class="token attr-name">fill-opacity</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>0.3<span class="token punctuation">"</span></span> <span class="token attr-name">d</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>m130.74999,42.98297l8.78624,0l2.71501,-8.3469l2.71502,8.3469l8.78624,0l-7.10821,5.1586l2.71516,8.34689l-7.10821,-5.15874l-7.10821,5.15874l2.71516,-8.34689l-7.1082,-5.1586z<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>svg_4<span class="token punctuation">"</span></span> <span class="token attr-name">stroke</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#fff<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>path</span> <span class="token attr-name">fill</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#ffffff<span class="token punctuation">"</span></span> <span class="token attr-name">stroke-width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>3<span class="token punctuation">"</span></span> <span class="token attr-name">stroke-opacity</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>null<span class="token punctuation">"</span></span> <span class="token attr-name">fill-opacity</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>0.3<span class="token punctuation">"</span></span> <span class="token attr-name">d</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>m146.24873,128.01l10.06602,0l3.11047,-9.56267l3.11048,9.56267l10.06601,0l-8.14356,5.90998l3.11064,9.56267l-8.14357,-5.91014l-8.14356,5.91014l3.11064,-9.56267l-8.14357,-5.90998z<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>svg_5<span class="token punctuation">"</span></span> <span class="token attr-name">stroke</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#fff<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>path</span> <span class="token attr-name">fill</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#ffffff<span class="token punctuation">"</span></span> <span class="token attr-name">stroke</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#fff<span class="token punctuation">"</span></span> <span class="token attr-name">stroke-width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>1.5<span class="token punctuation">"</span></span> <span class="token attr-name">stroke-opacity</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>null<span class="token punctuation">"</span></span> <span class="token attr-name">fill-opacity</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>0.61<span class="token punctuation">"</span></span> <span class="token attr-name">opacity</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>0.5<span class="token punctuation">"</span></span> <span class="token attr-name">d</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>m156.5,159.10938<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>svg_14<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>path</span> <span class="token attr-name">fill</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#ffffff<span class="token punctuation">"</span></span> <span class="token attr-name">stroke-width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>8<span class="token punctuation">"</span></span> <span class="token attr-name">stroke-opacity</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>null<span class="token punctuation">"</span></span> <span class="token attr-name">fill-opacity</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>0.61<span class="token punctuation">"</span></span> <span class="token attr-name">opacity</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>0.5<span class="token punctuation">"</span></span> <span class="token attr-name">d</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>m32.50126,127.10812c12.33775,34.10842 46.26656,44.01087 45.49545,43.89053<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>svg_15<span class="token punctuation">"</span></span> <span class="token attr-name">stroke</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#fff<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>g</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>svg</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这样便自制了一个效果还不错的LOGO图标。</p>
 
             </div>
             <hr/>
@@ -1201,12 +1238,8 @@ hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    课程笔记
-                                </a>
-                            
-                            <a href="/categories/%E4%B8%87%E7%BB%B4%E9%92%A2%C2%B7%E7%B2%BE%E8%8B%B1%E6%97%A5%E8%AF%BE2/" class="post-category">
-                                    万维钢·精英日课2
+                            <a href="/categories/%E8%88%9E%E7%A9%BA%E6%9C%AF/" class="post-category">
+                                    舞空术
                                 </a>
                             
                             
@@ -1216,16 +1249,20 @@ hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                 
                 <div class="card-action article-tags">
                     
+                    <a href="/tags/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">课程笔记</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%AF%BB%E4%B9%A6%E6%96%B9%E6%B3%95/">
+                        <span class="chip bg-color">读书方法</span>
+                    </a>
+                    
                     <a href="/tags/%E5%BE%97%E5%88%B0/">
                         <span class="chip bg-color">得到</span>
                     </a>
                     
                     <a href="/tags/%E4%B8%87%E7%BB%B4%E9%92%A2/">
                         <span class="chip bg-color">万维钢</span>
-                    </a>
-                    
-                    <a href="/tags/%E8%AF%BB%E4%B9%A6%E6%96%B9%E6%B3%95/">
-                        <span class="chip bg-color">读书方法</span>
                     </a>
                     
                 </div>
@@ -1263,8 +1300,8 @@ hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    读书笔记
+                            <a href="/categories/%E5%85%83%E6%B0%94%E5%BC%B9/" class="post-category">
+                                    元气弹
                                 </a>
                             
                             
@@ -1273,6 +1310,10 @@ hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                 </div>
                 
                 <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">读书笔记</span>
+                    </a>
                     
                     <a href="/tags/%E4%B8%AD%E5%9B%BD%E4%BC%98%E5%8A%BF/">
                         <span class="chip bg-color">中国优势</span>
