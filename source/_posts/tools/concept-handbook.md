@@ -1,10 +1,11 @@
 ---
-title: 雨停 の 葵花宝典
+title: 龙珠雷达
 date: 2020-01-23 18:21:29
 categories:
-- [终身学习]
-tags: [概念, 手册, 词条, 速查]
-summary: 持续收录学习过程中接触到的各类名词概念及解释的概念手册
+- [万能胶囊]
+tags: [概念, 手册, 词条, 扫盲]
+summary: 持续收录的概念手册
+img: http://q4kbn37nl.bkt.clouddn.com/long-zhu-lei-da.gif?e=1580245265&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:oneRra2rduP85ExzRj0Fvxkfd4Y
 ---
 持续收录学习过程中接触到的各类名词概念及解释。
 
@@ -191,6 +192,15 @@ summary: 持续收录学习过程中接触到的各类名词概念及解释的�
 ---
 
 ## W
+
+<div id="wan-mei-feng-bao"></div>
+
+### 完美风暴
+
+出自英文“perfect storm”，比喻几个因素恰好一起发生，导致一个剧烈的后果。
+
+相关：《万维钢精英日课3：蝴蝶无效应，安全有小事》
+收录时间：2020.1.28
 
 ### “微笑曲线”理论
 

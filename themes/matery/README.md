@@ -456,7 +456,7 @@ music:
   title: Listen to music
   fixed: false # enable fixed mode
   autoplay: false # audio autoplay
-  theme: '#42b983'
+  theme: '#E88C30'
   loop: 'all' # player loop play, values: 'all', 'one', 'none'
   order: 'list' # player play order, values: 'list', 'random'
   preload: 'auto' # values: 'none', 'metadata', 'auto'

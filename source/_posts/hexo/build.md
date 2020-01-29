@@ -2,9 +2,10 @@
 title: Hexo博客搭建
 date: 2020-01-24 05:54:13
 categories:
-- [Hexo]
+- [精神时光屋]
 tags: [Hexo, 博客, 个人博客, 博客搭建]
-summary: 描述了一个博客网站诞生的过程
+summary: 精神時光屋的诞生过程
+img: http://q4kbn37nl.bkt.clouddn.com/jing-shen-shi-guang-wu.jpg?e=1580247922&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:Z8FZdNQ7yKUvPUgUIBWdd7_Sadg
 ---
 今天是2020年的除夕。时光犹如白驹过隙，转眼又将开启崭新的一年。
 
@@ -236,7 +237,7 @@ npm install
 └── package.json
 ```
 
-其中， `_config.yml` 是博客的配置文件， `source` 目录用于存放文章的源文件， `themes` 目录用于存放主题，默认有 `landscape` 主题。
+其中，`_config.yml` 是博客的配置文件，`source` 目录用于存放文章的源文件，`themes` 目录用于存放主题，默认有 `landscape` 主题。
 
 ---
 
@@ -265,7 +266,7 @@ hexo server
 
 ![](http://q4kbn37nl.bkt.clouddn.com/hexo-server.png?e=1579882840&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:PQe9BimqgGe37rRNvPFAzHenSGQ)
 
-执行命令后，打开浏览器，输入 `localhost:4000` ，即可访问我们的第一个博客网站。
+执行命令后，打开浏览器，输入 `localhost:4000`，即可访问我们的第一个博客网站。
 
 ![](http://q4kbn37nl.bkt.clouddn.com/hexo-init-page.png?e=1579883002&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:BHUuNzGjZqACRuo5pctN5FGpKGg)
 
@@ -279,7 +280,7 @@ hexo server
 hexo new [layout] <title>
 ```
 
-可以在命令中指定文章的布局（layout）： `post` 、 `page` 和 `draft` ，默认为 `post`。
+可以在命令中指定文章的布局（layout）：`post`、`page` 和 `draft`，默认为 `post`。
 
 在创建这三种不同类型的文件时，它们将会被保存到不同的目录；而自定义的其他布局和 `post` 相同，都将储存到 `source/_posts` 目录下。
 
@@ -311,9 +312,9 @@ hexo new [layout] <title>
 
 ## 7 更换主题
 
-Hexo有丰富的[主题](https://hexo.io/themes/)，默认的是 `landscape` ，可以根据自己的喜好挑选和更换。
+Hexo有丰富的[主题](https://hexo.io/themes/)，默认的是 `landscape`，可以根据自己的喜好挑选和更换。
 
-我选择的主题是[Matery](https://github.com/blinkfox/hexo-theme-matery)。在其GitHub链接上下载该主题，解压后命名为 `matery` ，存放至 `themes` 目录下。
+我选择的主题是[Matery](https://github.com/blinkfox/hexo-theme-matery)。在其GitHub链接上下载该主题，解压后命名为 `matery`，存放至 `themes` 目录下。
 
 然后编辑 `_config/yml` 文件中的配置信息，将 `theme` 修改为themes目录下的主题目录名。
 
@@ -328,7 +329,7 @@ theme: matery
 
 Matery主题提供了相对美观的菜单、封面、主页、视频和音乐等组件。我们可以在主题配置文件 `themes/matery/_config.yml` 里更改相关的配置，来更改这些组件的配置和个人信息的配置。
 
-此外，我们还需对 `标签` 、 `分类` 、 `关于` 、 `留言板` 和 `友情链接` 菜单，创建相应的界面文件。
+此外，我们还需对 `标签`、`分类`、`关于`、`留言板` 和 `友情链接` 菜单，创建相应的界面文件。
 
 执行 `hexo new page categories` 命令创建分类页，会在 `source` 目录下生成 `categories/index.md` 文件，并使其包含如下内容。
 
@@ -341,7 +342,7 @@ layout: categories
 ---
 ```
 
-同样地，创建标签页 `tags/index.md` ，使其包含如下内容。
+同样地，创建标签页 `tags/index.md`，使其包含如下内容。
 
 ```
 ---
@@ -352,7 +353,7 @@ layout: tags
 ---
 ```
 
-以此类推，继续创建 `about` 、 `contact` 和 `friends` 页面。这样一来，博客的菜单都可以点击了。
+以此类推，继续创建 `about`、`contact` 和 `friends` 页面。这样一来，博客的菜单都可以点击了。
 
 至此，项目的目录结构会像下面这样。
 
@@ -394,13 +395,13 @@ layout: tags
 
 ### 8.1 创建GitHub个人仓库
 
-登录[GitHub](https://github.com/)，点击 `New repository` 创建一个名为 `<username>.github.io` 的仓库。其中 `username` 是用户名，比如我的GitHub用户名是 `rainstopper` ，我创建的仓库名称就是 `rainstopper.github.io` 。
+登录[GitHub](https://github.com/)，点击 `New repository` 创建一个名为 `<username>.github.io` 的仓库。其中 `username` 是用户名，比如我的GitHub用户名是 `rainstopper`，我创建的仓库名称就是 `rainstopper.github.io`。
 
 ### 8.2 添加GitHub SSH配置
 
 为GitHub添加SSH配置，可以在后续Git代码进行 `push` 操作时，跳过用户名和密码的输入，更加便利。不介意每次提交都输密码，或者有安全及其他方面考虑的，也可以跳过此步骤。
 
-打开 `Git Bash` ，执行如下命令设置Git的用户名和邮箱信息。
+打开 `Git Bash`，执行如下命令设置Git的用户名和邮箱信息。
 
 ```bash
 git config --global user.name <username>
@@ -426,7 +427,7 @@ ssh-keygen -t rsa -C <email>
 
 最后会提示在用户目录下生成了 `.ssh` 文件夹，里面包含了 `id_rsa` 私钥文件和 `id_rsa.pub` 公钥文件。
 
-在GitHub的 `Settings` 中找到 `SSH and GPG keys` 的配置页面，点击 `New SSH key` 按钮，在 `title` 中输入自定义的名称，将 `id_rsa.pub` 文件中的内容拷贝至 `Key` ，完成SSH秘钥的创建。
+在GitHub的 `Settings` 中找到 `SSH and GPG keys` 的配置页面，点击 `New SSH key` 按钮，在 `title` 中输入自定义的名称，将 `id_rsa.pub` 文件中的内容拷贝至 `Key`，完成SSH秘钥的创建。
 
 ![](http://q4kbn37nl.bkt.clouddn.com/github-ssh.png?e=1579891366&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:duNvV4Ij1lXBPpJHiVfB2OR42Y8)
 
@@ -444,7 +445,7 @@ ssh -T git@github.com
 
 有了GitHub仓库，我们就能将Hexo生成的静态页面托管至GitHub。
 
-如下修改项目的配置文件 `_config.yml` 。
+如下修改项目的配置文件 `_config.yml`。
 
 ```yaml
 # Deployment
@@ -455,7 +456,7 @@ deploy:
   branch: master
 ```
 
-接下来执行以下命令安装Hexo的Git发布插件 `hexo-deployer-git` 。
+接下来执行以下命令安装Hexo的Git发布插件 `hexo-deployer-git`。
 
 ```bash
 npm install hexo-deployer-git --save
@@ -506,7 +507,7 @@ hexo deploy
 
 ### 9.2 上传源代码
 
-执行以下命令将仓库 `clone` 到本地（会自动命名为 `<username>.github.io` ），其中的链接就是GitHub仓库的https链接。
+执行以下命令将仓库 `clone` 到本地（会自动命名为 `<username>.github.io`），其中的链接就是GitHub仓库的https链接。
 
 ```bash
 git clone https://github.com/<username>/<username>.github.io.git
@@ -529,7 +530,7 @@ git push
 
 ### 9.3 更换终端
 
-当我们需要更换终端时，依次安装 `Git` 和 `Node.js` ，执行 `npm install -g hexo-cli` 命令安装Hexo，设置GitHub的SSH Key，再将GitHub仓库 `clone` 到本地，即可继续博客的写作。
+当我们需要更换终端时，依次安装 `Git` 和 `Node.js`，执行 `npm install -g hexo-cli` 命令安装Hexo，设置GitHub的SSH Key，再将GitHub仓库 `clone` 到本地，即可继续博客的写作。
 
 至此，我们已经可以投入到博客的写作中去了。
 
@@ -543,9 +544,9 @@ git push
 
 我们可以在[阿里云](https://wanwang.aliyun.com/)上查询和购买域名。
 
-最常用的域名是 `.com` ，价格比较昂贵；其次是 `.com.cn` 、 `.cn` 和 `.net` 。然而这些常用的域名大多都已经被注册了。
+最常用的域名是 `.com`，价格比较昂贵；其次是 `.com.cn`、`.cn` 和 `.net`。然而这些常用的域名大多都已经被注册了。
 
-剩下的还有 `.site` 、 `.top` 、 `.vip` 等域名，只要能备案就行。我买的是 `sunyt.site` （以我中文名的缩写命名）。
+剩下的还有 `.site`、`.top`、`.vip` 等域名，只要能备案就行。我买的是 `sunyt.site`（以我中文名的缩写命名）。
 
 ### 10.2 域名备案
 
@@ -561,7 +562,7 @@ git push
 
 购买完成后，需要先进行实名认证，再进入[阿里云控制台](https://dns.console.aliyun.com/)的域名解析设置菜单，做域名解析的配置。
 
-可以直接使用 `新手引导` 按钮，它会自动添加主机记录为 `@` 和 `www` 、解析线路为 `默认` 的两条配置。
+可以直接使用 `新手引导` 按钮，它会自动添加主机记录为 `@` 和 `www`、解析线路为 `默认` 的两条配置。
 
 ![](http://q4kbn37nl.bkt.clouddn.com/aliyun-dns-guide.png?e=1579896004&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:IwzoBZ4z-sE66szbZ6VwSiJaXNo)
 
@@ -569,13 +570,13 @@ git push
 
 ### 10.4 修改GitHub仓库配置
 
-在GitHub仓库的 `Settings` 菜单下找到 `Custom domain` ，设置域名并保存。
+在GitHub仓库的 `Settings` 菜单下找到 `Custom domain`，设置域名并保存。
 
 ![](http://q4kbn37nl.bkt.clouddn.com/github-settings-custom-domain.png?e=1579896418&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:xBGBLkVCOB_Xqruz4Wvz7iOezqo)
 
 ### 10.5 修改项目配置并重新部署
 
-在项目 `source` 目录下新建一个名为 `CNAME` 的文件（注意没有后缀名），在文件内写上自己的域名，比如 `sunyt.site` 。
+在项目 `source` 目录下新建一个名为 `CNAME` 的文件（注意没有后缀名），在文件内写上自己的域名，比如 `sunyt.site`。
 
 ```
 .
@@ -600,7 +601,7 @@ hexo generate
 hexo deploy
 ```
 
-过不了多久，在浏览器中输入我的域名 `sunyt.site` ，就能访问我在GitHub托管的博客了。
+过不了多久，在浏览器中输入我的域名 `sunyt.site`，就能访问我在GitHub托管的博客了。
 
 ---
 
@@ -646,19 +647,19 @@ hexo deploy
 
 部署完成后，打开Coding项目代码，我们会看到与GitHub相同的Hexo静态文件。
 
-随即在Coding上部署项目，并设置自定义域名为自己的域名 `sunyt.site` 。
+随即在Coding上部署项目，并设置自定义域名为自己的域名 `sunyt.site`。
 
 ![](http://q4kbn37nl.bkt.clouddn.com/coding-deploy-setting.png?e=1579899019&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:OyAp31x2qJBjjqs52UNHOhts1H4)
 
 ### 11.4 修改域名解析配置
 
-回到[阿里云控制台](https://dns.console.aliyun.com/)，将原来指向GitHub配置的解析路线改为 `境外` ，再分别添加主机记录为 `@` 和 `www` 的两条记录，记录类型选择 `默认` ，记录值填写Coding项目的静态网站域名。
+回到[阿里云控制台](https://dns.console.aliyun.com/)，将原来指向GitHub配置的解析路线改为 `境外`，再分别添加主机记录为 `@` 和 `www` 的两条记录，记录类型选择 `默认`，记录值填写Coding项目的静态网站域名。
 
 ![](http://q4kbn37nl.bkt.clouddn.com/aliyun-dns-setting-github-and-coding.png?e=1579899444&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:MqbSUQGDtVH4Uw6vY1sI9PDC0c0)
 
 不一会儿，我们在国内访问域名 `sunyt.site` 就会访问到托管至Coding的页面了。
 
-我们可以通过在国内 `ping sunyt.site` 和 `ping ssd38z.coding-pages.com` ，观察解析到的IP地址是不是相同的，来验证域名解析的正确性。
+我们可以通过在国内 `ping sunyt.site` 和 `ping ssd38z.coding-pages.com`，观察解析到的IP地址是不是相同的，来验证域名解析的正确性。
 
 至此，我们的博客已经在GitHub和Coding双向部署，并通过域名解析，对国内外进行分流。
 
@@ -668,11 +669,11 @@ hexo deploy
 
 ### 使用七牛云存储图片 2020.1.24
 
-Hexo支持使用 `hexo-asset-image` 插件内联图片，该插件会在创建文章的同时，在同一目录下创建与其同名的目录，用来存放图片文件，使用非常方便，但缺点也显而易见： `source` 目录会很庞大，且内联图片会影响页面的渲染速度。
+Hexo支持使用 `hexo-asset-image` 插件内联图片，该插件会在创建文章的同时，在同一目录下创建与其同名的目录，用来存放图片文件，使用非常方便，但缺点也显而易见：`source` 目录会很庞大，且内联图片会影响页面的渲染速度。
 
 更好的做法是使用第三方平台来存储图片，我使用的是[七牛云](https://portal.qiniu.com/)。
 
-创建七牛云账号后，需要先进行实名认证，再在控制台打开 `对象存储` 下的 `空间管理` 菜单，去新建空间，否则会报 `403：没有权限` 。
+创建七牛云账号后，需要先进行实名认证，再在控制台打开 `对象存储` 下的 `空间管理` 菜单，去新建空间，否则会报 `403：没有权限`。
 
 写作时如果遇到图片，只需将其上传至七牛云，再在需要插入图片的位置添加Markdown标记 `![](<url>)` 即可。
 
@@ -688,7 +689,7 @@ Hexo支持使用 `hexo-asset-image` 插件内联图片，该插件会在创建�
 npm install hexo-prism-plugin --save
 ```
 
-紧接着，按照该插件的[文档](https://github.com/ele828/hexo-prism-plugin)描述，修改项目配置文件 `_config.yml` 。
+紧接着，按照该插件的[文档](https://github.com/ele828/hexo-prism-plugin)描述，修改项目配置文件 `_config.yml`。
 
 ```yaml
 highlight:
@@ -738,3 +739,92 @@ postInfo:
   min2read: true # 文章阅读时长
   readCount: true # 文章阅读次数
 ```
+
+### 开启Gitalk评论 2020.1.28
+
+Matery主题支持[Gitalk](https://gitalk.github.io/)、[Gitment](https://imsun.github.io/gitment/)、[Valine](https://valine.js.org/)和[Disqus](https://disqus.com/)评论模块，官方推荐的是Gitalk。
+
+开启Gitalk评论，首先需要创建一个GitHub的OAuth App。
+
+登陆GitHub，在 `Settings` > `Developer settings` 下，找到 `OAuth Apps` 菜单。
+
+![](http://q4kbn37nl.bkt.clouddn.com/github-oauth-apps.png?e=1580182303&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:fK9xiyWAbfpRy7JyvjuLncuLqBg)
+
+点击 `New OAuth App` 创建一个OAuth App。其中 `Application Name` 自定义，`Homepage URL` 和 `Authorization callback URL` 填写博客的地址。
+
+![](http://q4kbn37nl.bkt.clouddn.com/github-new-oauth-app.png?e=1580182303&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:SExXN6tiR7fGxUY9CMzLUJWid7s)
+
+创建完成后，可以点击刚创建的OAuth App，查看 `Client ID` 和 `Client Secret`。
+
+![](http://q4kbn37nl.bkt.clouddn.com/github-oauth-app-client-id.png?e=1580185161&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:cv2mSXRTnZUytxZug4M5bkc5QtQ)
+
+然后打开博客仓库的 `Settings` 菜单，确保 `Issues` 特性已经被勾选。
+
+![](http://q4kbn37nl.bkt.clouddn.com/github-repository-settings-issues.png?e=1580183579&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:lGSlq18Y_LMUNSgwoJfNJiDTxf8)
+
+接着修改 `theme/matery/_config.yml` 主题配置文件，开启gitalk，并填写GitHub仓库和OAuth App相关信息。
+
+```yaml
+# the Gitalk config，default disabled
+# Gitalk 评论模块的配置，默认为不激活
+gitalk:
+  enable: true
+  owner: rainstopper # GitHub用户名
+  repo: rainstopper.github.io # 仓库名
+  oauth:
+    clientId: 7884f**********fd16b # OAuth App 的 Client ID
+    clientSecret: 1530e******************************1ef5b # OAuth App 的 Client Secret
+  admin: rainstopper # GitHub用户名
+```
+
+重新部署后，滚动至文章底部就能看到久违的评论框了。
+
+![](http://q4kbn37nl.bkt.clouddn.com/article-comments.png?e=1580185433&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:I1g1rc1WLuGJDNjEQWwvUPZ49P8)
+
+编辑评论前需要登录自己的GitHub账户。
+
+此时，打开GitHub仓库的 `Issues` 菜单，会发现Gitalk对博客的每篇文章都创建了一个独立的Issue。这给了我们一个线索。如果小伙伴们对评论的实现方式充满好奇，可以自行研究。
+
+### 添加《龙珠》素材 2020.1.29
+
+在内容管理上添加《龙珠》[素材](/tools/map/)，用动漫中的概念类比博客的文章和分类，使内容更有趣。
+
+修改 `themes/matery/source/css/matery.css` 文件，使主题样式的色调为橙色系，更贴近“龙珠”主题。
+
+其中的LOGO，我通过一款[svg在线编辑工具](https://svg.wxeditor.com/)，使用简单的圆、五角星和曲线，绘制了一个“龙珠”的图标。
+
+![](http://q4kbn37nl.bkt.clouddn.com/svg-wxeditor.png?e=1580256074&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:keM96mJ9YV3Qhx2MO8a9I2mGHTg)
+
+将图标保存为 `logo.svg` 文件后，用编辑器打开，可以查看它的源代码。将其中 `<path>` 元素的 `stroke` 属性值修改为 `#fff` 白色即可。
+
+```svg
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+  <defs>
+    <radialGradient cy="0.25" cx="0.382" spreadMethod="pad" id="svg_8">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="rgba(255, 255, 255, .3)"/>
+    </radialGradient>
+  </defs>
+  <g>
+    <title>background</title>
+    <rect x="-1" y="-1" width="202" height="202" id="canvas_background" fill="none"/>
+    <g id="canvasGrid" display="none">
+      <rect id="svg_6" width="100%" height="100%" x="0" y="0" stroke-width="0" fill="url(#gridpattern)"/>
+    </g>
+  </g>
+  <g>
+    <title>Layer 1</title>
+    <ellipse fill-opacity="0.6" fill="url(#svg_8)" stroke-width="8" cx="100" cy="99.609375" id="svg_1" rx="90" ry="90" stroke="#fff"/>
+    <path fill="#ffffff" stroke-width="5" d="m51.03751,91.14299l37.81491,0l11.6851,-35.92401l11.6851,35.92401l37.81491,0l-30.59285,22.202l11.6857,35.92401l-30.59286,-22.20261l-30.59286,22.20261l11.68571,-35.92401l-30.59286,-22.202z" id="svg_2" fill-opacity="0.3" stroke="#fff"/>
+    <path fill="#ffffff" stroke-width="4" stroke-opacity="null" fill-opacity="0.3" d="m38.77375,53.14875l14.36866,0l4.44003,-13.65017l4.44003,13.65017l14.36866,0l-11.62447,8.43618l4.44026,13.65017l-11.62448,-8.43641l-11.62447,8.43641l4.44026,-13.65017l-11.62448,-8.43618z" id="svg_3" stroke="#fff"/>
+    <path fill="#ffffff" stroke-width="3" stroke-opacity="null" fill-opacity="0.3" d="m130.74999,42.98297l8.78624,0l2.71501,-8.3469l2.71502,8.3469l8.78624,0l-7.10821,5.1586l2.71516,8.34689l-7.10821,-5.15874l-7.10821,5.15874l2.71516,-8.34689l-7.1082,-5.1586z" id="svg_4" stroke="#fff"/>
+    <path fill="#ffffff" stroke-width="3" stroke-opacity="null" fill-opacity="0.3" d="m146.24873,128.01l10.06602,0l3.11047,-9.56267l3.11048,9.56267l10.06601,0l-8.14356,5.90998l3.11064,9.56267l-8.14357,-5.91014l-8.14356,5.91014l3.11064,-9.56267l-8.14357,-5.90998z" id="svg_5" stroke="#fff"/>
+    <path fill="#ffffff" stroke="#fff" stroke-width="1.5" stroke-opacity="null" fill-opacity="0.61" opacity="0.5" d="m156.5,159.10938" id="svg_14"/>
+    <path fill="#ffffff" stroke-width="8" stroke-opacity="null" fill-opacity="0.61" opacity="0.5" d="m32.50126,127.10812c12.33775,34.10842 46.26656,44.01087 45.49545,43.89053" id="svg_15" stroke="#fff"/>
+  </g>
+</svg>
+
+```
+
+这样便自制了一个效果还不错的LOGO图标。

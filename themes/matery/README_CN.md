@@ -460,7 +460,7 @@ music:
   title: 听听音乐
   fixed: false # 是否开启吸底模式
   autoplay: false # 是否自动播放
-  theme: '#42b983'
+  theme: '#E88C30'
   loop: 'all' # 音频循环播放, 可选值: 'all', 'one', 'none'
   order: 'list' # 音频循环顺序, 可选值: 'list', 'random'
   preload: 'auto' # 预加载，可选值: 'none', 'metadata', 'auto'
