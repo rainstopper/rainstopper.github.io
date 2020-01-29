@@ -1,5 +1,5 @@
 ---
-title: Hexo博客搭建
+title: Hexo 博客搭建
 date: 2020-01-24 05:54:13
 categories:
 - [精神时光屋]
@@ -7,15 +7,15 @@ tags: [Hexo, 博客, 个人博客, 博客搭建]
 summary: 精神時光屋的诞生过程
 img: http://q4kbn37nl.bkt.clouddn.com/jing-shen-shi-guang-wu.jpg?e=1580247922&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:Z8FZdNQ7yKUvPUgUIBWdd7_Sadg
 ---
-今天是2020年的除夕。时光犹如白驹过隙，转眼又将开启崭新的一年。
+今天是 2020 年的除夕。时光犹如白驹过隙，转眼又将开启崭新的一年。
 
-过去的25年是美好而短暂的，美在成就了如今的我，短于日子走得太快，忘了仔细地去记录。这也是偶尔令我感到些许遗憾的。
+过去的 25 年是美好而短暂的，美在成就了如今的我，短于日子走得太快，忘了仔细地去记录。这也是偶尔令我感到些许遗憾的。
 
 人们常说 *“种一棵树最好的时间是十年前，其次是现在”*，经营一片自己专属的地界亦如是。于是我花了些时间搭建了自己的第一个博客，并写下此文加以记录。
 
 ## 1 博客选型
 
-现如今，市面上博客相关的工具和产品繁多，涵盖了[语雀](https://www.yuque.com/)、[简书](https://www.jianshu.com/)、[博客园](https://www.cnblogs.com/)、[掘金](https://juejin.im/)、[知乎](https://www.zhihu.com/)等在线承载文字平台，也包括了[Gitbook](https://www.gitbook.com/)、[Hexo](https://hexo.io/)、[Jekyll](http://jekyllcn.com/)、[Vuepress](https://vuepress.vuejs.org/)等静态独立博客工具，更有[Ghost](http://www.ghostchina.com/)这样支持后台的博客系统。
+现如今，市面上博客相关的工具和产品繁多，涵盖了[语雀](https://www.yuque.com/)、[简书](https://www.jianshu.com/)、[博客园](https://www.cnblogs.com/)、[掘金](https://juejin.im/)、[知乎](https://www.zhihu.com/)等在线承载文字平台，也包括了 [Gitbook](https://www.gitbook.com/)、[Hexo](https://hexo.io/)、[Jekyll](http://jekyllcn.com/)、[Vuepress](https://vuepress.vuejs.org/) 等静态独立博客工具，更有 [Ghost](http://www.ghostchina.com/) 这样支持后台的博客系统。
 
 <table>
   <thead>
@@ -178,15 +178,15 @@ img: http://q4kbn37nl.bkt.clouddn.com/jing-shen-shi-guang-wu.jpg?e=1580247922&to
 
 这些工具大多都支持现在流行的 `Markdown` 标记语言，书写简洁高效。
 
-简书、博客园这些平台可以直接注册使用，写文章发表的用户交互好，SEO做得也不错，但缺点是容易受到平台的约束，还有广告。而自己租赁服务器、购买域名搭建博客，尽管自由度高，但成本昂贵，开发和维护也很耗费精力和时间。相较这两种，还有一个折中的方案，就是将生成的静态页面托管在Github、Coding等平台上。
+简书、博客园这些平台可以直接注册使用，写文章发表的用户交互好，SEO做得也不错，但缺点是容易受到平台的约束，还有广告。而自己租赁服务器、购买域名搭建博客，尽管自由度高，但成本昂贵，开发和维护也很耗费精力和时间。相较这两种，还有一个折中的方案，就是将生成的静态页面托管在 Github、Coding 等平台上。
 
-我本是信息管理专业出身，校园里有幸拜师入门习得一知半解，毕业后去动物园做起程序猿。学信管的，本身便懂些信息存取的法门；编程又是一项很实用的技能。两者结合，既考虑信息的存取成本和展现形式，又追求技术上的前卫和开放自由。搭建博客的目的 *不是折腾技术，而是记录所见所想、多输出一些高质量的文章*。于是我选择了Hexo——由 `Node.js` 支持、简单而功能强大的博客框架，以便更专注于写作。
+我本是信息管理专业出身，校园里有幸拜师入门习得一知半解，毕业后去动物园做起程序猿。学信管的，本身便懂些信息存取的法门；编程又是一项很实用的技能。两者结合，既考虑信息的存取成本和展现形式，又追求技术上的前卫和开放自由。搭建博客的目的 *不是折腾技术，而是记录所见所想、多输出一些高质量的文章*。于是我选择了 Hexo —— 由 `Node.js` 支持、简单而功能强大的博客框架，以便更专注于写作。
 
 ---
 
-## 2 Hexo简介
+## 2 Hexo 简介
 
-依照[官网文档](https://hexo.io/zh-cn/docs/)的说明，Hexo是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。
+依照[官网文档](https://hexo.io/zh-cn/docs/)的说明，Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。
 
 本站就是一个很好的例子。
 
@@ -194,15 +194,15 @@ img: http://q4kbn37nl.bkt.clouddn.com/jing-shen-shi-guang-wu.jpg?e=1580247922&to
 
 ## 3 安装
 
-Hexo的安装非常容易，有编程基础的朋友也可以参照[Hexo官网文档](https://hexo.io/zh-cn/docs/)完成此步骤。
+Hexo 的安装非常容易，有编程基础的朋友也可以参照 [Hexo 官网文档](https://hexo.io/zh-cn/docs/)完成此步骤。
 
 ### 3.1 准备工作
 
-在安装Hexo前，我们需要先安装[Git](https://git-scm.com/)和[Node.js](https://nodejs.org/en/)。这两样工具的安装相对简单，只需移步至其官网，下载对应操作系统的安装包，按照引导完成安装即可。此处不做赘述。
+在安装 Hexo 前，我们需要先安装 [Git](https://git-scm.com/) 和 [Node.js](https://nodejs.org/en/)。这两样工具的安装相对简单，只需移步至其官网，下载对应操作系统的安装包，按照引导完成安装即可。此处不做赘述。
 
-### 3.2 安装Hexo
+### 3.2 安装 Hexo
 
-安装完 `Node.js` 后，就可以通过 `npm` 安装Hexo了。
+安装完 `Node.js` 后，就可以通过 `npm` 安装 Hexo 了。
 
 打开命令行，执行如下命令。
 
@@ -262,7 +262,7 @@ hexo server
 └── package.json
 ```
 
-继续执行 `hexo server` 或 `hexo s` 命令，启动server服务。
+继续执行 `hexo server` 或 `hexo s` 命令，启动 server 服务。
 
 ![](http://q4kbn37nl.bkt.clouddn.com/hexo-server.png?e=1579882840&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:PQe9BimqgGe37rRNvPFAzHenSGQ)
 
@@ -306,15 +306,15 @@ hexo new [layout] <title>
 
 编辑 `source` 目录下的文件，开始我们的写作。
 
-关于Hexo的更多用法，可以参照[官方文档](https://hexo.io/zh-cn/docs/)自行尝试。
+关于 Hexo 的更多用法，可以参照[官方文档](https://hexo.io/zh-cn/docs/)自行尝试。
 
 ---
 
 ## 7 更换主题
 
-Hexo有丰富的[主题](https://hexo.io/themes/)，默认的是 `landscape`，可以根据自己的喜好挑选和更换。
+Hexo 有丰富的[主题](https://hexo.io/themes/)，默认的是 `landscape`，可以根据自己的喜好挑选和更换。
 
-我选择的主题是[Matery](https://github.com/blinkfox/hexo-theme-matery)。在其GitHub链接上下载该主题，解压后命名为 `matery`，存放至 `themes` 目录下。
+我选择的主题是 [Matery](https://github.com/blinkfox/hexo-theme-matery)。在其 GitHub 链接上下载该主题，解压后命名为 `matery`，存放至 `themes` 目录下。
 
 然后编辑 `_config/yml` 文件中的配置信息，将 `theme` 修改为themes目录下的主题目录名。
 
@@ -381,27 +381,27 @@ layout: tags
 └── package.json
 ```
 
-该主题的更多用法，还可以参照[Matery](https://github.com/blinkfox/hexo-theme-matery)文档继续体验。
+该主题的更多用法，还可以参照 [Matery](https://github.com/blinkfox/hexo-theme-matery) 文档继续体验。
 
 ---
 
-## 8 部署至GitHub
+## 8 部署至 GitHub
 
 经过前面的努力，我们的博客已经可以在本地运行了。
 
-但如果想让其他人人访问我们的博客，我们还需要找一台服务器，将博客部署上去。[GitHub Pages](https://pages.github.com/)就可以免费充当这样的服务器。
+但如果想让其他人人访问我们的博客，我们还需要找一台服务器，将博客部署上去。[GitHub Pages](https://pages.github.com/) 就可以免费充当这样的服务器。
 
-接下来，我们将博客部署至GitHub，让朋友们都能访问。
+接下来，我们将博客部署至 GitHub，让朋友们都能访问。
 
-### 8.1 创建GitHub个人仓库
+### 8.1 创建 GitHub 个人仓库
 
-登录[GitHub](https://github.com/)，点击 `New repository` 创建一个名为 `<username>.github.io` 的仓库。其中 `username` 是用户名，比如我的GitHub用户名是 `rainstopper`，我创建的仓库名称就是 `rainstopper.github.io`。
+登录 [GitHub](https://github.com/)，点击 `New repository` 创建一个名为 `<username>.github.io` 的仓库。其中 `username` 是用户名，比如我的GitHub用户名是 `rainstopper`，我创建的仓库名称就是 `rainstopper.github.io`。
 
-### 8.2 添加GitHub SSH配置
+### 8.2 添加 GitHub SSH 配置
 
-为GitHub添加SSH配置，可以在后续Git代码进行 `push` 操作时，跳过用户名和密码的输入，更加便利。不介意每次提交都输密码，或者有安全及其他方面考虑的，也可以跳过此步骤。
+为 GitHub 添加 SSH 配置，可以在后续 Git 代码进行 `push` 操作时，跳过用户名和密码的输入，更加便利。不介意每次提交都输密码，或者有安全及其他方面考虑的，也可以跳过此步骤。
 
-打开 `Git Bash`，执行如下命令设置Git的用户名和邮箱信息。
+打开 `Git Bash`，执行如下命令设置 Git 的用户名和邮箱信息。
 
 ```bash
 git config --global user.name <username>
@@ -415,7 +415,7 @@ git config user.name
 git config user.email
 ```
 
-执行以下命令创建SSH秘钥文件。
+执行以下命令创建 SSH 秘钥文件。
 
 ```bash
 ssh-keygen -t rsa -C <email>
@@ -427,11 +427,11 @@ ssh-keygen -t rsa -C <email>
 
 最后会提示在用户目录下生成了 `.ssh` 文件夹，里面包含了 `id_rsa` 私钥文件和 `id_rsa.pub` 公钥文件。
 
-在GitHub的 `Settings` 中找到 `SSH and GPG keys` 的配置页面，点击 `New SSH key` 按钮，在 `title` 中输入自定义的名称，将 `id_rsa.pub` 文件中的内容拷贝至 `Key`，完成SSH秘钥的创建。
+在 GitHub 的 `Settings` 中找到 `SSH and GPG keys` 的配置页面，点击 `New SSH key` 按钮，在 `title` 中输入自定义的名称，将 `id_rsa.pub` 文件中的内容拷贝至 `Key`，完成SSH秘钥的创建。
 
 ![](http://q4kbn37nl.bkt.clouddn.com/github-ssh.png?e=1579891366&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:duNvV4Ij1lXBPpJHiVfB2OR42Y8)
 
-使用以下命令验证SSH的配置是否生效。
+使用以下命令验证 SSH 的配置是否生效。
 
 ```bash
 ssh -T git@github.com
@@ -441,9 +441,9 @@ ssh -T git@github.com
 
 ![](http://q4kbn37nl.bkt.clouddn.com/test-github-ssh.png?e=1579891976&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:v38GguGs12J7jfuwfowPInGShZc)
 
-### 8.3 将Hexo生成的静态页面托管至GitHub
+### 8.3 将 Hexo 生成的静态页面托管至 GitHub
 
-有了GitHub仓库，我们就能将Hexo生成的静态页面托管至GitHub。
+有了 GitHub 仓库，我们就能将 Hexo 生成的静态页面托管至 GitHub。
 
 如下修改项目的配置文件 `_config.yml`。
 
@@ -456,13 +456,13 @@ deploy:
   branch: master
 ```
 
-接下来执行以下命令安装Hexo的Git发布插件 `hexo-deployer-git`。
+接下来执行以下命令安装 Hexo 的 Git 发布插件 `hexo-deployer-git`。
 
 ```bash
 npm install hexo-deployer-git --save
 ```
 
-然后执行以下命令，将项目部署至GitHub。
+然后执行以下命令，将项目部署至 GitHub。
 
 ```bash
 hexo clean
@@ -472,7 +472,7 @@ hexo deploy
 
 其中 `hexo clean` 或 `hexo cl` 命令会清理之前生成的文件； `hexo deploy` 或 `hexo d` 命令进行部署。
 
-部署完成后，我们的项目目录中会出现一个 `.deploy_git` 目录，其中的代码就是 `push` 至GitHub仓库中的静态文件。
+部署完成后，我们的项目目录中会出现一个 `.deploy_git` 目录，其中的代码就是 `push` 至 GitHub 仓库中的静态文件。
 
 ```
 .
@@ -493,21 +493,21 @@ hexo deploy
 
 ## 9 多终端工作
 
-经过上面的操作，我们已经完成了GitHub的部署，让朋友们都能访问我们的博客了。
+经过上面的操作，我们已经完成了 GitHub 的部署，让朋友们都能访问我们的博客了。
 
-可仔细看GitHub仓库中的文化，发现都是编译够生成的代码，而没有我们编写博客时的源文件。假如我们需要重装操作系统或者更换电脑，就可能会丢失这些源文件。
+可仔细看 GitHub 仓库中的文化，发现都是编译够生成的代码，而没有我们编写博客时的源文件。假如我们需要重装操作系统或者更换电脑，就可能会丢失这些源文件。
 
-这时，我们可以利用GitHub分支来实现源代码的管理，以便在多个终端下都能进行写作。
+这时，我们可以利用 GitHub 分支来实现源代码的管理，以便在多个终端下都能进行写作。
 
-### 9.1 创建GitHub分支
+### 9.1 创建 GitHub 分支
 
-进入我们之前创建好的GitHub仓库，在 `Code` 菜单下点击 `Branch:master` 按钮，新建一个名为 `hexo-source` 的分支，并将其设置为默认分支。
+进入我们之前创建好的 GitHub 仓库，在 `Code` 菜单下点击 `Branch:master` 按钮，新建一个名为 `hexo-source` 的分支，并将其设置为默认分支。
 
 ![](http://q4kbn37nl.bkt.clouddn.com/github-branch-hexo-source.png?e=1579894028&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:p8fSwlsoS5MJA2UTKOVNUg5tJco)
 
 ### 9.2 上传源代码
 
-执行以下命令将仓库 `clone` 到本地（会自动命名为 `<username>.github.io`），其中的链接就是GitHub仓库的https链接。
+执行以下命令将仓库 `clone` 到本地（会自动命名为 `<username>.github.io`），其中的链接就是 GitHub 仓库的 https 链接。
 
 ```bash
 git clone https://github.com/<username>/<username>.github.io.git
@@ -522,15 +522,15 @@ git commit -m "上传博客项目源文件"
 git push
 ```
 
-执行 `push` 命令时可能需要输入GitHub的用户名和密码。
+执行 `push` 命令时可能需要输入 GitHub 的用户名和密码。
 
-`push` 完成后，便可以在仓库的 `hexo-source` 分支下看到我们项目中的源代码，而 `master` 分支下依然是由Hexo生成的静态文件。
+`push` 完成后，便可以在仓库的 `hexo-source` 分支下看到我们项目中的源代码，而 `master` 分支下依然是由 Hexo 生成的静态文件。
 
-建议每次完成写作时，都依次执行上述命令，将自己的源文件 `push` 至GitHub仓库中，以防丢失。
+建议每次完成写作时，都依次执行上述命令，将自己的源文件 `push` 至 GitHub 仓库中，以防丢失。
 
 ### 9.3 更换终端
 
-当我们需要更换终端时，依次安装 `Git` 和 `Node.js`，执行 `npm install -g hexo-cli` 命令安装Hexo，设置GitHub的SSH Key，再将GitHub仓库 `clone` 到本地，即可继续博客的写作。
+当我们需要更换终端时，依次安装 `Git` 和 `Node.js`，执行 `npm install -g hexo-cli` 命令安装 Hexo，设置 GitHub 的 SSH Key，再将 GitHub 仓库 `clone` 到本地，即可继续博客的写作。
 
 至此，我们已经可以投入到博客的写作中去了。
 
@@ -566,11 +566,11 @@ git push
 
 ![](http://q4kbn37nl.bkt.clouddn.com/aliyun-dns-guide.png?e=1579896004&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:IwzoBZ4z-sE66szbZ6VwSiJaXNo)
 
-其中的记录值，我们可以先在命令行中通过 `ping <username>.github.io` 获取到项目在GitHub服务器上所在的IP地址，将其填入。
+其中的记录值，我们可以先在命令行中通过 `ping <username>.github.io` 获取到项目在 GitHub 服务器上所在的 IP 地址，将其填入。
 
-### 10.4 修改GitHub仓库配置
+### 10.4 修改 GitHub 仓库配置
 
-在GitHub仓库的 `Settings` 菜单下找到 `Custom domain`，设置域名并保存。
+在 GitHub 仓库的 `Settings` 菜单下找到 `Custom domain`，设置域名并保存。
 
 ![](http://q4kbn37nl.bkt.clouddn.com/github-settings-custom-domain.png?e=1579896418&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:xBGBLkVCOB_Xqruz4Wvz7iOezqo)
 
@@ -601,21 +601,21 @@ hexo generate
 hexo deploy
 ```
 
-过不了多久，在浏览器中输入我的域名 `sunyt.site`，就能访问我在GitHub托管的博客了。
+过不了多久，在浏览器中输入我的域名 `sunyt.site`，就能访问我在 GitHub 托管的博客了。
 
 ---
 
-## 11 部署至Coding实现国内外分流
+## 11 部署至 Coding 实现国内外分流
 
-我们已经将Hexo博客部署在GitHub上了，但GitHub是国外的，而且百度的蜘蛛不能爬取GitHub。如果希望我们的博客被百度收录，而且能更快地访问，可以同时在国内的[Coding](https://coding.net/)平台做托管。这么一来，在国内访问的是Coding，国外就走GitHub。
+我们已经将 Hexo 博客部署在 GitHub 上了，但 GitHub 是国外的，而且百度的蜘蛛不能爬取 GitHub。如果希望我们的博客被百度收录，而且能更快地访问，可以同时在国内的 [Coding](https://coding.net/) 平台做托管。这么一来，在国内访问的是 Coding，国外就走 GitHub。
 
-### 11.1 创建Coding项目
+### 11.1 创建 Coding 项目
 
-申请一个Coding账户，然后创建一个项目，项目的名称可以是任意的，我创建的项目名称与此前在GitHub上的用户名相同。
+申请一个 Coding 账户，然后创建一个项目，项目的名称可以是任意的，我创建的项目名称与此前在 GitHub 上的用户名相同。
 
-### 11.2 添加SSH配置
+### 11.2 添加 SSH 配置
 
-这一步也和GitHub一样。添加完成后，验证一下是否生效。
+这一步也和 GitHub 一样。添加完成后，验证一下是否生效。
 
 ```bash
 ssh -T git@e.coding.net
@@ -623,7 +623,7 @@ ssh -T git@e.coding.net
 
 ### 11.3 修改项目配置实现多平台部署
 
-修改项目 `_config.yml` 文件中的配置。其中 `github` 和 `coding` 分别填写GitHub仓库和Coding项目的ssh链接。
+修改项目 `_config.yml` 文件中的配置。其中 `github` 和 `coding` 分别填写 GitHub 仓库和 Coding 项目的 ssh 链接。
 
 ```yaml
 # Deployment
@@ -643,25 +643,25 @@ hexo generate
 hexo deploy
 ```
 
-部署的过程中，我们会看到先往GitHub仓库执行了一次 `push` 操作，紧接着又往Coding项目上也 `push` 了一次。
+部署的过程中，我们会看到先往GitHub仓库执行了一次 `push` 操作，紧接着又往 Coding 项目上也 `push` 了一次。
 
-部署完成后，打开Coding项目代码，我们会看到与GitHub相同的Hexo静态文件。
+部署完成后，打开 Coding 项目代码，我们会看到与 GitHub 相同的 Hexo 静态文件。
 
-随即在Coding上部署项目，并设置自定义域名为自己的域名 `sunyt.site`。
+随即在 Coding 上部署项目，并设置自定义域名为自己的域名 `sunyt.site`。
 
 ![](http://q4kbn37nl.bkt.clouddn.com/coding-deploy-setting.png?e=1579899019&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:OyAp31x2qJBjjqs52UNHOhts1H4)
 
 ### 11.4 修改域名解析配置
 
-回到[阿里云控制台](https://dns.console.aliyun.com/)，将原来指向GitHub配置的解析路线改为 `境外`，再分别添加主机记录为 `@` 和 `www` 的两条记录，记录类型选择 `默认`，记录值填写Coding项目的静态网站域名。
+回到[阿里云控制台](https://dns.console.aliyun.com/)，将原来指向 GitHub 配置的解析路线改为 `境外`，再分别添加主机记录为 `@` 和 `www` 的两条记录，记录类型选择 `默认`，记录值填写 Coding 项目的静态网站域名。
 
 ![](http://q4kbn37nl.bkt.clouddn.com/aliyun-dns-setting-github-and-coding.png?e=1579899444&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:MqbSUQGDtVH4Uw6vY1sI9PDC0c0)
 
-不一会儿，我们在国内访问域名 `sunyt.site` 就会访问到托管至Coding的页面了。
+不一会儿，我们在国内访问域名 `sunyt.site` 就会访问到托管至 Coding 的页面了。
 
-我们可以通过在国内 `ping sunyt.site` 和 `ping ssd38z.coding-pages.com`，观察解析到的IP地址是不是相同的，来验证域名解析的正确性。
+我们可以通过在国内 `ping sunyt.site` 和 `ping ssd38z.coding-pages.com`，观察解析到的 IP 地址是不是相同的，来验证域名解析的正确性。
 
-至此，我们的博客已经在GitHub和Coding双向部署，并通过域名解析，对国内外进行分流。
+至此，我们的博客已经在 GitHub 和 Coding 双向部署，并通过域名解析，对国内外进行分流。
 
 ---
 
@@ -669,7 +669,7 @@ hexo deploy
 
 ### 使用七牛云存储图片 2020.1.24
 
-Hexo支持使用 `hexo-asset-image` 插件内联图片，该插件会在创建文章的同时，在同一目录下创建与其同名的目录，用来存放图片文件，使用非常方便，但缺点也显而易见：`source` 目录会很庞大，且内联图片会影响页面的渲染速度。
+Hexo 支持使用 `hexo-asset-image` 插件内联图片，该插件会在创建文章的同时，在同一目录下创建与其同名的目录，用来存放图片文件，使用非常方便，但缺点也显而易见：`source` 目录会很庞大，且内联图片会影响页面的渲染速度。
 
 更好的做法是使用第三方平台来存储图片，我使用的是[七牛云](https://portal.qiniu.com/)。
 
@@ -681,7 +681,7 @@ Hexo支持使用 `hexo-asset-image` 插件内联图片，该插件会在创建�
 
 ### 代码块样式优化 2020.1.24
 
-默认的代码块生成会编译出 `<table>` 元素，使用左右两个 `<td>` 分别展示行号和代码内容，与Matery主题的样式有冲突，非常不美观。
+默认的代码块生成会编译出 `<table>` 元素，使用左右两个 `<td>` 分别展示行号和代码内容，与 Matery 主题的样式有冲突，非常不美观。
 
 解决方法是安装 `hexo-prism-plugin` 插件。
 
@@ -740,21 +740,21 @@ postInfo:
   readCount: true # 文章阅读次数
 ```
 
-### 开启Gitalk评论 2020.1.28
+### 开启 Gitalk 评论 2020.1.28
 
-Matery主题支持[Gitalk](https://gitalk.github.io/)、[Gitment](https://imsun.github.io/gitment/)、[Valine](https://valine.js.org/)和[Disqus](https://disqus.com/)评论模块，官方推荐的是Gitalk。
+Matery 主题支持 [Gitalk](https://gitalk.github.io/)、[Gitment](https://imsun.github.io/gitment/)、[Valine](https://valine.js.org/) 和 [Disqus](https://disqus.com/) 评论模块，官方推荐的是 Gitalk。
 
-开启Gitalk评论，首先需要创建一个GitHub的OAuth App。
+开启 Gitalk 评论，首先需要创建一个 GitHub 的 OAuth App。
 
-登陆GitHub，在 `Settings` > `Developer settings` 下，找到 `OAuth Apps` 菜单。
+登陆 GitHub，在 `Settings` > `Developer settings` 下，找到 `OAuth Apps` 菜单。
 
 ![](http://q4kbn37nl.bkt.clouddn.com/github-oauth-apps.png?e=1580182303&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:fK9xiyWAbfpRy7JyvjuLncuLqBg)
 
-点击 `New OAuth App` 创建一个OAuth App。其中 `Application Name` 自定义，`Homepage URL` 和 `Authorization callback URL` 填写博客的地址。
+点击 `New OAuth App` 创建一个 OAuth App。其中 `Application Name` 自定义，`Homepage URL` 和 `Authorization callback URL` 填写博客的地址。
 
 ![](http://q4kbn37nl.bkt.clouddn.com/github-new-oauth-app.png?e=1580182303&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:SExXN6tiR7fGxUY9CMzLUJWid7s)
 
-创建完成后，可以点击刚创建的OAuth App，查看 `Client ID` 和 `Client Secret`。
+创建完成后，可以点击刚创建的 OAuth App，查看 `Client ID` 和 `Client Secret`。
 
 ![](http://q4kbn37nl.bkt.clouddn.com/github-oauth-app-client-id.png?e=1580185161&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:cv2mSXRTnZUytxZug4M5bkc5QtQ)
 
@@ -762,7 +762,7 @@ Matery主题支持[Gitalk](https://gitalk.github.io/)、[Gitment](https://imsun.
 
 ![](http://q4kbn37nl.bkt.clouddn.com/github-repository-settings-issues.png?e=1580183579&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:lGSlq18Y_LMUNSgwoJfNJiDTxf8)
 
-接着修改 `theme/matery/_config.yml` 主题配置文件，开启gitalk，并填写GitHub仓库和OAuth App相关信息。
+接着修改 `theme/matery/_config.yml` 主题配置文件，开启 gitalk，并填写 GitHub 仓库和 OAuth App 相关信息。
 
 ```yaml
 # the Gitalk config，default disabled
@@ -781,9 +781,9 @@ gitalk:
 
 ![](http://q4kbn37nl.bkt.clouddn.com/article-comments.png?e=1580185433&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:I1g1rc1WLuGJDNjEQWwvUPZ49P8)
 
-编辑评论前需要登录自己的GitHub账户。
+编辑评论前需要登录自己的 GitHub 账户。
 
-此时，打开GitHub仓库的 `Issues` 菜单，会发现Gitalk对博客的每篇文章都创建了一个独立的Issue。这给了我们一个线索。如果小伙伴们对评论的实现方式充满好奇，可以自行研究。
+此时，打开 GitHub 仓库的 `Issues` 菜单，会发现 Gitalk 对博客的每篇文章都创建了一个独立的 Issue。这给了我们一个线索。如果小伙伴们对评论的实现方式充满好奇，可以自行研究。
 
 ### 添加《龙珠》素材 2020.1.29
 
@@ -791,7 +791,7 @@ gitalk:
 
 修改 `themes/matery/source/css/matery.css` 文件，使主题样式的色调为橙色系，更贴近“龙珠”主题。
 
-其中的LOGO，我通过一款[svg在线编辑工具](https://svg.wxeditor.com/)，使用简单的圆、五角星和曲线，绘制了一个“龙珠”的图标。
+其中的 LOGO，我通过一款[svg在线编辑工具](https://svg.wxeditor.com/)，使用简单的圆、五角星和曲线，绘制了一个“龙珠”的图标。
 
 ![](http://q4kbn37nl.bkt.clouddn.com/svg-wxeditor.png?e=1580256074&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:keM96mJ9YV3Qhx2MO8a9I2mGHTg)
 
@@ -827,4 +827,6 @@ gitalk:
 
 ```
 
-这样便自制了一个效果还不错的LOGO图标。
+这样便自制了一个效果还不错的 LOGO 图标。
+
+![](http://q4kbn37nl.bkt.clouddn.com/my-logo.png?e=1580266436&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:3A5J3iBLHvQAcWutZT5f6OwfULk)
