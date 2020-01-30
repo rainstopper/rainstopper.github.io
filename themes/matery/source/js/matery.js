@@ -70,7 +70,7 @@ $(function () {
 
     /*文章内容详情的一些初始化特性*/
     let articleInit = function () {
-        $('#articleContent a').attr('target', '_blank');
+        // $('#articleContent a').attr('target', '_blank');
 
         $('#articleContent img').each(function () {
             let imgPath = $(this).attr('src');
@@ -146,16 +146,16 @@ $(function () {
         }
     }
 
-    	
+
 	$(".nav-menu>li").hover(function(){
 		$(this).children('ul').stop(true,true).show();
 		 $(this).addClass('nav-show').siblings('li').removeClass('nav-show');
-		
+
 	},function(){
 		$(this).children('ul').stop(true,true).hide();
 		$('.nav-item.nav-show').removeClass('nav-show');
 	})
-	
+
     $('.m-nav-item>a').on('click',function(){
             if ($(this).next('ul').css('display') == "none") {
                 $('.m-nav-item').children('ul').slideUp(300);

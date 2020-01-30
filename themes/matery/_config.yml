@@ -43,9 +43,9 @@ menu:
 # 站点运行开始时间.
 time:
   enable: false
-  year: 2019 # 年份
-  month: 06 # 月份
-  date: 28 # 日期
+  year: 2020 # 年份
+  month: 01 # 月份
+  date: 23 # 日期
   hour: 00 # 小时
   minute: 00 # 分钟
   second: 00 # 秒
@@ -453,9 +453,9 @@ tidio:
 #背景canvas-nest
 canvas_nest:
   enable: true
-  color: 0,0,255 # 线条颜色, 默认: '0,0,0' ；三个数字分别为(R,G,B)，注意用,分割
-  pointColor: 0,0,255 # 交点颜色, 默认: '0,0,0' ；三个数字分别为(R,G,B)，注意用,分割
-  opacity: 0.7 # 线条透明度（0~1）, 默认: 0.5
+  color: 232, 140, 48 # 线条颜色, 默认: '0,0,0' ；三个数字分别为(R,G,B)，注意用,分割
+  pointColor: 232, 140, 48 # 交点颜色, 默认: '0,0,0' ；三个数字分别为(R,G,B)，注意用,分割
+  opacity: 0.9 # 线条透明度（0~1）, 默认: 0.5
   zIndex: -1 # 背景的 z-index 属性，css 属性用于控制所在层的位置, 默认: -1.
   count: 99 # 线条的总数量, 默认: 99
 
@@ -491,8 +491,8 @@ subtitle:
   startDelay: 300 # 开始延迟
   typeSpeed: 100 # 打字速度
   backSpeed: 50 # 删除速度
-  sub1: 人生就像是回力标，你投掷出的是什么，收到的就是什么
-  sub2: Life is like a beacon, you receive what you throw
+  sub1: 身为战斗民族的骄傲，请与我一战高下！
+  sub2: As the pride of the fighting nation, I'm ready for the battle!
 
 # 手机二级菜单.
 navMenu:
