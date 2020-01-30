@@ -164,7 +164,8 @@ code {
     top: 13px !important;
     font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;
     font-size: 0.91rem;
-    color: #e96900;
+    color: #FF2A68;
+    /* color: #e96900; */
     background-color: #f8f8f8;
     border-radius: 2px;
 }
@@ -1057,6 +1058,11 @@ article .article-tags .chip {
 
 #artDetail .tag-cate {
     padding-bottom: 15px;
+    display: flex;
+}
+
+#artDetail .tag-cate .tags {
+  flex: 1;
 }
 
 #artDetail a {
@@ -2157,4 +2163,12 @@ footer .copy-right {
     height: 50px;
     padding: 0px;
     margin: 0px;
+}
+
+.anchor::before {
+  display: block;
+  content: " ";
+  height: 60px;
+  margin-top: -60px;
+  visibility: hidden;
 }
