@@ -31,6 +31,14 @@ img: http://q4kbn37nl.bkt.clouddn.com/long-zhu-lei-da.gif?e=1580245265&token=0QX
 相关：王煜全 ——《中国优势》P. 13
 收录时间：2020.1.23
 
+### 成长思维模式（growth-mindset）
+
+见[“思维模式”理论](#si-wei-mo-shi-li-lun)。
+
+出自：卡罗尔·德韦克（Carol S. Dweck）——《终身成长：重新定义成功的思维模式》
+相关：万维钢 ——《万维钢·精英日课2：提高学习成绩的最简单心法》[课程笔记](/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-2/20180329_ti-gao-xue-xi-cheng-ji-de-zui-jian-dan-xin-fa/)
+收录时间：2020.1.31
+
 ### 创新效率
 
 > 一个可以用来衡量经济体或者企业整体的创新能力的指标。它包括三个维度：创新的质量、创新的成功率和创新的数量。
@@ -99,6 +107,14 @@ img: http://q4kbn37nl.bkt.clouddn.com/long-zhu-lei-da.gif?e=1580245265&token=0QX
 相关：王煜全 ——《中国优势》P. 71
 收录时间：2020.1.23
 
+### 固定思维模式（fixed-mindset）
+
+见[“思维模式”理论](#si-wei-mo-shi-li-lun)。
+
+出自：卡罗尔·德韦克（Carol S. Dweck）——《终身成长：重新定义成功的思维模式》
+相关：万维钢 ——《万维钢·精英日课2：提高学习成绩的最简单心法》[课程笔记](/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-2/20180329_ti-gao-xue-xi-cheng-ji-de-zui-jian-dan-xin-fa/)
+收录时间：2020.1.31
+
 ---
 
 ## H
@@ -109,6 +125,13 @@ img: http://q4kbn37nl.bkt.clouddn.com/long-zhu-lei-da.gif?e=1580245265&token=0QX
 
 出自：王煜全 ——《中国优势》P. 95
 收录时间：2020.1.23
+
+### 灰度认知，黑白决策
+
+> 我们知道世界不是非黑即白的，其中有很多灰色地带，所以我们必须有灰度的认知 —— 可是如果要做事的话，却不能是灰色的。
+
+相关：万维钢 ——《万维钢·精英日课3：逻辑思维5：灰度认知和黑白决策》[课程笔记](/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-3/20190326_luo-ji-si-wei-5-hui-du-ren-zhi-he-hei-bai-jue-ce/)
+收录时间：2020.1.31
 
 ---
 
@@ -176,7 +199,7 @@ img: http://q4kbn37nl.bkt.clouddn.com/long-zhu-lei-da.gif?e=1580245265&token=0QX
 
 ### “跨越鸿沟”理论（Crossing the Chasm）
 
-> 1991 年由美国科技领域营销大师杰弗里·摩尔（Geoffrey Moore）首次提出的市场理论。
+> 1991 年由美国科技领域营销大师杰弗里·摩尔（Geoffrey Moore）首次提出的市场营销理论。
 
 根据用户对新技术、新产品的接受度，将用户分为五类。
 
@@ -235,6 +258,21 @@ img: http://q4kbn37nl.bkt.clouddn.com/long-zhu-lei-da.gif?e=1580245265&token=0QX
 
 相关：王煜全 ——《中国优势》P. 57
 收录时间：2020.1.23
+
+
+<div class="anchor" id="si-wei-mo-shi-li-lun"></div>
+
+### “思维模式”理论
+
+> 人对智能的思维模式可以分为两种 ——
+>
+> 一种是所谓“成长思维模式（growth mindset）”，就是你认为学习不在天赋，而在于努力，只要努力用功，什么东西都能学会。
+>
+> 另一种叫“固定思维模式（fixed mindset）”，就是你特别相信天赋的作用，擅长的东西就是擅长，要是不擅长怎么学都没用。
+
+出自：卡罗尔·德韦克（Carol S. Dweck）——《终身成长：重新定义成功的思维模式》
+相关：万维钢 ——《万维钢·精英日课2：提高学习成绩的最简单心法》[课程笔记](/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-2/20180329_ti-gao-xue-xi-cheng-ji-de-zui-jian-dan-xin-fa/)
+收录时间：2020.1.31
 
 ---
 

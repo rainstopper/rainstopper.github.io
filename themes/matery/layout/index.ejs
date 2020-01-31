@@ -86,9 +86,9 @@
 
                     <div class="card-content article-content">
                         <%
-                          var summary = post.summary || strip_html(post.content);
-                          var classes = ['summary'];
-                          if (summary.length > 120) classes.push('block-with-text');
+                            var summary = post.summary || strip_html(post.content);
+                            var classes = ['summary'];
+                            if (summary.length > 120) classes.push('block-with-text');
                         %>
                         <div class="<%- classes.join(' ') %>">
                         <% if (summary.length > 120) { %>

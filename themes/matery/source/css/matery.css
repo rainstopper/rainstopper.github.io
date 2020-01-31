@@ -1260,7 +1260,7 @@ article .article-tags .chip {
 th,
 td {
     padding: 12px 13px;
-    border: 1px solid #dfe2e5;
+    border: 1px solid #dfe2e5 !important;
 }
 
 table tr:nth-child(2n),
