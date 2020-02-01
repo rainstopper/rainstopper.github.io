@@ -48,7 +48,7 @@ summary: 《万维钢·精英日课2：客观题和主观题》课程笔记
 
 ### 1.4 费舍尔等人的研究
 
-事实上，上面这几道题来自卡耐基梅隆大学和耶鲁大学的几位心理学家和认知科学家。他们在 2018 年二月份的《科学美国人》上发表了一篇文章 [[1]](#references)，叫《有毒政治对话是否会改变我们对客观事实的看法》，介绍了自己的一项研究。文章第一作者是马修·费舍尔（Matthew Fisher）。
+事实上，上面这几道题来自卡耐基梅隆大学和耶鲁大学的几位心理学家和认知科学家。他们在2018年二月份的《科学美国人》上发表了一篇文章 [[1]](#references)，叫《有毒政治对话是否会改变我们对客观事实的看法》，介绍了自己的一项研究。文章第一作者是马修·费舍尔（Matthew Fisher）。
 
 #### 1.4.1 客观派和主观派
 
@@ -174,7 +174,7 @@ summary: 《万维钢·精英日课2：客观题和主观题》课程笔记
 
 [1] Are Toxic Political Conversations Changing How We Feel about Objective Truth? By Matthew Fisher, Joshua Knobe, Brent Strickland, Frank C. Keil, SCIENTIFIC AMERICAN FEBRUARY 2018.
 
-[2] 奥曼的原始论文是 Agreeing to disagree，发表于 1976 年。万维钢的《真理追求者》一文中有介绍过这个理论。
+[2] 奥曼的原始论文是 Agreeing to disagree，发表于1976年。万维钢的《真理追求者》一文中有介绍过这个理论。
 
 
 课程发布日期：2018.2.1

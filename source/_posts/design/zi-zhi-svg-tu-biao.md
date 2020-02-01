@@ -5,6 +5,7 @@ categories:
 - [太阳拳]
 tags: [设计, 制作, SVG]
 summary: 自制一个 SVG 格式的专属 LOGO 图标
+img: http://q4kbn37nl.bkt.clouddn.com/desk_20200201095737.jpg?e=1580525893&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:U6hmIS6NJJIdyuGWn40pQwFqFKQ
 ---
 
 新博客搭建的第 N 天，大体上用着还挺顺手，唯一的缺憾就是少一个自己专属的 LOGO。之前因为没有准备，索性把 LOGO 这玩意儿给去掉了，以无 LOGO 状态“裸跑”了好一阵子。可好些天下来了，一想到这茬，还是觉也睡不好，饭也吃不香（主要是让新型冠状病毒给禁足了，在家闲得慌）。
@@ -145,3 +146,5 @@ logo: /medias/logo.svg # 添加 LOGO，看我看我！！
 `<ellipse>` 和 `<path>` 元素的 `stroke-width` 属性就是上文提到的线粗。
 
 如果你制作的图标线条是黑色的，将 `<ellipse>` 和 `<path>` 元素的 `stroke` 线条颜色属性值修改为 `#fff` 白色即可。
+
+如此看来，SVG 格式的文件很有逻辑性可言，它告描述了渲染的规则和步骤，它比一般的“像素坐标 + 颜色”的描述方式更高级。

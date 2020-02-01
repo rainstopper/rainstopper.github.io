@@ -8,7 +8,7 @@ summary: 格言金句
 img: http://q4kbn37nl.bkt.clouddn.com/xian-dou.jpg?e=1580351453&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:hEDN46SKRt8Nl9idEgPdAQYr8-0
 ---
 
-持续收录的格言金句。
+##### 持续收录的格言金句
 
 ## 雷·达里奥语录
 

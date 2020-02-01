@@ -3,12 +3,12 @@ title: 坡塔拉耳环
 date: 2020-01-30 05:40:15
 categories:
 - [万能胶囊]
-tags: [概念, 公式]
-summary: 概念方程式
+tags: [知识, 公式]
+summary: 知识方程式
 img: http://q4kbn37nl.bkt.clouddn.com/po-ta-la-er-huan.png?e=1580336943&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:pEKaATKgjM6IULGs1ZWRs09lGvk
 ---
 
-持续收录的概念公式。
+##### 持续收录的知识公式
 
 ## C
 
@@ -143,7 +143,7 @@ img: http://q4kbn37nl.bkt.clouddn.com/po-ta-la-er-huan.png?e=1580336943&token=0Q
 
 > *所谓“开放”，就是互相不设防*。我告诉你一个我自己比较隐私的事情，向你暴露一个弱点，然后你也向我暴露你的一个弱点，这种不设防的感觉能迅速拉近两个人的亲密程度。你只要主动来一段难过的情感流露，马上就能拉近跟一个陌生人的关系。
 >
-> 好关系来自互相之间不断的响应。这是一个叫哈里·赖斯（Harry Reis）的社会心理学家于 2007 年提出的理论。他的洞见是，好关系的关键是“我们互相对对方的响应的感知”。我能感知到你对我的响应，你能感知到我对你的响应，咱俩就是好关系。
+> 好关系来自互相之间不断的响应。这是一个叫哈里·赖斯（Harry Reis）的社会心理学家于2007年提出的理论。他的洞见是，好关系的关键是“我们互相对对方的响应的感知”。我能感知到你对我的响应，你能感知到我对你的响应，咱俩就是好关系。
 
 同时，[响应 = 理解 + 接受 + 关心](#xiang-ying)。
 
@@ -189,7 +189,7 @@ img: http://q4kbn37nl.bkt.clouddn.com/po-ta-la-er-huan.png?e=1580336943&token=0Q
 
 > 最容易被人接受的东西，往往是在熟悉和新奇之间找到了一个微妙的平衡。
 
-你之所以觉得这个东西美，是因为你比较熟悉这个东西。这个效应叫做“[多看效应（Mere Exposure Effect）](/tools/concept-handbook/#duo-kan-xiao-ying)”。
+你之所以觉得这个东西美，是因为你比较熟悉这个东西。这个效应叫做“[多看效应（Mere Exposure Effect）](/tools/knowledge-handbook/#duo-kan-xiao-ying)”。
 
 心理学家在无数的实验中让受试者选他喜欢的东西，最后选出来的都是他熟悉的东西。所以多看效应的意思就是“看得次数多了就喜欢了” —— 也可以说是“吐啊吐啊就习惯了”。
 

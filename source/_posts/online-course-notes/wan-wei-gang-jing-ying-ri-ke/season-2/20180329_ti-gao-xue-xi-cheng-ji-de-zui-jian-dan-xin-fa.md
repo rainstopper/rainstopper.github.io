@@ -113,9 +113,9 @@ summary: 《万维钢·精英日课2：提高学习成绩的最简单心法》�
 
 ### 延伸
 
-#### 研究原文
+#### 实验原文
 
-原文[链接](https://digest.bps.org.uk/2018/03/23/this-cheap-brief-growth-mindset-intervention-shifted-struggling-students-onto-a-more-successful-trajectory/)。
+这项实验论文现已发布，原文[链接](https://digest.bps.org.uk/2018/03/23/this-cheap-brief-growth-mindset-intervention-shifted-struggling-students-onto-a-more-successful-trajectory/)。
 
 
 <div class="anchor" id="references"></div>

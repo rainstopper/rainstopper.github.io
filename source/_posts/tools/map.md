@@ -9,7 +9,9 @@ img: http://q4kbn37nl.bkt.clouddn.com/long-zhu-di-tu.jpg?e=1580247107&token=0QXS
 top: true
 ---
 
-描述对应文章和分类的含义，存放《龙珠》中的素材，带你游览热血的龙珠世界。
+##### 带你游览奇妙的龙珠世界
+
+描述对应文章和分类的含义，存放《龙珠》中的素材。
 
 ## 精神时光屋
 
@@ -81,15 +83,27 @@ top: true
 
 用途：作为文章 —— 即本文。
 
+### 龙珠
+
+> 七颗名为“龙珠”的宝物，每颗龙珠各自有一至七颗不等的五角星标记并散布于世界各地，只要集齐七颗龙珠就可以呼唤出神龙，向神龙许愿便可以达成任何愿望。
+>
+> 而龙珠在神龙实现愿望后便会自动飞散并且变成石头，一年后集齐七颗龙珠的话，便可再次实现愿望。
+
+![龙珠](http://q4kbn37nl.bkt.clouddn.com/long-zhu.jpg?e=1580530338&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:GNwZlYzuiA2e2R81-FwjbWfnb6Q)
+
+寓意：用来实现愿望的 `宝物`、`知识`、`财富`。
+
+用途：作为文章 —— [知识手册](/tools/knowledge-handbook/)
+
 ### 龙珠雷达
 
 > 用来寻找龙珠的道具。最精准的是布尔玛所制的龙珠雷达。
 
 ![龙珠雷达](http://q4kbn37nl.bkt.clouddn.com/long-zhu-lei-da.gif?e=1580245265&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:oneRra2rduP85ExzRj0Fvxkfd4Y)
 
-寓意：知识的 `指南针`、`扫盲` 工具。
+寓意：知识的 `指南针`、`仪表盘`、`扫盲` 工具。
 
-用途：作为文章 —— [概念手册](/tools/concept-handbook/)。
+用途：作为文章 —— [知识图谱](/tools/knowledge-graph/)。
 
 ### 坡塔拉耳环
 
@@ -109,7 +123,7 @@ top: true
 
 寓意：旧的知识组合成新的知识。
 
-用途：作为文章 —— [概念方程式](/tools/concept-formula/)。
+用途：作为文章 —— [知识方程式](/tools/knowledge-formula/)。
 
 ### 仙豆
 
@@ -122,6 +136,20 @@ top: true
 寓意：`打鸡血`、`满血复活`的强心剂。
 
 用途：作为文章 —— [格言金句](/tools/mottoes/)。
+
+#### 筋斗云
+
+> 用来骑乘的飞行工具。
+>
+> 猫仙人送给青年龟仙人的礼物，只有内心纯洁的人才能坐上去。本体是卡林塔外的一大片云。
+>
+> 龟仙人老年变得好色而无法再使用，于是送给了悟空。不怕子弹、炮弹等一切物理攻击，但会被魔族的攻击打散。
+
+![筋斗云](http://q4kbn37nl.bkt.clouddn.com/jin-dou-yun.jpg?e=1580528638&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:lincyH5hAJSaOdRzzzF8MZPvRC0)
+
+寓意：腾云驾雾的赶路神器，我们一直在路上。
+
+用途：作为文章 —— [待办事项](/tools/to-do-list/)。
 
 ## 吧台
 
@@ -160,14 +188,6 @@ top: true
 #### 如意棒
 
 > 青年龟仙人向猫仙人坚持要来的武器。实际上是连接卡林塔与天神殿的神器。轻便但十分坚硬，且能按使用者的意愿伸长缩短。
-
-#### 筋斗云
-
-> 用来骑乘的飞行工具。
->
-> 猫仙人送给青年龟仙人的礼物，只有内心纯洁的人才能坐上去。本体是卡林塔外的一大片云。
->
-> 龟仙人老年变得好色而无法再使用，于是送给了悟空。不怕子弹、炮弹等一切物理攻击，但会被魔族的攻击打散。
 
 #### 超神水
 

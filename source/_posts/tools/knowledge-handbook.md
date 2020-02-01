@@ -1,14 +1,15 @@
 ---
-title: 龙珠雷达
+title: 龙珠
 date: 2020-01-23 18:21:29
 categories:
 - [万能胶囊]
-tags: [概念, 手册, 词条, 扫盲]
-summary: 概念手册
-img: http://q4kbn37nl.bkt.clouddn.com/long-zhu-lei-da.gif?e=1580245265&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:oneRra2rduP85ExzRj0Fvxkfd4Y
+tags: [知识, 手册, 概念, 词条]
+summary: 知识手册
+img: http://q4kbn37nl.bkt.clouddn.com/long-zhu.jpg?e=1580530338&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:GNwZlYzuiA2e2R81-FwjbWfnb6Q
+top: true
 ---
 
-持续收录的概念手册。
+##### 持续收录的知识手册
 
 ## C
 
@@ -52,7 +53,7 @@ img: http://q4kbn37nl.bkt.clouddn.com/long-zhu-lei-da.gif?e=1580245265&token=0QX
 
 ### 《杜拜法案》
 
-> 1980 年 12 月 12 日，美国国会通过了《杜拜法案》，也称《大学和小企业专利程序法案》。它的核心即确立高校对知识产权的所有权。
+> 1980年12月12日，美国国会通过了《杜拜法案》，也称《大学和小企业专利程序法案》。它的核心即确立高校对知识产权的所有权。
 >
 > * 将专利的所有权和商业开发权分离
 > 《杜拜法案》规定，专利的所有权属于高校，高校可以向企业授予专利的独家商业权益。
@@ -73,11 +74,11 @@ img: http://q4kbn37nl.bkt.clouddn.com/long-zhu-lei-da.gif?e=1580245265&token=0QX
 
 > 心理学上把“对越熟悉的东西越喜欢”的现象称为“多看效应”。
 
-20 世纪 60 年代，心理学家查荣茨做过这样一个实验：他向参加实验的人出示一些人的照片，让他们观看。有些照片出现了二十几次，有的出现十几次，而有的则只出现了一两次。之后，请看照片的人评价他们对照片的喜爱程度。结果发现，参加实验的人看到某张照片的次数越多，就越喜欢这张照片。他们更喜欢那些看过二十几次的熟悉照片，而不是只看过几次的新鲜照片。也就是说，看的次数增加了喜欢的程度。
+20世纪60年代，心理学家查荣茨做过这样一个实验：他向参加实验的人出示一些人的照片，让他们观看。有些照片出现了二十几次，有的出现十几次，而有的则只出现了一两次。之后，请看照片的人评价他们对照片的喜爱程度。结果发现，参加实验的人看到某张照片的次数越多，就越喜欢这张照片。他们更喜欢那些看过二十几次的熟悉照片，而不是只看过几次的新鲜照片。也就是说，看的次数增加了喜欢的程度。
 
 在一所大学的女生宿舍楼里，心理学家随机找了几个寝室，发给她们不同口味的饮料，然后要求这几个寝室的女生，可以以品尝饮料为理由，在这些寝室间互相走动，但见面时不得交谈。一段时间后，心理学家评估她们之间的熟悉和喜欢的程度，结果发现：见面的次数越多，相互喜欢的程度越大；而见面的次数越少或根本没有，相互喜欢的程度就较低。
 
-相关：[喜欢 = 熟悉 + 意外](/tools/concept-formula/#xi-huan)
+相关：[喜欢 = 熟悉 + 意外](/tools/knowledge-formula/#xi-huan)
 收录时间：2020.1.30
 
 
@@ -132,6 +133,28 @@ img: http://q4kbn37nl.bkt.clouddn.com/long-zhu-lei-da.gif?e=1580245265&token=0QX
 
 相关：万维钢 ——《万维钢·精英日课3：逻辑思维5：灰度认知和黑白决策》[课程笔记](/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-3/20190326_luo-ji-si-wei-5-hui-du-ren-zhi-he-hei-bai-jue-ce/)
 收录时间：2020.1.31
+
+---
+
+## J
+
+<div class="anchor" id="ji-yi-qv-xian"></div>
+
+### 记忆曲线
+
+> 由德国心理学家艾宾浩斯(H.Ebbinghaus)研究发现，描述了人类大脑对新事物遗忘的规律。
+
+艾宾浩斯研究发现，遗忘在学习之后立即开始，而且遗忘的进程并不是均匀的。最初遗忘速度很快，以后逐渐缓慢。
+
+他认为"保持和遗忘是时间的函数"，他用无意义音节（由若干音节字母组成、能够读出、但无内容意义即不是词的音节）作记忆材料，用节省法计算保持和遗忘的数量。并根据他的实验结果绘成描述遗忘进程的曲线，即著名的“艾宾浩斯记忆遗忘曲线”。
+
+![“记忆曲线”图解](http://q4kbn37nl.bkt.clouddn.com/the-ebbinghaus-forgetting-curve.jpg?e=1580532271&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:RckLgyWG6u_nQmdr2g8rfvlT2lg)
+
+这向我们揭示了，学习要勤于复习，并且理解得越深入，遗忘得也越慢。
+
+出自：赫尔曼·艾宾浩斯（Hermann Ebbinghaus，德国心理学家）
+相关：万维钢 ——《万维钢·精英日课1：忘记是为了更好的记住》[课程笔记](/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-1/20160831_wang-ji-shi-wei-le-geng-hao-de-ji-zhu/)
+收录时间：2020.2.1
 
 ---
 
@@ -197,9 +220,28 @@ img: http://q4kbn37nl.bkt.clouddn.com/long-zhu-lei-da.gif?e=1580245265&token=0QX
 出自：王煜全 ——《中国优势》P. 16
 收录时间：2020.1.23
 
+
+<div class="anchor" id="ke-yi-lian-xi"></div>
+
+### 刻意练习
+
+> 佛罗里达州立大学心理学家安德斯·艾利克森（K. Anders Ericsson）提出的一个概念。它提倡 ——
+>
+> 1. 只在“学习区”学习；
+>
+> 2. 把训练内容分为有针对性的小块，对每一个小块进行重复练习，直到把这个套路“长”在大脑之中；
+>
+> 3. 练习中要随时获得有效的反馈 —— 考试就是很好的反馈；
+>
+> 4. 练习时注意力必须高度集中 —— 所以刻意练习不好玩。
+
+出自：安德斯·艾利克森（K. Anders Ericsson，佛罗里达州立大学心理学家）
+相关：万维钢 ——《万维钢·精英日课2：特别放松丨关于学习的15个真相》
+收录时间：2020.2.1
+
 ### “跨越鸿沟”理论（Crossing the Chasm）
 
-> 1991 年由美国科技领域营销大师杰弗里·摩尔（Geoffrey Moore）首次提出的市场营销理论。
+> 1991年由美国科技领域营销大师杰弗里·摩尔（Geoffrey Moore）首次提出的市场营销理论。
 
 根据用户对新技术、新产品的接受度，将用户分为五类。
 
@@ -231,6 +273,21 @@ img: http://q4kbn37nl.bkt.clouddn.com/long-zhu-lei-da.gif?e=1580245265&token=0QX
 
 出自：王煜全 ——《中国优势》P. 54
 收录时间：2020.1.23
+
+---
+
+## Q
+
+<div class="anchor" id="qiang-li-yan-du"></div>
+
+### 强力研读
+
+> 一种高强度的读书方法，也是一种态度和心法。
+>
+> 它追求阅读的深度和效率，力图能在一本书中挖掘到最大限度的收获。
+
+相关：《万维钢·精英日课2：特别放送丨给高手的学习方法建议》[课程笔记](/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-2/20171110_te-bie-fang-song-gei-gao-shou-de-xue-xi-fang-fa-jian-yi/)
+收录时间：2020.2.1
 
 ---
 
@@ -300,7 +357,7 @@ img: http://q4kbn37nl.bkt.clouddn.com/long-zhu-lei-da.gif?e=1580245265&token=0QX
 
 ### “微笑曲线”理论（Smiling Curve）
 
-> 重要科技业者宏碁集团创办人施振荣先生在 1992 年为“再造宏碁”提出的产业理论。
+> 重要科技业者宏碁集团创办人施振荣先生在1992年为“再造宏碁”提出的产业理论。
 
 ![“微笑曲线”理论图解](http://q4kbn37nl.bkt.clouddn.com/wei-xiao-qv-xian-li-lun.jpg?e=1580340448&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:Mhv9UjZf0etSN-e50-MGM5W1_QY)
 
@@ -325,3 +382,11 @@ img: http://q4kbn37nl.bkt.clouddn.com/long-zhu-lei-da.gif?e=1580245265&token=0QX
 出自：菲茨·杰拉德（Francis Scott Key Fitzgerald）
 相关：万维钢 ——《万维钢·精英日课2：独处的工夫》
 收录时间：2020.1.30
+
+### 遗忘曲线
+
+见[记忆曲线](#ji-yi-qv-xian)。
+
+出自：赫尔曼·艾宾浩斯（Hermann Ebbinghaus，德国心理学家）
+相关：万维钢 ——《万维钢·精英日课1：忘记是为了更好的记住》[课程笔记](//online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-1/20160831_wang-ji-shi-wei-le-geng-hao-de-ji-zhu/)
+收录时间：2020.2.1

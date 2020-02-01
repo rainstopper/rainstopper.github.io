@@ -7,7 +7,7 @@ tags: [Hexo, 博客, 个人博客, 博客搭建]
 summary: 精神時光屋的诞生过程
 img: http://q4kbn37nl.bkt.clouddn.com/jing-shen-shi-guang-wu.jpg?e=1580247922&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:Z8FZdNQ7yKUvPUgUIBWdd7_Sadg
 ---
-今天是 2020 年的除夕。时光犹如白驹过隙，转眼又将开启崭新的一年。
+今天是2020年的除夕。时光犹如白驹过隙，转眼又将开启崭新的一年。
 
 过去的 25 年是美好而短暂的，美在成就了如今的我，短于日子走得太快，忘了仔细地去记录。这也是偶尔令我感到些许遗憾的。
 
