@@ -274,6 +274,8 @@ hexo server
 
 ## 6 基本用法
 
+### 6.1 写作
+
 执行如下命令创建一篇新文章或者新的页面。
 
 ```bash
@@ -305,6 +307,22 @@ hexo new [layout] <title>
 ```
 
 编辑 `source` 目录下的文件，开始我们的写作。
+
+### 6.2 管理资源
+
+*资源管理的关键在于理解 Hexo 的代码生成规则。*
+
+根据 Hexo [官方文档](https://hexo.io/zh-cn/docs/asset-folders)中的描述，在文章中管理资源文件可以有多种方式。
+
+1. 一种方式是直接将资源文件放在 `source` 目录下，在文章中通过根目录 `/` 去访问。这种方式比较适合放置一些公共资源，比如第三方库，原因是它们可能被多篇文章同时引用。
+
+2. 另一种方式则需要先在 `_config.yml` 配置文件中设置 `post_asset_folder: true`。这行配置的作用是，此后使用 `hexo new [layout] <title>` 命令时，会在文章所在目录下创建一个与之同名的文件夹，用来存放资源文件，然后在文章中通过当前目录 `./` 去访问。
+这种方法有一个弊端，每次创建文章都会创建同名的文件夹，但大多数情况下我的文章很可能不需要引用任何的资源文件。这会使目录看起来非常臃肿，而这些文件夹都是空荡荡的。但这时我往 `_config.yml` 配置文件中设置 `post_asset_folder: false` 去关闭这个特性，在文章中就无法访问到同名文件夹下的资源文件了。
+另外，我怀疑这是一个 bug —— 上述方法生成的同名文件夹下，如果包含 `.js` 文件，会像 `.md` 文件一样，被解析成新的一篇文章。这也是我不提倡这种方法的一个重要理由。
+
+3. 还有一种方式是使用主题下的资源目录，也就是 `themes/matery/source`，来存放资源文件。但这显然是一种不好的做法，原因是这些资源文件不应该和主题耦合。
+这个特性还让人联想到一个问题 —— 如果 `source` 目录下的资源和 `themes/matery/source` 中的重名了，会怎么样？实际上，如果是目录重名，例如 `source/libs` 和 `themes/matery/source/libs`，Hexo 会将两个 `libs` 目录下的内容进行合并。如果是文件重名，例如 `source/libs/echarts` 和 `themes/matery/source/libs/echarts` 下各自都有一个 `echarts.min.js` 文件，`source` 目录下的文件会覆盖 `themes/matery/source` 目录下的同名文件。
+
 
 关于 Hexo 的更多用法，可以参照[官方文档](https://hexo.io/zh-cn/docs/)自行尝试。
 
@@ -355,6 +373,8 @@ layout: tags
 
 以此类推，继续创建 `about`、`contact` 和 `friends` 页面。这样一来，博客的菜单都可以点击了。
 
+文档还告诉我们，如果要设置 `友情链接` 页面中的数据，需要创建 `source/_data/friends.json` 文件，并向其中添加数据。
+
 至此，项目的目录结构会像下面这样。
 
 ```
@@ -362,6 +382,8 @@ layout: tags
 ├── public
 ├── scaffolds
 ├── source
+|   ├── _data
+|   |   └── friends.json # 友情链接数据
 |   ├── _drafts
 |   ├── _posts
 |   ├── about # 关于
@@ -584,6 +606,7 @@ git push
 ├── public
 ├── scaffolds
 ├── source
+|   ├── _data
 |   ├── _drafts
 |   ├── _posts
 |   ...

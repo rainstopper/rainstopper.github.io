@@ -6,7 +6,6 @@ categories:
 tags: [知识, 手册, 概念, 词条]
 summary: 知识手册
 img: http://q4kbn37nl.bkt.clouddn.com/long-zhu.jpg?e=1580530338&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:GNwZlYzuiA2e2R81-FwjbWfnb6Q
-top: true
 ---
 
 ##### 持续收录的知识手册
@@ -55,6 +54,9 @@ top: true
 
 相关：王煜全 ——《中国优势》P. 13
 收录时间：2020.1.23
+
+
+<div class="anchor" id="cheng-zhang-si-wei-mo-shi"></div>
 
 ### 成长思维模式（growth-mindset）
 
@@ -132,6 +134,9 @@ top: true
 相关：王煜全 ——《中国优势》P. 71
 收录时间：2020.1.23
 
+
+<div class="anchor" id="gu-ding-si-wei-mo-shi"></div>
+
 ### 固定思维模式（fixed-mindset）
 
 见[“思维模式”理论](#si-wei-mo-shi-li-lun)。
@@ -150,6 +155,9 @@ top: true
 
 出自：王煜全 ——《中国优势》P. 95
 收录时间：2020.1.23
+
+
+<div class="anchor" id="hui-du-ren-zhi-hei-bai-jue-ce"></div>
 
 ### 灰度认知，黑白决策
 
@@ -183,6 +191,8 @@ top: true
 ---
 
 ## K
+
+<div class="anchor" id="kang-nai-er-bi-ji-fa"></div>
 
 ### 康奈尔笔记法
 
@@ -341,6 +351,16 @@ top: true
 收录时间：2020.1.23
 
 
+<div class="anchor" id="si-wei-dao-tu"></div>
+
+### 思维导图
+
+> 一种用于辅助决策是思考工具。
+
+相关：万维钢 ——《万维钢·精英日课2：特别放送丨给高手的学习方法建议》[课程笔记](/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-2/20171110_te-bie-fang-song-gei-gao-shou-de-xue-xi-fang-fa-jian-yi/#si-wei-dao-tu)
+收录时间：2020.2.3
+
+
 <div class="anchor" id="si-wei-mo-shi-li-lun"></div>
 
 ### “思维模式”理论
@@ -419,3 +439,22 @@ top: true
 出自：赫尔曼·艾宾浩斯（Hermann Ebbinghaus，德国心理学家）
 相关：万维钢 ——《万维钢·精英日课1：忘记是为了更好的记住》[课程笔记](//online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-1/20160831_wang-ji-shi-wei-le-geng-hao-de-ji-zhu/)
 收录时间：2020.2.1
+
+---
+
+## Z
+
+<div class="anchor" id="zhi-shi-tu-pu"></div>
+
+### 知识图谱
+
+> 知识图谱（Knowledge Graph）是显示知识发展进程与结构关系的一系列各种不同的图形，用可视化技术描述知识资源及其载体，有利于构建、绘制、显示、分析和挖掘知识及它们之间的相互联系。
+
+具体来说，知识图谱是通过将应用数学、图形学、信息可视化技术、信息科学等学科的理论与方法与计量学引文分析、共现分析等方法结合，并利用可视化的图谱形象地展示学科的核心结构、发展历史、前沿领域以及整体知识架构达到多学科融合目的的现代理论。它把复杂的知识领域通过数据挖掘、信息处理、知识计量和图形绘制而显示出来，揭示知识领域的动态发展规律，为学科研究提供切实的、有价值的参考。
+
+这个概念由 Google 在2012年提出，最初是为了将传统的基于关键字的（keyword-based）搜索模型向基于语义的搜索升级。
+
+目前，随着智能信息服务应用的不断发展，知识图谱已广泛应用于智能搜索、智能问答、个性化推荐等领域。
+
+相关：[《构建知识图谱》](/hexo/build-knowledge-graph/)
+收录时间：2020.2.2
