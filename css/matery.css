@@ -1652,11 +1652,12 @@ thead {
     margin: 0 0.5rem;
     padding: 0;
     color: #fff;
-    border: 1px solid #0f9d58;
-    background: radial-gradient(#4cbf30, #0f9d58);
+    /* border: 1px solid #0f9d58; */
+    background: linear-gradient(to right, #E7B72F 0%, #E88C30 100%);
+    /* background: radial-gradient(#4cbf30, #0f9d58); */
     font-size: 0.9rem;
     border-radius: 50%;
-    box-shadow: 0 4px 6px rgba(50, 50, 93, .21), 0 2px 3px rgba(0, 0, 0, .1);
+    box-shadow: 0 4px 6px rgba(50, 40, 10, .21), 0 2px 3px rgba(0, 0, 0, .1);
 }
 
 .profile .avatar-img {
@@ -2169,6 +2170,6 @@ footer .copy-right {
   display: block;
   content: " ";
   height: 60px;
-  margin-top: -70px;
+  margin-top: -60px;
   visibility: hidden;
 }

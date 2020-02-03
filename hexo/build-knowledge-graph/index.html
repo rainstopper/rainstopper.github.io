@@ -1,0 +1,1600 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="构建知识图谱, 精神時光屋">
+    <meta name="description" content="描述知识图谱的构建过程">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>构建知识图谱 | 精神時光屋</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    
+    <script src="/libs/jquery/jquery.min.js"></script>
+    
+<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper head-container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.svg" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">精神時光屋</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.svg" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">精神時光屋</div>
+        <div class="logo-desc">
+            
+            
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('http://q4kbn37nl.bkt.clouddn.com/desk_20200202120008.jpg?e=1580619646&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:sihJZZErfPmn-KGy2g0HFns0uck')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">构建知识图谱</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #E88C30;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #E88C30;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #E88C30;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col tags">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E7%9F%A5%E8%AF%86/">
+                                <span class="chip bg-color">知识</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%9B%BE%E8%B0%B1/">
+                                <span class="chip bg-color">图谱</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E7%B2%BE%E7%A5%9E%E6%97%B6%E5%85%89%E5%B1%8B/" class="post-category">
+                                精神时光屋
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-02-02
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    4.9k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    19 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="1-背景"><a href="#1-背景" class="headerlink" title="1 背景"></a>1 背景</h2><p>本博客除了分享，它的重要作用是 —— <em>学习</em>。</p>
+<p>我们博客的名字之所以取材于日本动漫《龙珠Z》中的场景“精神时光屋”，就是因为这是一个跨时空的修炼圣地，允许人们忘我地投入进去，使修炼效率得以上百倍地提高。</p>
+<p><img src="http://q4kbn37nl.bkt.clouddn.com/jing-shen-shi-guang-wu.jpg?e=1580247922&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:Z8FZdNQ7yKUvPUgUIBWdd7_Sadg" alt="精神时光屋"></p>
+<p>学习是有法可依的。《万维钢·精英日课2：正确的学习方法只有一种风格》这篇课程告诉我们，什么样的学习方法才是“<a href="/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-2/20180607_zheng-que-de-xue-xi-fang-fa-zhi-you-yi-zhong-feng-ge/#you-xiao-de-fang-fa">有效的学习方法</a>”，其中提到的“把新学到的知识和以前的知识建立连接”这种做法，就是我认为最重要的。《万维钢·精英日课2：特别放松丨给高手的学习方法建议》中提到了一种高强度的读书方法，叫做“<a href="/tools/knowledge-handbook/#qiang-li-yan-du">强力研读</a>”。它也提出，读书笔记中应该<a href="/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-2/20171110_te-bie-fang-song-gei-gao-shou-de-xue-xi-fang-fa-jian-yi/#fa-xian-lian-xi">包含书与书之间的联系</a>，同时使用的记录工具要<a href="/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-2/20171110_te-bie-fang-song-gei-gao-shou-de-xue-xi-fang-fa-jian-yi/#chuang-zao">便于创造</a>。创造，就是<a href="/tools/knowledge-formula/#chuang-zao">想法的连接</a>。</p>
+<p>所谓“连接”，就是新旧知识之间的联系。它能巩固我们对知识的认知，也能催生出具有创造性的想法。</p>
+<p>此前我一直有一个习惯，就是在写作的过程中，利用 <code>超链接</code> 将有联系的知识点关联起来。但这只是一个跳转的途径。</p>
+<p>我仍然迫切需要一个可视化的界面，能看到这些“连接”的全貌。这也给了我<a href="/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-2/20180607_zheng-que-de-xue-xi-fang-fa-zhi-you-yi-zhong-feng-ge/#li-yong-bo-ke-xue-xi">灵感</a> —— 构建一份自己的知识图谱。</p>
+<h2 id="2-简介"><a href="#2-简介" class="headerlink" title="2 简介"></a>2 简介</h2><p>要构建知识图谱，我们首先得知道它是什么，以及它能给我们带来什么。</p>
+<h3 id="2-1-信息与知识"><a href="#2-1-信息与知识" class="headerlink" title="2.1 信息与知识"></a>2.1 信息与知识</h3><p>如果你看过网络综艺《奇葩说》第五季第 17 期：你是否支持全人类一秒知识共享，你也许会对辩手陈铭的辩论印象深刻。他在节目中区分了信息和知识两个概念：</p>
+<blockquote>
+<p>信息是指外部的客观事实。举例：这里有一瓶水，它现在是 7℃。</p>
+<p>知识是对外部客观规律的归纳和总结。举例：水在 0℃ 及以下会结冰。</p>
+</blockquote>
+<p>“客观规律的归纳和总结” 似乎有些难以实现。Quora 上有另一种经典的解读，区分“信息”和“知识”。</p>
+<p><img src="http://q4kbn37nl.bkt.clouddn.com/information-and-knowledge.jpg?e=1580631425&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:xGamemhPRMgNiC1aC00CPOF-ZVQ" alt="信息和知识"></p>
+<p>有了这样的参考，我们就很容易理解，在信息的基础上，建立实体之间的联系，就能行成 “知识”。</p>
+<h3 id="2-2-知识图谱"><a href="#2-2-知识图谱" class="headerlink" title="2.2 知识图谱"></a>2.2 知识图谱</h3><p><a href="/tools/knowledge-handbook/#zhi-shi-tu-pu">知识图谱（Knowledge Graph）</a>是显示知识发展进程与结构关系的一系列各种不同的图形，用可视化技术描述知识资源及其载体，有利于构建、绘制、显示、分析和挖掘知识及它们之间的相互联系。它的本质是揭示实体之间关系的语义网络。</p>
+<p>这个概念最先由 Google 在2012年5月17日提出，最初是为了将传统的基于关键字的（keyword-based）搜索模型向基于语义的搜索升级，增强用户搜索质量和体验。</p>
+<p>知识图谱的主要目的是用来描述知识本身以及他们之间的关联关系。</p>
+<h3 id="2-3-知识的表式方式"><a href="#2-3-知识的表式方式" class="headerlink" title="2.3 知识的表式方式"></a>2.3 知识的表式方式</h3><p>知识图谱是由一条条知识组成，比如 ——</p>
+<blockquote>
+<ol>
+<li><p>姚明出生于上海</p>
+</li>
+<li><p>姚明是中国人</p>
+</li>
+<li><p>姚明的配偶是叶莉</p>
+</li>
+</ol>
+</blockquote>
+<p><img src="http://q4kbn37nl.bkt.clouddn.com/knowledge-graph-example-of-yao-ming.webp?e=1580631946&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:DlISW87JlGZobV2Hf21NwzQPdEE" alt="姚明的知识图谱"></p>
+<p>而每条知识表示为一个 SPO（Subject-Predicate-Object）三元组。比如 ——</p>
+<blockquote>
+<p>“姚明出生于上海”可以用三元组表示为 <code>(&quot;Yao Ming&quot;, &quot;born-in&quot;, &quot;Shanghai&quot;)</code>。</p>
+<p>把自然语言转化为三元组的过程，用到的技术是自然语言处理 (Natural Language Processing，简称 NLP）。</p>
+</blockquote>
+<p>如果我们把三元素两端的实体看作是节点，把关系（包括属性、类别等）看作是一条边，那么大量的三元组就可以组成了一张庞大的知识图谱。</p>
+<h3 id="2-4-知识库"><a href="#2-4-知识库" class="headerlink" title="2.4 知识库"></a>2.4 知识库</h3><p>随着新知识的录入和机器的自动推理，这些结构化的知识会被存储起来，进而得到一个庞大、丰富的数据库，这个数据库就叫做“知识库（Knowledge Base）”。</p>
+<p>从结构化的数据类型上看，知识库有两种类型 —— Curated KBs 和 Extracted KBs。</p>
+<blockquote>
+<p><em>Curated KBs</em>：由标准的、结构化的三元组所表达的知识组成的知识库，每条知识的结构和刚才的例子很像，<em>每个关系都是标准定义好的</em>。以 freebase（一个创作共享类的网站）为代表，它从维基百科和 WordNet 等知识库抽取了大量的实体及实体关系，相当于实现了一种结构化的维基百科。</p>
+<p><em>Extracted KBs</em>：直接从网页中抽取实体关系三元组所组成的知识库，它的实体和关系更多是自然语言的形式表达的。与 freebase 相比，这样得到的知识更具有多样性，但也会存在一定的噪声，其精确度低于 Curated KBs。</p>
+</blockquote>
+<p>目前行业内使用的比较多的还是简单、易构建的 Curated KBs。</p>
+<div class="anchor" id="zhi-shi-tui-li"></div>
+
+<h3 id="2-5-知识推理"><a href="#2-5-知识推理" class="headerlink" title="2.5 知识推理"></a>2.5 知识推理</h3><p>知识推理和人类的逻辑是一样，可以分为“归纳”和“演绎”两类。所谓归纳（induction）是指从某类事物的大量实例出发，推理出关于这类事物的一般性结论。将归纳的过程调转方向，得到的就是演绎。演绎（deduction）指的是从一般性的前提出发，推导出个别结论或者具体陈述的过程。</p>
+<p>举个例子 ——</p>
+<blockquote>
+<p>“阿里巴巴是一个数据驱动的公司”可以用三元组表示为 <code>(&quot;阿里巴巴&quot;, &quot;is-a&quot;, 数据驱动的公司&quot;)</code>；</p>
+<p>“阿里巴巴是一种科技公司”可以表示为 <code>(&quot;阿里巴巴&quot;, &quot;subclass&quot;, &quot;科技公司&quot;)</code>。</p>
+<p>如果以后再录入了一条这样的知识：<code>(&quot;Google&quot;, &quot;is-a&quot;, &quot;数据驱动的公司&quot;)</code>，</p>
+<p>机器就可以自动推理出一个新知识： <code>(&quot;Google&quot;, &quot;subclass&quot;, &quot;科技公司&quot;)</code>。</p>
+</blockquote>
+<p>归纳推理能够从已知知识中获取未知知识，是知识的增殖过程。而演绎推理可以用来解决复杂的问题，但它只是将已有事实揭示出来，而不能够产生新知识。上面例子中的推理过程用的就是演绎推理，虽然产生了新的知识记录，但是只是揭示了已有的事实，并没有推理出未知。</p>
+<p>知识推理的背后涉及到一些算法。其中，归纳推理所使用的算法叫 <em>路径排序算法</em>（path ranking algorithm）；演绎推理则使用了 <em>马尔可夫逻辑网</em>（Markov logic network）和 <em>概率软逻辑</em>（probabilistic soft logic）。</p>
+<h2 id="3-功能描述"><a href="#3-功能描述" class="headerlink" title="3 功能描述"></a>3 功能描述</h2><p>第一版的知识图谱功能相对简单，能纵观全貌，体现知识点之间的联系即可。</p>
+<p>具体包含了下列功能：</p>
+<blockquote>
+<ol>
+<li><p>构建一个知识库，博客的编写者（我本人）可以往里录入知识点（实体、概念等）和关联关系。</p>
+</li>
+<li><p>系统根据知识库中的内容，生成相应的知识图谱，通过一篇独立的博客文章来展示。</p>
+</li>
+<li><p>生成的知识图谱是一张关系图，图中的节点代表知识点，连线代表知识的“连接”。</p>
+</li>
+<li><p>默认可以看到知识图谱中的每个节点的名称。鼠标悬停在连线上时，可以看见关系的描述。点击节点或者连线，可以跳转至相关信息的详细页面。</p>
+</li>
+</ol>
+</blockquote>
+<p>后续会考虑添加对已录入知识进行自动的<a href="#zhi-shi-tui-li">知识推理</a>。</p>
+<h2 id="4-技术设计"><a href="#4-技术设计" class="headerlink" title="4 技术设计"></a>4 技术设计</h2><h3 id="4-1-知识库"><a href="#4-1-知识库" class="headerlink" title="4.1 知识库"></a>4.1 知识库</h3><p>知识库用于知识点和关联关系的存储。</p>
+<div class="anchor" id="zhi-shi-ku-zai-ti"></div>
+
+<h4 id="4-1-1-载体"><a href="#4-1-1-载体" class="headerlink" title="4.1.1 载体"></a>4.1.1 载体</h4><p>存储：由于是简单的前端项目，知识库使用 <code>.json</code> 文件存储于项目内部，暂不考虑使用外部数据源。</p>
+<p>提取：直接加载上述 <code>.json</code> 文件中的原始数据，在展示前进行处理。</p>
+<div class="anchor" id="zhi-shi-ku-shu-ju-jie-gou"></div>
+
+<h4 id="4-1-2-数据结构"><a href="#4-1-2-数据结构" class="headerlink" title="4.1.2 数据结构"></a>4.1.2 数据结构</h4><p>简介中的三元组是标准的逻辑结构，且相对简单。</p>
+<p>但为了实现相应的功能，应该将数据的物理结构拆分成 <em>节点（知识点）</em> 和 <em>连线（关联关系）</em>。</p>
+<ol>
+<li>节点（知识点）的数据结构如下：</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>字段描述</th>
+<th>数据类型</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>name</td>
+<td>节点名称</td>
+<td>String</td>
+<td>不能重复</td>
+</tr>
+<tr>
+<td>category</td>
+<td>分类</td>
+<td>String</td>
+<td>分类名称</td>
+</tr>
+<tr>
+<td>link</td>
+<td>链接地址</td>
+<td>String</td>
+<td></td>
+</tr>
+<tr>
+<td>date</td>
+<td>收录时间</td>
+<td>String</td>
+<td>格式：<code>yyyy-MM-dd HH:mm:ss</code></td>
+</tr>
+</tbody></table>
+<ol start="2">
+<li>连线（关联关系）的数据结构如下：</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>字段描述</th>
+<th>数据类型</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>subject</td>
+<td>关系主体</td>
+<td>String</td>
+<td>源节点的名称</td>
+</tr>
+<tr>
+<td>predicate</td>
+<td>关系谓语</td>
+<td>String</td>
+<td>尽可能使用标准化的词汇</td>
+</tr>
+<tr>
+<td>object</td>
+<td>关系客体</td>
+<td>String</td>
+<td>目标节点的名称</td>
+</tr>
+<tr>
+<td>date</td>
+<td>收录时间</td>
+<td>String</td>
+<td>格式：<code>yyyy-MM-dd HH:mm:ss</code></td>
+</tr>
+</tbody></table>
+<p>这里的连线，相当于对三元组的扩充。</p>
+<h3 id="4-2-图形界面"><a href="#4-2-图形界面" class="headerlink" title="4.2 图形界面"></a>4.2 图形界面</h3><h4 id="4-2-1-图表库选型"><a href="#4-2-1-图表库选型" class="headerlink" title="4.2.1 图表库选型"></a>4.2.1 图表库选型</h4><p>想要在页面上实现一个关系图，有很多现成的第三方库可以使用。</p>
+<p>我发现，Matery 主题中的许多图表都使用了 <a href="https://www.echartsjs.com/zh/index.html" target="_blank" rel="noopener">ECharts</a>。这是一个不错的第三方图表库，功能强大、使用方便。我曾经用它实现了不少报表，对我而言早已轻车熟路。这次还是用它。</p>
+<p>值得注意的是，尽管 Echarts 提供的关系图也是接收“节点和“连线”两组数据作为参数，但仔细查阅了<a href="https://www.echartsjs.com/zh/option.html#series-graph" target="_blank" rel="noopener">官方文档</a>后会发现，参数的字段定义与数据结构的设计稍有不同，需要做一些简单的格式转换。</p>
+<h4 id="4-2-2-图表库的使用"><a href="#4-2-2-图表库的使用" class="headerlink" title="4.2.2 图表库的使用"></a>4.2.2 图表库的使用</h4><p>我们知道 Markdown 中也是可以使用 HTML 语法的，当然也可以使用 JavaScript 脚本，但这总归有些不方便。</p>
+<p>实际上，Hexo 的<a href="https://hexo.io/plugins/" target="_blank" rel="noopener">官方插件</a>中就提供了一款 <a href="https://github.com/kchen0x/hexo-tag-echarts3" target="_blank" rel="noopener">hexo-tag-echarts3</a> 插件，支持在 <code>.md</code> 文章文件中使用 <code>echarts-tag</code> 标签来绘制 ECharts 图表。</p>
+<p>可是，在<a href="chang-shi-hexo-tag-echarts3-cha-jian">初步尝试</a>后，发现这个插件存在一些缺陷，故暂停使用。</p>
+<p>最终决定使用传统的 js 方式引入 ECharts 库，实现关系图。</p>
+<h2 id="5-开发"><a href="#5-开发" class="headerlink" title="5 开发"></a>5 开发</h2><p>打开命令行，使用 Hexo 提供的 <code>hexo new [layout] &lt;title&gt;</code> 命令在 <code>source\_posts</code> 目录下创建一个 <code>.md</code> 格式的文章文件 —— 这是我们的常规操作，大家一定都很熟悉了。</p>
+<p>然而，Hexo 在生成静态文件后，之会保留一些特定目录下的源文件。这时，我们应该如何引用我们想引用的文件呢？</p>
+<h3 id="5-1-构建知识库"><a href="#5-1-构建知识库" class="headerlink" title="5.1 构建知识库"></a>5.1 构建知识库</h3><p><a href="#zhi-shi-ku-zai-ti">上面</a>我们提到，目前的知识库比较简单，仅采用一个 <code>.json</code> 文件存储。</p>
+<p>新建 <code>source/data/knowledge-base.json</code> 文件，添加如下内容：</p>
+<pre class="line-numbers language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"nodes"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span> <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"创造"</span><span class="token punctuation">,</span> <span class="token property">"category"</span><span class="token operator">:</span> <span class="token string">"思维类"</span><span class="token punctuation">,</span> <span class="token property">"link"</span><span class="token operator">:</span> <span class="token string">"/tools/knowledge-formula/#chuang-zao"</span><span class="token punctuation">,</span> <span class="token property">"date"</span><span class="token operator">:</span> <span class="token string">"2020-02-03 14:24:27"</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span> <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"想法的连接"</span><span class="token punctuation">,</span> <span class="token property">"date"</span><span class="token operator">:</span> <span class="token string">"2020-02-03 14:24:39"</span> <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">"lines"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span> <span class="token property">"subject"</span><span class="token operator">:</span> <span class="token string">"创造"</span><span class="token punctuation">,</span> <span class="token property">"predicate"</span><span class="token operator">:</span> <span class="token string">"是"</span><span class="token punctuation">,</span> <span class="token property">"object"</span><span class="token operator">:</span> <span class="token string">"想法的连接"</span><span class="token punctuation">,</span> <span class="token property">"date"</span><span class="token operator">:</span> <span class="token string">"2020-02-03 14:24:55"</span> <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>依照知识库的<a href="#zhi-shi-ku-shu-ju-jie-gou">数据结构</a>，其中 <code>nodes</code> 表示节点，<code>lines</code> 表示连线。正如我们录入一条知识：“创造就是想法的连接” —— 对应三元组<code>(&quot;创造&quot;, &quot;是&quot;, &quot;想法的连接&quot;)</code>。</p>
+<p>然后我们的项目结构看起来会是下面这样：</p>
+<pre><code>.
+├── .deploy_git
+├── public
+├── scaffolds
+├── source
+|   ├── _data
+|   ├── _drafts
+|   ├── _posts
+|   ...
+|   ├── data # 数据资源
+|   |   └── knowledge-base.json # 知识库
+|   ...
+|   └── CNAME
+├── themes
+├── _config.yml
+└── package.json</code></pre><h3 id="5-2-数据加载和处理"><a href="#5-2-数据加载和处理" class="headerlink" title="5.2 数据加载和处理"></a>5.2 数据加载和处理</h3><h4 id="5-2-1-数据加载"><a href="#5-2-1-数据加载" class="headerlink" title="5.2.1 数据加载"></a>5.2.1 数据加载</h4><p>由于 Matery 主题本身引入了 <code>jQuery</code> 库，可以直接使用里边的方法，还是非常方便的。</p>
+<p>在 <code>.md</code> 文章文件中添加以下代码：</p>
+<pre class="line-numbers language-markdown"><code class="language-markdown"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+function loadData(callback) { // 数据加载方法
+  $.ajax({
+<span class="token code keyword">    url: '/data/knowledge-base.json',</span>
+<span class="token code keyword">    dataType: 'json',</span>
+<span class="token code keyword">    success: callback</span>
+  });
+}
+
+loadData(function(response) {
+  console.log(response);
+});
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>其中，<code>loadData</code> 方法是用于数据加载的方法。它接收一个回调函数作为参数，我们可以在这个回调函数内部处理返回的数据。</p>
+<p>比如这里通过 <code>console.log()</code> 方法打印了响应的信息，这样就能在浏览器控制台上看到 <code>source/data/knowledge-base.json</code> 中保存的对象信息。</p>
+<p><em>如果今后需要更换外部数据源，或是改变数据加载的方式，我们只需要修改 <code>loadData()</code> 方法即可。</em></p>
+<h4 id="5-2-2-格式化处理"><a href="#5-2-2-格式化处理" class="headerlink" title="5.2.2 格式化处理"></a>5.2.2 格式化处理</h4><p>阅读 ECharts 的<a href="https://www.echartsjs.com/zh/option.html#series-graph" target="_blank" rel="noopener">配置文档</a>发现，配置中需要 <code>legend.data</code>、<code>categories</code>、<code>data</code>/<code>nodes</code>、<code>links</code>/<code>edges</code> 四项信息。这一步的目的就是将 <code>source/data/knowledge-base.json</code> 返回的信息转化为这四种信息，供 ECharts 渲染。</p>
+<p>修改 <code>loadData()</code> 方法如下：</p>
+<pre class="line-numbers language-markdown"><code class="language-markdown">loadData(function(response) {
+  var nodes = response.nodes || []； // 节点信息
+  var lines = response.lines || []; // 连线信息
+
+  // 生成分类信息
+  var categories = nodes.filter(function(item, index) { // 过滤重复的分类
+<span class="token code keyword">    for (var i = 0; i &lt; index; i++) if (item.category === nodes.category) return false; // 前面出现过相同的名称</span>
+<span class="token code keyword">    return true;</span>
+  }).map(function(item) {
+<span class="token code keyword">    return { name: item.category };</span>
+  });
+  categories.push({ name: '其它' }); // 无分类的节点被归类为“其它”
+
+  // 生成图例信息
+  var legends = categories.map(function(item) {
+<span class="token code keyword">    return item.name;</span>
+  });
+
+  // 生成节点信息
+  var data = nodes.filter(function(item, index) { // 过滤名称重复的节点
+<span class="token code keyword">    for (var i = 0; i &lt; index; i++) if (name === nodes[i].name) return false; // 前面出现过相同的名称</span>
+<span class="token code keyword">    return true;</span>
+  }).map(function(item) {
+<span class="token code keyword">    var name = item.name;</span>
+
+<span class="token code keyword">    var value = 0; // 节点的数值</span>
+<span class="token code keyword">    lines.forEach(function(line) { // 节点的出度、入度之和</span>
+<span class="token code keyword">      if (name === line.subject || name === line.object) value++;</span>
+<span class="token code keyword">    });</span>
+<span class="token code keyword">    if (value === 0) value = 1; // 至少是 1</span>
+
+<span class="token code keyword">    var categoryIndex = legends.length - 1; // 分类下标，默认最大值，对应“其它”</span>
+<span class="token code keyword">    for (var i = 0; i &lt; legends.length; i++) {</span>
+<span class="token code keyword">      if (item.category === legends[i]) {</span>
+<span class="token code keyword">        categoryIndex = i;</span>
+<span class="token code keyword">        break;</span>
+<span class="token code keyword">      }</span>
+<span class="token code keyword">    }</span>
+
+<span class="token code keyword">    return {</span>
+<span class="token code keyword">      name: name, // 节点名称</span>
+<span class="token code keyword">      value: value, // 节点数值</span>
+<span class="token code keyword">      category: categoryIndex, // 节点分类</span>
+<span class="token code keyword">      symbolSize: value * 10, // 节点大小</span>
+<span class="token code keyword">      label: { // 标签</span>
+<span class="token code keyword">        show: value >= 1 // 数值 ≥5 时展示</span>
+<span class="token code keyword">      },</span>
+<span class="token code keyword">      link: item.link // 链接，点击事件时获取</span>
+<span class="token code keyword">    };</span>
+  });
+
+  // 生成连线信息
+  links = lines.map(function(item) {
+<span class="token code keyword">    return {</span>
+<span class="token code keyword">      source: item.subject,</span>
+<span class="token code keyword">      target: item.object,</span>
+<span class="token code keyword">      value: item.predicate</span>
+<span class="token code keyword">    };</span>
+  });
+});<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="5-3-Echarts-关系图绘制"><a href="#5-3-Echarts-关系图绘制" class="headerlink" title="5.3 Echarts 关系图绘制"></a>5.3 Echarts 关系图绘制</h3><div class="anchor" id="chang-shi-hexo-tag-echarts3-cha-jian"></div>
+
+<h4 id="5-3-1-尝试-hexo-tag-echarts3-插件"><a href="#5-3-1-尝试-hexo-tag-echarts3-插件" class="headerlink" title="5.3.1 尝试 hexo-tag-echarts3 插件"></a>5.3.1 尝试 hexo-tag-echarts3 插件</h4><p><em>本小节不是关键内容，可以<a href="">跳过</a>。</em></p>
+<p>打开命令行，执行 <code>npm install hexo-tag-echarts3 --save</code> 安装 Hexo 的 ECharts 标签插件。</p>
+<p>在文章中就可以使用标签的方式来绘制图表了。</p>
+<pre class="line-numbers language-markdown"><code class="language-markdown">{% echarts 400 '85%' %} // 高度默认 400，宽度默认 '85%'
+{ // echarts option
+  series: [{
+<span class="token code keyword">    type: 'graph',</span>
+<span class="token code keyword">    layout: 'force',</span>
+<span class="token code keyword">    label: {</span>
+<span class="token code keyword">      show: true</span>
+<span class="token code keyword">    },</span>
+<span class="token code keyword">    draggable: true,</span>
+<span class="token code keyword">    categories: [],</span>
+<span class="token code keyword">    data: [{ name: '孤独的测试节点' }],</span>
+<span class="token code keyword">    links: []</span>
+  }]
+}
+{% endecharts %}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>而当我使用上述代码绘制一张关系图时，出现了一个出乎意料的报错 ——</p>
+<p><img src="http://q4kbn37nl.bkt.clouddn.com/hexo-tag-echart3-unsupport-graph-error.png?e=1580708740&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:Yrmp9F5EJeRSxU0PiWBfxnlPGOs" alt="未加载 graph 组件"></p>
+<p>排查发现，<code>hexo-tag-echarts3</code> 插件所引用的 ECharts 库地址是 <code>https://cdn.bootcss.com/echarts/3.8.0/echarts.common.min.js</code>，这个 <code>echarts.common.min.js</code> 中并未包含对 graph 关系图的支持。</p>
+<p>我们知道 Echarts 包含了非常多样化的图表（chart）、坐标系（coordinate systems）和组件（component），在其官网的<a href="https://www.echartsjs.com/zh/builder.html" target="_blank" rel="noopener">下载页面</a>支持定制自己需要的部分。这样的好处是可以按需引入，以减少依赖包的大小。随之带来的问题是，可能遗漏一些依赖，比如上面的方式引入的 js 文件中就不包含我们需要的 graph 关系图组件。这时就需要更新原有的依赖了。</p>
+<p>具体方法是，首先如下修改 <code>node_modules/hexo-tag-echarts3/template.html</code> 插件源文件中的内容：</p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&lt;%- id %<span class="token punctuation">></span><span class="token punctuation">"</span></span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token property">width</span><span class="token punctuation">:</span> &lt;<span class="token number">%</span>- width <span class="token number">%</span>><span class="token punctuation">;</span><span class="token property">height</span><span class="token punctuation">:</span> &lt;<span class="token number">%</span>- height <span class="token number">%</span>>px<span class="token punctuation">;</span><span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">0</span> auto</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token comment" spellcheck="true">&lt;!-- &lt;script src="https://cdn.bootcss.com/echarts/3.8.0/echarts.common.min.js">&lt;/script> --></span> <span class="token comment" spellcheck="true">&lt;!-- 不使用该 cdn 资源 --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript">
+        <span class="token comment" spellcheck="true">// 基于准备好的dom，初始化echarts实例</span>
+        <span class="token keyword">var</span> myChart <span class="token operator">=</span> echarts<span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'&lt;%- id %>'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 指定图表的配置项和数据</span>
+        <span class="token keyword">var</span> option <span class="token operator">=</span> <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span> option <span class="token operator">%</span><span class="token operator">></span>
+        <span class="token comment" spellcheck="true">// 使用刚指定的配置项和数据显示图表。</span>
+        myChart<span class="token punctuation">.</span><span class="token function">setOption</span><span class="token punctuation">(</span>option<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>然后修改文章文件中的内容：</p>
+<pre class="line-numbers language-markdown"><code class="language-markdown"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/libs/echarts/echarts.min.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span> <span class="token comment" spellcheck="true">&lt;!-- 引用自己的 ECharts 库 --></span>
+
+{% echarts 400 '85%' %} // 高度默认 400，宽度默认 '85%'
+{ // echarts option
+  series: [{
+<span class="token code keyword">    type: 'graph',</span>
+<span class="token code keyword">    layout: 'force',</span>
+<span class="token code keyword">    label: {</span>
+<span class="token code keyword">      show: true</span>
+<span class="token code keyword">    },</span>
+<span class="token code keyword">    draggable: true,</span>
+<span class="token code keyword">    categories: [],</span>
+<span class="token code keyword">    data: [{ name: '孤独的测试节点' }],</span>
+<span class="token code keyword">    links: []</span>
+  }]
+}
+{% endecharts %}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>在 <code>echarts tag</code> 标签之前引用自己的 ECharts 库，这个库可以去 ECharts 的<a href="https://www.echartsjs.com/zh/download.html" target="_blank" rel="noopener">官网</a>下载。当然直接这么引用也是没问题的，因为 Matery 主题的源文件目录 <code>themes/matery/source/libs</code> 下已经包含了 ECharts 库了，且其支持 graph。</p>
+<div class="anchor" id="hexo-tag-echarts3-cha-jian-yi-liu-wen-ti"></div>
+
+<blockquote>
+<p>这么做虽然解决了问题，但也留了个坑。我们修改的 <code>hexo-tag-echarts3</code> 插件的源文件位于 <code>node_modules</code> 目录下，假如重新执行 <code>npm install</code> 命令安装依赖（更换设备的时候一定会出现这种情况），对源文件的修改就白费了。</p>
+<p>我又回顾了一下 <code>hexo-tag-ehcart3</code> 插件的历史版本，它们都引用了类似的 <code>echarts.common.min.js</code>，且都不包含关系图组件。换言之，回退插件的版本也没法解决问题。</p>
+<p>这个遗留问题我已<a href="/tools/to-do-list/#hexo-tag-echarts3-cha-jian-yi-liu-wen-ti">记录在案</a>。未来可能的解决方法是重写该插件，以支持 ECharts 组件的按需引入。</p>
+</blockquote>
+<p>另外，由于是通过模板创建，这段代码并不能在数据加载后异步执行。这是个很致命的缺点。</p>
+<p>因此，<em>这里先暂停使用该插件</em>。但不得不说，这是一个有趣的尝试。</p>
+<h4 id="5-3-2-传统方式实现"><a href="#5-3-2-传统方式实现" class="headerlink" title="5.3.2 传统方式实现"></a>5.3.2 传统方式实现</h4><p>以下是 <code>.md</code> 文章文件的完整代码：</p>
+<pre class="line-numbers language-markdown"><code class="language-markdown"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>graph<span class="token punctuation">"</span></span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">520</span>px<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/libs/echarts/echarts.min.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>  <span class="token comment" spellcheck="true">&lt;!-- 引入 ECharts 库 --></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+var myChart = echarts.init(document.getElementById('graph'));
+
+function loadData(callback) { // 数据加载方法，接收一个回调函数
+  $.ajax({
+<span class="token code keyword">    url: '/data/knowledge-base.json',</span>
+<span class="token code keyword">    dataType: 'json',</span>
+<span class="token code keyword">    success: callback</span>
+  });
+}
+
+myChart.showLoading();
+
+loadData(function(response) {
+  var nodes = response.nodes || [], // 节点信息
+<span class="token code keyword">      lines = response.lines || []; // 连线信息</span>
+
+  // 生成分类信息
+  var categories = nodes.filter(function(item, index) { // 过滤重复的分类
+<span class="token code keyword">    for (var i = 0; i &lt; index; i++) if (item.category === nodes.category) return false; // 前面出现过相同的名称</span>
+<span class="token code keyword">    return true;</span>
+  }).map(function(item) {
+<span class="token code keyword">    return { name: item.category };</span>
+  });
+  categories.push({ name: '其它' }); // 无分类的节点被归类为“其它”
+
+  // 生成图例信息
+  var legends = categories.map(function(item) {
+<span class="token code keyword">    return item.name;</span>
+  });
+
+  // 生成节点信息
+  var data = nodes.filter(function(item, index) { // 过滤名称重复的节点
+<span class="token code keyword">    for (var i = 0; i &lt; index; i++) if (item.name === nodes[i].name) return false; // 前面出现过相同的名称</span>
+<span class="token code keyword">    return true;</span>
+  }).map(function(item) {
+<span class="token code keyword">    var name = item.name;</span>
+
+<span class="token code keyword">    var value = 0; // 节点的数值</span>
+<span class="token code keyword">    lines.forEach(function(line) { // 节点的出度、入度之和</span>
+<span class="token code keyword">      if (name === line.subject || name === line.object) value++;</span>
+<span class="token code keyword">    });</span>
+<span class="token code keyword">    if (value === 0) value = 1; // 至少是 1</span>
+
+<span class="token code keyword">    var categoryIndex = legends.length - 1; // 分类下标，默认最大值，对应“其它”</span>
+<span class="token code keyword">    for (var i = 0; i &lt; legends.length; i++) {</span>
+<span class="token code keyword">      if (item.category === legends[i]) {</span>
+<span class="token code keyword">        categoryIndex = i;</span>
+<span class="token code keyword">        break;</span>
+<span class="token code keyword">      }</span>
+<span class="token code keyword">    }</span>
+
+<span class="token code keyword">    return {</span>
+<span class="token code keyword">      name: name, // 节点名称</span>
+<span class="token code keyword">      value: value, // 节点数值</span>
+<span class="token code keyword">      category: categoryIndex, // 节点分类</span>
+<span class="token code keyword">      symbolSize: 10 + (value - 1) * 3, // 节点大小</span>
+<span class="token code keyword">      label: { // 标签</span>
+<span class="token code keyword">        show: value >= 5 // 数值 ≥5 时展示</span>
+<span class="token code keyword">      },</span>
+<span class="token code keyword">      tooltip: {</span>
+<span class="token code keyword">        formatter: function(params) {</span>
+<span class="token code keyword">          if (params.dataType === 'node') {</span>
+<span class="token code keyword">            return params.data.name + '：' + params.data.value;</span>
+<span class="token code keyword">          } else if (params.dataType === 'edge') {</span>
+<span class="token code keyword">            return params.data.value;</span>
+<span class="token code keyword">          } else {</span>
+<span class="token code keyword">            return;</span>
+<span class="token code keyword">          }</span>
+<span class="token code keyword">        }</span>
+<span class="token code keyword">      },</span>
+<span class="token code keyword">      link: item.link, // 链接，点击事件时获取</span>
+<span class="token code keyword">      date: item.date</span>
+<span class="token code keyword">    };</span>
+  });
+
+  // 生成连线信息
+  links = lines.map(function(item) {
+<span class="token code keyword">    return {</span>
+<span class="token code keyword">      source: item.subject,</span>
+<span class="token code keyword">      target: item.object,</span>
+<span class="token code keyword">      value: item.predicate,</span>
+<span class="token code keyword">      date: item.date</span>
+<span class="token code keyword">    };</span>
+  });
+
+  myChart.setOption({
+<span class="token code keyword">    title: {</span>
+<span class="token code keyword">      text: '知识图谱'</span>
+<span class="token code keyword">    },</span>
+<span class="token code keyword">    legend: {</span>
+<span class="token code keyword">      data: legends</span>
+<span class="token code keyword">    },</span>
+<span class="token code keyword">    tooltip: {},</span>
+<span class="token code keyword">    series: [{</span>
+<span class="token code keyword">      type: 'graph',</span>
+<span class="token code keyword">      layout: 'force',</span>
+<span class="token code keyword">      force: {</span>
+<span class="token code keyword">        edgeLength: 80,</span>
+<span class="token code keyword">        repulsion: 100,</span>
+<span class="token code keyword">        gravity: 0.1</span>
+<span class="token code keyword">      },</span>
+<span class="token code keyword">      draggable: true,</span>
+<span class="token code keyword">      focusNodeAdjacency: true,</span>
+<span class="token code keyword">      edgeSymbol: ['none', 'arrow'],</span>
+<span class="token code keyword">      itemStyle: { // 图形样式</span>
+<span class="token code keyword">        borderColor: '#fff',</span>
+<span class="token code keyword">        borderWidth: 1,</span>
+<span class="token code keyword">        shadowBlur: 10,</span>
+<span class="token code keyword">        shadowColor: 'rgba(0, 0, 0, 0.3)'</span>
+<span class="token code keyword">      },</span>
+<span class="token code keyword">      label: { // 图形上的文本标签</span>
+<span class="token code keyword">        position: 'right',</span>
+<span class="token code keyword">        formatter: '{b}'</span>
+<span class="token code keyword">      },</span>
+<span class="token code keyword">      edgeLabel: { // 关系边上的文本标签</span>
+<span class="token code keyword">        show: true,</span>
+<span class="token code keyword">        formatter: '{c}'</span>
+<span class="token code keyword">      },</span>
+<span class="token code keyword">      categories: categories,</span>
+<span class="token code keyword">      data: data,</span>
+<span class="token code keyword">      links: links</span>
+<span class="token code keyword">    }]</span>
+  });
+
+  myChart.hideLoading();
+
+  myChart.on('click', function(event) { // 绑定点击事件，打开新的标签页跳转至节点 link 指向的地址
+<span class="token code keyword">    var data = event.data || {};</span>
+<span class="token code keyword">    var link = data.link;</span>
+<span class="token code keyword">    if (link) {</span>
+<span class="token code keyword">      window.open(link, '\_blank');</span>
+<span class="token code keyword">    }</span>
+  });
+});
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>简简单单的 100 余行代码，就实现了知识图谱。</p>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://www.sunyt.site" rel="external nofollow noreferrer">雨停</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://www.sunyt.site/hexo/build-knowledge-graph/">https://www.sunyt.site/hexo/build-knowledge-graph/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="https://www.sunyt.site" target="_blank">雨停</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E7%9F%A5%E8%AF%86/">
+                                    <span class="chip bg-color">知识</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%9B%BE%E8%B0%B1/">
+                                    <span class="chip bg-color">图谱</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+        </div>
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '7884f52521111fafd16b',
+        clientSecret: '1530e69623eba37951a73e4b6105f8c0b1e1ef5b',
+        repo: 'rainstopper.github.io',
+        owner: 'rainstopper',
+        admin: "rainstopper",
+        id: '2020-02-02T11-50-48',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/hexo/build-knowledge-graph/">
+                    <div class="card-image">
+                        
+                        <img src="http://q4kbn37nl.bkt.clouddn.com/desk_20200202120008.jpg?e=1580619646&amp;token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:sihJZZErfPmn-KGy2g0HFns0uck" class="responsive-img" alt="构建知识图谱">
+                        
+                        <span class="card-title">构建知识图谱</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    
+                    <div class="summary">
+                    
+                        描述知识图谱的构建过程
+                    
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-02
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%B2%BE%E7%A5%9E%E6%97%B6%E5%85%89%E5%B1%8B/" class="post-category">
+                                    精神时光屋
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%9F%A5%E8%AF%86/">
+                        <span class="chip bg-color">知识</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%9B%BE%E8%B0%B1/">
+                        <span class="chip bg-color">图谱</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-1/20160831_wang-ji-shi-wei-le-geng-hao-de-ji-zhu/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="忘记是为了更好的记住">
+                        
+                        <span class="card-title">忘记是为了更好的记住</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    
+                    <div class="summary">
+                    
+                        《万维钢·精英日课1：忘记是为了更好的记住》课程笔记
+                    
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-01
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%88%9E%E7%A9%BA%E6%9C%AF/" class="post-category">
+                                    舞空术
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">课程笔记</span>
+                    </a>
+                    
+                    <a href="/tags/%E4%B8%87%E7%BB%B4%E9%92%A2%C2%B7%E7%B2%BE%E8%8B%B1%E6%97%A5%E8%AF%BE1/">
+                        <span class="chip bg-color">万维钢·精英日课1</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%AE%B0%E5%BF%86/">
+                        <span class="chip bg-color">记忆</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 精神時光屋<br />'
+            + '文章作者: 雨停<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+    <footer class="page-footer bg-color">
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="https://www.sunyt.site" target="_blank">雨停</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/rainstopper" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:501705246@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=501705246" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 501705246" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+    <script type="text/javascript" color="232, 140, 48"
+        pointColor="232, 140, 48" opacity='0.9'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
+
+    
+    
+    <script type="text/javascript" size="150" alpha='0.6'
+        zIndex="-1" src="/libs/background/ribbon-refresh.min.js" async="async"></script>
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

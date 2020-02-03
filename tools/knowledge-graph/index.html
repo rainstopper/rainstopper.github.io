@@ -257,105 +257,10 @@
 
 
 
-<main class="post-container content">
+<main class="container content">
 
     
-    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
-<style>
-    #articleContent h1::before,
-    #articleContent h2::before,
-    #articleContent h3::before,
-    #articleContent h4::before,
-    #articleContent h5::before,
-    #articleContent h6::before {
-        display: block;
-        content: " ";
-        height: 100px;
-        margin-top: -100px;
-        visibility: hidden;
-    }
-
-    #articleContent :focus {
-        outline: none;
-    }
-
-    .toc-fixed {
-        position: fixed;
-        top: 64px;
-    }
-
-    .toc-widget {
-        width: 345px;
-        padding-left: 20px;
-    }
-
-    .toc-widget .toc-title {
-        margin: 35px 0 15px 0;
-        padding-left: 17px;
-        font-size: 1.5rem;
-        font-weight: bold;
-        line-height: 1.5rem;
-    }
-
-    .toc-widget ol {
-        padding: 0;
-        list-style: none;
-    }
-
-    #toc-content {
-        height: calc(100vh - 250px);
-        overflow: auto;
-    }
-
-    #toc-content ol {
-        padding-left: 10px;
-    }
-
-    #toc-content ol li {
-        padding-left: 10px;
-    }
-
-    #toc-content .toc-link:hover {
-        color: #E88C30;
-        font-weight: 700;
-        text-decoration: underline;
-    }
-
-    #toc-content .toc-link::before {
-        background-color: transparent;
-        max-height: 25px;
-    }
-
-    #toc-content .is-active-link {
-        color: #E88C30;
-    }
-
-    #toc-content .is-active-link::before {
-        background-color: #E88C30;
-    }
-
-    #floating-toc-btn {
-        position: fixed;
-        right: 15px;
-        bottom: 76px;
-        padding-top: 15px;
-        margin-bottom: 0;
-        z-index: 998;
-    }
-
-    #floating-toc-btn .btn-floating {
-        width: 48px;
-        height: 48px;
-    }
-
-    #floating-toc-btn .btn-floating i {
-        line-height: 48px;
-        font-size: 1.4rem;
-    }
-</style>
-<div class="row">
-    <div id="main-content" class="col s12 m12 l9">
-        <!-- 文章内容详情 -->
+    <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
@@ -406,14 +311,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    10
+                    507
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -429,7 +334,151 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h5 id="知识图谱"><a href="#知识图谱" class="headerlink" title="知识图谱"></a>知识图谱</h5><p>努力开发中ing…</p>
+                <div id="graph" style="height: 520px;"></div>
+
+<script type="text/javascript" src="/libs/echarts/echarts.min.js"></script>  <!-- 引入 ECharts 库 -->
+
+<script type="text/javascript">
+var myChart = echarts.init(document.getElementById('graph'));
+
+function loadData(callback) { // 数据加载方法，接收一个回调函数
+  $.ajax({
+    url: '/data/knowledge-base.json',
+    dataType: 'json',
+    success: callback
+  });
+}
+
+myChart.showLoading();
+
+loadData(function(response) {
+  var nodes = response.nodes || [], // 节点信息
+      lines = response.lines || []; // 连线信息
+
+  // 生成分类信息
+  var categories = nodes.filter(function(item, index) { // 过滤重复的分类
+    for (var i = 0; i < index; i++) if (item.category === nodes.category) return false; // 前面出现过相同的名称
+    return true;
+  }).map(function(item) {
+    return { name: item.category };
+  });
+  categories.push({ name: '其它' }); // 无分类的节点被归类为“其它”
+
+  // 生成图例信息
+  var legends = categories.map(function(item) {
+    return item.name;
+  });
+
+  // 生成节点信息
+  var data = nodes.filter(function(item, index) { // 过滤名称重复的节点
+    for (var i = 0; i < index; i++) if (item.name === nodes[i].name) return false; // 前面出现过相同的名称
+    return true;
+  }).map(function(item) {
+    var name = item.name;
+
+    var value = 0; // 节点的数值
+    lines.forEach(function(line) { // 节点的出度、入度之和
+      if (name === line.subject || name === line.object) value++;
+    });
+    if (value === 0) value = 1; // 至少是 1
+
+    var categoryIndex = legends.length - 1; // 分类下标，默认最大值，对应“其它”
+    for (var i = 0; i < legends.length; i++) {
+      if (item.category === legends[i]) {
+        categoryIndex = i;
+        break;
+      }
+    }
+
+    return {
+      name: name, // 节点名称
+      value: value, // 节点数值
+      category: categoryIndex, // 节点分类
+      symbolSize: 10 + (value - 1) * 2, // 节点大小
+      label: { // 标签
+        show: value >= 1 // 数值 ≥5 时展示
+      },
+      tooltip: {
+        formatter: function(params) {
+          if (params.dataType === 'node') {
+            return params.data.name + '：' + params.data.value;
+          } else if (params.dataType === 'edge') {
+            return params.data.value;
+          } else {
+            return;
+          }
+        }
+      },
+      link: item.link, // 链接，点击事件时获取
+      date: item.date
+    };
+  });
+console.log(data)
+  // 生成连线信息
+  links = lines.map(function(item) {
+    return {
+      source: item.subject,
+      target: item.object,
+      value: item.predicate,
+      date: item.date
+    };
+  });
+
+  myChart.setOption({
+    title: {
+      text: '知识图谱'
+    },
+    legend: {
+      data: legends
+    },
+    tooltip: {},
+    series: [{
+      type: 'graph',
+      layout: 'force',
+      force: {
+        edgeLength: 50,
+        repulsion: 80,
+        gravity: 0.1
+      },
+      draggable: true,
+      focusNodeAdjacency: true,
+      edgeSymbol: ['none', 'arrow'],
+      itemStyle: { // 图形样式
+        borderColor: '#fff',
+        borderWidth: 1,
+        shadowBlur: 10,
+        shadowColor: 'rgba(0, 0, 0, 0.3)'
+      },
+      label: { // 图形上的文本标签
+        position: 'right',
+        formatter: '{b}'
+      },
+      edgeLabel: { // 关系边上的文本标签
+        formatter: '{c}'
+      },
+      emphasis: {
+        lineStyle: {
+          width: 3
+        }
+      },
+      categories: categories,
+      data: data,
+      links: links,
+      animation: false
+    }]
+  });
+
+  myChart.hideLoading();
+
+  myChart.on('click', function(event) { // 绑定点击事件，打开新的标签页跳转至节点 link 指向的地址
+    var data = event.data || {};
+    var link = data.link;
+    if (link) {
+      window.open(link, '\_blank');
+    }
+  });
+});
+</script>
 
             </div>
             <hr/>
@@ -871,100 +920,6 @@
 code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
 </style>
 
-
-    </div>
-    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
-        <div class="toc-widget">
-            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
-            <div id="toc-content"></div>
-        </div>
-    </div>
-</div>
-
-<!-- TOC 悬浮按钮. -->
-
-<div id="floating-toc-btn" class="hide-on-med-and-down">
-    <a class="btn-floating btn-large bg-color">
-        <i class="fas fa-list-ul"></i>
-    </a>
-</div>
-
-
-<script src="/libs/tocbot/tocbot.min.js"></script>
-<script>
-    $(function () {
-        tocbot.init({
-            tocSelector: '#toc-content',
-            contentSelector: '#articleContent',
-            headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
-        });
-
-        // modify the toc link href to support Chinese.
-        let i = 0;
-        let tocHeading = 'toc-heading-';
-        $('#toc-content a').each(function () {
-            $(this).attr('href', '#' + tocHeading + (++i));
-        });
-
-        // modify the heading title id to support Chinese.
-        i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
-            $(this).attr('id', tocHeading + (++i));
-        });
-
-        // Set scroll toc fixed.
-        let tocHeight = parseInt($(window).height() * 0.4 - 64);
-        let $tocWidget = $('.toc-widget');
-        $(window).scroll(function () {
-            let scroll = $(window).scrollTop();
-            /* add post toc fixed. */
-            if (scroll > tocHeight) {
-                $tocWidget.addClass('toc-fixed');
-            } else {
-                $tocWidget.removeClass('toc-fixed');
-            }
-        });
-
-        
-        /* 修复文章卡片 div 的宽度. */
-        let fixPostCardWidth = function (srcId, targetId) {
-            let srcDiv = $('#' + srcId);
-            if (srcDiv.length === 0) {
-                return;
-            }
-
-            let w = srcDiv.width();
-            if (w >= 450) {
-                w = w + 21;
-            } else if (w >= 350 && w < 450) {
-                w = w + 18;
-            } else if (w >= 300 && w < 350) {
-                w = w + 16;
-            } else {
-                w = w + 14;
-            }
-            $('#' + targetId).width(w);
-        };
-
-        // 切换TOC目录展开收缩的相关操作.
-        const expandedClass = 'expanded';
-        let $tocAside = $('#toc-aside');
-        let $mainContent = $('#main-content');
-        $('#floating-toc-btn .btn-floating').click(function () {
-            if ($tocAside.hasClass(expandedClass)) {
-                $tocAside.removeClass(expandedClass).hide();
-                $mainContent.removeClass('l9');
-            } else {
-                $tocAside.addClass(expandedClass).show();
-                $mainContent.addClass('l9');
-            }
-            fixPostCardWidth('artDetail', 'prenext-posts');
-        });
-        
-    });
-</script>
 
     
 
