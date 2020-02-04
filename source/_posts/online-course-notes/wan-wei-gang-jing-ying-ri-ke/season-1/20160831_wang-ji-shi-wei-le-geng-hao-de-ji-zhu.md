@@ -11,6 +11,9 @@ summary: 《万维钢·精英日课1：忘记是为了更好的记住》课程�
 
 万维钢的文章《超强记忆力是个邪道功夫》中，反对拿圆周率之类根本不是知识的东西搞刻意的记忆力训练。但另一方面，学习的确需要记忆。于是有人发问，既然说超强记忆力是邪道，那正道的记忆力，应该怎么用呢？
 
+
+<div class="anchor" id="ba-la-de-xiao-ying"></div>
+
 ## 1 巴拉德效应
 
 本尼迪克特·凯里（Benedict Carey）的《我们如何学习：关于什么时间学、在哪学、为什么学的令人吃惊的真相》（How We Learn: The Surprising Truth About When, Where, and Why It Happens）里说了这么一个故事 ——

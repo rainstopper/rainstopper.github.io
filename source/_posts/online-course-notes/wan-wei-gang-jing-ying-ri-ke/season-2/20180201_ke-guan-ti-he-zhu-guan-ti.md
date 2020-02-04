@@ -11,6 +11,9 @@ summary: 《万维钢·精英日课2：客观题和主观题》课程笔记
 
 这一课的主题是有关“认知”的认知。
 
+
+<div class="anchor" id="ke-guan-he-zhu-guan"></div>
+
 ## 1 客观和主观
 
 我们都知道“客观事实”和“主观观点”的区别。
@@ -45,6 +48,9 @@ summary: 《万维钢·精英日课2：客观题和主观题》课程笔记
 > 老王：堕胎是不道德的，应该用法律禁止。
 
 有些人认为答案是明摆着的，要么就应该合法要么就应该不合法，这个题目是个客观题。有些人则认为到底应不应该允许堕胎这个问题没有绝对的对错，只有各人观点不同，是一道主观题。
+
+
+<div class="anchor" id="fei-she-er-deng-ren-de-yan-jiu"></div>
 
 ### 1.4 费舍尔等人的研究
 
@@ -154,6 +160,9 @@ summary: 《万维钢·精英日课2：客观题和主观题》课程笔记
 《万维钢·精英日课3：逻辑思维5：灰度认知和黑白决策》中提倡的[“灰度认知，黑白决策”](/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-3/20190326_luo-ji-si-wei-5-hui-du-ren-zhi-he-hei-bai-jue-ce/#hui-du-ren-zhi-he-hei-bai-jue-ce)，到了这里却成了“黑白认知，灰度决策”。这就很有意思了。在认知层面，我们得在客观题和主观题之间明确地划一道线；但在决策上，既要允许主观的成分，又要尊重客观事实。
 
 另外，主观题不应该形成争论，这说明双方既要互相尊重，又各自[讲原则](/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-3/20190326_luo-ji-si-wei-5-hui-du-ren-zhi-he-hei-bai-jue-ce/#yuan-ze-de-zuo-yong)，求同存异。而假装有灰色地带，更是一种[灵活地讲原则](/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-3/20190326_luo-ji-si-wei-5-hui-du-ren-zhi-he-hei-bai-jue-ce/#ling-huo-ye-shi-yi-zhong-jiang-yuan-ze)。
+
+
+<div class="anchor" id="jie-he-yi-dian-zi-you-yi-zhi"></div>
 
 #### 结合一点自由意志
 

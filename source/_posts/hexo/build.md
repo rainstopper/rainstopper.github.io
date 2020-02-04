@@ -13,6 +13,9 @@ img: http://q4kbn37nl.bkt.clouddn.com/jing-shen-shi-guang-wu.jpg?e=1580247922&to
 
 人们常说 *“种一棵树最好的时间是十年前，其次是现在”*，经营一片自己专属的地界亦如是。于是我花了些时间搭建了自己的第一个博客，并写下此文加以记录。
 
+
+<div class="anchor" id="bo-ke-xuan-xing"></div>
+
 ## 1 博客选型
 
 现如今，市面上博客相关的工具和产品繁多，涵盖了[语雀](https://www.yuque.com/)、[简书](https://www.jianshu.com/)、[博客园](https://www.cnblogs.com/)、[掘金](https://juejin.im/)、[知乎](https://www.zhihu.com/)等在线承载文字平台，也包括了 [Gitbook](https://www.gitbook.com/)、[Hexo](https://hexo.io/)、[Jekyll](http://jekyllcn.com/)、[Vuepress](https://vuepress.vuejs.org/) 等静态独立博客工具，更有 [Ghost](http://www.ghostchina.com/) 这样支持后台的博客系统。
@@ -328,6 +331,8 @@ hexo new [layout] <title>
 
 ---
 
+<div class="anchor" id="geng-huan-zhu-ti"></div>
+
 ## 7 更换主题
 
 Hexo 有丰富的[主题](https://hexo.io/themes/)，默认的是 `landscape`，可以根据自己的喜好挑选和更换。
@@ -406,6 +411,8 @@ layout: tags
 该主题的更多用法，还可以参照 [Matery](https://github.com/blinkfox/hexo-theme-matery) 文档继续体验。
 
 ---
+
+<div class="anchor" id="bu-shu-zhi-github"></div>
 
 ## 8 部署至 GitHub
 
@@ -628,6 +635,8 @@ hexo deploy
 
 ---
 
+<div class="anchor" id="bu-shu-zhi-coding-shi-xian-guo-nei-wai-fen-liu"></div>
+
 ## 11 部署至 Coding 实现国内外分流
 
 我们已经将 Hexo 博客部署在 GitHub 上了，但 GitHub 是国外的，而且百度的蜘蛛不能爬取 GitHub。如果希望我们的博客被百度收录，而且能更快地访问，可以同时在国内的 [Coding](https://coding.net/) 平台做托管。这么一来，在国内访问的是 Coding，国外就走 GitHub。
@@ -689,6 +698,8 @@ hexo deploy
 ---
 
 ## 更多
+
+<div class="anchor" id="shi-yong-qi-niu-yun-cun-chu-tu-pian"></div>
 
 ### 使用七牛云存储图片 2020.1.24
 
@@ -762,6 +773,9 @@ postInfo:
   min2read: true # 文章阅读时长
   readCount: true # 文章阅读次数
 ```
+
+
+<div class="anchor" id="kai-qi-gitalk-ping-lun"></div>
 
 ### 开启 Gitalk 评论 2020.1.28
 

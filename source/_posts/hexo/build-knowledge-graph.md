@@ -589,7 +589,7 @@ loadData(function(response) {
 
 ## 更多
 
-### 2020.2.4 知识库结构优化
+### 知识库结构优化 2020.2.4
 
 在构建知识库的[开发过程](gou-jian-zhi-shi-ku)中，我们将知识库的节点（nodes）数据和连线（lines）数据都存放在 `source/data/knowledge-base.json` 文件中。
 

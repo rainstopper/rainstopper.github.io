@@ -89,6 +89,9 @@ $(function() {
         source: item.subject,
         target: item.object,
         value: item.predicate,
+        lineStyle: {
+          color: item.link ? '#E88C30' : null
+        },
         link: item.link,
         date: item.date
       };
@@ -121,8 +124,8 @@ $(function() {
         layout: 'force',
         force: {
           edgeLength: 30,
-          repulsion: 32,
-          gravity: 0.2
+          repulsion: 30,
+          gravity: 0.22
         },
         roam: true,
         draggable: true,
@@ -143,7 +146,7 @@ $(function() {
         },
         emphasis: {
           lineStyle: {
-            width: 3
+            width: 4
           }
         },
         categories: categories,
