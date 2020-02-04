@@ -436,6 +436,8 @@
                 <p>今天是2020年的除夕。时光犹如白驹过隙，转眼又将开启崭新的一年。</p>
 <p>过去的 25 年是美好而短暂的，美在成就了如今的我，短于日子走得太快，忘了仔细地去记录。这也是偶尔令我感到些许遗憾的。</p>
 <p>人们常说 <em>“种一棵树最好的时间是十年前，其次是现在”</em>，经营一片自己专属的地界亦如是。于是我花了些时间搭建了自己的第一个博客，并写下此文加以记录。</p>
+<div class="anchor" id="bo-ke-xuan-xing"></div>
+
 <h2 id="1-博客选型"><a href="#1-博客选型" class="headerlink" title="1 博客选型"></a>1 博客选型</h2><p>现如今，市面上博客相关的工具和产品繁多，涵盖了<a href="https://www.yuque.com/" target="_blank" rel="noopener">语雀</a>、<a href="https://www.jianshu.com/" target="_blank" rel="noopener">简书</a>、<a href="https://www.cnblogs.com/" target="_blank" rel="noopener">博客园</a>、<a href="https://juejin.im/" target="_blank" rel="noopener">掘金</a>、<a href="https://www.zhihu.com/" target="_blank" rel="noopener">知乎</a>等在线承载文字平台，也包括了 <a href="https://www.gitbook.com/" target="_blank" rel="noopener">Gitbook</a>、<a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>、<a href="http://jekyllcn.com/" target="_blank" rel="noopener">Jekyll</a>、<a href="https://vuepress.vuejs.org/" target="_blank" rel="noopener">Vuepress</a> 等静态独立博客工具，更有 <a href="http://www.ghostchina.com/" target="_blank" rel="noopener">Ghost</a> 这样支持后台的博客系统。</p>
 <table>
   <thead>
@@ -684,6 +686,8 @@ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span><span
 </ol>
 <p>关于 Hexo 的更多用法，可以参照<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">官方文档</a>自行尝试。</p>
 <hr>
+<div class="anchor" id="geng-huan-zhu-ti"></div>
+
 <h2 id="7-更换主题"><a href="#7-更换主题" class="headerlink" title="7 更换主题"></a>7 更换主题</h2><p>Hexo 有丰富的<a href="https://hexo.io/themes/" target="_blank" rel="noopener">主题</a>，默认的是 <code>landscape</code>，可以根据自己的喜好挑选和更换。</p>
 <p>我选择的主题是 <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank" rel="noopener">Matery</a>。在其 GitHub 链接上下载该主题，解压后命名为 <code>matery</code>，存放至 <code>themes</code> 目录下。</p>
 <p>然后编辑 <code>_config/yml</code> 文件中的配置信息，将 <code>theme</code> 修改为themes目录下的主题目录名。</p>
@@ -733,6 +737,8 @@ layout: tags
 ├── _config.yml
 └── package.json</code></pre><p>该主题的更多用法，还可以参照 <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank" rel="noopener">Matery</a> 文档继续体验。</p>
 <hr>
+<div class="anchor" id="bu-shu-zhi-github"></div>
+
 <h2 id="8-部署至-GitHub"><a href="#8-部署至-GitHub" class="headerlink" title="8 部署至 GitHub"></a>8 部署至 GitHub</h2><p>经过前面的努力，我们的博客已经可以在本地运行了。</p>
 <p>但如果想让其他人人访问我们的博客，我们还需要找一台服务器，将博客部署上去。<a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> 就可以免费充当这样的服务器。</p>
 <p>接下来，我们将博客部署至 GitHub，让朋友们都能访问。</p>
@@ -832,6 +838,8 @@ hexo generate
 hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>过不了多久，在浏览器中输入我的域名 <code>sunyt.site</code>，就能访问我在 GitHub 托管的博客了。</p>
 <hr>
+<div class="anchor" id="bu-shu-zhi-coding-shi-xian-guo-nei-wai-fen-liu"></div>
+
 <h2 id="11-部署至-Coding-实现国内外分流"><a href="#11-部署至-Coding-实现国内外分流" class="headerlink" title="11 部署至 Coding 实现国内外分流"></a>11 部署至 Coding 实现国内外分流</h2><p>我们已经将 Hexo 博客部署在 GitHub 上了，但 GitHub 是国外的，而且百度的蜘蛛不能爬取 GitHub。如果希望我们的博客被百度收录，而且能更快地访问，可以同时在国内的 <a href="https://coding.net/" target="_blank" rel="noopener">Coding</a> 平台做托管。这么一来，在国内访问的是 Coding，国外就走 GitHub。</p>
 <h3 id="11-1-创建-Coding-项目"><a href="#11-1-创建-Coding-项目" class="headerlink" title="11.1 创建 Coding 项目"></a>11.1 创建 Coding 项目</h3><p>申请一个 Coding 账户，然后创建一个项目，项目的名称可以是任意的，我创建的项目名称与此前在 GitHub 上的用户名相同。</p>
 <h3 id="11-2-添加-SSH-配置"><a href="#11-2-添加-SSH-配置" class="headerlink" title="11.2 添加 SSH 配置"></a>11.2 添加 SSH 配置</h3><p>这一步也和 GitHub 一样。添加完成后，验证一下是否生效。</p>
@@ -858,7 +866,9 @@ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span><span
 <p>我们可以通过在国内 <code>ping sunyt.site</code> 和 <code>ping ssd38z.coding-pages.com</code>，观察解析到的 IP 地址是不是相同的，来验证域名解析的正确性。</p>
 <p>至此，我们的博客已经在 GitHub 和 Coding 双向部署，并通过域名解析，对国内外进行分流。</p>
 <hr>
-<h2 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h2><h3 id="使用七牛云存储图片-2020-1-24"><a href="#使用七牛云存储图片-2020-1-24" class="headerlink" title="使用七牛云存储图片 2020.1.24"></a>使用七牛云存储图片 2020.1.24</h3><p>Hexo 支持使用 <code>hexo-asset-image</code> 插件内联图片，该插件会在创建文章的同时，在同一目录下创建与其同名的目录，用来存放图片文件，使用非常方便，但缺点也显而易见：<code>source</code> 目录会很庞大，且内联图片会影响页面的渲染速度。</p>
+<h2 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h2><div class="anchor" id="shi-yong-qi-niu-yun-cun-chu-tu-pian"></div>
+
+<h3 id="使用七牛云存储图片-2020-1-24"><a href="#使用七牛云存储图片-2020-1-24" class="headerlink" title="使用七牛云存储图片 2020.1.24"></a>使用七牛云存储图片 2020.1.24</h3><p>Hexo 支持使用 <code>hexo-asset-image</code> 插件内联图片，该插件会在创建文章的同时，在同一目录下创建与其同名的目录，用来存放图片文件，使用非常方便，但缺点也显而易见：<code>source</code> 目录会很庞大，且内联图片会影响页面的渲染速度。</p>
 <p>更好的做法是使用第三方平台来存储图片，我使用的是<a href="https://portal.qiniu.com/" target="_blank" rel="noopener">七牛云</a>。</p>
 <p>创建七牛云账号后，需要先进行实名认证，再在控制台打开 <code>对象存储</code> 下的 <code>空间管理</code> 菜单，去新建空间，否则会报 <code>403：没有权限</code>。</p>
 <p>写作时如果遇到图片，只需将其上传至七牛云，再在需要插入图片的位置添加Markdown标记 <code>![](&lt;url&gt;)</code> 即可。</p>
@@ -899,6 +909,8 @@ hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
   <span class="token key atrule">totalCount</span><span class="token punctuation">:</span> <span class="token boolean important">false </span><span class="token comment" spellcheck="true"># 站点总文章字数</span>
   <span class="token key atrule">min2read</span><span class="token punctuation">:</span> <span class="token boolean important">true </span><span class="token comment" spellcheck="true"># 文章阅读时长</span>
   <span class="token key atrule">readCount</span><span class="token punctuation">:</span> <span class="token boolean important">true </span><span class="token comment" spellcheck="true"># 文章阅读次数</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<div class="anchor" id="kai-qi-gitalk-ping-lun"></div>
+
 <h3 id="开启-Gitalk-评论-2020-1-28"><a href="#开启-Gitalk-评论-2020-1-28" class="headerlink" title="开启 Gitalk 评论 2020.1.28"></a>开启 Gitalk 评论 2020.1.28</h3><p>Matery 主题支持 <a href="https://gitalk.github.io/" target="_blank" rel="noopener">Gitalk</a>、<a href="https://imsun.github.io/gitment/" target="_blank" rel="noopener">Gitment</a>、<a href="https://valine.js.org/" target="_blank" rel="noopener">Valine</a> 和 <a href="https://disqus.com/" target="_blank" rel="noopener">Disqus</a> 评论模块，官方推荐的是 Gitalk。</p>
 <p>开启 Gitalk 评论，首先需要创建一个 GitHub 的 OAuth App。</p>
 <p>登陆 GitHub，在 <code>Settings</code> &gt; <code>Developer settings</code> 下，找到 <code>OAuth Apps</code> 菜单。</p>
