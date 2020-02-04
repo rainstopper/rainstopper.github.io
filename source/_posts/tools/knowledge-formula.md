@@ -28,12 +28,18 @@ img: http://q4kbn37nl.bkt.clouddn.com/po-ta-la-er-huan.png?e=1580336943&token=0Q
 相关：万维钢 ——《万维钢·精英日课1：〈成功与运气〉1：运气动力学》
 收录时间：2020.1.30
 
+
+<div class="anchor" id="cheng-gong-ren-sheng"></div>
+
 ### 成功人生 = 梦想 + 现实 + 决心
 
 > Deams + Reality + Determination = A Successful Life
 
 出自：雷·达里奥（Ray Dalio）——《原则：生活和工作》
 收录时间：2020.1.30
+
+
+<div class="anchor" id="cheng-zhang"></div>
 
 ### 成长 = 压力 + 休息
 
@@ -111,6 +117,8 @@ img: http://q4kbn37nl.bkt.clouddn.com/po-ta-la-er-huan.png?e=1580336943&token=0Q
 
 ## J
 
+<div class="anchor" id="jin-bu"></div>
+
 ### 进步 = 痛苦 + 反思
 
 > Pain + Reflection = Progress
@@ -152,6 +160,8 @@ img: http://q4kbn37nl.bkt.clouddn.com/po-ta-la-er-huan.png?e=1580336943&token=0Q
 
 ## S
 
+<div class="anchor" id="shu-xue-qi-wang"></div>
+
 ### 数学期望 = 成功的收益 × 成功的概率 - 失败的损失 × 失败的概率
 
 > 1. *好事不等于万无一失的事*。一件事有失败的可能性不要紧，只要满足 1）数学期望是正的，2）哪怕失败了也可以承受，那就值得做。所有收益大的事都是有风险的，关键在于你能不成承受这个风险。
@@ -164,6 +174,9 @@ img: http://q4kbn37nl.bkt.clouddn.com/po-ta-la-er-huan.png?e=1580336943&token=0Q
 
 相关：万维钢 ——《万维钢·精英日课2：问答：正常化偏误、侥幸心理和灰犀牛》
 收录时间：2020.1.30
+
+
+<div class="anchor" id="su-zao-zhe"></div>
 
 ### 塑造者 = 远见 + 实践思想家 + 决心
 
@@ -200,6 +213,9 @@ img: http://q4kbn37nl.bkt.clouddn.com/po-ta-la-er-huan.png?e=1580336943&token=0Q
 相关：《万维钢·精英日课1：喜欢 = 熟悉 + 意外》
 收录时间：2020.1.30
 
+
+<div class="anchor" id="xiang-fa-jing-ying-zheng-zhi"></div>
+
 ### 想法精英政治 = 激进的事实 + 激进的透明 + 可信度加权决策
 
 > Idea Meritocracy = Radical Truth + Radical Transparency + Believability-Weighted Decision Making
@@ -235,6 +251,8 @@ img: http://q4kbn37nl.bkt.clouddn.com/po-ta-la-er-huan.png?e=1580336943&token=0Q
 收录时间：2020.1.30
 
 ## Z
+
+<div class="anchor" id="zhi-shi"></div>
 
 ### 知识 = 体验 × 敏感度
 

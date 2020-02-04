@@ -11,6 +11,9 @@ summary: 《罗辑思维7：第738期丨怎么处理“棘手问题”？》课�
 
 罗胖认为，处理“[棘手问题](/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-3/20190523_dan-chun-wen-ti-liang-nan-wen-ti-he-ji-shou-wen-ti/)”的一个很有用的心法，是组建一个“内心的董事会”。
 
+
+<div class="anchor" id="a-shi-de-xin-fa"></div>
+
 ## 1 阿狮的心法
 
 得到 App 有个《每天听本书》栏目。这个产品听起来概念很简单，就是用 20 到 30 分钟的时间，帮助你解读一本书的精髓。这种产品不就是选书、写稿、品控、制作、上线不就行了吗？没有那么简单。

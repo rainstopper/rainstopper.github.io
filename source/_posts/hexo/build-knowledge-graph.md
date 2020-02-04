@@ -159,6 +159,7 @@ img: http://q4kbn37nl.bkt.clouddn.com/desk_20200202120008.jpg?e=1580619646&token
 | subject     | 关系主体 | String  | 源节点的名称                 |
 | predicate   | 关系谓语 | String  | 尽可能使用标准化的词汇        |
 | object      | 关系客体 | String  | 目标节点的名称               |
+| link        | 链接地址 | String  |                             |
 | date        | 收录时间 | String  | 格式：`yyyy-MM-dd HH:mm:ss` |
 
 这里的连线，相当于对三元组的扩充。
@@ -188,6 +189,9 @@ img: http://q4kbn37nl.bkt.clouddn.com/desk_20200202120008.jpg?e=1580619646&token
 打开命令行，使用 Hexo 提供的 `hexo new [layout] <title>` 命令在 `source\_posts` 目录下创建一个 `.md` 格式的文章文件 —— 这是我们的常规操作，大家一定都很熟悉了。
 
 然而，Hexo 在生成静态文件后，之会保留一些特定目录下的源文件。这时，我们应该如何引用我们想引用的文件呢？
+
+
+<div class="anchor" id="gou-jian-zhi-shi-ku"></div>
 
 ### 5.1 构建知识库
 
@@ -268,8 +272,8 @@ loadData(function(response) {
 
 ```markdown
 loadData(function(response) {
-  var nodes = response.nodes || []； // 节点信息
-  var lines = response.lines || []; // 连线信息
+  var nodes = response.nodes || [], // 节点信息
+      lines = response.lines || []; // 连线信息
 
   // 生成分类信息
   var categories = nodes.filter(function(item, index) { // 过滤重复的分类
@@ -287,7 +291,7 @@ loadData(function(response) {
 
   // 生成节点信息
   var data = nodes.filter(function(item, index) { // 过滤名称重复的节点
-    for (var i = 0; i < index; i++) if (name === nodes[i].name) return false; // 前面出现过相同的名称
+    for (var i = 0; i < index; i++) if (item.name === nodes[i].name) return false; // 前面出现过相同的名称
     return true;
   }).map(function(item) {
     var name = item.name;
@@ -310,11 +314,12 @@ loadData(function(response) {
       name: name, // 节点名称
       value: value, // 节点数值
       category: categoryIndex, // 节点分类
-      symbolSize: value * 10, // 节点大小
+      symbolSize: 10 + (value - 1) * 2, // 节点大小
       label: { // 标签
-        show: value >= 1 // 数值 ≥5 时展示
+        show: value >= 1 // 数值足够大时展示
       },
-      link: item.link // 链接，点击事件时获取
+      link: item.link, // 链接，点击事件时获取
+      date: item.date
     };
   });
 
@@ -323,7 +328,9 @@ loadData(function(response) {
     return {
       source: item.subject,
       target: item.object,
-      value: item.predicate
+      value: item.predicate,
+      link: item.link,
+      date: item.date
     };
   });
 });
@@ -423,14 +430,14 @@ loadData(function(response) {
 以下是 `.md` 文章文件的完整代码：
 
 ```markdown
-<div id="graph" style="height: 520px;"></div>
+<div id="graph" style="height: 600px;"></div>
 
 <script type="text/javascript" src="/libs/echarts/echarts.min.js"></script>  <!-- 引入 ECharts 库 -->
 
 <script type="text/javascript">
 var myChart = echarts.init(document.getElementById('graph'));
 
-function loadData(callback) { // 数据加载方法，接收一个回调函数
+function loadData(callback) { // 数据加载方法
   $.ajax({
     url: '/data/knowledge-base.json',
     dataType: 'json',
@@ -483,20 +490,9 @@ loadData(function(response) {
       name: name, // 节点名称
       value: value, // 节点数值
       category: categoryIndex, // 节点分类
-      symbolSize: 10 + (value - 1) * 3, // 节点大小
+      symbolSize: 10 + (value - 1) * 2, // 节点大小
       label: { // 标签
-        show: value >= 5 // 数值 ≥5 时展示
-      },
-      tooltip: {
-        formatter: function(params) {
-          if (params.dataType === 'node') {
-            return params.data.name + '：' + params.data.value;
-          } else if (params.dataType === 'edge') {
-            return params.data.value;
-          } else {
-            return;
-          }
-        }
+        show: value >= 1 // 数值足够大时展示
       },
       link: item.link, // 链接，点击事件时获取
       date: item.date
@@ -509,29 +505,44 @@ loadData(function(response) {
       source: item.subject,
       target: item.object,
       value: item.predicate,
+      link: item.link,
       date: item.date
     };
   });
 
   myChart.setOption({
-    title: {
-      text: '知识图谱'
-    },
     legend: {
+      type: 'scroll',
+      left: 0,
+      orient: 'vertical',
       data: legends
     },
-    tooltip: {},
+    tooltip: {
+      formatter: function(params) {
+        var str = '';
+        if (params.dataType === 'node') {
+          str = params.data.name + '<br/>关联 ' + params.data.value + ' 个节点';
+        } else if (params.dataType === 'edge') {
+          str = params.data.source + ' ' + params.data.value + ' ' + params.data.target;
+        }
+        if (params.data.link) {
+          if (str.length > 0) str += '<br/>';
+          str += '点击查看详情';
+        }
+        return str;
+      }
+    },
     series: [{
       type: 'graph',
       layout: 'force',
       force: {
-        edgeLength: 80,
-        repulsion: 100,
-        gravity: 0.1
+        edgeLength: 40,
+        repulsion: 50,
+        gravity: 0.12
       },
       draggable: true,
       focusNodeAdjacency: true,
-      edgeSymbol: ['none', 'arrow'],
+      // edgeSymbol: ['none', 'arrow'],
       itemStyle: { // 图形样式
         borderColor: '#fff',
         borderWidth: 1,
@@ -543,12 +554,17 @@ loadData(function(response) {
         formatter: '{b}'
       },
       edgeLabel: { // 关系边上的文本标签
-        show: true,
         formatter: '{c}'
+      },
+      emphasis: {
+        lineStyle: {
+          width: 3
+        }
       },
       categories: categories,
       data: data,
-      links: links
+      links: links,
+      animation: false
     }]
   });
 
@@ -565,4 +581,66 @@ loadData(function(response) {
 </script>
 ```
 
-简简单单的 100 余行代码，就实现了知识图谱。
+简简单单的百余行代码，就实现了知识图谱。
+
+## 6 总结
+
+知识图谱现已上线，点击[传送门](/tools/knowledge-graph/)。
+
+## 更多
+
+### 2020.2.4 知识库结构优化
+
+在构建知识库的[开发过程](gou-jian-zhi-shi-ku)中，我们将知识库的节点（nodes）数据和连线（lines）数据都存放在 `source/data/knowledge-base.json` 文件中。
+
+随着数据量的增长，节点数据和连线数据同时存放在一个文件中的方式，不利于数据的管理和维护。
+
+#### 1 数据存储优化
+
+现将两块数据分开存放，具体如下：
+
+```
+.
+...
+├── source
+|   ...
+|   ├── data # 数据资源
+|   |   └── knowledge-base # 知识库
+|   |       ├── lines.json # 连线数据
+|   |       └── nodes.json # 节点数据
+|   ...
+...
+```
+
+其中，`source/data/knowledge-base/nodes.json` 文件用来存放节点数据，例如：
+
+```json
+[
+  { "name": "创造", "category": "思维类", "link": "/tools/knowledge-formula/#chuang-zao", "date": "2020-02-03 14:24:27" },
+  { "name": "想法的连接", "date": "2020-02-03 14:24:39" }
+]
+```
+
+`source/data/knowledge-base/lines.json` 则用来存放连线数据 ——
+
+```json
+[
+  { "subject": "创造", "predicate": "是", "object": "想法的连接", "date": "2020-02-03 14:24:55" }
+]
+```
+
+#### 2 数据加载优化
+
+将数据分散存储至两个 `.json` 文件后，需要分开两次分别请求。我们允许这两次请求都是异步、并发的，各自独立执行，但最后共同处理它们返回的结果。jQuery 提供的 `$.when()` 方法就可以做到这点。
+
+修改 `.md` 文章文件中的 `loadData()` 方法：
+
+```markdown
+function loadData(callback) { // 数据加载方法
+  $.when($.get('/data/knowledge-base/nodes.json'), $.get('/data/knowledge-base/lines.json')).done(function(nodesResponse, linesResponse) {
+    callback({ nodes: nodesResponse[0], lines: linesResponse[0] });
+  });
+}
+```
+
+相较之前的方式，这么做会增加一次请求资源的网络开销，但能使数据的存储更有条理，更有利于管理和维护。

@@ -200,7 +200,7 @@ clicklove:
 profile:
   avatar: /medias/avatar.jpg
   career: 软件工程师
-  introduction: 
+  introduction: 为了梦想一生追寻那七颗璀璨龙珠，不曾停下脚步。
 
 # config my projects informations in about page.
 # If you don't want to display this `My Projects` content, you can deactivate or delete this configuration.
