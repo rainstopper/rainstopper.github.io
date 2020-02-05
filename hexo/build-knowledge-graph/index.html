@@ -444,6 +444,8 @@
 <h3 id="2-2-知识图谱"><a href="#2-2-知识图谱" class="headerlink" title="2.2 知识图谱"></a>2.2 知识图谱</h3><p><a href="/tools/knowledge-handbook/#zhi-shi-tu-pu">知识图谱（Knowledge Graph）</a>是显示知识发展进程与结构关系的一系列各种不同的图形，用可视化技术描述知识资源及其载体，有利于构建、绘制、显示、分析和挖掘知识及它们之间的相互联系。它的本质是揭示实体之间关系的语义网络。</p>
 <p>这个概念最先由 Google 在2012年5月17日提出，最初是为了将传统的基于关键字的（keyword-based）搜索模型向基于语义的搜索升级，增强用户搜索质量和体验。</p>
 <p>知识图谱的主要目的是用来描述知识本身以及他们之间的关联关系。</p>
+<div class="anchor" id="zhi-shi-de-biao-shi-fang-shi"></div>
+
 <h3 id="2-3-知识的表式方式"><a href="#2-3-知识的表式方式" class="headerlink" title="2.3 知识的表式方式"></a>2.3 知识的表式方式</h3><p>知识图谱是由一条条知识组成，比如 ——</p>
 <blockquote>
 <ol>
@@ -462,6 +464,8 @@
 <p>把自然语言转化为三元组的过程，用到的技术是自然语言处理 (Natural Language Processing，简称 NLP）。</p>
 </blockquote>
 <p>如果我们把三元素两端的实体看作是节点，把关系（包括属性、类别等）看作是一条边，那么大量的三元组就可以组成了一张庞大的知识图谱。</p>
+<div class="anchor" id="zhi-shi-ku"></div>
+
 <h3 id="2-4-知识库"><a href="#2-4-知识库" class="headerlink" title="2.4 知识库"></a>2.4 知识库</h3><p>随着新知识的录入和机器的自动推理，这些结构化的知识会被存储起来，进而得到一个庞大、丰富的数据库，这个数据库就叫做“知识库（Knowledge Base）”。</p>
 <p>从结构化的数据类型上看，知识库有两种类型 —— Curated KBs 和 Extracted KBs。</p>
 <blockquote>
@@ -586,6 +590,8 @@
 </tr>
 </tbody></table>
 <p>这里的连线，相当于对三元组的扩充。</p>
+<div class="anchor" id="tu-xing-jie-mian"></div>
+
 <h3 id="4-2-图形界面"><a href="#4-2-图形界面" class="headerlink" title="4.2 图形界面"></a>4.2 图形界面</h3><h4 id="4-2-1-图表库选型"><a href="#4-2-1-图表库选型" class="headerlink" title="4.2.1 图表库选型"></a>4.2.1 图表库选型</h4><p>想要在页面上实现一个关系图，有很多现成的第三方库可以使用。</p>
 <p>我发现，Matery 主题中的许多图表都使用了 <a href="https://www.echartsjs.com/zh/index.html" target="_blank" rel="noopener">ECharts</a>。这是一个不错的第三方图表库，功能强大、使用方便。我曾经用它实现了不少报表，对我而言早已轻车熟路。这次还是用它。</p>
 <p>值得注意的是，尽管 Echarts 提供的关系图也是接收“节点和“连线”两组数据作为参数，但仔细查阅了<a href="https://www.echartsjs.com/zh/option.html#series-graph" target="_blank" rel="noopener">官方文档</a>后会发现，参数的字段定义与数据结构的设计稍有不同，需要做一些简单的格式转换。</p>

@@ -311,7 +311,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    602
+                    723
                 </div>
                 
 
@@ -345,6 +345,25 @@ function loadData(callback) { // 数据加载方法
   });
 }
 
+var ACTIVE_COLOR = '#E88C30'; // '#E88C30'
+
+var MIN_NODE_SIZE = 10, // 节点大小下限
+    MAX_NODE_SIZE = 50, // 节点大小上限
+    NODE_SIZE_INCREASE_STEP = 2; // 节点大小增长步长
+
+function getNodeSize(value) { // 计算节点大小
+  return Math.min(MIN_NODE_SIZE + (value - 1) * NODE_SIZE_INCREASE_STEP, MAX_NODE_SIZE);
+}
+
+var MIN_OPACITYR = 0.3, // 透明度下限
+    MAX_OPACITY = 1, // 透明度上限
+    MAX_OPACITY_VALUE = 7, // 大于等于该值能达到透明度上限
+    OPACITY_INDEX = 3; // 透明度指数，该值越大，透明的节点越多
+
+function getNodeOpacity(value) { // 计算节点透明度
+  return Math.min(MIN_OPACITYR + Math.pow(value / MAX_OPACITY_VALUE, OPACITY_INDEX) * (1 - MIN_OPACITYR), MAX_OPACITY);
+}
+
 $(function() {
   var myChart = echarts.init(document.getElementById('graph'));
 
@@ -360,6 +379,9 @@ $(function() {
       return true;
     }).map(function(item) {
       return { name: item.category };
+    });
+    categories.sort(function(a, b) { // 按名称排序
+      return a.name.localeCompare(b.name);
     });
     categories.push({ name: '其它' }); // 无分类的节点被归类为“其它”
 
@@ -393,9 +415,9 @@ $(function() {
         name: name, // 节点名称
         value: value, // 节点数值
         category: categoryIndex, // 节点分类
-        symbolSize: Math.min(10 + (value - 1) * 2, 30), // 节点大小
+        symbolSize: getNodeSize(value), // 节点大小
         itemStyle: { // 图形样式
-          opacity: Math.min(0.3 + Math.pow(value / 7, 2) * 0.7, 1) // 透明度
+          opacity: getNodeOpacity(value) // 透明度
         },
         label: { // 标签
           show: value >= 1 // 数值足够大时展示
@@ -412,7 +434,7 @@ $(function() {
         target: item.object,
         value: item.predicate,
         lineStyle: {
-          color: item.link ? '#E88C30' : null
+          color: item.link ? ACTIVE_COLOR : null
         },
         link: item.link,
         date: item.date
@@ -446,8 +468,8 @@ $(function() {
         layout: 'force',
         force: {
           edgeLength: 30,
-          repulsion: 30,
-          gravity: 0.22
+          repulsion: 50,
+          gravity: 0.44
         },
         roam: true,
         draggable: true,
