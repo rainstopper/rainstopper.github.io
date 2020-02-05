@@ -13,6 +13,9 @@ summary: 《万维钢·精英日课2：提高学习成绩的最简单心法》�
 
 这项研究的预印本被英国心理学会研究文摘的一个撰稿人看到了，所以我们能提前得知 [[1]](#references)。而论文的原文被研究者从预印本服务器上撤掉了，可能在做最后的修改。
 
+
+<div class="anchor" id="li-lun"></div>
+
 ## 1 理论
 
 德韦克的理论说，人对智能的思维模式可以分为两种。一种是所谓“成长思维模式（growth mindset）”，就是你认为学习不在天赋，而在于努力，只要努力用功，什么东西都能学会。另一种叫“固定思维模式（fixed mindset）”，就是你特别相信天赋的作用，擅长的东西就是擅长，要是不擅长怎么学都没用。
@@ -24,6 +27,9 @@ summary: 《万维钢·精英日课2：提高学习成绩的最简单心法》�
 这个理论已经非常成熟了，很早之前就出了一本书，这本书的中文版都至少有三个版本，最新的一版叫《终身成长：重新定义成功的思维模式》（MINDSET: THE NEW PSYCHOLOGY OF SUCCESS）。
 
 ![德韦克和她的著作《终身成长：重新定义成功的思维模式》](http://q4kbn37nl.bkt.clouddn.com/mindset-the-new-psychology-of-success.jpg?e=1580460741&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:zQrMR_dkyeFKz5YBZ8rv66ium5g)
+
+
+<div class="anchor" id="shi-yan"></div>
 
 ## 2 实验
 
@@ -55,6 +61,9 @@ summary: 《万维钢·精英日课2：提高学习成绩的最简单心法》�
 >
 > 这些被判定“不是学习的料”的孩子，等于是被强行设定了“固定思维模式”。结果他们的学习成绩果然直线下降。有研究者认为美国基础教育之所以搞不好，也跟很多家长一开始就不打算让孩子上大学有关。
 
+
+<div class="anchor" id="si-wei-mo-shi-hui-ying-xiang-tai-du"></div>
+
 ### 3.2 思维模式会影响态度
 
 思维模式会影响人们对工作中各种挑战的态度 [[3]](#references)。
@@ -62,6 +71,9 @@ summary: 《万维钢·精英日课2：提高学习成绩的最简单心法》�
 *固定思维模式的人，在面对一个任务的时候，会认为这个任务是对他个人能力的一种测试。比如让他考试，他会认为考试是证明他行还是不行。他非常担心万一搞砸了别人就会质疑他的能力。他很容易把任务当成威胁。*
 
 *而成长思维模式的人，则会把任务当成一个学习的机会。他并不是通过任务来证明什么，而是通过任务来提高自己。他把任务当成机会，结果他的表现会好得多。*
+
+
+<div class="anchor" id="si-wei-mo-shi-hui-shou-wai-jie-ying-xiang"></div>
 
 ### 3.3 思维模式会受外界影响
 
@@ -95,7 +107,7 @@ summary: 《万维钢·精英日课2：提高学习成绩的最简单心法》�
 
 德韦克的研究表明，这么说，你才能在他心中埋下成长思维模式的种子。他会把每一项任务都当成成长的机会，他会愿意花更长的时间钻研难题，他会主动选择困难的任务。
 
-![“固定思维模式”和“成长思维模式”](http://q4kbn37nl.bkt.clouddn.com/growth-mindset-and-fixed-mindset_2.jpg?e=1580462875&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:M9jS44-DqA3eeMt-SXMMl1suCWs)
+![“固定思维模式”和“成长思维模式”](http://q4kbn37nl.bkt.clouddn.com/growth-mindset-and-fixed-mindset_2.jpg?e=1580925458&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:S7A7ojsMhTAkartOEgJbxaNvdwk)
 
 ## 学习心得
 
@@ -109,7 +121,7 @@ summary: 《万维钢·精英日课2：提高学习成绩的最简单心法》�
 >
 > 4. 智商很难提高，但是学习成绩和人生的成就是可以提高的。人的表现不仅仅由智商决定，努力也很重要。
 >
-> 5. 我们应该告诉孩子，人要有成长思维模式、人的只能是可以改变的。
+> 5. 我们应该告诉孩子，人要有成长思维模式、人的智能是可以改变的。
 
 ### 延伸
 

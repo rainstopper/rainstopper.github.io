@@ -50,6 +50,9 @@ img: http://q4kbn37nl.bkt.clouddn.com/desk_20200202120008.jpg?e=1580619646&token
 
 知识图谱的主要目的是用来描述知识本身以及他们之间的关联关系。
 
+
+<div class="anchor" id="zhi-shi-de-biao-shi-fang-shi"></div>
+
 ### 2.3 知识的表式方式
 
 知识图谱是由一条条知识组成，比如 ——
@@ -69,6 +72,9 @@ img: http://q4kbn37nl.bkt.clouddn.com/desk_20200202120008.jpg?e=1580619646&token
 > 把自然语言转化为三元组的过程，用到的技术是自然语言处理 (Natural Language Processing，简称 NLP）。
 
 如果我们把三元素两端的实体看作是节点，把关系（包括属性、类别等）看作是一条边，那么大量的三元组就可以组成了一张庞大的知识图谱。
+
+
+<div class="anchor" id="zhi-shi-ku"></div>
 
 ### 2.4 知识库
 
@@ -163,6 +169,9 @@ img: http://q4kbn37nl.bkt.clouddn.com/desk_20200202120008.jpg?e=1580619646&token
 | date        | 收录时间 | String  | 格式：`yyyy-MM-dd HH:mm:ss` |
 
 这里的连线，相当于对三元组的扩充。
+
+
+<div class="anchor" id="tu-xing-jie-mian"></div>
 
 ### 4.2 图形界面
 

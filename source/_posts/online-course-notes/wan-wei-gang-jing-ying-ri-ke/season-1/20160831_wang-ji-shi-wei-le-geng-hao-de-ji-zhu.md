@@ -32,6 +32,9 @@ summary: 《万维钢·精英日课1：忘记是为了更好的记住》课程�
 
 ![本尼迪克特·凯里《我们如何学习：关于什么时间学、在哪学、为什么学的令人吃惊的真相》](http://q4kbn37nl.bkt.clouddn.com/how-we-learn-the-surprising-truth-about-when-where-and-why-it-happens.jpg?e=1580566409&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:ZvLdHTv1sWelWvS-FMZZZOgJRds)
 
+
+<div class="anchor" id="bi-yue-ke-de-ji-yi-li-li-lun-mo-xing"></div>
+
 ## 2 比约克的记忆力理论模型
 
 加州大学洛杉矶分校的一对教授夫妻 —— 罗伯特·比约克（Robert Bjork）和伊丽莎白·比约克（Elizabeth Bjork）—— 据此提出了一个非常漂亮的记忆力理论模型。它能完美解释各种关于记忆和遗忘的现象，它能为我们的学习提供指导，它非常简单而又非常反常识。
@@ -81,6 +84,9 @@ summary: 《万维钢·精英日课1：忘记是为了更好的记住》课程�
 
 *所以要想记住，最好先忘了。*
 
+
+<div class="anchor" id="wan-wei-gang-de-ping-lun"></div>
+
 ## 3 万维钢的评论
 
 > 我上大学的时候，一度觉得一本书学一个学期实在效率太低了。实际上我用突击的方法学完了好多课程 —— 拿本教材直接读，读完一章就做做习题，然后就读下一章，其实总共用不了多少时间，而且考试成绩都挺好。 
@@ -110,6 +116,8 @@ summary: 《万维钢·精英日课1：忘记是为了更好的记住》课程�
 > 5. 记忆式的学习，可以搞战略性的多任务。
 
 ### 延伸
+
+<div class="anchor" id="ji-yi-de-chang-qi-zhan-lue"></div>
 
 #### 记忆的长期战略
 
