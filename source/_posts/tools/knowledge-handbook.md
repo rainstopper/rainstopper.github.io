@@ -166,6 +166,16 @@ img: http://q4kbn37nl.bkt.clouddn.com/long-zhu.jpg?e=1580530338&token=0QXSKIUWEa
 相关：万维钢 ——《万维钢·精英日课3：逻辑思维5：灰度认知和黑白决策》[课程笔记](/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-3/20190326_luo-ji-si-wei-5-hui-du-ren-zhi-he-hei-bai-jue-ce/)
 收录时间：2020.1.31
 
+
+<div class="anchor" id="hui-sheng-shi-xiao-ying"></div>
+
+### 回音室效应
+
+> 在媒体上指在一个相对封闭的环境上，一些意见相近的声音不断重复，并以夸张或其他扭曲形式重复，令处于相对封闭环境中的大多数人认为这些扭曲的故事就是事实的全部。
+
+相关：万维钢 ——《万维钢·精英日课1：怎样优雅地跟人谈政治...以及任何有争议的话题》[读书笔记](/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-1/20160929_zen-yang-you-ya-de-gen-ren-tan-zheng-zhi-yi-ji-ren-he-you-zheng-yi-de-hua-ti/)
+收录时间：2020.2.6
+
 ---
 
 ## J
@@ -456,5 +466,5 @@ img: http://q4kbn37nl.bkt.clouddn.com/long-zhu.jpg?e=1580530338&token=0QXSKIUWEa
 
 目前，随着智能信息服务应用的不断发展，知识图谱已广泛应用于智能搜索、智能问答、个性化推荐等领域。
 
-相关：[《构建知识图谱》](/hexo/build-knowledge-graph/)
+相关：[《构建知识图谱》](/hexo/knowledge-graph/build/)
 收录时间：2020.2.2

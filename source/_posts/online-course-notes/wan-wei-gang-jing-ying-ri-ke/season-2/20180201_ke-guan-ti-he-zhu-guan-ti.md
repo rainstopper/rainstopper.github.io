@@ -129,9 +129,9 @@ summary: 《万维钢·精英日课2：客观题和主观题》课程笔记
 
 > 万维钢：在实际操作上，哪怕相信这个问题是个客观题，你也应该假装它处在客观和主观中间的灰色地带。
 
-*这么做对形象有利*。《万维钢·精英日课1：怎样优雅地跟人谈政治...以及任何有争议的话题》中提到一项[研究](/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-1/20160929_zen-yang-you-ya-de-gen-ren-tan-zheng-zhi-yi-ji-ren-he-you-zheng-yi-de-hua-ti/#)，说如果一个人在和对方阵营的人争论的时候表现得是在向对方学习，这个人的形象就很好。旁观者会认为他有见识、老练、有说服力，会很喜欢他。
+*这么做对形象有利*。《万维钢·精英日课1：怎样优雅地跟人谈政治...以及任何有争议的话题》中提到一项[研究](/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-1/20160929_zen-yang-you-ya-de-gen-ren-tan-zheng-zhi-yi-ji-ren-he-you-zheng-yi-de-hua-ti/#ji-qiao-shi-tan-hua-bian-de-you-ya)，说如果一个人在和对方阵营的人争论的时候表现得是在向对方学习，这个人的形象就很好。旁观者会认为他有见识、老练、有说服力，会很喜欢他。
 
-*这么做还是智慧的表现*。《万维钢·精英日课1：到底什么叫“智慧”？》中提到心理学家对“智慧”的一个[定义](/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-1/20161018_dao-di-shen-me-jiao-zhi-hui/#)，就是智识上的谦逊，就是能够考虑他人的观点。
+*这么做还是智慧的表现*。《万维钢·精英日课1：到底什么叫“智慧”？》中提到心理学家对“智慧”的一个[定义](/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-1/20161018_dao-di-shen-me-jiao-zhi-hui/#zhi-hui-xu-yao-de-neng-li)，就是智识上的谦逊，就是能够考虑他人的观点。
 
 *这么做还能让人更有说服力*。形象好，有智慧，谁都愿意听这样的人说话。
 

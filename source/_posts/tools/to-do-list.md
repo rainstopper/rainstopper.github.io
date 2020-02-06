@@ -10,13 +10,22 @@ img: http://q4kbn37nl.bkt.clouddn.com/jin-dou-yun.jpg?e=1580528638&token=0QXSKIU
 
 ##### 待办事项
 
+## 知识图谱支持搜索
+
+知识图谱支持按关键字进行模糊搜索，匹配包含关键字的节点，并突出展示。
+
+起因：随着节点数量的增加，凭肉眼寻找节点变得困难。
+优先级：★★★☆☆
+提出时间：2020.2.7
+
+
 <div class="anchor" id="hexo-tag-echarts3-cha-jian-yi-liu-wen-ti"></div>
 
 ## hexo-tag-echarts3 插件遗留问题
 
 在构建知识图谱的过程中发现，`hexo-tag-echarts3` 插件引入的 ECharts 功能不全，且该插件的所有历史版本都存在同样的问题。
 
-起因：《构建知识图谱》中遇到的 [hexo-tag-echarts3 插件问题](/hexo/build-knowledge-graph/#hexo-tag-echarts3-cha-jian-yi-liu-wen-ti)
+起因：《构建知识图谱》中遇到的 [hexo-tag-echarts3 插件问题](/hexo/knowledge-graph/build/#hexo-tag-echarts3-cha-jian-yi-liu-wen-ti)
 优先级：★☆☆☆☆
 提出时间：2020.2.3
 
@@ -30,7 +39,7 @@ img: http://q4kbn37nl.bkt.clouddn.com/jin-dou-yun.jpg?e=1580528638&token=0QXSKIU
 
 起因：《万维钢·精英日课2：正确的学习方法只有一种风格》给我的[灵感]((/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-2/20180607_zheng-que-de-xue-xi-fang-fa-zhi-you-yi-zhong-feng-ge/#li-yong-bo-ke-xue-xi)
 优先级：★★★★☆
-过程：[《构建知识图谱》](/hexo/build-knowledge-graph/)
+过程：[《构建知识图谱》](/hexo/knowledge-graph/build/)
 成果：[知识图谱](/tools/knowledge-graph/)
 提出时间：2020.2.1
 开始时间：2020.2.2

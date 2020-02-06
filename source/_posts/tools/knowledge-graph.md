@@ -34,9 +34,9 @@ function getNodeSize(value) { // 计算节点大小
 }
 
 var MIN_OPACITYR = 0.3, // 透明度下限
-    MAX_OPACITY = 1, // 透明度上限
+    MAX_OPACITY = 0.96, // 透明度上限
     MAX_OPACITY_VALUE = 7, // 大于等于该值能达到透明度上限
-    OPACITY_INDEX = 3; // 透明度指数，该值越大，透明的节点越多
+    OPACITY_INDEX = 2; // 透明度指数，该值越大，透明的节点越多
 
 function getNodeOpacity(value) { // 计算节点透明度
   return Math.min(MIN_OPACITYR + Math.pow(value / MAX_OPACITY_VALUE, OPACITY_INDEX) * (1 - MIN_OPACITYR), MAX_OPACITY);
@@ -147,7 +147,7 @@ $(function() {
         force: {
           edgeLength: 30,
           repulsion: 50,
-          gravity: 0.44
+          gravity: 0.5
         },
         roam: true,
         draggable: true,
