@@ -893,6 +893,7 @@ header .go-back i {
 #post-calendar {
     width: 100%;
     height: 225px;
+    overflow-x: auto;
 }
 
 .settings-content {

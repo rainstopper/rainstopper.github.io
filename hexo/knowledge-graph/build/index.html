@@ -402,7 +402,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    5.3k
+                    5.5k
                 </div>
                 
 
@@ -432,7 +432,7 @@
 <p>所谓“连接”，就是新旧知识之间的联系。它能巩固我们对知识的认知，也能催生出具有创造性的想法。</p>
 <p>此前我一直有一个习惯，就是在写作的过程中，利用 <code>超链接</code> 将有联系的知识点关联起来。但这只是一个跳转的途径。</p>
 <p>我仍然迫切需要一个可视化的界面，能看到这些“连接”的全貌。这也给了我<a href="/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-2/20180607_zheng-que-de-xue-xi-fang-fa-zhi-you-yi-zhong-feng-ge/#li-yong-bo-ke-xue-xi">灵感</a> —— 构建一份自己的知识图谱。</p>
-<h2 id="2-简介"><a href="#2-简介" class="headerlink" title="2 简介"></a>2 简介</h2><p>要构建知识图谱，我们首先得知道它是什么，以及它能给我们带来什么。</p>
+<h2 id="2-预备知识"><a href="#2-预备知识" class="headerlink" title="2 预备知识"></a>2 预备知识</h2><p>要构建知识图谱，我们首先得知道它是什么，以及它能给我们带来什么。</p>
 <h3 id="2-1-信息与知识"><a href="#2-1-信息与知识" class="headerlink" title="2.1 信息与知识"></a>2.1 信息与知识</h3><p>如果你看过网络综艺《奇葩说》第五季第 17 期：你是否支持全人类一秒知识共享，你也许会对辩手陈铭的辩论印象深刻。他在节目中区分了信息和知识两个概念：</p>
 <blockquote>
 <p>信息是指外部的客观事实。举例：这里有一瓶水，它现在是 7℃。</p>
@@ -599,7 +599,7 @@
 <p>实际上，Hexo 的<a href="https://hexo.io/plugins/" target="_blank" rel="noopener">官方插件</a>中就提供了一款 <a href="https://github.com/kchen0x/hexo-tag-echarts3" target="_blank" rel="noopener">hexo-tag-echarts3</a> 插件，支持在 <code>.md</code> 文章文件中使用 <code>echarts-tag</code> 标签来绘制 ECharts 图表。</p>
 <p>可是，在<a href="chang-shi-hexo-tag-echarts3-cha-jian">初步尝试</a>后，发现这个插件存在一些缺陷，故暂停使用。</p>
 <p>最终决定使用传统的 js 方式引入 ECharts 库，实现关系图。</p>
-<h2 id="5-开发"><a href="#5-开发" class="headerlink" title="5 开发"></a>5 开发</h2><p>打开命令行，使用 Hexo 提供的 <code>hexo new [layout] &lt;title&gt;</code> 命令在 <code>source\_posts</code> 目录下创建一个 <code>.md</code> 格式的文章文件 —— 这是我们的常规操作，大家一定都很熟悉了。</p>
+<h2 id="5-代码实现"><a href="#5-代码实现" class="headerlink" title="5 代码实现"></a>5 代码实现</h2><p>打开命令行，使用 Hexo 提供的 <code>hexo new [layout] &lt;title&gt;</code> 命令在 <code>source\_posts</code> 目录下创建一个 <code>.md</code> 格式的文章文件 —— 这是我们的常规操作，大家一定都很熟悉了。</p>
 <p>然而，Hexo 在生成静态文件后，之会保留一些特定目录下的源文件。这时，我们应该如何引用我们想引用的文件呢？</p>
 <div class="anchor" id="gou-jian-zhi-shi-ku"></div>
 
@@ -633,87 +633,85 @@
 ├── _config.yml
 └── package.json</code></pre><h3 id="5-2-数据加载和处理"><a href="#5-2-数据加载和处理" class="headerlink" title="5.2 数据加载和处理"></a>5.2 数据加载和处理</h3><h4 id="5-2-1-数据加载"><a href="#5-2-1-数据加载" class="headerlink" title="5.2.1 数据加载"></a>5.2.1 数据加载</h4><p>由于 Matery 主题本身引入了 <code>jQuery</code> 库，可以直接使用里边的方法，还是非常方便的。</p>
 <p>在 <code>.md</code> 文章文件中添加以下代码：</p>
-<pre class="line-numbers language-markdown"><code class="language-markdown"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-function loadData(callback) { // 数据加载方法
-  $.ajax({
-<span class="token code keyword">    url: '/data/knowledge-base.json',</span>
-<span class="token code keyword">    dataType: 'json',</span>
-<span class="token code keyword">    success: callback</span>
-  });
-}
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">loadData</span><span class="token punctuation">(</span>callback<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 数据加载方法</span>
+  $<span class="token punctuation">.</span><span class="token function">ajax</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    url<span class="token punctuation">:</span> <span class="token string">'/data/knowledge-base.json'</span><span class="token punctuation">,</span>
+    dataType<span class="token punctuation">:</span> <span class="token string">'json'</span><span class="token punctuation">,</span>
+    success<span class="token punctuation">:</span> callback
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-loadData(function(response) {
-  console.log(response);
-});
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token function">loadData</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>其中，<code>loadData</code> 方法是用于数据加载的方法。它接收一个回调函数作为参数，我们可以在这个回调函数内部处理返回的数据。</p>
 <p>比如这里通过 <code>console.log()</code> 方法打印了响应的信息，这样就能在浏览器控制台上看到 <code>source/data/knowledge-base.json</code> 中保存的对象信息。</p>
 <p><em>如果今后需要更换外部数据源，或是改变数据加载的方式，我们只需要修改 <code>loadData()</code> 方法即可。</em></p>
 <h4 id="5-2-2-格式化处理"><a href="#5-2-2-格式化处理" class="headerlink" title="5.2.2 格式化处理"></a>5.2.2 格式化处理</h4><p>阅读 ECharts 的<a href="https://www.echartsjs.com/zh/option.html#series-graph" target="_blank" rel="noopener">配置文档</a>发现，配置中需要 <code>legend.data</code>、<code>categories</code>、<code>data</code>/<code>nodes</code>、<code>links</code>/<code>edges</code> 四项信息。这一步的目的就是将 <code>source/data/knowledge-base.json</code> 返回的信息转化为这四种信息，供 ECharts 渲染。</p>
 <p>修改 <code>loadData()</code> 方法如下：</p>
-<pre class="line-numbers language-markdown"><code class="language-markdown">loadData(function(response) {
-  var nodes = response.nodes || [], // 节点信息
-<span class="token code keyword">      lines = response.lines || []; // 连线信息</span>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token function">loadData</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> nodes <span class="token operator">=</span> response<span class="token punctuation">.</span>nodes <span class="token operator">||</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 节点信息</span>
+      lines <span class="token operator">=</span> response<span class="token punctuation">.</span>lines <span class="token operator">||</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 连线信息</span>
 
-  // 生成分类信息
-  var categories = nodes.filter(function(item, index) { // 过滤重复的分类
-<span class="token code keyword">    for (var i = 0; i &lt; index; i++) if (item.category === nodes.category) return false; // 前面出现过相同的名称</span>
-<span class="token code keyword">    return true;</span>
-  }).map(function(item) {
-<span class="token code keyword">    return { name: item.category };</span>
-  });
-  categories.push({ name: '其它' }); // 无分类的节点被归类为“其它”
+  <span class="token comment" spellcheck="true">// 生成分类信息</span>
+  <span class="token keyword">var</span> categories <span class="token operator">=</span> nodes<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>item<span class="token punctuation">,</span> index<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 过滤重复的分类</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> index<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>item<span class="token punctuation">.</span>category <span class="token operator">===</span> nodes<span class="token punctuation">.</span>category<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 前面出现过相同的名称</span>
+    <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span> name<span class="token punctuation">:</span> item<span class="token punctuation">.</span>category <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  categories<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token string">'其它'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 无分类的节点被归类为“其它”</span>
 
-  // 生成图例信息
-  var legends = categories.map(function(item) {
-<span class="token code keyword">    return item.name;</span>
-  });
+  <span class="token comment" spellcheck="true">// 生成图例信息</span>
+  <span class="token keyword">var</span> legends <span class="token operator">=</span> categories<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> item<span class="token punctuation">.</span>name<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  // 生成节点信息
-  var data = nodes.filter(function(item, index) { // 过滤名称重复的节点
-<span class="token code keyword">    for (var i = 0; i &lt; index; i++) if (item.name === nodes[i].name) return false; // 前面出现过相同的名称</span>
-<span class="token code keyword">    return true;</span>
-  }).map(function(item) {
-<span class="token code keyword">    var name = item.name;</span>
+  <span class="token comment" spellcheck="true">// 生成节点信息</span>
+  <span class="token keyword">var</span> data <span class="token operator">=</span> nodes<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>item<span class="token punctuation">,</span> index<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 过滤名称重复的节点</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> index<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>item<span class="token punctuation">.</span>name <span class="token operator">===</span> nodes<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 前面出现过相同的名称</span>
+    <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> name <span class="token operator">=</span> item<span class="token punctuation">.</span>name<span class="token punctuation">;</span>
 
-<span class="token code keyword">    var value = 0; // 节点的数值</span>
-<span class="token code keyword">    lines.forEach(function(line) { // 节点的出度、入度之和</span>
-<span class="token code keyword">      if (name === line.subject || name === line.object) value++;</span>
-<span class="token code keyword">    });</span>
-<span class="token code keyword">    if (value === 0) value = 1; // 至少是 1</span>
+    <span class="token keyword">var</span> value <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 节点的数值</span>
+    lines<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>line<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 节点的出度、入度之和</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>name <span class="token operator">===</span> line<span class="token punctuation">.</span>subject <span class="token operator">||</span> name <span class="token operator">===</span> line<span class="token punctuation">.</span>object<span class="token punctuation">)</span> value<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>value <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> value <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 至少是 1</span>
 
-<span class="token code keyword">    var categoryIndex = legends.length - 1; // 分类下标，默认最大值，对应“其它”</span>
-<span class="token code keyword">    for (var i = 0; i &lt; legends.length; i++) {</span>
-<span class="token code keyword">      if (item.category === legends[i]) {</span>
-<span class="token code keyword">        categoryIndex = i;</span>
-<span class="token code keyword">        break;</span>
-<span class="token code keyword">      }</span>
-<span class="token code keyword">    }</span>
+    <span class="token keyword">var</span> categoryIndex <span class="token operator">=</span> legends<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 分类下标，默认最大值，对应“其它”</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> legends<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>item<span class="token punctuation">.</span>category <span class="token operator">===</span> legends<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        categoryIndex <span class="token operator">=</span> i<span class="token punctuation">;</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
 
-<span class="token code keyword">    return {</span>
-<span class="token code keyword">      name: name, // 节点名称</span>
-<span class="token code keyword">      value: value, // 节点数值</span>
-<span class="token code keyword">      category: categoryIndex, // 节点分类</span>
-<span class="token code keyword">      symbolSize: 10 + (value - 1) * 2, // 节点大小</span>
-<span class="token code keyword">      label: { // 标签</span>
-<span class="token code keyword">        show: value >= 1 // 数值足够大时展示</span>
-<span class="token code keyword">      },</span>
-<span class="token code keyword">      link: item.link, // 链接，点击事件时获取</span>
-<span class="token code keyword">      date: item.date</span>
-<span class="token code keyword">    };</span>
-  });
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      name<span class="token punctuation">:</span> name<span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 节点名称</span>
+      value<span class="token punctuation">:</span> value<span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 节点数值</span>
+      category<span class="token punctuation">:</span> categoryIndex<span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 节点分类</span>
+      symbolSize<span class="token punctuation">:</span> <span class="token number">10</span> <span class="token operator">+</span> <span class="token punctuation">(</span>value <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 节点大小</span>
+      label<span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 标签</span>
+        show<span class="token punctuation">:</span> value <span class="token operator">>=</span> <span class="token number">1</span> <span class="token comment" spellcheck="true">// 数值足够大时展示</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      link<span class="token punctuation">:</span> item<span class="token punctuation">.</span>link<span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 链接，点击事件时获取</span>
+      date<span class="token punctuation">:</span> item<span class="token punctuation">.</span>date
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  // 生成连线信息
-  links = lines.map(function(item) {
-<span class="token code keyword">    return {</span>
-<span class="token code keyword">      source: item.subject,</span>
-<span class="token code keyword">      target: item.object,</span>
-<span class="token code keyword">      value: item.predicate,</span>
-<span class="token code keyword">      link: item.link,</span>
-<span class="token code keyword">      date: item.date</span>
-<span class="token code keyword">    };</span>
-  });
-});<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+  <span class="token comment" spellcheck="true">// 生成连线信息</span>
+  <span class="token keyword">var</span> links <span class="token operator">=</span> lines<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      source<span class="token punctuation">:</span> item<span class="token punctuation">.</span>subject<span class="token punctuation">,</span>
+      target<span class="token punctuation">:</span> item<span class="token punctuation">.</span>object<span class="token punctuation">,</span>
+      value<span class="token punctuation">:</span> item<span class="token punctuation">.</span>predicate<span class="token punctuation">,</span>
+      link<span class="token punctuation">:</span> item<span class="token punctuation">.</span>link<span class="token punctuation">,</span>
+      date<span class="token punctuation">:</span> item<span class="token punctuation">.</span>date
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="5-3-Echarts-关系图绘制"><a href="#5-3-Echarts-关系图绘制" class="headerlink" title="5.3 Echarts 关系图绘制"></a>5.3 Echarts 关系图绘制</h3><div class="anchor" id="chang-shi-hexo-tag-echarts3-cha-jian"></div>
 
 <h4 id="5-3-1-尝试-hexo-tag-echarts3-插件"><a href="#5-3-1-尝试-hexo-tag-echarts3-插件" class="headerlink" title="5.3.1 尝试 hexo-tag-echarts3 插件"></a>5.3.1 尝试 hexo-tag-echarts3 插件</h4><p><em>本小节不是关键内容，可以<a href="">跳过</a>。</em></p>
@@ -742,12 +740,12 @@ loadData(function(response) {
 <pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&lt;%- id %<span class="token punctuation">></span><span class="token punctuation">"</span></span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token property">width</span><span class="token punctuation">:</span> &lt;<span class="token number">%</span>- width <span class="token number">%</span>><span class="token punctuation">;</span><span class="token property">height</span><span class="token punctuation">:</span> &lt;<span class="token number">%</span>- height <span class="token number">%</span>>px<span class="token punctuation">;</span><span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">0</span> auto</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 <span class="token comment" spellcheck="true">&lt;!-- &lt;script src="https://cdn.bootcss.com/echarts/3.8.0/echarts.common.min.js">&lt;/script> --></span> <span class="token comment" spellcheck="true">&lt;!-- 不使用该 cdn 资源 --></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript">
-        <span class="token comment" spellcheck="true">// 基于准备好的dom，初始化echarts实例</span>
-        <span class="token keyword">var</span> myChart <span class="token operator">=</span> echarts<span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'&lt;%- id %>'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">// 指定图表的配置项和数据</span>
-        <span class="token keyword">var</span> option <span class="token operator">=</span> <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span> option <span class="token operator">%</span><span class="token operator">></span>
-        <span class="token comment" spellcheck="true">// 使用刚指定的配置项和数据显示图表。</span>
-        myChart<span class="token punctuation">.</span><span class="token function">setOption</span><span class="token punctuation">(</span>option<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">// 基于准备好的dom，初始化echarts实例</span>
+  <span class="token keyword">var</span> myChart <span class="token operator">=</span> echarts<span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'&lt;%- id %>'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">// 指定图表的配置项和数据</span>
+  <span class="token keyword">var</span> option <span class="token operator">=</span> <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span> option <span class="token operator">%</span><span class="token operator">></span>
+  <span class="token comment" spellcheck="true">// 使用刚指定的配置项和数据显示图表。</span>
+  myChart<span class="token punctuation">.</span><span class="token function">setOption</span><span class="token punctuation">(</span>option<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>然后修改文章文件中的内容：</p>
 <pre class="line-numbers language-markdown"><code class="language-markdown"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/libs/echarts/echarts.min.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span> <span class="token comment" spellcheck="true">&lt;!-- 引用自己的 ECharts 库 --></span>
@@ -778,157 +776,156 @@ loadData(function(response) {
 <p>另外，由于是通过模板创建，这段代码并不能在数据加载后异步执行。这是个很致命的缺点。</p>
 <p>因此，<em>这里先暂停使用该插件</em>。但不得不说，这是一个有趣的尝试。</p>
 <h4 id="5-3-2-传统方式实现"><a href="#5-3-2-传统方式实现" class="headerlink" title="5.3.2 传统方式实现"></a>5.3.2 传统方式实现</h4><p>以下是 <code>.md</code> 文章文件的完整代码：</p>
-<pre class="line-numbers language-markdown"><code class="language-markdown"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>graph<span class="token punctuation">"</span></span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">600</span>px<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>graph<span class="token punctuation">"</span></span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">600</span>px<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/libs/echarts/echarts.min.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>  <span class="token comment" spellcheck="true">&lt;!-- 引入 ECharts 库 --></span>
 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-var myChart = echarts.init(document.getElementById('graph'));
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript">
+<span class="token keyword">var</span> myChart <span class="token operator">=</span> echarts<span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'graph'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-function loadData(callback) { // 数据加载方法
-  $.ajax({
-<span class="token code keyword">    url: '/data/knowledge-base.json',</span>
-<span class="token code keyword">    dataType: 'json',</span>
-<span class="token code keyword">    success: callback</span>
-  });
-}
+<span class="token keyword">function</span> <span class="token function">loadData</span><span class="token punctuation">(</span>callback<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 数据加载方法</span>
+  $<span class="token punctuation">.</span><span class="token function">ajax</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    url<span class="token punctuation">:</span> <span class="token string">'/data/knowledge-base.json'</span><span class="token punctuation">,</span>
+    dataType<span class="token punctuation">:</span> <span class="token string">'json'</span><span class="token punctuation">,</span>
+    success<span class="token punctuation">:</span> callback
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-myChart.showLoading();
+myChart<span class="token punctuation">.</span><span class="token function">showLoading</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-loadData(function(response) {
-  var nodes = response.nodes || [], // 节点信息
-<span class="token code keyword">      lines = response.lines || []; // 连线信息</span>
+<span class="token function">loadData</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> nodes <span class="token operator">=</span> response<span class="token punctuation">.</span>nodes <span class="token operator">||</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 节点信息</span>
+      lines <span class="token operator">=</span> response<span class="token punctuation">.</span>lines <span class="token operator">||</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 连线信息</span>
 
-  // 生成分类信息
-  var categories = nodes.filter(function(item, index) { // 过滤重复的分类
-<span class="token code keyword">    for (var i = 0; i &lt; index; i++) if (item.category === nodes.category) return false; // 前面出现过相同的名称</span>
-<span class="token code keyword">    return true;</span>
-  }).map(function(item) {
-<span class="token code keyword">    return { name: item.category };</span>
-  });
-  categories.push({ name: '其它' }); // 无分类的节点被归类为“其它”
+  <span class="token comment" spellcheck="true">// 生成分类信息</span>
+  <span class="token keyword">var</span> categories <span class="token operator">=</span> nodes<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>item<span class="token punctuation">,</span> index<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 过滤重复的分类</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> index<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>item<span class="token punctuation">.</span>category <span class="token operator">===</span> nodes<span class="token punctuation">.</span>category<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 前面出现过相同的名称</span>
+    <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span> name<span class="token punctuation">:</span> item<span class="token punctuation">.</span>category <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  categories<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token string">'其它'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 无分类的节点被归类为“其它”</span>
 
-  // 生成图例信息
-  var legends = categories.map(function(item) {
-<span class="token code keyword">    return item.name;</span>
-  });
+  <span class="token comment" spellcheck="true">// 生成图例信息</span>
+  <span class="token keyword">var</span> legends <span class="token operator">=</span> categories<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> item<span class="token punctuation">.</span>name<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  // 生成节点信息
-  var data = nodes.filter(function(item, index) { // 过滤名称重复的节点
-<span class="token code keyword">    for (var i = 0; i &lt; index; i++) if (item.name === nodes[i].name) return false; // 前面出现过相同的名称</span>
-<span class="token code keyword">    return true;</span>
-  }).map(function(item) {
-<span class="token code keyword">    var name = item.name;</span>
+  <span class="token comment" spellcheck="true">// 生成节点信息</span>
+  <span class="token keyword">var</span> data <span class="token operator">=</span> nodes<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>item<span class="token punctuation">,</span> index<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 过滤名称重复的节点</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> index<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>item<span class="token punctuation">.</span>name <span class="token operator">===</span> nodes<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 前面出现过相同的名称</span>
+    <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> name <span class="token operator">=</span> item<span class="token punctuation">.</span>name<span class="token punctuation">;</span>
 
-<span class="token code keyword">    var value = 0; // 节点的数值</span>
-<span class="token code keyword">    lines.forEach(function(line) { // 节点的出度、入度之和</span>
-<span class="token code keyword">      if (name === line.subject || name === line.object) value++;</span>
-<span class="token code keyword">    });</span>
-<span class="token code keyword">    if (value === 0) value = 1; // 至少是 1</span>
+    <span class="token keyword">var</span> value <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 节点的数值</span>
+    lines<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>line<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 节点的出度、入度之和</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>name <span class="token operator">===</span> line<span class="token punctuation">.</span>subject <span class="token operator">||</span> name <span class="token operator">===</span> line<span class="token punctuation">.</span>object<span class="token punctuation">)</span> value<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>value <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> value <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 至少是 1</span>
 
-<span class="token code keyword">    var categoryIndex = legends.length - 1; // 分类下标，默认最大值，对应“其它”</span>
-<span class="token code keyword">    for (var i = 0; i &lt; legends.length; i++) {</span>
-<span class="token code keyword">      if (item.category === legends[i]) {</span>
-<span class="token code keyword">        categoryIndex = i;</span>
-<span class="token code keyword">        break;</span>
-<span class="token code keyword">      }</span>
-<span class="token code keyword">    }</span>
+    <span class="token keyword">var</span> categoryIndex <span class="token operator">=</span> legends<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 分类下标，默认最大值，对应“其它”</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> legends<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>item<span class="token punctuation">.</span>category <span class="token operator">===</span> legends<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        categoryIndex <span class="token operator">=</span> i<span class="token punctuation">;</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
 
-<span class="token code keyword">    return {</span>
-<span class="token code keyword">      name: name, // 节点名称</span>
-<span class="token code keyword">      value: value, // 节点数值</span>
-<span class="token code keyword">      category: categoryIndex, // 节点分类</span>
-<span class="token code keyword">      symbolSize: 10 + (value - 1) * 2, // 节点大小</span>
-<span class="token code keyword">      label: { // 标签</span>
-<span class="token code keyword">        show: value >= 1 // 数值足够大时展示</span>
-<span class="token code keyword">      },</span>
-<span class="token code keyword">      link: item.link, // 链接，点击事件时获取</span>
-<span class="token code keyword">      date: item.date</span>
-<span class="token code keyword">    };</span>
-  });
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      name<span class="token punctuation">:</span> name<span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 节点名称</span>
+      value<span class="token punctuation">:</span> value<span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 节点数值</span>
+      category<span class="token punctuation">:</span> categoryIndex<span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 节点分类</span>
+      symbolSize<span class="token punctuation">:</span> <span class="token number">10</span> <span class="token operator">+</span> <span class="token punctuation">(</span>value <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 节点大小</span>
+      label<span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 标签</span>
+        show<span class="token punctuation">:</span> value <span class="token operator">>=</span> <span class="token number">1</span> <span class="token comment" spellcheck="true">// 数值足够大时展示</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      link<span class="token punctuation">:</span> item<span class="token punctuation">.</span>link<span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 链接，点击事件时获取</span>
+      date<span class="token punctuation">:</span> item<span class="token punctuation">.</span>date
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  // 生成连线信息
-  links = lines.map(function(item) {
-<span class="token code keyword">    return {</span>
-<span class="token code keyword">      source: item.subject,</span>
-<span class="token code keyword">      target: item.object,</span>
-<span class="token code keyword">      value: item.predicate,</span>
-<span class="token code keyword">      link: item.link,</span>
-<span class="token code keyword">      date: item.date</span>
-<span class="token code keyword">    };</span>
-  });
+  <span class="token comment" spellcheck="true">// 生成连线信息</span>
+  <span class="token keyword">var</span> links <span class="token operator">=</span> lines<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      source<span class="token punctuation">:</span> item<span class="token punctuation">.</span>subject<span class="token punctuation">,</span>
+      target<span class="token punctuation">:</span> item<span class="token punctuation">.</span>object<span class="token punctuation">,</span>
+      value<span class="token punctuation">:</span> item<span class="token punctuation">.</span>predicate<span class="token punctuation">,</span>
+      link<span class="token punctuation">:</span> item<span class="token punctuation">.</span>link<span class="token punctuation">,</span>
+      date<span class="token punctuation">:</span> item<span class="token punctuation">.</span>date
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  myChart.setOption({
-<span class="token code keyword">    legend: {</span>
-<span class="token code keyword">      type: 'scroll',</span>
-<span class="token code keyword">      left: 0,</span>
-<span class="token code keyword">      orient: 'vertical',</span>
-<span class="token code keyword">      data: legends</span>
-<span class="token code keyword">    },</span>
-<span class="token code keyword">    tooltip: {</span>
-<span class="token code keyword">      formatter: function(params) {</span>
-<span class="token code keyword">        var str = '';</span>
-<span class="token code keyword">        if (params.dataType === 'node') {</span>
-<span class="token code keyword">          str = params.data.name + '&lt;br/>关联 ' + params.data.value + ' 个节点';</span>
-<span class="token code keyword">        } else if (params.dataType === 'edge') {</span>
-<span class="token code keyword">          str = params.data.source + ' ' + params.data.value + ' ' + params.data.target;</span>
-<span class="token code keyword">        }</span>
-<span class="token code keyword">        if (params.data.link) {</span>
-<span class="token code keyword">          if (str.length > 0) str += '&lt;br/>';</span>
-<span class="token code keyword">          str += '点击查看详情';</span>
-<span class="token code keyword">        }</span>
-<span class="token code keyword">        return str;</span>
-<span class="token code keyword">      }</span>
-<span class="token code keyword">    },</span>
-<span class="token code keyword">    series: [{</span>
-<span class="token code keyword">      type: 'graph',</span>
-<span class="token code keyword">      layout: 'force',</span>
-<span class="token code keyword">      force: {</span>
-<span class="token code keyword">        edgeLength: 40,</span>
-<span class="token code keyword">        repulsion: 50,</span>
-<span class="token code keyword">        gravity: 0.12</span>
-<span class="token code keyword">      },</span>
-<span class="token code keyword">      draggable: true,</span>
-<span class="token code keyword">      focusNodeAdjacency: true,</span>
-<span class="token code keyword">      // edgeSymbol: ['none', 'arrow'],</span>
-<span class="token code keyword">      itemStyle: { // 图形样式</span>
-<span class="token code keyword">        borderColor: '#fff',</span>
-<span class="token code keyword">        borderWidth: 1,</span>
-<span class="token code keyword">        shadowBlur: 10,</span>
-<span class="token code keyword">        shadowColor: 'rgba(0, 0, 0, 0.3)'</span>
-<span class="token code keyword">      },</span>
-<span class="token code keyword">      label: { // 图形上的文本标签</span>
-<span class="token code keyword">        position: 'right',</span>
-<span class="token code keyword">        formatter: '{b}'</span>
-<span class="token code keyword">      },</span>
-<span class="token code keyword">      edgeLabel: { // 关系边上的文本标签</span>
-<span class="token code keyword">        formatter: '{c}'</span>
-<span class="token code keyword">      },</span>
-<span class="token code keyword">      emphasis: {</span>
-<span class="token code keyword">        lineStyle: {</span>
-<span class="token code keyword">          width: 3</span>
-<span class="token code keyword">        }</span>
-<span class="token code keyword">      },</span>
-<span class="token code keyword">      categories: categories,</span>
-<span class="token code keyword">      data: data,</span>
-<span class="token code keyword">      links: links,</span>
-<span class="token code keyword">      animation: false</span>
-<span class="token code keyword">    }]</span>
-  });
+  myChart<span class="token punctuation">.</span><span class="token function">setOption</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    legend<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      type<span class="token punctuation">:</span> <span class="token string">'scroll'</span><span class="token punctuation">,</span>
+      left<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+      orient<span class="token punctuation">:</span> <span class="token string">'vertical'</span><span class="token punctuation">,</span>
+      data<span class="token punctuation">:</span> legends
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    tooltip<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      formatter<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span>params<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">var</span> str <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>params<span class="token punctuation">.</span>dataType <span class="token operator">===</span> <span class="token string">'node'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          str <span class="token operator">=</span> params<span class="token punctuation">.</span>data<span class="token punctuation">.</span>name <span class="token operator">+</span> <span class="token string">'&lt;br/>关联 '</span> <span class="token operator">+</span> params<span class="token punctuation">.</span>data<span class="token punctuation">.</span>value <span class="token operator">+</span> <span class="token string">' 个节点'</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>params<span class="token punctuation">.</span>dataType <span class="token operator">===</span> <span class="token string">'edge'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          str <span class="token operator">=</span> params<span class="token punctuation">.</span>data<span class="token punctuation">.</span>source <span class="token operator">+</span> <span class="token string">' '</span> <span class="token operator">+</span> params<span class="token punctuation">.</span>data<span class="token punctuation">.</span>value <span class="token operator">+</span> <span class="token string">' '</span> <span class="token operator">+</span> params<span class="token punctuation">.</span>data<span class="token punctuation">.</span>target<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>params<span class="token punctuation">.</span>data<span class="token punctuation">.</span>link<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>str<span class="token punctuation">.</span>length <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> str <span class="token operator">+</span><span class="token operator">=</span> <span class="token string">'&lt;br/>'</span><span class="token punctuation">;</span>
+          str <span class="token operator">+</span><span class="token operator">=</span> <span class="token string">'点击查看详情'</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> str<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    series<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+      type<span class="token punctuation">:</span> <span class="token string">'graph'</span><span class="token punctuation">,</span>
+      layout<span class="token punctuation">:</span> <span class="token string">'force'</span><span class="token punctuation">,</span>
+      force<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        edgeLength<span class="token punctuation">:</span> <span class="token number">40</span><span class="token punctuation">,</span>
+        repulsion<span class="token punctuation">:</span> <span class="token number">50</span><span class="token punctuation">,</span>
+        gravity<span class="token punctuation">:</span> <span class="token number">0.12</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      draggable<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      focusNodeAdjacency<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token comment" spellcheck="true">// edgeSymbol: ['none', 'arrow'],</span>
+      itemStyle<span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 图形样式</span>
+        borderColor<span class="token punctuation">:</span> <span class="token string">'#fff'</span><span class="token punctuation">,</span>
+        borderWidth<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+        shadowBlur<span class="token punctuation">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+        shadowColor<span class="token punctuation">:</span> <span class="token string">'rgba(0, 0, 0, 0.3)'</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      label<span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 图形上的文本标签</span>
+        position<span class="token punctuation">:</span> <span class="token string">'right'</span><span class="token punctuation">,</span>
+        formatter<span class="token punctuation">:</span> <span class="token string">'{b}'</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      edgeLabel<span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 关系边上的文本标签</span>
+        formatter<span class="token punctuation">:</span> <span class="token string">'{c}'</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      emphasis<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        lineStyle<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          width<span class="token punctuation">:</span> <span class="token number">3</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      categories<span class="token punctuation">:</span> categories<span class="token punctuation">,</span>
+      data<span class="token punctuation">:</span> data<span class="token punctuation">,</span>
+      links<span class="token punctuation">:</span> links<span class="token punctuation">,</span>
+      animation<span class="token punctuation">:</span> <span class="token boolean">false</span>
+    <span class="token punctuation">}</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  myChart.hideLoading();
+  myChart<span class="token punctuation">.</span><span class="token function">hideLoading</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  myChart.on('click', function(event) { // 绑定点击事件，打开新的标签页跳转至节点 link 指向的地址
-<span class="token code keyword">    var data = event.data || {};</span>
-<span class="token code keyword">    var link = data.link;</span>
-<span class="token code keyword">    if (link) {</span>
-<span class="token code keyword">      window.open(link, '\_blank');</span>
-<span class="token code keyword">    }</span>
-  });
-});
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+  myChart<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>event<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 绑定点击事件，打开新的标签页跳转至节点 link 指向的地址</span>
+    <span class="token keyword">var</span> data <span class="token operator">=</span> event<span class="token punctuation">.</span>data <span class="token operator">||</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> link <span class="token operator">=</span> data<span class="token punctuation">.</span>link<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>link<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      window<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span>link<span class="token punctuation">,</span> <span class="token string">'\_blank'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>简简单单的百余行代码，就实现了知识图谱。</p>
-<h2 id="6-总结"><a href="#6-总结" class="headerlink" title="6 总结"></a>6 总结</h2><p>知识图谱现已上线，点击<a href="/tools/knowledge-graph/">传送门</a>。</p>
 <h2 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h2><h3 id="知识库结构优化-2020-2-4"><a href="#知识库结构优化-2020-2-4" class="headerlink" title="知识库结构优化 2020.2.4"></a>知识库结构优化 2020.2.4</h3><p>在构建知识库的<a href="gou-jian-zhi-shi-ku">开发过程</a>中，我们将知识库的节点（nodes）数据和连线（lines）数据都存放在 <code>source/data/knowledge-base.json</code> 文件中。</p>
 <p>随着数据量的增长，节点数据和连线数据同时存放在一个文件中的方式，不利于数据的管理和维护。</p>
 <h4 id="1-数据存储优化"><a href="#1-数据存储优化" class="headerlink" title="1 数据存储优化"></a>1 数据存储优化</h4><p>现将两块数据分开存放，具体如下：</p>
@@ -952,12 +949,34 @@ loadData(function(response) {
 <span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <h4 id="2-数据加载优化"><a href="#2-数据加载优化" class="headerlink" title="2 数据加载优化"></a>2 数据加载优化</h4><p>将数据分散存储至两个 <code>.json</code> 文件后，需要分开两次分别请求。我们允许这两次请求都是异步、并发的，各自独立执行，但最后共同处理它们返回的结果。jQuery 提供的 <code>$.when()</code> 方法就可以做到这点。</p>
 <p>修改 <code>.md</code> 文章文件中的 <code>loadData()</code> 方法：</p>
-<pre class="line-numbers language-markdown"><code class="language-markdown">function loadData(callback) { // 数据加载方法
-  $.when($.get('/data/knowledge-base/nodes.json'), $.get('/data/knowledge-base/lines.json')).done(function(nodesResponse, linesResponse) {
-<span class="token code keyword">    callback({ nodes: nodesResponse[0], lines: linesResponse[0] });</span>
-  });
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">loadData</span><span class="token punctuation">(</span>callback<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 数据加载方法</span>
+  $<span class="token punctuation">.</span><span class="token function">when</span><span class="token punctuation">(</span>$<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">'/data/knowledge-base/nodes.json'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> $<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">'/data/knowledge-base/lines.json'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">done</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>nodesResponse<span class="token punctuation">,</span> linesResponse<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">callback</span><span class="token punctuation">(</span><span class="token punctuation">{</span> nodes<span class="token punctuation">:</span> nodesResponse<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> lines<span class="token punctuation">:</span> linesResponse<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>相较之前的方式，这么做会增加一次请求资源的网络开销，但能使数据的存储更有条理，更有利于管理和维护。</p>
+<h3 id="图例排序-2020-2-7"><a href="#图例排序-2020-2-7" class="headerlink" title="图例排序 2020.2.7"></a>图例排序 2020.2.7</h3><p>随着节点类型的增加，图例的数量也在增多。</p>
+<p>图例的顺序即是节点分类的顺序，这与节点录入的顺序有关。为了使其更利于查找，现按名称对分类信息进行重新排序。</p>
+<p>这里可以利用 js 的 <code>Array.sort()</code> 方法。</p>
+<p>如下修改调用 <code>loadData(callback)</code> 方法时传入的 <code>callback</code> 参数：</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token function">loadData</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+
+  <span class="token comment" spellcheck="true">// 生成分类信息</span>
+  <span class="token keyword">var</span> categories <span class="token operator">=</span> nodes<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>item<span class="token punctuation">,</span> index<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 过滤重复的分类</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> index<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>item<span class="token punctuation">.</span>category <span class="token operator">===</span> nodes<span class="token punctuation">.</span>category<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 前面出现过相同的名称</span>
+    <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span> name<span class="token punctuation">:</span> item<span class="token punctuation">.</span>category <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 按名称排序</span>
+    <span class="token keyword">return</span> a<span class="token punctuation">.</span>name<span class="token punctuation">.</span><span class="token function">localeCompare</span><span class="token punctuation">(</span>b<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  categories<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token string">'其它'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 无分类的节点被归类为“其它”</span>
+
+  <span class="token operator">...</span>  
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><p>知识图谱<a href="/tools/knowledge-graph/">传送门</a></p>
+<p>下一篇：<a href="/hexo/knowledge-graph/support-search/">《知识图谱支持搜索》</a></p>
 
             </div>
             <hr/>
@@ -1218,30 +1237,29 @@ loadData(function(response) {
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/hexo/knowledge-graph/build/">
+                <a href="/hexo/knowledge-graph/support-search/">
                     <div class="card-image">
                         
-                        <img src="http://q4kbn37nl.bkt.clouddn.com/desk_20200202120008.jpg?e=1580619646&amp;token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:sihJZZErfPmn-KGy2g0HFns0uck" class="responsive-img" alt="构建知识图谱">
+                        <img src="http://q4kbn37nl.bkt.clouddn.com/magnifier_20200207185342.jpg?e=1581076491&amp;token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:Zjw9UhZIMlMD-UmjaQeP1EBLGVI" class="responsive-img" alt="知识图谱支持搜索">
                         
-                        <span class="card-title">构建知识图谱</span>
+                        <span class="card-title">知识图谱支持搜索</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     
                     <div class="summary">
                     
-                        描述知识图谱的构建过程
+                        知识图谱优化 —— 支持搜索
                     
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-02
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-07
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1254,7 +1272,6 @@ loadData(function(response) {
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -1264,6 +1281,10 @@ loadData(function(response) {
                     
                     <a href="/tags/%E5%9B%BE%E8%B0%B1/">
                         <span class="chip bg-color">图谱</span>
+                    </a>
+                    
+                    <a href="/tags/%E4%BC%98%E5%8C%96/">
+                        <span class="chip bg-color">优化</span>
                     </a>
                     
                 </div>
