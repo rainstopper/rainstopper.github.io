@@ -24,7 +24,7 @@ img: http://q4kbn37nl.bkt.clouddn.com/desk_20200202120008.jpg?e=1580619646&token
 
 我仍然迫切需要一个可视化的界面，能看到这些“连接”的全貌。这也给了我[灵感](/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-2/20180607_zheng-que-de-xue-xi-fang-fa-zhi-you-yi-zhong-feng-ge/#li-yong-bo-ke-xue-xi) —— 构建一份自己的知识图谱。
 
-## 2 简介
+## 2 预备知识
 
 要构建知识图谱，我们首先得知道它是什么，以及它能给我们带来什么。
 
@@ -193,7 +193,7 @@ img: http://q4kbn37nl.bkt.clouddn.com/desk_20200202120008.jpg?e=1580619646&token
 
 最终决定使用传统的 js 方式引入 ECharts 库，实现关系图。
 
-## 5 开发
+## 5 代码实现
 
 打开命令行，使用 Hexo 提供的 `hexo new [layout] <title>` 命令在 `source\_posts` 目录下创建一个 `.md` 格式的文章文件 —— 这是我们的常规操作，大家一定都很熟悉了。
 
@@ -251,8 +251,7 @@ img: http://q4kbn37nl.bkt.clouddn.com/desk_20200202120008.jpg?e=1580619646&token
 
 在 `.md` 文章文件中添加以下代码：
 
-```markdown
-<script type="text/javascript">
+```javascript
 function loadData(callback) { // 数据加载方法
   $.ajax({
     url: '/data/knowledge-base.json',
@@ -264,7 +263,6 @@ function loadData(callback) { // 数据加载方法
 loadData(function(response) {
   console.log(response);
 });
-</script>
 ```
 
 其中，`loadData` 方法是用于数据加载的方法。它接收一个回调函数作为参数，我们可以在这个回调函数内部处理返回的数据。
@@ -279,7 +277,7 @@ loadData(function(response) {
 
 修改 `loadData()` 方法如下：
 
-```markdown
+```javascript
 loadData(function(response) {
   var nodes = response.nodes || [], // 节点信息
       lines = response.lines || []; // 连线信息
@@ -333,7 +331,7 @@ loadData(function(response) {
   });
 
   // 生成连线信息
-  links = lines.map(function(item) {
+  var links = lines.map(function(item) {
     return {
       source: item.subject,
       target: item.object,
@@ -389,12 +387,12 @@ loadData(function(response) {
 <div id="<%- id %>" style="width: <%- width %>;height: <%- height %>px;margin: 0 auto"></div>
 <!-- <script src="https://cdn.bootcss.com/echarts/3.8.0/echarts.common.min.js"></script> --> <!-- 不使用该 cdn 资源 -->
 <script type="text/javascript">
-        // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('<%- id %>'));
-        // 指定图表的配置项和数据
-        var option = <%= option %>
-        // 使用刚指定的配置项和数据显示图表。
-        myChart.setOption(option);
+  // 基于准备好的dom，初始化echarts实例
+  var myChart = echarts.init(document.getElementById('<%- id %>'));
+  // 指定图表的配置项和数据
+  var option = <%= option %>
+  // 使用刚指定的配置项和数据显示图表。
+  myChart.setOption(option);
 </script>
 ```
 
@@ -438,7 +436,7 @@ loadData(function(response) {
 
 以下是 `.md` 文章文件的完整代码：
 
-```markdown
+```html
 <div id="graph" style="height: 600px;"></div>
 
 <script type="text/javascript" src="/libs/echarts/echarts.min.js"></script>  <!-- 引入 ECharts 库 -->
@@ -509,7 +507,7 @@ loadData(function(response) {
   });
 
   // 生成连线信息
-  links = lines.map(function(item) {
+  var links = lines.map(function(item) {
     return {
       source: item.subject,
       target: item.object,
@@ -592,10 +590,6 @@ loadData(function(response) {
 
 简简单单的百余行代码，就实现了知识图谱。
 
-## 6 总结
-
-知识图谱现已上线，点击[传送门](/tools/knowledge-graph/)。
-
 ## 更多
 
 ### 知识库结构优化 2020.2.4
@@ -644,7 +638,7 @@ loadData(function(response) {
 
 修改 `.md` 文章文件中的 `loadData()` 方法：
 
-```markdown
+```javascript
 function loadData(callback) { // 数据加载方法
   $.when($.get('/data/knowledge-base/nodes.json'), $.get('/data/knowledge-base/lines.json')).done(function(nodesResponse, linesResponse) {
     callback({ nodes: nodesResponse[0], lines: linesResponse[0] });
@@ -653,3 +647,38 @@ function loadData(callback) { // 数据加载方法
 ```
 
 相较之前的方式，这么做会增加一次请求资源的网络开销，但能使数据的存储更有条理，更有利于管理和维护。
+
+### 图例排序 2020.2.7
+
+随着节点类型的增加，图例的数量也在增多。
+
+图例的顺序即是节点分类的顺序，这与节点录入的顺序有关。为了使其更利于查找，现按名称对分类信息进行重新排序。
+
+这里可以利用 js 的 `Array.sort()` 方法。
+
+如下修改调用 `loadData(callback)` 方法时传入的 `callback` 参数：
+
+```javascript
+loadData(function(response) {
+  ...
+
+  // 生成分类信息
+  var categories = nodes.filter(function(item, index) { // 过滤重复的分类
+    for (var i = 0; i < index; i++) if (item.category === nodes.category) return false; // 前面出现过相同的名称
+    return true;
+  }).map(function(item) {
+    return { name: item.category };
+  }).sort(function(a, b) { // 按名称排序
+    return a.name.localeCompare(b.name);
+  });
+  categories.push({ name: '其它' }); // 无分类的节点被归类为“其它”
+
+  ...  
+});
+```
+
+## 相关链接
+
+知识图谱[传送门](/tools/knowledge-graph/)
+
+下一篇：[《知识图谱支持搜索》](/hexo/knowledge-graph/support-search/)

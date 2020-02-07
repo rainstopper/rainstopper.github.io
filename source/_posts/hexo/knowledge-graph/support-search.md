@@ -1,17 +1,204 @@
 ---
-title: 龙珠雷达
-date: 2020-02-01 11:14:48
+title: 知识图谱支持搜索
+date: 2020-02-07 18:41:13
 categories:
-- [万能胶囊]
-tags: [知识, 图谱, 联系]
-summary: 知识图谱
-img: http://q4kbn37nl.bkt.clouddn.com/long-zhu-lei-da.gif?e=1580245265&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:oneRra2rduP85ExzRj0Fvxkfd4Y
-top: true
-toc: false
+- [精神时光屋]
+tags: [知识, 图谱, 优化]
+summary: 知识图谱优化 —— 支持搜索
+img: http://q4kbn37nl.bkt.clouddn.com/magnifier_20200207185342.jpg?e=1581076491&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:Zjw9UhZIMlMD-UmjaQeP1EBLGVI
 ---
 
-##### 持续构建的知识图谱
+## 1 背景
 
+这些天对博客进行整体地梳理，发现文章里涉及的知识概念和联系竟意外的多。仅仅十余篇文章，却在知识图谱中产生了 300 余个节点、400 余条连线 —— 这已经是一个具有相当体量的知识体系。
+
+![《龙珠雷达》2020.2.7](http://q4kbn37nl.bkt.clouddn.com/knowledge-graph_20200207190230.png?e=1581076982&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:fsfA_8RGVNzuzJ_W44wf2B61jW4)
+
+在为数众多的节点中，想要凭借肉眼寻找到自己关注的节点实属不易。而且关系紧密的节点可能发生重叠，更为我们的寻找带来困难。
+
+这时就需要知识图谱具备搜索的功能，以提高图谱的使用效率。
+
+## 2 功能描述
+
+知识图谱搜索的具体功能如下：
+
+> 1. 在知识图谱的展示区域附近，提供一个搜索框，供用户输入关键字进行模糊搜索。
+>
+> 2. 用户在搜索框中输入关键字时，使用一个下拉列表展示包含该关键字的节点名称列表，可以点击列表项改变搜索框中的内容；若没有匹配任何节点，则显示“无结果”。
+>
+> 3. 同时，系统将包含搜索内容的节点高亮显示，其余节点做一定程度的透明化处理。
+>
+> 4. 此外，用户还能通过节点的关联数（出、入度之和）对节点总量进行筛选。
+
+## 3 技术设计
+
+我在 ECharts 的[官方文档](https://www.echartsjs.com/zh/tutorial.html#5%20%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8B%20ECharts)进行了一番搜索，并没有找到它有自带相关的搜素工具或者插件 —— 通常图表中的数据是通过查询服务端而返回的，未提供客户端的搜素功能也合理 —— 这也是我专门写下这篇文章的原因，如果简单的调用插件就能实现，我也没必要再花一章的工夫来记录。
+
+这里只有自己来实现上述的搜素功能了。
+
+### 3.1 搜索工具栏布局
+
+根据我们的构想，需要在关系图的附近提供搜索工具栏。
+
+具体做法是，在原关系图 `<div>` 标签外包一层容器，再在容器中放置我们的搜索工具。如此一来，DOM 结构大概会变成下面这样：
+
+```html
+<div class="graph-container" style="height: 520px;"> <!-- 关系图容器 -->
+  <div id="graph" style="height: 100%;"></div> <!-- 关系图 -->
+  <table class="search-tool"> <!-- 搜索工具 -->
+    <tr>
+      <th>关键字：</th>
+      <td>
+        <input type="text" name="keyword" autocomplete="off" class="icon-right"/> <!-- 关键字输入框 -->
+        <i class="fas fa-search"></i> <!-- 放大镜图标 -->
+        <div class="result-list">请输入关键字...</div> <!-- 搜索结果列表 -->
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th>关联数：</th>
+      <td>
+        <input type="number" name="min-degree" autocomplete="off"/> <!-- 关联数最小值 -->
+        <span class="divider">≤ N <</span>
+        <input type="number" name="max-degree" autocomplete="off"/> <!-- 关联数最大值 -->
+      </td>
+    </tr>
+  </table>
+</div>
+```
+
+搜索工具之所以使用 `<table>` 标签，是因为它的对齐方式比较方便，用类似“田”字格的方式就能组织两个搜索条件的摆放。
+
+接下来，我们只需要给 `.graph-container table.search-tool` 设置绝对定位，便能使其位于容器的右上角。
+
+```css
+.graph-container {
+  position: relative;
+}
+
+.graph-container table.search-tool {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: auto;
+}
+```
+
+以及给结果列表 `.graph-container table.search-tool .result-list` 设置绝对定位，使其位于关键字输入框下方。
+
+```css
+.graph-container table.search-tool .result-list {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  min-width: 200px;
+  max-height: 240px;
+}
+```
+
+如此便能实现 DOM 元素在页面上的布局。
+
+### 3.2 搜索过程
+
+页面首次加载时，会在内存中保存一份生成的节点数据。大概会是下面这样：
+
+```javascript
+var data = []; // 存放数据
+
+$(function() { // 页面加载完成
+  var myChart = echarts.init(document.getElementById('graph')); // 初始化图表
+
+  loadData(function(response) {
+    var nodes = response.nodes;
+
+    ...
+
+    // 生成节点信息
+    data = nodes.filter(...).map(...);
+
+    ...
+  });
+});
+
+function search() {
+  // 使用 data 作为数据集
+}
+```
+
+用户可以输入关键字、关联数最小值和关联数最大值进行搜索。此时，被搜索的数据集就是这份数据 `data`。
+
+在 `search()` 方法的内部，为了防止对 `data` 造成更改，而引起不必要的麻烦，需要先对其做一份深拷贝。接着对这份拷贝数据，使用 `Array.filter()` 方法过滤“关联数”不满足要求的数据；然后使用 `Array.map()` 方法，匹配其中包含“关键字”的节点高亮展示，其余节点则做一定程度的透明化处理。
+
+最后我们将搜索结果整合进新的 `option` 中，再通过 ECharts API 提供的 `echartsInstance.setOption()` 方法重绘图表，以达到更新搜索结果的目的。
+
+同时，关键字输入的过程中会弹出下拉列表，展示匹配到的节点名称，可供用户选择。
+
+### 3.3 事件监听
+
+为了追求高实时性的用户体验，搜索工具栏不设置“搜索”按钮，而通过对输入框的事件监听触发 `search()` 搜索方法。
+
+jQuery 提供的 `on()` 方法就足以实现了，对于关键字和关联数的输入，我们可以通过 `$(...).on('keyup')` 的方式为其绑定监听事件。这里不监听 `change` 事件，而监听 `keyup` 事件，是因为 `change` 事件在输入框失去焦点的时候才会触发，体验上不如监听 `keyup` 流畅。
+
+但监听 `keyup` 的同时也会带来新的问题。例如在关键字输入的次数会很多，尤其是当我们需要输入中文时，`keyup` 会先监听到一部分的拼音字母。这个过程会引起频繁地搜索，这些搜索很可能是没有意义的，且在节点数量较多的情况下，可能引起卡顿。
+
+这里使用了事件延迟处理的小技巧。以关键字输入框 `<input name="keyword">` 的监听为例：
+
+```javascript
+$(function() {
+
+  ...
+
+  var timer = null;
+  $('.graph-container .search-tool input[name="keyword"]').on('keyup', function() {
+    if (timer) window.clearTimeout(timer); // 清除延时
+    timer = window.setTimeout(function() { // 延时处理
+      // search()
+    }, 200); // 延时 200 毫秒
+  });
+});
+```
+
+上面的例子中，用户在持续输入时，如果停顿的时间不超过 200 毫秒，则不会触发搜索。尽管有 200 毫秒的短暂延时才会进行搜索，但这在很大程度上减少了无意义搜索的占比。
+
+### 3.4 下拉列表
+
+当关键字输入框被点击而获得焦点时，会展示一个下拉列表；而点击其余空白处时（除了关键字输入框和下拉列表），会再次将这个下拉列表隐藏。这也是个很典型的事件处理的例子 ——
+
+```javascript
+$(function() {
+  ...
+
+  // 展示搜索结果列表
+  $('.graph-container .search-tool input[name="keyword"]').on('click', function() {
+    var $this = $(this);
+    var $resultList = $('.graph-container .search-tool .result-list');
+    $resultList.show(); // 展示结果列表
+    $(document).on('click', function(event) { // 给 document 绑定点击事件
+      var $target = $(event.target);
+      if ($target.closest($resultList).length || $target.is($this)) { // 如果点击的元素是结果列表或者关键字输入框
+        event.stopPropagation(); // 阻止事件冒泡
+      } else {
+        $resultList.hide(); // 隐藏结果列表
+        $(document).unbind('click'); // 解除点击事件
+      }
+    });
+  });
+
+  ...
+});
+```
+
+实现这个功能时，需要判断事件的来源，并合理地阻止事件继续冒泡。
+
+## 4 代码实现
+
+设计固然是可行的，但在实现的过程中总会遇到更多的阻力，比如框架本身带来的限制、样式的干扰，还有一些细节上的处理，需要谨慎思考、反复雕琢。
+
+这些过程很难一点一点全都细说，得自己动手做一遍才能体会。
+
+以下是完整的源代码和相关注释：
+
+```html
 <div class="graph-container" style="height: 520px;"> <!-- 关系图容器 -->
   <div id="graph" style="height: 100%;"></div> <!-- 关系图 -->
   <table class="search-tool"> <!-- 搜索工具 -->
@@ -117,7 +304,7 @@ function search(keyword, min, max) { // 搜索
   } else { // 关键字为空时
     $resultList.text('请输入关键字...');
   }
-  
+
   option.series[0].data = resultData;
   myChart.setOption(option);
 }
@@ -426,3 +613,26 @@ $(function() {
   background-color: #fefede;
 }
 </style>
+```
+
+相较于[最初版本](/hexo/knowledge-graph/build/)，代码量确实多出不少。这里边也做了些重构，将一些公共方法抽离出来，同时将一些配置信息单独定义和管理，在逻辑性和可读性上是不输给上个版本的，但难度也不会减。
+
+来看看具体的效果：
+
+![关键字搜索效果](http://q4kbn37nl.bkt.clouddn.com/knowledge-graph_20200208040546.png?e=1581109587&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:xmduc8ClE_8Nu3aOH-UTGjxlLLg)
+
+支持按关键字进行搜索，并且匹配的节点会被高亮显示，其余节点则更加透明。
+
+另外，按关联数的搜索过滤了一部分不符合要求的节点，节点的总数也会随之减少：
+
+![关联数搜索效果](http://q4kbn37nl.bkt.clouddn.com/knowledge-graph_20200208040834.png?e=1581109779&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:Hv6nNDcFovNjLk1SEE_OzMo5unI)
+
+这样一来，对知识图谱的日常管理会更加方便。
+
+新版支持搜索的知识图谱已上线，速速前去体验吧~
+
+## 相关链接
+
+知识图谱[传送门](/tools/knowledge-graph/)
+
+上一篇：[《构建知识图谱》](/hexo/knowledge-graph/build/)
