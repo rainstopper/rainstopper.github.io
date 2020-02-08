@@ -28,7 +28,7 @@ toc: false
       <th>关联数：</th>
       <td>
         <input type="number" name="min-degree" autocomplete="off"/> <!-- 关联数最小值 -->
-        <span class="divider">≤ N <</span>
+        <span class="divider">≤ N ≤</span>
         <input type="number" name="max-degree" autocomplete="off"/> <!-- 关联数最大值 -->
       </td>
     </tr>
@@ -80,12 +80,16 @@ function search(keyword, min, max) { // 搜索
   if (!max) max = $('.graph-container .search-tool input[name="max-degree"]').val(); // 获取关联数最大值
 
   var resultData = JSON.parse(JSON.stringify(data)); // 深拷贝，不改变 data 中的数据
+
+  resultData = resultData.filter(function(item) { // 筛选满足关联数的节点
+    console.log(item.value <= parseInt(max))
+    return (min === '' || item.value >= parseInt(min)) && (max === '' || item.value <= parseInt(max));
+  });
+
   var $resultList = $('.graph-container .search-tool .result-list');
   if (keyword.length > 0) { // 关键字不为空时进行匹配
     var results = []; // 列表结果
-    resultData = resultData.filter(function(item) { // 筛选满足关联数的节点
-      return (min === '' || item.value >= parseInt(min)) && (max === '' || item.value < parseInt(max));
-    }).map(function(item) { // 重绘搜索结果数据
+    resultData = resultData.map(function(item) { // 重绘搜索结果数据
       if (item.name.indexOf(keyword) >= 0) { // 匹配
         results.push(item.name); // 添加结果至列表
         return $.extend(item, {
@@ -109,7 +113,7 @@ function search(keyword, min, max) { // 搜索
     if (results.length) { // 如果有结果
       $resultList.text(''); // 先将提示信息清空
       for (var i = 0; i < results.length; i++) { // 生成结果列表
-        $resultList.append($("<div>").addClass('item').text(results[i]));
+        $resultList.append($('<div>').addClass('item').text(results[i]));
       }
     } else { // 没有结果
       $resultList.text('很遗憾，没有找到结果...');
@@ -117,7 +121,7 @@ function search(keyword, min, max) { // 搜索
   } else { // 关键字为空时
     $resultList.text('请输入关键字...');
   }
-  
+
   option.series[0].data = resultData;
   myChart.setOption(option);
 }
@@ -256,8 +260,8 @@ $(function() {
         },
         categories: categories,
         data: data,
-        links: links,
-        animation: false
+        links: links
+        // animation: false
       }]
     };
 
@@ -281,7 +285,8 @@ $(function() {
 
   // 按关键字搜索
   var timer = null;
-  $('.graph-container .search-tool input[name="keyword"]').on('keyup', function(event) {
+  $('.graph-container .search-tool input[name="keyword"]').on('keydown', function(event) {
+    $('.graph-container .search-tool .result-list').text('拼命搜索中ing...');
     if (timer) window.clearTimeout(timer); // 清空延时器
     timer = window.setTimeout(function() {
       search(event.target.value);
@@ -313,10 +318,10 @@ $(function() {
   });
 
   // 按关联数筛选
-  $('.graph-container .search-tool input[name="min-degree"]').on('keyup', function(event) { // 最小值
+  $('.graph-container .search-tool input[name="min-degree"]').on('keydown', function(event) { // 最小值
     search(undefined, event.target.value);
   });
-  $('.graph-container .search-tool input[name="max-degree"]').on('keyup', function(event) { // 最大值
+  $('.graph-container .search-tool input[name="max-degree"]').on('keydown', function(event) { // 最大值
     search(undefined, undefined, event.target.value);
   });
 });
@@ -345,6 +350,7 @@ $(function() {
 #articleContent .graph-container table.search-tool th,
 #articleContent .graph-container table.search-tool td {
   padding: 3px 0;
+  font-size: 14px;
 }
 
 #articleContent .graph-container table.search-tool th {
@@ -355,14 +361,14 @@ $(function() {
 
 #articleContent .graph-container table.search-tool tr td input {
   width: 120px;
-  height: 22px;
+  height: 20px;
   margin: 0;
   box-sizing: border-box;
   border: 1px solid #aaa;
   border-radius: 3px;
   background-color: #fff;
   padding: 3px;
-  font-size: 14px;
+  font-size: 12px;
 }
 #articleContent .graph-container table.search-tool tr td input:focus { /*覆盖 materialize.min.css 样式*/
   border: 1px solid #aaa;
@@ -389,7 +395,7 @@ $(function() {
   display: inline-table;
   background-color: rgba(0, 0, 0, 0);
   text-align: center;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 #articleContent .graph-container table.search-tool tr td .fas {
@@ -413,7 +419,7 @@ $(function() {
   background-color: #fff;
   padding: 10px 0;
   color: #888;
-  line-height: 30px;
+  line-height: 24px;
   text-indent: 10px;
 }
 

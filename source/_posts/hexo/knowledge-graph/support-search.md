@@ -137,9 +137,11 @@ function search() {
 
 为了追求高实时性的用户体验，搜索工具栏不设置“搜索”按钮，而通过对输入框的事件监听触发 `search()` 搜索方法。
 
-jQuery 提供的 `on()` 方法就足以实现了，对于关键字和关联数的输入，我们可以通过 `$(...).on('keyup')` 的方式为其绑定监听事件。这里不监听 `change` 事件，而监听 `keyup` 事件，是因为 `change` 事件在输入框失去焦点的时候才会触发，体验上不如监听 `keyup` 流畅。
+jQuery 提供的 `on()` 方法就足以实现了，对于关键字和关联数的输入，我们可以通过 `$(...).on('keydown')` 的方式为其绑定监听事件。这里不监听 `change` 事件，而监听 `keydown` 事件，是因为 `change` 事件在输入框失去焦点的时候才会触发，体验上不如监听 `keydown` 流畅。
 
-但监听 `keyup` 的同时也会带来新的问题。例如在关键字输入的次数会很多，尤其是当我们需要输入中文时，`keyup` 会先监听到一部分的拼音字母。这个过程会引起频繁地搜索，这些搜索很可能是没有意义的，且在节点数量较多的情况下，可能引起卡顿。
+但监听 `keydown` 的同时也会带来新的问题。例如在关键字输入的次数会很多，尤其是当我们需要输入中文时，`keydown` 会先监听到一部分的拼音字母。这个过程会引起频繁地搜索，这些搜索很可能是没有意义的，且在节点数量较多的情况下，可能引起卡顿。
+
+你也许想到，为什么不选择监听 `keyup` 事件呢？原因是考虑到长按（比如一直按着 `backspace ←` / `delete` 按键进行删除）的过程中，`keyup` 事件不会触发，中途还是会发生不必要的搜索。
 
 这里使用了事件延迟处理的小技巧。以关键字输入框 `<input name="keyword">` 的监听为例：
 
@@ -149,7 +151,7 @@ $(function() {
   ...
 
   var timer = null;
-  $('.graph-container .search-tool input[name="keyword"]').on('keyup', function() {
+  $('.graph-container .search-tool input[name="keyword"]').on('keydown', function() {
     if (timer) window.clearTimeout(timer); // 清除延时
     timer = window.setTimeout(function() { // 延时处理
       // search()
@@ -215,7 +217,7 @@ $(function() {
       <th>关联数：</th>
       <td>
         <input type="number" name="min-degree" autocomplete="off"/> <!-- 关联数最小值 -->
-        <span class="divider">≤ N <</span>
+        <span class="divider">≤ N ≤</span>
         <input type="number" name="max-degree" autocomplete="off"/> <!-- 关联数最大值 -->
       </td>
     </tr>
@@ -267,12 +269,15 @@ function search(keyword, min, max) { // 搜索
   if (!max) max = $('.graph-container .search-tool input[name="max-degree"]').val(); // 获取关联数最大值
 
   var resultData = JSON.parse(JSON.stringify(data)); // 深拷贝，不改变 data 中的数据
+
+  resultData = resultData.filter(function(item) { // 筛选满足关联数的节点
+    return (min === '' || item.value >= parseInt(min)) && (max === '' || item.value <= parseInt(max));
+  });
+
   var $resultList = $('.graph-container .search-tool .result-list');
   if (keyword.length > 0) { // 关键字不为空时进行匹配
     var results = []; // 列表结果
-    resultData = resultData.filter(function(item) { // 筛选满足关联数的节点
-      return (min === '' || item.value >= parseInt(min)) && (max === '' || item.value < parseInt(max));
-    }).map(function(item) { // 重绘搜索结果数据
+    resultData = resultData.map(function(item) { // 重绘搜索结果数据
       if (item.name.indexOf(keyword) >= 0) { // 匹配
         results.push(item.name); // 添加结果至列表
         return $.extend(item, {
@@ -296,7 +301,7 @@ function search(keyword, min, max) { // 搜索
     if (results.length) { // 如果有结果
       $resultList.text(''); // 先将提示信息清空
       for (var i = 0; i < results.length; i++) { // 生成结果列表
-        $resultList.append($("<div>").addClass('item').text(results[i]));
+        $resultList.append($('<div>').addClass('item').text(results[i]));
       }
     } else { // 没有结果
       $resultList.text('很遗憾，没有找到结果...');
@@ -443,8 +448,8 @@ $(function() {
         },
         categories: categories,
         data: data,
-        links: links,
-        animation: false
+        links: links
+        // animation: false
       }]
     };
 
@@ -468,7 +473,8 @@ $(function() {
 
   // 按关键字搜索
   var timer = null;
-  $('.graph-container .search-tool input[name="keyword"]').on('keyup', function(event) {
+  $('.graph-container .search-tool input[name="keyword"]').on('keydown', function(event) {
+    $('.graph-container .search-tool .result-list').text('拼命搜索中ing...');
     if (timer) window.clearTimeout(timer); // 清空延时器
     timer = window.setTimeout(function() {
       search(event.target.value);
@@ -500,10 +506,10 @@ $(function() {
   });
 
   // 按关联数筛选
-  $('.graph-container .search-tool input[name="min-degree"]').on('keyup', function(event) { // 最小值
+  $('.graph-container .search-tool input[name="min-degree"]').on('keydown', function(event) { // 最小值
     search(undefined, event.target.value);
   });
-  $('.graph-container .search-tool input[name="max-degree"]').on('keyup', function(event) { // 最大值
+  $('.graph-container .search-tool input[name="max-degree"]').on('keydown', function(event) { // 最大值
     search(undefined, undefined, event.target.value);
   });
 });
@@ -532,6 +538,7 @@ $(function() {
 #articleContent .graph-container table.search-tool th,
 #articleContent .graph-container table.search-tool td {
   padding: 3px 0;
+  font-size: 14px;
 }
 
 #articleContent .graph-container table.search-tool th {
@@ -542,14 +549,14 @@ $(function() {
 
 #articleContent .graph-container table.search-tool tr td input {
   width: 120px;
-  height: 22px;
+  height: 20px;
   margin: 0;
   box-sizing: border-box;
   border: 1px solid #aaa;
   border-radius: 3px;
   background-color: #fff;
   padding: 3px;
-  font-size: 14px;
+  font-size: 12px;
 }
 #articleContent .graph-container table.search-tool tr td input:focus { /*覆盖 materialize.min.css 样式*/
   border: 1px solid #aaa;
@@ -576,7 +583,7 @@ $(function() {
   display: inline-table;
   background-color: rgba(0, 0, 0, 0);
   text-align: center;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 #articleContent .graph-container table.search-tool tr td .fas {
@@ -600,7 +607,7 @@ $(function() {
   background-color: #fff;
   padding: 10px 0;
   color: #888;
-  line-height: 30px;
+  line-height: 24px;
   text-indent: 10px;
 }
 
