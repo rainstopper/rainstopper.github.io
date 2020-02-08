@@ -311,14 +311,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.4k
+                    1.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    9 分
                 </div>
                 
 
@@ -350,7 +350,7 @@
       <th>关联数：</th>
       <td>
         <input type="number" name="min-degree" autocomplete="off"/> <!-- 关联数最小值 -->
-        <span class="divider">≤ N <</span>
+        <span class="divider">≤ N ≤</span>
         <input type="number" name="max-degree" autocomplete="off"/> <!-- 关联数最大值 -->
       </td>
     </tr>
@@ -406,7 +406,7 @@ function search(keyword, min, max) { // 搜索
   if (keyword.length > 0) { // 关键字不为空时进行匹配
     var results = []; // 列表结果
     resultData = resultData.filter(function(item) { // 筛选满足关联数的节点
-      return (min === '' || item.value >= parseInt(min)) && (max === '' || item.value < parseInt(max));
+      return (min === '' || item.value >= parseInt(min)) && (max === '' || item.value <= parseInt(max));
     }).map(function(item) { // 重绘搜索结果数据
       if (item.name.indexOf(keyword) >= 0) { // 匹配
         results.push(item.name); // 添加结果至列表
@@ -667,6 +667,7 @@ $(function() {
 #articleContent .graph-container table.search-tool th,
 #articleContent .graph-container table.search-tool td {
   padding: 3px 0;
+  font-size: 14px;
 }
 
 #articleContent .graph-container table.search-tool th {
@@ -677,14 +678,14 @@ $(function() {
 
 #articleContent .graph-container table.search-tool tr td input {
   width: 120px;
-  height: 22px;
+  height: 20px;
   margin: 0;
   box-sizing: border-box;
   border: 1px solid #aaa;
   border-radius: 3px;
   background-color: #fff;
   padding: 3px;
-  font-size: 14px;
+  font-size: 12px;
 }
 #articleContent .graph-container table.search-tool tr td input:focus { /*覆盖 materialize.min.css 样式*/
   border: 1px solid #aaa;
@@ -711,7 +712,7 @@ $(function() {
   display: inline-table;
   background-color: rgba(0, 0, 0, 0);
   text-align: center;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 #articleContent .graph-container table.search-tool tr td .fas {
@@ -735,7 +736,7 @@ $(function() {
   background-color: #fff;
   padding: 10px 0;
   color: #888;
-  line-height: 30px;
+  line-height: 24px;
   text-indent: 10px;
 }
 
