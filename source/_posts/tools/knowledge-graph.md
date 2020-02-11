@@ -318,10 +318,10 @@ $(function() {
   });
 
   // 按关联数筛选
-  $('.graph-container .search-tool input[name="min-degree"]').on('keydown', function(event) { // 最小值
+  $('.graph-container .search-tool input[name="min-degree"]').on('keyup', function(event) { // 最小值
     search(undefined, event.target.value);
   });
-  $('.graph-container .search-tool input[name="max-degree"]').on('keydown', function(event) { // 最大值
+  $('.graph-container .search-tool input[name="max-degree"]').on('keyup', function(event) { // 最大值
     search(undefined, undefined, event.target.value);
   });
 });
