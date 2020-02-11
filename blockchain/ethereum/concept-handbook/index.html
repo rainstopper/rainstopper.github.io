@@ -1,0 +1,1758 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="以太坊概念手册, 精神時光屋">
+    <meta name="description" content="以太坊概念手册">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>以太坊概念手册 | 精神時光屋</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    
+    <script src="/libs/jquery/jquery.min.js"></script>
+    
+<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper head-container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.svg" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">精神時光屋</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.svg" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">精神時光屋</div>
+        <div class="logo-desc">
+            
+            
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('http://q4kbn37nl.bkt.clouddn.com/ethereum_20200209215359.jpg?e=1581260069&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:lKNEVXQdmIPEFg1kibtfHBCTQ8E')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">以太坊概念手册</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #E88C30;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #E88C30;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #E88C30;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col tags">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E6%89%8B%E5%86%8C/">
+                                <span class="chip bg-color">手册</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%A6%82%E5%BF%B5/">
+                                <span class="chip bg-color">概念</span>
+                            </a>
+                        
+                            <a href="/tags/%E8%AF%8D%E6%9D%A1/">
+                                <span class="chip bg-color">词条</span>
+                            </a>
+                        
+                            <a href="/tags/%E4%BB%A5%E5%A4%AA%E5%9D%8A/">
+                                <span class="chip bg-color">以太坊</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E7%8C%9C%E7%8C%9C%E6%8B%B3/" class="post-category">
+                                猜猜拳
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-02-09
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    7k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    26 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h5 id="以太坊概念手册"><a href="#以太坊概念手册" class="headerlink" title="以太坊概念手册"></a>以太坊概念手册</h5><h2 id="A"><a href="#A" class="headerlink" title="A"></a>A</h2><div class="anchor" id="account"></div>
+
+<h3 id="账户（Account）"><a href="#账户（Account）" class="headerlink" title="账户（Account）"></a>账户（Account）</h3><blockquote>
+<p>账户是一个对象，它包含<a href="#address">地址</a>、余额、<a href="#nonce">nonce</a>，并且存储了状态和代码（皆可为空）。账户可以是<a href="#contract-account">合约账户</a>或者<a href="#eoa">外部账户</a>（EOA）。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.11<br>收录时间：2020.2.9</p>
+<div class="anchor" id="address"></div>
+
+<h3 id="地址（Address）"><a href="#地址（Address）" class="headerlink" title="地址（Address）"></a>地址（Address）</h3><blockquote>
+<p>通常来说，地址代表的是一个<a href="#smart-contract">合约</a>或<a href="#eoa">外部账户</a>，可以在<a href="#blockchain">区块链</a>上接收（即作为目标地址）或发送（即作为源地址）<a href="#transaction">交易</a>。更具体地说，地址是 <a href="#ecdsa">ECDSA</a> <a href="#public-key">公钥</a>的 <a href="#keccak-256">Keccak 哈希</a>中最右的 160 位数。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.11<br>收录时间：2020.2.9</p>
+<h3 id="断言（Assert）"><a href="#断言（Assert）" class="headerlink" title="断言（Assert）"></a>断言（Assert）</h3><blockquote>
+<p><a href="#solidity">Solidity</a> 语言中，<code>assert(false)</code> 断言会编译成 <code>oxfe</code> 无效操作码，耗尽所有剩余 <a href="#gas">gas</a> 并回退所有变更。当一次 <code>assert()</code> 断言失败时，意味着代码出现严重错误，你需要修改代码。可以使用 <code>assert()</code> 来检查代码，避免出现意外。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.11<br>收录时间：2020.2.9</p>
+<hr>
+<h2 id="B"><a href="#B" class="headerlink" title="B"></a>B</h2><h3 id="大端字节序（Big-endian）"><a href="#大端字节序（Big-endian）" class="headerlink" title="大端字节序（Big-endian）"></a>大端字节序（Big-endian）</h3><blockquote>
+<p>代表从最高位字节开始的位置编号。与小端字节序（little-endian）相反，后者从最低位字节开始。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.11<br>收录时间：2020.2.9</p>
+<h3 id="BIP（Bitcoin-Improvement-Proposals）"><a href="#BIP（Bitcoin-Improvement-Proposals）" class="headerlink" title="BIP（Bitcoin Improvement Proposals）"></a>BIP（Bitcoin Improvement Proposals）</h3><blockquote>
+<p>比特币改进提案，由比特币社区提交的一系列对比特币协议进行改进的提案。比如，BIP-21（比特币改进提案第 21 号）是建议比特币协议改进统一资源标识符（URI）的提案。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.11<br>收录时间：2020.2.9</p>
+<div class="anchor" id="block"></div>
+
+<h3 id="区块（Block）"><a href="#区块（Block）" class="headerlink" title="区块（Block）"></a>区块（Block）</h3><blockquote>
+<p>一个关于其所包含<a href="#transaction">交易</a>的所需信息（区块头）的集合，以及称为<a href="#ommer">叔块</a>（ommer）的一组其他区块头。区块由以太坊网络中的<a href="#miner">矿工</a>添加上链。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.11<br>收录时间：2020.2.9</p>
+<div class="anchor" id="blockchain"></div>
+
+<h3 id="区块链（Blockchain）"><a href="#区块链（Blockchain）" class="headerlink" title="区块链（Blockchain）"></a>区块链（Blockchain）</h3><blockquote>
+<p>以太坊网络中由<a href="#pow">工作量证明</a>验证的<a href="#block">区块</a>序列，每个区块与其父块相连，可一直追溯到创世块。以太坊区块链与比特币的不同之处在于，前者没有区块大小限制，而使用 <a href="#gas">gas</a> 上限来调整区块大小。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.12<br>收录时间：2020.2.9</p>
+<div class="anchor" id="bytecode"></div>
+
+<h3 id="字节码（Bytecode）"><a href="#字节码（Bytecode）" class="headerlink" title="字节码（Bytecode）"></a>字节码（Bytecode）</h3><blockquote>
+<p>为软件解释器或<a href="#evm">虚拟机</a>的高效执行而设计的抽象指令集。与人类可读的源代码不同，字节码以数字格式表示。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.12<br>收录时间：2020.2.9</p>
+<h3 id="“拜占庭”分叉（Byzantium-fork）"><a href="#“拜占庭”分叉（Byzantium-fork）" class="headerlink" title="“拜占庭”分叉（Byzantium fork）"></a>“拜占庭”分叉（Byzantium fork）</h3><blockquote>
+<p>以太坊网络在“<a href="#metropolis">大都会</a>”开发阶段两次<a href="#fork">分叉</a>中的第一次，包含 EIP-649（以太坊改进提案第 649 号）：延迟“大都会”阶段的难度炸弹并降低<a href="#reward">区块奖励</a>，使“<a href="#ice-age">冰河期</a>”推迟一年，区块奖励由 5 个<a href="#ether">以太币</a>将至 3 个。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.12<br>收录时间：2020.2.9</p>
+<hr>
+<h2 id="C"><a href="#C" class="headerlink" title="C"></a>C</h2><h3 id="编译（Compiling）"><a href="#编译（Compiling）" class="headerlink" title="编译（Compiling）"></a>编译（Compiling）</h3><blockquote>
+<p>将用高级编程语言（如 <a href="#solidity">Solidity</a>）编写的代码转换成较低级语言（如<a href="#evm">以太坊虚拟机</a><a href="#bytecode">字节码</a>）。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.12<br>收录时间：2020.2.9</p>
+<div class="anchor" id="consensus"></div>
+
+<h3 id="共识（Consensus）"><a href="#共识（Consensus）" class="headerlink" title="共识（Consensus）"></a>共识（Consensus）</h3><blockquote>
+<p>当许多<a href="#node">节点</a>（通常是全网大多数节点）都在本地经验证的<a href="#blockchain">区块链</a>上存有同样<a href="#block">区块</a>时，我们说<a href="#network">网络</a>达成共识。要与<a href="#consensus-rules">共识规则</a>区别开来。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.12<br>收录时间：2020.2.9</p>
+<div class="anchor" id="consensus-rules"></div>
+
+<h3 id="共识规则（Consensus-rules）"><a href="#共识规则（Consensus-rules）" class="headerlink" title="共识规则（Consensus rules）"></a>共识规则（Consensus rules）</h3><blockquote>
+<p>每个全功能<a href="#node">节点</a>为了与其他节点保持一致所要遵循的<a href="#block">区块</a>验证规则。要与<a href="#consensus">共识</a>区别开来。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.12<br>收录时间：2020.2.9</p>
+<h3 id="“君士坦丁堡”分叉（Constantinople-fork）"><a href="#“君士坦丁堡”分叉（Constantinople-fork）" class="headerlink" title="“君士坦丁堡”分叉（Constantinople fork）"></a>“君士坦丁堡”分叉（Constantinople fork）</h3><blockquote>
+<p>这是“<a href="#metropolis">大都会</a>”开发阶段两次<a href="#fork">分叉</a>中的第二次，原计划在2018年年中执行升级，该次升级主要计划将<a href="#consensus">共识</a>算法更换成<a href="#pow">工作量证明</a>与<a href="#pos">权益证明</a>混合的算法。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.12<br>收录时间：2020.2.9</p>
+<div class="anchor" id="contract-account"></div>
+
+<h3 id="合约账户（Contract-account）"><a href="#合约账户（Contract-account）" class="headerlink" title="合约账户（Contract account）"></a>合约账户（Contract account）</h3><blockquote>
+<p>一个包含代码的<a href="#account">账户</a>，只要接收到来自其他账户（<a href="#eoa">外部账户</a>或<a href="#smart-contract">合约</a>）的<a href="#transaction">交易</a>就会执行合约代码。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.12<br>收录时间：2020.2.9</p>
+<div class="anchor" id="contract-creation-transaction"></div>
+
+<h3 id="创建合约交易（Contract-creation-transaction）"><a href="#创建合约交易（Contract-creation-transaction）" class="headerlink" title="创建合约交易（Contract creation transaction）"></a>创建合约交易（Contract creation transaction）</h3><blockquote>
+<p>一种为了注册一个<a href="#smart-contract">合约</a>并将其记录在以太坊<a href="#blockchain">区块链</a>上的特殊<a href="#transaction">交易</a>，其中接受者<a href="#address">地址</a>“为<a href="#zero-address">零</a>”。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.12<br>收录时间：2020.2.9</p>
+<hr>
+<h2 id="D"><a href="#D" class="headerlink" title="D"></a>D</h2><h3 id="去中心化自组织（DAO，Decentralized-Autonomous-Organization）"><a href="#去中心化自组织（DAO，Decentralized-Autonomous-Organization）" class="headerlink" title="去中心化自组织（DAO，Decentralized Autonomous Organization）"></a>去中心化自组织（DAO，Decentralized Autonomous Organization）</h3><blockquote>
+<p>去中心化自组织是一类没有分层管理体系的公司或其他组织。“The DAO”同时也可以指代一份2016年4月30日发布的<a href="#smart-contract">合约</a>，其随后在2016年6月遭到攻击，并最终引起了在<a href="#block">区块</a>高度 1192000 发生的<a href="#hard-fork">硬分叉</a>。该<a href="#fork">分叉</a>回退了被攻击的 DAO 合约。也导致以太坊与以太坊经典分裂成两个竞争系统。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.13<br>收录时间：2020.2.10</p>
+<div class="anchor" id="dapp"></div>
+
+<h3 id="DApp（Decentralized-application）"><a href="#DApp（Decentralized-application）" class="headerlink" title="DApp（Decentralized application）"></a>DApp（Decentralized application）</h3><blockquote>
+<p>去中心化应用程序。狭义地说，DApp 可以是一个<a href="#smart-contract">智能合约</a>或网页上的用户界面；广义地说，是在开放的、去中心化的、点对点的基础设施服务之上建立的<a href="#network">网络</a>应用程序。此外，许多去中心化应用程序还包含去中心化存储与（或）通信协议和平台。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.13<br>收录时间：2020.2.10</p>
+<div class="anchor" id="deed"></div>
+
+<h3 id="权证（Deed）"><a href="#权证（Deed）" class="headerlink" title="权证（Deed）"></a>权证（Deed）</h3><blockquote>
+<p><a href="#nft">不可替代代币</a>（NFT）标准是由 ERC721 提议的。与 ERC20 代币不同。权证（所有权证书）可以证明 ERC721 代币的所有权，且该所有权不可互换，但目前为止还未有任何司法管辖区承认其为合法文件。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.13<br>收录时间：2020.2.10</p>
+<div class="anchor" id="difficulty"></div>
+
+<h3 id="难度（Difficulty）"><a href="#难度（Difficulty）" class="headerlink" title="难度（Difficulty）"></a>难度（Difficulty）</h3><blockquote>
+<p>对全网来说，设置产生单位<a href="#pow">工作量证明</a>需要消耗多少算力。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.13<br>收录时间：2020.2.10</p>
+<div class="anchor" id="digital-signature"></div>
+
+<h3 id="数字签名（Digital-signature）"><a href="#数字签名（Digital-signature）" class="headerlink" title="数字签名（Digital signature）"></a>数字签名（Digital signature）</h3><blockquote>
+<p>数字签名算法使用户可以使用其<a href="#private-key">私钥</a>生成我们称之为文件“签名”的短数据串，并使任何拥有相应<a href="#public-key">公钥</a>、该文件签名与文档的人都可以验证：该文件确实由该特定私钥的所有者“签署”，且该文档在签署后未被更改。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.13<br>收录时间：2020.2.10</p>
+<hr>
+<h2 id="E"><a href="#E" class="headerlink" title="E"></a>E</h2><div class="anchor" id="ecdsa"></div>
+
+<h3 id="ECDSA（Elliptic-Curve-Digital-Signature-Algorithm）"><a href="#ECDSA（Elliptic-Curve-Digital-Signature-Algorithm）" class="headerlink" title="ECDSA（Elliptic Curve Digital Signature Algorithm）"></a>ECDSA（Elliptic Curve Digital Signature Algorithm）</h3><blockquote>
+<p>椭圆曲线<a href="#digital-signature">数字签名</a>算法，是以太坊使用的密码学算法，用来保证<a href="#account">账户</a>资金只能被其所有者分配。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.13<br>收录时间：2020.2.10</p>
+<div class="anchor" id="eip"></div>
+
+<h3 id="EIP-以太坊改进提案（Ethereum-Improvement-Proposal）"><a href="#EIP-以太坊改进提案（Ethereum-Improvement-Proposal）" class="headerlink" title="EIP 以太坊改进提案（Ethereum Improvement Proposal）"></a>EIP 以太坊改进提案（Ethereum Improvement Proposal）</h3><blockquote>
+<p>以太坊改进提案，用以描述对以太坊平台提出的改进建议的文件，以特定的格式向全体以太坊社区描述一个提议的新功能、新流程或新环境。更多信息可以参考 <a href="https://github.com/ethereum/EIPs" target="_blank" rel="noopener">https://github.com/ethereum/EIPs</a>。（参见“<a href="#erc">ERC</a>”）</p>
+</blockquote>
+<p>相关：《精通以太坊》P.13<br>收录时间：2020.2.10</p>
+<div class="anchor" id="ens"></div>
+
+<h3 id="ENS（Ethereum-Name-Service）"><a href="#ENS（Ethereum-Name-Service）" class="headerlink" title="ENS（Ethereum Name Service）"></a>ENS（Ethereum Name Service）</h3><blockquote>
+<p>以太坊域名服务。更多信息可以参考 <a href="https://github.com/ethereum/ens/" target="_blank" rel="noopener">https://github.com/ethereum/ens/</a>。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.13<br>收录时间：2020.2.10</p>
+<h3 id="熵（Entropy）"><a href="#熵（Entropy）" class="headerlink" title="熵（Entropy）"></a>熵（Entropy）</h3><blockquote>
+<p>在密码学的语境中，熵意味着不可预期性，也就是随机性高低。当我们生成一个秘密信息（如<a href="#private-key">私钥</a>）时，算法通常需要依赖于一个熵非常大的信源来保证其输出的随机性。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.13<br>收录时间：2020.2.10</p>
+<div class="anchor" id="eoa"></div>
+
+<h3 id="EOA（External-Owned-Account）"><a href="#EOA（External-Owned-Account）" class="headerlink" title="EOA（External Owned Account）"></a>EOA（External Owned Account）</h3><blockquote>
+<p>外部账户，即以太坊网络中由人类用户创建或为人类用户使用的<a href="#account">账户</a>。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.14<br>收录时间：2020.2.10</p>
+<div class="anchor" id="erc"></div>
+
+<h3 id="ERC（Ethereum-Request-for-Comments）"><a href="#ERC（Ethereum-Request-for-Comments）" class="headerlink" title="ERC（Ethereum Request for Comments）"></a>ERC（Ethereum Request for Comments）</h3><blockquote>
+<p>以太坊请求评论。ERC 是给部分尝试定义以太坊具体使用标准的 <a href="#eip">EIP</a> 贴上的标签。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.14<br>收录时间：2020.2.10</p>
+<div class="anchor" id="ethash"></div>
+
+<h3 id="Ethash"><a href="#Ethash" class="headerlink" title="Ethash"></a>Ethash</h3><blockquote>
+<p>以太坊 1.0 版本中使用的<a href="#pow">工作量证明</a>算法。更多信息请参考 <a href="https://github.com/ethereum/wiki/wiki/Ethash" target="_blank" rel="noopener">https://github.com/ethereum/wiki/wiki/Ethash</a>。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.14<br>收录时间：2020.2.10</p>
+<div class="anchor" id="ether"></div>
+
+<h3 id="以太币（Ether）"><a href="#以太币（Ether）" class="headerlink" title="以太币（Ether）"></a>以太币（Ether）</h3><blockquote>
+<p>以太坊生态系统中使用的原生加密货币，用来支付执行<a href="#smart-contract">智能合约</a>时产生的 <a href="#gas">gas</a> 消耗，其货币符号为 Ξ，是希腊语中大写的 Xi 字母。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.14<br>收录时间：2020.2.10</p>
+<h3 id="事件（Event）"><a href="#事件（Event）" class="headerlink" title="事件（Event）"></a>事件（Event）</h3><blockquote>
+<p>事件使<a href="#evm">以太坊虚拟机</a>中的日志记录工具可用，而日志记录工具可在 <a href="#dapp">DApp</a> 的用户界面中触发 JavaScript 回调，后者又能监听这些事件。更多信息请参考 <a href="http://solidity.readthedocs.io/en/develop/contracts.html#events" target="_blank" rel="noopener">http://solidity.readthedocs.io/en/develop/contracts.html#events</a>。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.14<br>收录时间：2020.2.10</p>
+<div class="anchor" id="evm"></div>
+
+<h3 id="EVM（Ethereum-Virtual-Machine）"><a href="#EVM（Ethereum-Virtual-Machine）" class="headerlink" title="EVM（Ethereum Virtual Machine）"></a>EVM（Ethereum Virtual Machine）</h3><blockquote>
+<p>以太坊虚拟机，是基于栈的虚拟机，用于执行<a href="#bytecode">字节码</a>。在以太坊中，其执行模型指定了在给定一系列字节码指令和一小组环境数据的情况下如何改变系统状态。这是通过虚拟状态机的正式模型指定的。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.14<br>收录时间：2020.2.10</p>
+<h3 id="EVM-汇编语言（EVM-assembly-language）"><a href="#EVM-汇编语言（EVM-assembly-language）" class="headerlink" title="EVM 汇编语言（EVM assembly language）"></a>EVM 汇编语言（EVM assembly language）</h3><blockquote>
+<p>人类可读的<a href="#evm">以太坊虚拟机</a><a href="#bytecode">字节码</a>的一种形式。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.14<br>收录时间：2020.2.10</p>
+<hr>
+<h2 id="F"><a href="#F" class="headerlink" title="F"></a>F</h2><div class="anchor" id="fallback-function"></div>
+
+<h3 id="回退函数（Fallback-function）"><a href="#回退函数（Fallback-function）" class="headerlink" title="回退函数（Fallback function）"></a>回退函数（Fallback function）</h3><blockquote>
+<p>在缺失数据或无法匹配函数名称时的默认函数调用。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.14<br>收录时间：2020.2.10</p>
+<h3 id="Faucet"><a href="#Faucet" class="headerlink" title="Faucet"></a>Faucet</h3><blockquote>
+<p>免费提供测试网可用的测试<a href="#ether">以太币</a>的服务。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.14<br>收录时间：2020.2.10</p>
+<h3 id="finney"><a href="#finney" class="headerlink" title="finney"></a>finney</h3><blockquote>
+<p><a href="#ether">以太币</a>的货币单位。$10^{15}$ finney = 1 ether。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.14<br>收录时间：2020.2.10</p>
+<div class="anchor" id="fork"></div>
+
+<h3 id="分叉（Fork）"><a href="#分叉（Fork）" class="headerlink" title="分叉（Fork）"></a>分叉（Fork）</h3><blockquote>
+<p>在协议层面的一次改动，可能会产生一条竞争链，或造成在挖矿中对未来<a href="#block">区块</a>路径的暂时性分歧。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.14<br>收录时间：2020.2.10</p>
+<h3 id="“前沿”版本（Frontier）"><a href="#“前沿”版本（Frontier）" class="headerlink" title="“前沿”版本（Frontier）"></a>“前沿”版本（Frontier）</h3><blockquote>
+<p>以太坊最初开发测试阶段的版本，在2015年7月上线，知道2016年3月。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.15<br>收录时间：2020.2.10</p>
+<hr>
+<h2 id="G"><a href="#G" class="headerlink" title="G"></a>G</h2><h3 id="Ganache"><a href="#Ganache" class="headerlink" title="Ganache"></a>Ganache</h3><blockquote>
+<p>个人版以太坊<a href="#blockchain">区块链</a>，用户可以在控制区块链操作的情况下用其进行代码测试、执行命令并检查状态。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.15<br>收录时间：2020.2.10</p>
+<div class="anchor" id="gas"></div>
+
+<h3 id="gas"><a href="#gas" class="headerlink" title="gas"></a>gas</h3><blockquote>
+<p>以太坊网络中为执行<a href="#smart-contract">智能合约</a>所消耗的虚拟“燃油”。<a href="#evm">以太坊虚拟机</a>使用一种记账方法来衡量 gas 用量，以限制算力资源的消耗。（参见“<a href="#turing-complete">图灵完备</a>”）</p>
+</blockquote>
+<p>相关：《精通以太坊》P.15<br>收录时间：2020.2.10</p>
+<h3 id="gas-上限（gas-limit）"><a href="#gas-上限（gas-limit）" class="headerlink" title="gas 上限（gas limit）"></a>gas 上限（gas limit）</h3><blockquote>
+<p>一个<a href="#transaction">交易</a>或一个<a href="#block">区块</a>允许消耗的最大 <a href="#gas">gas</a> 量。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.15<br>收录时间：2020.2.10</p>
+<div class="anchor" id="gavin-wood"></div>
+
+<h3 id="Gavin-Wood"><a href="#Gavin-Wood" class="headerlink" title="Gavin Wood"></a>Gavin Wood</h3><blockquote>
+<p>Gavin Wood 是一名英国籍程序员，以太坊联合创始人，前首席技术官。2014年8月，他提出了 <a href="#solidity">Solidity</a> 这种面向<a href="#smart-contract">合约</a>的编程语言，用于编写<a href="#smart-contract">智能合约</a>。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.15<br>收录时间：2020.2.10</p>
+<h3 id="创世块（Genesis-block）"><a href="#创世块（Genesis-block）" class="headerlink" title="创世块（Genesis block）"></a>创世块（Genesis block）</h3><blockquote>
+<p><a href="#blockchain">区块链</a>上的第一个<a href="#block">区块</a>，用于初始化特定的区块链及其原生加密代币。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.15<br>收录时间：2020.2.10</p>
+<h3 id="Geth（Go-Ethereum）"><a href="#Geth（Go-Ethereum）" class="headerlink" title="Geth（Go Ethereum）"></a>Geth（Go Ethereum）</h3><blockquote>
+<p>以太坊的 Go 语言实现，是以太坊协议上最著名的实现。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.15<br>收录时间：2020.2.10</p>
+<hr>
+<h2 id="H"><a href="#H" class="headerlink" title="H"></a>H</h2><div class="anchor" id="hard-fork"></div>
+
+<h3 id="硬分叉（Hard-fork）"><a href="#硬分叉（Hard-fork）" class="headerlink" title="硬分叉（Hard fork）"></a>硬分叉（Hard fork）</h3><blockquote>
+<p>硬分叉也叫硬分叉改变，是<a href="#blockchain">区块链</a>上产生的永久分歧，通常发生在拒绝升级的<a href="#node">节点</a>无法验证遵循新<a href="#consensus">共识</a>协议的已升级节点所创建的<a href="#block">区块</a>时。“硬分叉”不应与“<a href="#fork">分叉</a>”、“软分叉”、“软件分叉”或“Git 分叉”混淆。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.15<br>收录时间：2020.2.10</p>
+<div class="anchor" id="hash"></div>
+
+<h3 id="哈希（Hash）"><a href="#哈希（Hash）" class="headerlink" title="哈希（Hash）"></a>哈希（Hash）</h3><blockquote>
+<p>由可变长度输入，通过哈希函数（散列函数）生成的固定长度的数字指纹。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.15<br>收录时间：2020.2.10</p>
+<div class="anchor" id="hd-wallet"></div>
+
+<h3 id="HD-钱包（HD-Wallet）"><a href="#HD-钱包（HD-Wallet）" class="headerlink" title="HD 钱包（HD Wallet）"></a>HD 钱包（HD Wallet）</h3><blockquote>
+<p>分层确定性<a href="#wallet">钱包</a>，即使用分层确定性（HD）<a href="#secret-key">秘钥</a>创建与传输协议（BIP-32）的钱包。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.15<br>收录时间：2020.2.10</p>
+<h3 id="HD-钱包种子（HD-wallet-seed）"><a href="#HD-钱包种子（HD-wallet-seed）" class="headerlink" title="HD 钱包种子（HD wallet seed）"></a>HD 钱包种子（HD wallet seed）</h3><blockquote>
+<p>用来生成 <a href="#hd-wallet">HD 钱包</a>中主<a href="#private-key">私钥</a>与主链码的短种子值。可以用助记词表示，以便人类复制、备份及恢复私钥。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.15<br>收录时间：2020.2.10</p>
+<h3 id="“家园”版本（Homestead）"><a href="#“家园”版本（Homestead）" class="headerlink" title="“家园”版本（Homestead）"></a>“家园”版本（Homestead）</h3><blockquote>
+<p>以太坊的第二个开发阶段，在2016年3月<a href="#block">区块</a>高度为 1150000 时发布。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.15<br>收录时间：2020.2.10</p>
+<hr>
+<h2 id="I"><a href="#I" class="headerlink" title="I"></a>I</h2><h3 id="ICAP（Inter-exchange-Client-Address-Protocol）"><a href="#ICAP（Inter-exchange-Client-Address-Protocol）" class="headerlink" title="ICAP（Inter-exchange Client Address Protocol）"></a>ICAP（Inter-exchange Client Address Protocol）</h3><blockquote>
+<p>互换客户端地址协议，是一种与国际银行账号（IBAN）编码部分兼容的以太坊<a href="#address">地址</a>编码形式，为以太坊地址提供通用、经校验且可互操作的编码。ICAP 引入一个新的 IBAN 伪国家代码 XE，即“eXtended Ethereum”，类似其他非司法管辖区货币的代码（如 XBT、XRP、XCP）。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.16<br>收录时间：2020.2.10</p>
+<div class="anchor" id="ice-age"></div>
+
+<h3 id="冰河期（Ice-Age）"><a href="#冰河期（Ice-Age）" class="headerlink" title="冰河期（Ice Age）"></a>冰河期（Ice Age）</h3><blockquote>
+<p>在以太坊<a href="#blockchain">区块链</a><a href="#block">区块</a>高度为 200000 时通过<a href="#hard-fork">硬分叉</a>执行的指数<a href="#difficulty">难度</a>增长（又称为难度炸弹），以鼓励向<a href="#pos">权益证明</a>的转变。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.16<br>收录时间：2020.2.9</p>
+<h3 id="IDE（Integrated-Development-Environment）"><a href="#IDE（Integrated-Development-Environment）" class="headerlink" title="IDE（Integrated Development Environment）"></a>IDE（Integrated Development Environment）</h3><blockquote>
+<p>综合开发环境，是一个结合了代码编辑器、编译器、运行时与调试器的用户界面。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.16<br>收录时间：2020.2.10</p>
+<h3 id="部署代码不可变问题（Immutable-deployed-code-problem）"><a href="#部署代码不可变问题（Immutable-deployed-code-problem）" class="headerlink" title="部署代码不可变问题（Immutable deployed code problem）"></a>部署代码不可变问题（Immutable deployed code problem）</h3><blockquote>
+<p>只要一份<a href="#smart-contract">合约</a>（或<a href="#library">库</a>）的代码部署上链，就无法改变。正常的软件开发需要修复可能出现的漏洞并增加新功能，因此该不可改变性对<a href="#smart-contract">智能合约</a>开发而言是个挑战。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.16<br>收录时间：2020.2.10</p>
+<div class="anchor" id="internal-transaction"></div>
+
+<h3 id="内部交易（也称为“消息”）（Internal-transaction）"><a href="#内部交易（也称为“消息”）（Internal-transaction）" class="headerlink" title="内部交易（也称为“消息”）（Internal transaction）"></a>内部交易（也称为“消息”）（Internal transaction）</h3><blockquote>
+<p>从一个<a href="#contract-account">合约账户</a>发往另一个合约账户或<a href="#eoa">外部账户</a>的<a href="#transaction">交易</a>。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.16<br>收录时间：2020.2.10</p>
+<h3 id="IPFS（InterPlanetary-File-System）"><a href="#IPFS（InterPlanetary-File-System）" class="headerlink" title="IPFS（InterPlanetary File System）"></a>IPFS（InterPlanetary File System）</h3><blockquote>
+<p>星际文件系统，是一个旨在创建开源且分布式存储和共享文件的<a href="#network">网络</a>传输协议。它是一种内容可寻址的对等超媒体分发协议。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.16<br>收录时间：2020.2.10</p>
+<hr>
+<h2 id="K"><a href="#K" class="headerlink" title="K"></a>K</h2><h3 id="秘钥导出函数（KDF，Key-Derivation-Function）"><a href="#秘钥导出函数（KDF，Key-Derivation-Function）" class="headerlink" title="秘钥导出函数（KDF，Key Derivation Function）"></a>秘钥导出函数（KDF，Key Derivation Function）</h3><blockquote>
+<p>也称为<a href="#secret-key">秘钥</a>延伸算法，通过<a href="#keystore-file">秘钥库文件</a>格式来防止暴力破解，防止攻击者预先计算派生秘钥的字典或“彩虹表”，通过重复计算密令的<a href="#hash">哈希</a>来实现。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.16<br>收录时间：2020.2.10</p>
+<div class="anchor" id="keccak-256"></div>
+
+<h3 id="Keccak-256"><a href="#Keccak-256" class="headerlink" title="Keccak-256"></a>Keccak-256</h3><p>以太坊协议使用的加密<a href="#hash">哈希</a>函数。Keccak-256 是从 SHA-3 规范演化出来的。</p>
+<p>相关：《精通以太坊》P.16<br>收录时间：2020.2.10</p>
+<div class="anchor" id="keystore-file"></div>
+
+<h3 id="秘钥库文件（Keystore-File）"><a href="#秘钥库文件（Keystore-File）" class="headerlink" title="秘钥库文件（Keystore File）"></a>秘钥库文件（Keystore File）</h3><blockquote>
+<p>一个包含单个（随机生成的）<a href="#private-key">私钥</a>的 JSON 编码文件，用密令加密以提高安全性。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.16<br>收录时间：2020.2.10</p>
+<hr>
+<h2 id="L"><a href="#L" class="headerlink" title="L"></a>L</h2><h3 id="LevelDB"><a href="#LevelDB" class="headerlink" title="LevelDB"></a>LevelDB</h3><blockquote>
+<p>一个轻量、开源的键值对存储库，它是单一用途的数据库，可以绑定到许多平台。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.16<br>收录时间：2020.2.10</p>
+<div class="anchor" id="library"></div>
+
+<h3 id="库（Library）"><a href="#库（Library）" class="headerlink" title="库（Library）"></a>库（Library）</h3><blockquote>
+<p>以太坊中的库是一类特殊的<a href="#smart-contract">合约</a>，它不可填值，无<a href="#fallback-function">回退函数</a>，也无数据存储。因此，库无法接收或持有<a href="#ether">以太币</a>，也无法存储数据。以太坊上的库是其他合约可以为只读计算调用的先前部署的代码。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.16<br>收录时间：2020.2.10</p>
+<h3 id="轻客户端（Lightweight-client）"><a href="#轻客户端（Lightweight-client）" class="headerlink" title="轻客户端（Lightweight client）"></a>轻客户端（Lightweight client）</h3><blockquote>
+<p>一类不在本地保存<a href="#blockchain">区块链</a>副本，也无法验证<a href="#block">区块</a>和<a href="#transaction">交易</a>的以太坊客户端，具有<a href="#wallet">钱包</a>功能，也可以用其创建并广播交易。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.17<br>收录时间：2020.2.10</p>
+<hr>
+<h2 id="M"><a href="#M" class="headerlink" title="M"></a>M</h2><h3 id="默克尔帕特里夏树（Merkle-Patricia-tree）"><a href="#默克尔帕特里夏树（Merkle-Patricia-tree）" class="headerlink" title="默克尔帕特里夏树（Merkle Patricia tree）"></a>默克尔帕特里夏树（Merkle Patricia tree）</h3><blockquote>
+<p>一条缝协议中用于高效存储键值对的数据结构。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.17<br>收录时间：2020.2.10</p>
+<div class="anchor" id="message"></div>
+
+<h3 id="消息（Message）"><a href="#消息（Message）" class="headerlink" title="消息（Message）"></a>消息（Message）</h3><blockquote>
+<p>一个永不串行且只能在<a href="#evm">以太坊虚拟机</a>内发送的<a href="#internal-transaction">内部交易</a>。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.17<br>收录时间：2020.2.10</p>
+<h3 id="消息调用（Message-call）"><a href="#消息调用（Message-call）" class="headerlink" title="消息调用（Message call）"></a>消息调用（Message call）</h3><blockquote>
+<p>将<a href="#message">消息</a>从一个<a href="#account">账户</a>传递到另一个账户的行为。如果目标账户与<a href="#evm">以太坊虚拟机</a>代码相关联，则将使用该对象的状态启动虚拟机并执行该消息的操作。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.17<br>收录时间：2020.2.10</p>
+<h3 id="ME-代币（METoken）"><a href="#ME-代币（METoken）" class="headerlink" title="ME 代币（METoken）"></a>ME 代币（METoken）</h3><blockquote>
+<p>精通以太坊代币，即 ERC20 代币。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.17<br>收录时间：2020.2.10</p>
+<div class="anchor" id="metropolis"></div>
+
+<h3 id="“大都会”阶段"><a href="#“大都会”阶段" class="headerlink" title="“大都会”阶段"></a>“大都会”阶段</h3><blockquote>
+<p>以太坊开发的第三阶段，在2017年10月发布。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.17<br>收录时间：2020.2.9</p>
+<div class="anchor" id="miner"></div>
+
+<h3 id="矿工（Miner）"><a href="#矿工（Miner）" class="headerlink" title="矿工（Miner）"></a>矿工（Miner）</h3><blockquote>
+<p>通过不断做<a href="#hash">哈希</a>运算，找到新<a href="#block">区块</a>的有效<a href="#pow">工作量证明</a>的<a href="#network">网络</a><a href="#node">节点</a>。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.17<br>收录时间：2020.2.10</p>
+<h3 id="Mist"><a href="#Mist" class="headerlink" title="Mist"></a>Mist</h3><blockquote>
+<p>Mist 是以太坊基金会开发的首个支持以太坊的浏览器。它包含一个浏览器内置的<a href="#wallet">钱包</a>，这也是首个 ERC20 代币标准的实现（ERC20 标准的作者 Fabian Vogelsteller 同时也是 Mist 的主要开发者）。Mist 还是第一个引入 camalCase 校验和（EIP-115 提出的）钱包。Mist 浏览器运行全功能<a href="#node">节点</a>，提供支持基于 <a href="#swarm">Swarm</a> 协议的存储和 <a href="#ens">ENS</a> 地址的完整的 <a href="#dapp">DApp</a> 浏览器。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.17<br>收录时间：2020.2.10</p>
+<hr>
+<h2 id="N"><a href="#N" class="headerlink" title="N"></a>N</h2><div class="anchor" id="network"></div>
+
+<h3 id="网络（Network）"><a href="#网络（Network）" class="headerlink" title="网络（Network）"></a>网络（Network）</h3><blockquote>
+<p>以太坊网络，将<a href="#transaction">交易</a>与<a href="#block">区块</a>传播到每个以太坊<a href="#node">节点</a>（网络参与者）的点对点网络。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.17<br>收录时间：2020.2.10</p>
+<div class="anchor" id="nft"></div>
+
+<h3 id="不可替代代币（NFT）"><a href="#不可替代代币（NFT）" class="headerlink" title="不可替代代币（NFT）"></a>不可替代代币（NFT）</h3><blockquote>
+<p>也叫“所有权证书”或“<a href="#deed">权证</a>”，是由 ERC721 议案提出的代币标准。不可替代代币能够被追溯也可以<a href="#transaction">交易</a>，每个代币是唯一且独一无二的，不像 ERC20 代币，每个 NFT 都是无法互换的。NFT 能够代表数字或物理资产的所有权。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.17<br>收录时间：2020.2.10</p>
+<div class="anchor" id="node"></div>
+
+<h3 id="节点（Node）"><a href="#节点（Node）" class="headerlink" title="节点（Node）"></a>节点（Node）</h3><blockquote>
+<p>参与点对点<a href="#network">网络</a>的软件客户端。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.18<br>收录时间：2020.2.10</p>
+<div class="anchor" id="nonce"></div>
+
+<h3 id="nonce"><a href="#nonce" class="headerlink" title="nonce"></a>nonce</h3><blockquote>
+<p>在密码学中，nonce 指的是一个在加密通信中只能使用一次的值。以太坊中有两类 nonce：账户 nonce，用于每个<a href="#account">账户</a>中的<a href="#transaction">交易</a>计数，防止重放攻击；工作量证明 nonce，<a href="#block">区块</a>中满足<a href="#pow">工作量证明</a>的随机值。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.18<br>收录时间：2020.2.10</p>
+<hr>
+<h2 id="O"><a href="#O" class="headerlink" title="O"></a>O</h2><div class="anchor" id="ommer"></div>
+
+<h3 id="Ommer"><a href="#Ommer" class="headerlink" title="Ommer"></a>Ommer</h3><blockquote>
+<p>某一个父块的子块，且自身不是任何<a href="#block">区块</a>的父块。当一个<a href="#miner">矿工</a>找到有效区块时，另一个矿工可能已经发布了一个竞争区块并将其添加上链。与比特币不同，以太坊中的孤块可以被更新的区块作为 ommer 打包，并获得部分<a href="#reward">区块奖励</a>。使用术语“ommer”是对同一个父块下不同子块的中性表达，但也有人称其为“叔块”（uncle）。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.18<br>收录时间：2020.2.10</p>
+<hr>
+<h2 id="P"><a href="#P" class="headerlink" title="P"></a>P</h2><h3 id="Parity"><a href="#Parity" class="headerlink" title="Parity"></a>Parity</h3><blockquote>
+<p>以太坊客户端软件中最著名的可互操作实现之一。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.18<br>收录时间：2020.2.10</p>
+<div class="anchor" id="private-key"></div>
+
+<h3 id="私钥（Private-key）"><a href="#私钥（Private-key）" class="headerlink" title="私钥（Private key）"></a>私钥（Private key）</h3><blockquote>
+<p>参见“<a href="#secret-key">秘钥</a>”。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.18<br>收录时间：2020.2.10</p>
+<div class="anchor" id="pos"></div>
+
+<h3 id="权益证明（Pos）"><a href="#权益证明（Pos）" class="headerlink" title="权益证明（Pos）"></a>权益证明（Pos）</h3><blockquote>
+<p>权益证明是加密货币<a href="#blockchain">区块链</a>协议试图达成分布式<a href="#consensus">共识</a>的一类方法。权益证明要求用户先证明自己对一定量加密资产的所有权（即他们在<a href="#network">网络</a>中的“权益”），才可参与到验证<a href="#transaction">交易</a>的过程中。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.18<br>收录时间：2020.2.9</p>
+<div class="anchor" id="pow"></div>
+
+<h3 id="工作量证明（Pow）"><a href="#工作量证明（Pow）" class="headerlink" title="工作量证明（Pow）"></a>工作量证明（Pow）</h3><blockquote>
+<p>工作量证明是一份需要巨大算力才能找到的数据（即“证明”）。在以太坊网络中，<a href="#miner">矿工</a>必须找到符合全网<a href="#difficulty">难度</a>标准的 <a href="#ethash">Ethash</a> 算法的数字解决方案。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.18<br>收录时间：2020.2.9</p>
+<div class="anchor" id="public-key"></div>
+
+<h3 id="公钥（Public-key）"><a href="#公钥（Public-key）" class="headerlink" title="公钥（Public key）"></a>公钥（Public key）</h3><blockquote>
+<p>通过<a href="#private-key">私钥</a>的单向函数派生的数字，可以公开共享，任何人都可以使用它来验证用其对应私钥进行的<a href="#digital-signature">数字签名</a>。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.18<br>收录时间：2020.2.10</p>
+<hr>
+<h2 id="R"><a href="#R" class="headerlink" title="R"></a>R</h2><h3 id="收据（Receipt）"><a href="#收据（Receipt）" class="headerlink" title="收据（Receipt）"></a>收据（Receipt）</h3><blockquote>
+<p>收据是由以太坊客户端返回的数据，用来表示特定<a href="#transaction">交易</a>的结果，数据包含交易<a href="#hash">哈希</a>、打包的<a href="#block">区块</a>高度、实际 <a href="#gas">gas</a> 消耗量，如果该交易用来部署<a href="#smart-contract">合约</a>，则还会返回该合约<a href="#address">地址</a>。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.18<br>收录时间：2020.2.10</p>
+<h3 id="可重入攻击（Re-entrancy-attack）"><a href="#可重入攻击（Re-entrancy-attack）" class="headerlink" title="可重入攻击（Re-entrancy attack）"></a>可重入攻击（Re-entrancy attack）</h3><blockquote>
+<p>攻击者<a href="#smart-contract">合约</a>调用受害者合约函数，使得在调用执行过程中受害者合约会循环调用攻击者合约。这可能导致通过跳过受害者合约的余额更新或提款金额计算的部分来盗窃资金。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.18<br>收录时间：2020.2.10</p>
+<div class="anchor" id="reward"></div>
+
+<h3 id="区块奖励（Reward）"><a href="#区块奖励（Reward）" class="headerlink" title="区块奖励（Reward）"></a>区块奖励（Reward）</h3><blockquote>
+<p>以太坊网络给予找到相应<a href="#pow">工作量证明</a>的解的<a href="#miner">矿工</a>的，包含在每个新<a href="#block">区块</a>中用<a href="#ether">以太币</a>计价的奖励。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.19<br>收录时间：2020.2.10</p>
+<h3 id="RLP（Recursive-Length-Prefix）"><a href="#RLP（Recursive-Length-Prefix）" class="headerlink" title="RLP（Recursive Length Prefix）"></a>RLP（Recursive Length Prefix）</h3><blockquote>
+<p>递归长度前缀是一种编码算法，用于编码任意嵌套结构的对象（数据结构），它是以太坊中数据序列化的主要方法。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.19<br>收录时间：2020.2.10</p>
+<hr>
+<h2 id="S"><a href="#S" class="headerlink" title="S"></a>S</h2><h3 id="中本聪（Satoshi-Nakamoto）"><a href="#中本聪（Satoshi-Nakamoto）" class="headerlink" title="中本聪（Satoshi Nakamoto）"></a>中本聪（Satoshi Nakamoto）</h3><blockquote>
+<p>中本聪是设计比特币并创建比特币原始实现的个人或团队的名字。他（们）是第一个解决数字货币双重花费问题的人（团队），他们的真实身份至今还是个谜。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.19<br>收录时间：2020.2.10</p>
+<div class="anchor" id="secret-key"></div>
+
+<h3 id="秘钥（也称为私钥）（Secret-key）"><a href="#秘钥（也称为私钥）（Secret-key）" class="headerlink" title="秘钥（也称为私钥）（Secret key）"></a>秘钥（也称为私钥）（Secret key）</h3><blockquote>
+<p>通过生成<a href="#digital-signature">数字签名</a>（参见“<a href="#public-key">公钥</a>”、“<a href="#address">地址</a>”、“<a href="#ecdsa">ECDSA</a>”），使以太坊用户能够证明<a href="#account">账户</a>或<a href="#smart-contract">合约</a>的所有权的密码。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.19<br>收录时间：2020.2.10</p>
+<h3 id="“宁静”阶段（Serenity）"><a href="#“宁静”阶段（Serenity）" class="headerlink" title="“宁静”阶段（Serenity）"></a>“宁静”阶段（Serenity）</h3><blockquote>
+<p>以太坊开发进程的第四阶段，也是终极阶段，还未公布计划的发布日期。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.19<br>收录时间：2020.2.10</p>
+<div class="anchor" id="serpent"></div>
+
+<h3 id="Serpent"><a href="#Serpent" class="headerlink" title="Serpent"></a>Serpent</h3><blockquote>
+<p>直译为“大蛇”，是一种语法类似 Python（直译为“大蟒”）的过程化编程语言。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.19<br>收录时间：2020.2.10</p>
+<h3 id="SHA（Secure-Hash-Algorithm）"><a href="#SHA（Secure-Hash-Algorithm）" class="headerlink" title="SHA（Secure Hash Algorithm）"></a>SHA（Secure Hash Algorithm）</h3><blockquote>
+<p>安全哈希算法，是由美国国家标准与技术研究院（NIST）发布的一系列加密<a href="#hash">哈希</a>函数。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.19<br>收录时间：2020.2.10</p>
+<h3 id="单例模式（Singleton）"><a href="#单例模式（Singleton）" class="headerlink" title="单例模式（Singleton）"></a>单例模式（Singleton）</h3><blockquote>
+<p>计算机编程术语，描述只能存在单个实例的对象。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.19<br>收录时间：2020.2.10</p>
+<div class="anchor" id="smart-contract"></div>
+
+<h3 id="智能合约（Smart-Contract）"><a href="#智能合约（Smart-Contract）" class="headerlink" title="智能合约（Smart Contract）"></a>智能合约（Smart Contract）</h3><blockquote>
+<p>在以太坊计算基础框架上执行的程序。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.19<br>收录时间：2020.2.10</p>
+<div class="anchor" id="solidity"></div>
+
+<h3 id="Solidity"><a href="#Solidity" class="headerlink" title="Solidity"></a>Solidity</h3><blockquote>
+<p>一种语法类似 JavaScript、C++ 或 Java 的程序化（命令式）编程语言，是用于编写以太坊<a href="#smart-contract">智能合约</a>的最流行也最常用的编程语言。由 <a href="#gavin-wood">Gavin Wood</a> 博士发明，他同时也是《精通以太坊》的作者之一。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.19<br>收录时间：2020.2.10</p>
+<h3 id="Solidity-内联汇编（Solidity-inline-assembly）"><a href="#Solidity-内联汇编（Solidity-inline-assembly）" class="headerlink" title="Solidity 内联汇编（Solidity inline assembly）"></a>Solidity 内联汇编（Solidity inline assembly）</h3><blockquote>
+<p><a href="#solidity">Solidity</a> 中包含的内联汇编使用<a href="#evm">以太坊虚拟机</a>汇编，可使其为以太坊虚拟机代码的人类可读形式的代码。内联汇编使得编写某些操作变得更加容易。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.19<br>收录时间：2020.2.10</p>
+<h3 id="Spurious-Dragon-分叉"><a href="#Spurious-Dragon-分叉" class="headerlink" title="Spurious Dragon 分叉"></a>Spurious Dragon 分叉</h3><blockquote>
+<p>在<a href="#block">区块</a>高度为 2675000 时发生的以太坊网络<a href="#hard-fork">硬分叉</a>，解决了一些拒绝服务攻击变量，以及另一状态的清除（参见“<a href="#tangerine-whistle-fork">Tangerine Whistle 分叉</a>”）。同时还增加了对重放攻击的防御机制。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.20<br>收录时间：2020.2.10</p>
+<div class="anchor" id="swarm"></div>
+
+<h3 id="Swarm-协议"><a href="#Swarm-协议" class="headerlink" title="Swarm 协议"></a>Swarm 协议</h3><blockquote>
+<p>一个去中心化（点对点）的存储<a href="#network">网络</a>，与 <a href="#web3">Web3</a> 和 <a href="#whisper">Whisper</a> 协议共同使用来构建 <a href="#dapp">DApp</a>。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.20<br>收录时间：2020.2.10</p>
+<h3 id="szabo"><a href="#szabo" class="headerlink" title="szabo"></a>szabo</h3><blockquote>
+<p><a href="#ether">以太币</a>的货币单位。$10^{12}$ szabo = 1 ether。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.20<br>收录时间：2020.2.11</p>
+<hr>
+<h2 id="T"><a href="#T" class="headerlink" title="T"></a>T</h2><div class="anchor" id="tangerine-whistle-fork"></div>
+
+<h3 id="Tangerine-Whistle-分叉"><a href="#Tangerine-Whistle-分叉" class="headerlink" title="Tangerine Whistle 分叉"></a>Tangerine Whistle 分叉</h3><blockquote>
+<p>在<a href="#block">区块</a>高度 2463000 时发生的以太坊网络<a href="#hard-fork">硬分叉</a>，改变了某些输入/输出密集型操作的 <a href="#gas">gas</a> 计算方法，并清理了因一次拒绝服务攻击造成的累积状态，这一攻击正是利用了某些操作的较低 gas 成本。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.20<br>收录时间：2020.2.11</p>
+<h3 id="测试网（Testnet）"><a href="#测试网（Testnet）" class="headerlink" title="测试网（Testnet）"></a>测试网（Testnet）</h3><blockquote>
+<p>测试<a href="#network">网络</a>（test network）的缩写，通常用来模拟以太坊主网的行为。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.20<br>收录时间：2020.2.11</p>
+<div class="anchor" id="transaction"></div>
+
+<h3 id="交易（Transaction）"><a href="#交易（Transaction）" class="headerlink" title="交易（Transaction）"></a>交易（Transaction）</h3><blockquote>
+<p>由一个原始<a href="#account">账户</a>签署并以一个特定<a href="#address">地址</a>为目标的提交到以太坊<a href="#blockchain">区块链</a>上的数据。该交易包含交易 <a href="#gas">gas</a> 上限等元数据。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.20<br>收录时间：2020.2.11</p>
+<h3 id="Truffle"><a href="#Truffle" class="headerlink" title="Truffle"></a>Truffle</h3><blockquote>
+<p>最常用的以太坊开发框架之一。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.20<br>收录时间：2020.2.11</p>
+<div class="anchor" id="turing-complete"></div>
+
+<h3 id="图灵完备（Turing-complete）"><a href="#图灵完备（Turing-complete）" class="headerlink" title="图灵完备（Turing complete）"></a>图灵完备（Turing complete）</h3><blockquote>
+<p>在可计算性理论里，如果一系列操作数据的规则（如指令集、编程语言、细胞自动机）可以用来模拟单带图灵机，那么它是图灵完备的。这个名字来源于英国数学家和计算机科学家艾伦·图灵。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.20<br>收录时间：2020.2.10</p>
+<hr>
+<h2 id="V"><a href="#V" class="headerlink" title="V"></a>V</h2><div class="anchor" id="vitalik-buterin"></div>
+
+<h3 id="Vitalik-Buterin"><a href="#Vitalik-Buterin" class="headerlink" title="Vitalik Buterin"></a>Vitalik Buterin</h3><blockquote>
+<p>一名俄裔加拿大籍程序员、作家，因联合创建以太坊和《比特币杂志》而为世人所认识。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.20<br>收录时间：2020.2.11</p>
+<h3 id="Vyper"><a href="#Vyper" class="headerlink" title="Vyper"></a>Vyper</h3><blockquote>
+<p>一种高级编程语言，与 <a href="#serpent">Serpent</a> 相似，使用类似 Python 的语法，目的是创造一个更接近纯函数式的编程语言。由 <a href="#vitalik-buterin">Vitalik Buterin</a> 发明。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.20<br>收录时间：2020.2.11</p>
+<hr>
+<h2 id="W"><a href="#W" class="headerlink" title="W"></a>W</h2><div class="anchor" id="wallet"></div>
+
+<h3 id="钱包（Wallet）"><a href="#钱包（Wallet）" class="headerlink" title="钱包（Wallet）"></a>钱包（Wallet）</h3><blockquote>
+<p>保存用户<a href="#secret-key">秘钥</a>的软件，可以用来访问并管理你的以太坊<a href="#account">账户</a>并与<a href="#smart-contract">智能合约</a>交互。秘钥不一定要存储在钱包中，为了提高安全性，可以离线存储（如写在一张记忆卡或者纸上）。尽管称其为“钱包”，但它并不存储代币本身。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.21<br>收录时间：2020.2.10</p>
+<div class="anchor" id="web3"></div>
+
+<h3 id="web3"><a href="#web3" class="headerlink" title="web3"></a>web3</h3><blockquote>
+<p>万维网的第三个版本。由 <a href="#gavin-wood">Gavin Wood</a> 博士首次提议，代表了对<a href="#network">网络</a>应用的新愿景与新焦点：从中心化所有并管理的应用转移到在去中心化协议上构建的应用。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.21<br>收录时间：2020.2.11</p>
+<h3 id="wei"><a href="#wei" class="headerlink" title="wei"></a>wei</h3><blockquote>
+<p><a href="#ether">以太币</a>最小货币单位。$10^{18}$ wei = 1 ether。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.21<br>收录时间：2020.2.11</p>
+<div class="anchor" id="whisper"></div>
+
+<h3 id="Whisper-协议"><a href="#Whisper-协议" class="headerlink" title="Whisper 协议"></a>Whisper 协议</h3><blockquote>
+<p>去中心化（P2P）的消息传输服务。与 <a href="#web3">Web3</a> 和 <a href="#swarm">Swarm</a> 协议共同使用来构建 <a href="#dapp">DApp</a>。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.21<br>收录时间：2020.2.11</p>
+<hr>
+<h2 id="Z"><a href="#Z" class="headerlink" title="Z"></a>Z</h2><div class="anchor" id="zero-address"></div>
+
+<h3 id="零地址（Zero-Address）"><a href="#零地址（Zero-Address）" class="headerlink" title="零地址（Zero Address）"></a>零地址（Zero Address）</h3><blockquote>
+<p>一个特殊的以太坊<a href="#address">地址</a>，地址的所有字节都为 0，作为“<a href="#contract-creation-transaction">创建合约交易</a>”的目标地址。</p>
+</blockquote>
+<p>相关：《精通以太坊》P.21<br>收录时间：2020.2.9</p>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://www.sunyt.site" rel="external nofollow noreferrer">雨停</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://www.sunyt.site/blockchain/ethereum/concept-handbook/">https://www.sunyt.site/blockchain/ethereum/concept-handbook/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="https://www.sunyt.site" target="_blank">雨停</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E6%89%8B%E5%86%8C/">
+                                    <span class="chip bg-color">手册</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%A6%82%E5%BF%B5/">
+                                    <span class="chip bg-color">概念</span>
+                                </a>
+                            
+                                <a href="/tags/%E8%AF%8D%E6%9D%A1/">
+                                    <span class="chip bg-color">词条</span>
+                                </a>
+                            
+                                <a href="/tags/%E4%BB%A5%E5%A4%AA%E5%9D%8A/">
+                                    <span class="chip bg-color">以太坊</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+        </div>
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '7884f52521111fafd16b',
+        clientSecret: '1530e69623eba37951a73e4b6105f8c0b1e1ef5b',
+        repo: 'rainstopper.github.io',
+        owner: 'rainstopper',
+        admin: "rainstopper",
+        id: '2020-02-09T21-49-29',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/blockchain/ethereum/concept-handbook/">
+                    <div class="card-image">
+                        
+                        <img src="http://q4kbn37nl.bkt.clouddn.com/ethereum_20200209215359.jpg?e=1581260069&amp;token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:lKNEVXQdmIPEFg1kibtfHBCTQ8E" class="responsive-img" alt="以太坊概念手册">
+                        
+                        <span class="card-title">以太坊概念手册</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    
+                    <div class="summary">
+                    
+                        以太坊概念手册
+                    
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-09
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%8C%9C%E7%8C%9C%E6%8B%B3/" class="post-category">
+                                    猜猜拳
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%89%8B%E5%86%8C/">
+                        <span class="chip bg-color">手册</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%A6%82%E5%BF%B5/">
+                        <span class="chip bg-color">概念</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%AF%8D%E6%9D%A1/">
+                        <span class="chip bg-color">词条</span>
+                    </a>
+                    
+                    <a href="/tags/%E4%BB%A5%E5%A4%AA%E5%9D%8A/">
+                        <span class="chip bg-color">以太坊</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-2/20180314_you-dian-mo-shi-yi-shi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="有点“模式”意识">
+                        
+                        <span class="card-title">有点“模式”意识</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    
+                    <div class="summary">
+                    
+                        《万维钢·精英日课2：有点“模式”意识》课程笔记
+                    
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-09
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%88%9E%E7%A9%BA%E6%9C%AF/" class="post-category">
+                                    舞空术
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">课程笔记</span>
+                    </a>
+                    
+                    <a href="/tags/%E4%B8%87%E7%BB%B4%E9%92%A2%C2%B7%E7%B2%BE%E8%8B%B1%E6%97%A5%E8%AF%BE2/">
+                        <span class="chip bg-color">万维钢·精英日课2</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%AB%98%E6%89%8B%E7%9A%84%E5%BF%83%E6%B3%95/">
+                        <span class="chip bg-color">高手的心法</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%A8%A1%E5%BC%8F/">
+                        <span class="chip bg-color">模式</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 精神時光屋<br />'
+            + '文章作者: 雨停<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
+
+
+    <footer class="page-footer bg-color">
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="https://www.sunyt.site" target="_blank">雨停</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                <i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2020";
+                    var startMonth = "1";
+                    var startDate = "23";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+            <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" />
+                <a href="http://www.beian.miit.gov.cn/" target="_blank">浙ICP备20003707号</a>
+            </span>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/rainstopper" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:501705246@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=501705246" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 501705246" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+    <script type="text/javascript" color="232, 140, 48"
+        pointColor="232, 140, 48" opacity='0.9'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
+
+    
+    
+    <script type="text/javascript" size="150" alpha='0.6'
+        zIndex="-1" src="/libs/background/ribbon-refresh.min.js" async="async"></script>
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
