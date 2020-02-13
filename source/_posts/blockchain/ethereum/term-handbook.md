@@ -1,9 +1,9 @@
 ---
-title: 以太坊概念手册
+title: 以太坊术语手册
 date: 2020-02-09 21:49:29
 categories:
 - [猜猜拳]
-tags: [以太坊, 概念, 手册, 词条]
+tags: [以太坊, 术语, 手册, 概念]
 summary: 以太坊概念手册
 img: http://q4kbn37nl.bkt.clouddn.com/ethereum_20200209215359.jpg?e=1581260069&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:lKNEVXQdmIPEFg1kibtfHBCTQ8E
 mathjax: true
@@ -702,7 +702,7 @@ mathjax: true
 
 <div class="anchor" id="pos"></div>
 
-### 权益证明（Pos）
+### 权益证明（PoS）
 
 > 权益证明是加密货币[区块链](#blockchain)协议试图达成分布式[共识](#consensus)的一类方法。权益证明要求用户先证明自己对一定量加密资产的所有权（即他们在[网络](#network)中的“权益”），才可参与到验证[交易](#transaction)的过程中。
 
@@ -712,7 +712,7 @@ mathjax: true
 
 <div class="anchor" id="pow"></div>
 
-### 工作量证明（Pow）
+### 工作量证明（PoW）
 
 > 工作量证明是一份需要巨大算力才能找到的数据（即“证明”）。在以太坊网络中，[矿工](#miner)必须找到符合全网[难度](#difficulty)标准的 [Ethash](#ethash) 算法的数字解决方案。
 

@@ -267,11 +267,11 @@ hexo server
 
 继续执行 `hexo server` 或 `hexo s` 命令，启动 server 服务。
 
-![](http://q4kbn37nl.bkt.clouddn.com/hexo-server.png?e=1579882840&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:PQe9BimqgGe37rRNvPFAzHenSGQ)
+![命令行启动](http://q4kbn37nl.bkt.clouddn.com/hexo-server.png?e=1579882840&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:PQe9BimqgGe37rRNvPFAzHenSGQ)
 
 执行命令后，打开浏览器，输入 `localhost:4000`，即可访问我们的第一个博客网站。
 
-![](http://q4kbn37nl.bkt.clouddn.com/hexo-init-page.png?e=1579883002&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:BHUuNzGjZqACRuo5pctN5FGpKGg)
+![Hexo 默认页](http://q4kbn37nl.bkt.clouddn.com/hexo-init-page.png?e=1579883002&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:BHUuNzGjZqACRuo5pctN5FGpKGg)
 
 ---
 
@@ -452,13 +452,13 @@ ssh-keygen -t rsa -C <email>
 
 这个过程中会提示输入文件名，也可以不设置，一路回车。
 
-![](http://q4kbn37nl.bkt.clouddn.com/generate-ssh-key.png?e=1579891710&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:JZD8R9_SaZxT5rxAEDAlwVE2iMk)
+![命令行生成 SSH Key](http://q4kbn37nl.bkt.clouddn.com/generate-ssh-key.png?e=1579891710&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:JZD8R9_SaZxT5rxAEDAlwVE2iMk)
 
 最后会提示在用户目录下生成了 `.ssh` 文件夹，里面包含了 `id_rsa` 私钥文件和 `id_rsa.pub` 公钥文件。
 
 在 GitHub 的 `Settings` 中找到 `SSH and GPG keys` 的配置页面，点击 `New SSH key` 按钮，在 `title` 中输入自定义的名称，将 `id_rsa.pub` 文件中的内容拷贝至 `Key`，完成SSH秘钥的创建。
 
-![](http://q4kbn37nl.bkt.clouddn.com/github-ssh.png?e=1579891366&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:duNvV4Ij1lXBPpJHiVfB2OR42Y8)
+![在 GitHub 中添加 SSH Key](http://q4kbn37nl.bkt.clouddn.com/github-ssh.png?e=1579891366&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:duNvV4Ij1lXBPpJHiVfB2OR42Y8)
 
 使用以下命令验证 SSH 的配置是否生效。
 
@@ -468,7 +468,7 @@ ssh -T git@github.com
 
 出现以下提示信息时，即为配置成功。
 
-![](http://q4kbn37nl.bkt.clouddn.com/test-github-ssh.png?e=1579891976&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:v38GguGs12J7jfuwfowPInGShZc)
+![测试 SSH](http://q4kbn37nl.bkt.clouddn.com/test-github-ssh.png?e=1579891976&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:v38GguGs12J7jfuwfowPInGShZc)
 
 ### 8.3 将 Hexo 生成的静态页面托管至 GitHub
 
@@ -532,7 +532,7 @@ hexo deploy
 
 进入我们之前创建好的 GitHub 仓库，在 `Code` 菜单下点击 `Branch:master` 按钮，新建一个名为 `hexo-source` 的分支，并将其设置为默认分支。
 
-![](http://q4kbn37nl.bkt.clouddn.com/github-branch-hexo-source.png?e=1579894028&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:p8fSwlsoS5MJA2UTKOVNUg5tJco)
+![创建 GitHub 分支](http://q4kbn37nl.bkt.clouddn.com/github-branch-hexo-source.png?e=1579894028&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:p8fSwlsoS5MJA2UTKOVNUg5tJco)
 
 ### 9.2 上传源代码
 
@@ -593,7 +593,7 @@ git push
 
 可以直接使用 `新手引导` 按钮，它会自动添加主机记录为 `@` 和 `www`、解析线路为 `默认` 的两条配置。
 
-![](http://q4kbn37nl.bkt.clouddn.com/aliyun-dns-guide.png?e=1579896004&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:IwzoBZ4z-sE66szbZ6VwSiJaXNo)
+![在阿里云配置域名解析](http://q4kbn37nl.bkt.clouddn.com/aliyun-dns-guide.png?e=1579896004&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:IwzoBZ4z-sE66szbZ6VwSiJaXNo)
 
 其中的记录值，我们可以先在命令行中通过 `ping <username>.github.io` 获取到项目在 GitHub 服务器上所在的 IP 地址，将其填入。
 
@@ -601,7 +601,7 @@ git push
 
 在 GitHub 仓库的 `Settings` 菜单下找到 `Custom domain`，设置域名并保存。
 
-![](http://q4kbn37nl.bkt.clouddn.com/github-settings-custom-domain.png?e=1579896418&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:xBGBLkVCOB_Xqruz4Wvz7iOezqo)
+![在 GitHub 仓库中配置域名](http://q4kbn37nl.bkt.clouddn.com/github-settings-custom-domain.png?e=1579896418&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:xBGBLkVCOB_Xqruz4Wvz7iOezqo)
 
 ### 10.5 修改项目配置并重新部署
 
@@ -681,13 +681,13 @@ hexo deploy
 
 随即在 Coding 上部署项目，并设置自定义域名为自己的域名 `sunyt.site`。
 
-![](http://q4kbn37nl.bkt.clouddn.com/coding-deploy-setting.png?e=1579899019&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:OyAp31x2qJBjjqs52UNHOhts1H4)
+![在 Coding 部署静态页面](http://q4kbn37nl.bkt.clouddn.com/coding-deploy-setting.png?e=1579899019&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:OyAp31x2qJBjjqs52UNHOhts1H4)
 
 ### 11.4 修改域名解析配置
 
 回到[阿里云控制台](https://dns.console.aliyun.com/)，将原来指向 GitHub 配置的解析路线改为 `境外`，再分别添加主机记录为 `@` 和 `www` 的两条记录，记录类型选择 `默认`，记录值填写 Coding 项目的静态网站域名。
 
-![](http://q4kbn37nl.bkt.clouddn.com/aliyun-dns-setting-github-and-coding.png?e=1579899444&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:MqbSUQGDtVH4Uw6vY1sI9PDC0c0)
+![阿里云控制台域名解析](http://q4kbn37nl.bkt.clouddn.com/aliyun-dns-setting-github-and-coding.png?e=1579899444&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:MqbSUQGDtVH4Uw6vY1sI9PDC0c0)
 
 不一会儿，我们在国内访问域名 `sunyt.site` 就会访问到托管至 Coding 的页面了。
 
@@ -785,19 +785,19 @@ Matery 主题支持 [Gitalk](https://gitalk.github.io/)、[Gitment](https://imsu
 
 登陆 GitHub，在 `Settings` > `Developer settings` 下，找到 `OAuth Apps` 菜单。
 
-![](http://q4kbn37nl.bkt.clouddn.com/github-oauth-apps.png?e=1580182303&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:fK9xiyWAbfpRy7JyvjuLncuLqBg)
+![GitHub OAuth Apps](http://q4kbn37nl.bkt.clouddn.com/github-oauth-apps.png?e=1580182303&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:fK9xiyWAbfpRy7JyvjuLncuLqBg)
 
 点击 `New OAuth App` 创建一个 OAuth App。其中 `Application Name` 自定义，`Homepage URL` 和 `Authorization callback URL` 填写博客的地址。
 
-![](http://q4kbn37nl.bkt.clouddn.com/github-new-oauth-app.png?e=1580182303&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:SExXN6tiR7fGxUY9CMzLUJWid7s)
+![OAuth App 的详细配置](http://q4kbn37nl.bkt.clouddn.com/github-new-oauth-app.png?e=1580182303&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:SExXN6tiR7fGxUY9CMzLUJWid7s)
 
 创建完成后，可以点击刚创建的 OAuth App，查看 `Client ID` 和 `Client Secret`。
 
-![](http://q4kbn37nl.bkt.clouddn.com/github-oauth-app-client-id.png?e=1580185161&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:cv2mSXRTnZUytxZug4M5bkc5QtQ)
+![OAuth App 的秘钥信息](http://q4kbn37nl.bkt.clouddn.com/github-oauth-app-client-id.png?e=1580185161&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:cv2mSXRTnZUytxZug4M5bkc5QtQ)
 
 然后打开博客仓库的 `Settings` 菜单，确保 `Issues` 特性已经被勾选。
 
-![](http://q4kbn37nl.bkt.clouddn.com/github-repository-settings-issues.png?e=1580183579&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:lGSlq18Y_LMUNSgwoJfNJiDTxf8)
+![在 GitHub 仓库中配置特性](http://q4kbn37nl.bkt.clouddn.com/github-repository-settings-issues.png?e=1580183579&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:lGSlq18Y_LMUNSgwoJfNJiDTxf8)
 
 接着修改 `theme/matery/_config.yml` 主题配置文件，开启 gitalk，并填写 GitHub 仓库和 OAuth App 相关信息。
 
@@ -816,7 +816,7 @@ gitalk:
 
 重新部署后，滚动至文章底部就能看到久违的评论框了。
 
-![](http://q4kbn37nl.bkt.clouddn.com/article-comments.png?e=1580185433&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:I1g1rc1WLuGJDNjEQWwvUPZ49P8)
+![文章评论区](http://q4kbn37nl.bkt.clouddn.com/article-comments.png?e=1580185433&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:I1g1rc1WLuGJDNjEQWwvUPZ49P8)
 
 编辑评论前需要登录自己的 GitHub 账户。
 
@@ -831,6 +831,115 @@ gitalk:
 
 修改 `themes/matery/source/css/matery.css` 文件，使主题样式的色调为橙色系，更贴近“龙珠”主题。
 
-后来还自制了[博客LOGO](/design/zi-zhi-svg-tu-biao/)，使用圆、五角星和简单的曲线组合在一起，绘制了一个“龙珠”的 `.svg` 图标。
+后来还自制了[博客 LOGO](/design/zi-zhi-svg-tu-biao/)，使用圆、五角星和简单的曲线组合在一起，绘制了一个“龙珠”的 `.svg` 图标。
 
-![](http://q4kbn37nl.bkt.clouddn.com/my-logo.png?e=1580266436&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:3A5J3iBLHvQAcWutZT5f6OwfULk)
+![LOGO 效果](http://q4kbn37nl.bkt.clouddn.com/my-logo.png?e=1580266436&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:3A5J3iBLHvQAcWutZT5f6OwfULk)
+
+### 添加音乐 2020.2.13
+
+Matery 主题无默认音乐，需要我们人为添加。[Matery 官方文档](https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md#%E9%85%8D%E7%BD%AE%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%8F%AF%E9%80%89%E7%9A%84)对此有详细的描述。
+
+#### 1 使用 Matery 主题添加音乐
+
+先在 `source/_data` 目录下创建一个名为 `musics.json` 的文件，项目的目录结构会像下面这样：
+
+```
+.
+├── .deploy_git
+├── public
+├── scaffolds
+├── source
+|   ├── _data
+|   |   └── musics.json # 音乐配置信息
+|   ├── _drafts
+|   ├── _posts
+|   ...
+|   └── CNAME
+├── themes
+├── _config.yml
+└── package.json
+```
+
+向该文件中添加如下的音乐配置信息：
+
+```json
+[{
+  "name": "我的名字",
+  "artist": "焦迈奇",
+  "url": "http://q4kbn37nl.bkt.clouddn.com/music_wo-de-ming-zi_jiao-mai-qi.m4a?e=1581608810&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:PTZv1m1seTGo-N0ctdJB3Di1ifQ",
+  "cover": "http://q4kbn37nl.bkt.clouddn.com/music-cover_wo-de-ming-zi_jiao-mai-qi.jpg?e=1581608810&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:AKnA5__0hbn7QkvzmW4jrQt0H2M"
+}]
+```
+
+其中 `name` 表示歌曲名称，`artist` 表示歌手/作者，`url` 表示音乐的 url，`cover` 表示音乐的封面，`lrc` 表示歌词。我把音乐文件和封面图片文件都[上传至七牛云](#shi-yong-qi-niu-yun-cun-chu-tu-pian)，这里的 url 使用的就是七牛云的 url。
+
+如上的配置信息允许传入一个数组，这意味着我们还可以继续添加更多的音乐。
+
+接着，在主题配置文件 `themes/matery/_config.yml` 加入以下修改：
+
+```yaml
+# Whether to display the musics.
+# 是否在首页显示音乐.
+music:
+  enable: true
+  showTitle: true
+  title: 听听音乐
+  fixed: false # 开启吸底模式
+  autoplay: true # 是否自动播放
+  theme: '#E88C30'
+  loop: 'all' # 音频循环播放, 可选值: 'all', 'one', 'none'
+  order: 'list' # 音频循环顺序, 可选值: 'list', 'random'
+  preload: 'auto' # 预加载，可选值: 'none', 'metadata', 'auto'
+  volume: 0.7 # 默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效
+  listFolded: false # 列表默认折叠
+  listMaxHeight: #列表最大高度
+```
+
+配置完成后，重新进入首页即可播放音乐。另外，移动端或者某些浏览器（如Chrome）会禁止自动播放。
+
+#### 2 添加歌词
+
+实际上，Matery 主题使用 [APlayer](https://aplayer.js.org/#/zh-Hans/) 插件来播放音乐。
+
+如果想要添加歌词，需要根据 [APlayer 官方文档](https://aplayer.js.org/#/zh-Hans/)的描述，如下修改 `themes/matery/layout/_widget/music.ejs` 主题源文件底部 js 中的内容：
+
+```html
+<script>
+$(function () {
+    new APlayer({
+        container: document.getElementById('aplayer'),
+        fixed: '<%- theme.music.fixed %>' === 'true',
+        autoplay: '<%- theme.music.autoplay %>' === 'true',
+        theme: '<%- theme.music.theme %>',
+        loop: '<%- theme.music.loop %>',
+        order: '<%- theme.music.order %>',
+        preload: '<%- theme.music.preload %>',
+        volume: Number('<%- theme.music.volume %>'),
+        listFolded: '<%- theme.music.listFolded %>' === 'true',
+        listMaxHeight: '<%- theme.music.listMaxHeight %>',
+        lrcType: 3, // 1 表示 JS 字符串，2 表示 HTML 标签，3 表示 LRC 文件
+        audio: eval(<%- audiosJson %>)
+    });
+});
+</script>
+```
+
+紧接着修改音乐配置文件 `source/_data/musics.json` 中的内容：
+
+```json
+[{
+  "name": "我的名字",
+  "artist": "焦迈奇",
+  "url": "http://q4kbn37nl.bkt.clouddn.com/music_wo-de-ming-zi_jiao-mai-qi.m4a?e=1581608810&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:PTZv1m1seTGo-N0ctdJB3Di1ifQ",
+  "cover": "http://q4kbn37nl.bkt.clouddn.com/music-cover_wo-de-ming-zi_jiao-mai-qi.jpg?e=1581608810&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:AKnA5__0hbn7QkvzmW4jrQt0H2M",
+  "lrc":"http://q4kbn37nl.bkt.clouddn.com/music-lyric_wo-de-ming-zi_jiao-mai-qi.lrc?e=1581612081&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:Jiine8cwEBR_vnNo1MMGdMWy2eE"
+}]
+```
+
+其中，新添加的 `lrc` 表示歌词文件，它也同样[使用七牛云存储](#shi-yong-qi-niu-yun-cun-chu-tu-pian)。
+
+于是便能在首页播放具有歌词的音乐啦~
+
+![首页播放音乐](http://q4kbn37nl.bkt.clouddn.com/index-music.png?e=1581613359&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:zYnnEyUqMHom1qkq6tqpnw8IJjo)
+
+更多用法可以参考 [APlayer 官方文档](https://aplayer.js.org/#/zh-Hans/)。
