@@ -242,7 +242,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('http://q4kbn37nl.bkt.clouddn.com/jing-shen-shi-guang-wu.jpg?e=1580247922&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:Z8FZdNQ7yKUvPUgUIBWdd7_Sadg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('http://static.sunyt.site/jing-shen-shi-guang-wu.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -410,14 +410,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    6.6k
+                    7.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    25 分
+                    28 分
                 </div>
                 
 
@@ -636,9 +636,9 @@ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span><span
 ├── themes
 ├── _config.yml
 └── package.json</code></pre><p>继续执行 <code>hexo server</code> 或 <code>hexo s</code> 命令，启动 server 服务。</p>
-<p><img src="http://q4kbn37nl.bkt.clouddn.com/hexo-server.png?e=1579882840&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:PQe9BimqgGe37rRNvPFAzHenSGQ" alt="命令行启动"></p>
+<p><img src="http://static.sunyt.site/hexo-server.png" alt="命令行启动"></p>
 <p>执行命令后，打开浏览器，输入 <code>localhost:4000</code>，即可访问我们的第一个博客网站。</p>
-<p><img src="http://q4kbn37nl.bkt.clouddn.com/hexo-init-page.png?e=1579883002&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:BHUuNzGjZqACRuo5pctN5FGpKGg" alt="Hexo 默认页"></p>
+<p><img src="http://static.sunyt.site/hexo-init-page.png" alt="Hexo 默认页"></p>
 <hr>
 <h2 id="6-基本用法"><a href="#6-基本用法" class="headerlink" title="6 基本用法"></a>6 基本用法</h2><h3 id="6-1-写作"><a href="#6-1-写作" class="headerlink" title="6.1 写作"></a>6.1 写作</h3><p>执行如下命令创建一篇新文章或者新的页面。</p>
 <pre class="line-numbers language-bash"><code class="language-bash">hexo new <span class="token punctuation">[</span>layout<span class="token punctuation">]</span> <span class="token operator">&lt;</span>title<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -753,14 +753,14 @@ layout: tags
 <p>执行以下命令创建 SSH 秘钥文件。</p>
 <pre class="line-numbers language-bash"><code class="language-bash">ssh-keygen -t rsa -C <span class="token operator">&lt;</span>email<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>这个过程中会提示输入文件名，也可以不设置，一路回车。</p>
-<p><img src="http://q4kbn37nl.bkt.clouddn.com/generate-ssh-key.png?e=1579891710&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:JZD8R9_SaZxT5rxAEDAlwVE2iMk" alt="命令行生成 SSH Key"></p>
+<p><img src="http://static.sunyt.site/generate-ssh-key.png" alt="命令行生成 SSH Key"></p>
 <p>最后会提示在用户目录下生成了 <code>.ssh</code> 文件夹，里面包含了 <code>id_rsa</code> 私钥文件和 <code>id_rsa.pub</code> 公钥文件。</p>
 <p>在 GitHub 的 <code>Settings</code> 中找到 <code>SSH and GPG keys</code> 的配置页面，点击 <code>New SSH key</code> 按钮，在 <code>title</code> 中输入自定义的名称，将 <code>id_rsa.pub</code> 文件中的内容拷贝至 <code>Key</code>，完成SSH秘钥的创建。</p>
-<p><img src="http://q4kbn37nl.bkt.clouddn.com/github-ssh.png?e=1579891366&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:duNvV4Ij1lXBPpJHiVfB2OR42Y8" alt="在 GitHub 中添加 SSH Key"></p>
+<p><img src="http://static.sunyt.site/github-ssh.png" alt="在 GitHub 中添加 SSH Key"></p>
 <p>使用以下命令验证 SSH 的配置是否生效。</p>
 <pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">ssh</span> -T git@github.com<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>出现以下提示信息时，即为配置成功。</p>
-<p><img src="http://q4kbn37nl.bkt.clouddn.com/test-github-ssh.png?e=1579891976&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:v38GguGs12J7jfuwfowPInGShZc" alt="测试 SSH"></p>
+<p><img src="http://static.sunyt.site/test-github-ssh.png" alt="测试 SSH"></p>
 <h3 id="8-3-将-Hexo-生成的静态页面托管至-GitHub"><a href="#8-3-将-Hexo-生成的静态页面托管至-GitHub" class="headerlink" title="8.3 将 Hexo 生成的静态页面托管至 GitHub"></a>8.3 将 Hexo 生成的静态页面托管至 GitHub</h3><p>有了 GitHub 仓库，我们就能将 Hexo 生成的静态页面托管至 GitHub。</p>
 <p>如下修改项目的配置文件 <code>_config.yml</code>。</p>
 <pre class="line-numbers language-yaml"><code class="language-yaml"><span class="token comment" spellcheck="true"># Deployment</span>
@@ -791,7 +791,7 @@ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span><span
 <p>可仔细看 GitHub 仓库中的文化，发现都是编译够生成的代码，而没有我们编写博客时的源文件。假如我们需要重装操作系统或者更换电脑，就可能会丢失这些源文件。</p>
 <p>这时，我们可以利用 GitHub 分支来实现源代码的管理，以便在多个终端下都能进行写作。</p>
 <h3 id="9-1-创建-GitHub-分支"><a href="#9-1-创建-GitHub-分支" class="headerlink" title="9.1 创建 GitHub 分支"></a>9.1 创建 GitHub 分支</h3><p>进入我们之前创建好的 GitHub 仓库，在 <code>Code</code> 菜单下点击 <code>Branch:master</code> 按钮，新建一个名为 <code>hexo-source</code> 的分支，并将其设置为默认分支。</p>
-<p><img src="http://q4kbn37nl.bkt.clouddn.com/github-branch-hexo-source.png?e=1579894028&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:p8fSwlsoS5MJA2UTKOVNUg5tJco" alt="创建 GitHub 分支"></p>
+<p><img src="http://static.sunyt.site/github-branch-hexo-source.png" alt="创建 GitHub 分支"></p>
 <h3 id="9-2-上传源代码"><a href="#9-2-上传源代码" class="headerlink" title="9.2 上传源代码"></a>9.2 上传源代码</h3><p>执行以下命令将仓库 <code>clone</code> 到本地（会自动命名为 <code>&lt;username&gt;.github.io</code>），其中的链接就是 GitHub 仓库的 https 链接。</p>
 <pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> clone https://github.com/<span class="token operator">&lt;</span>username<span class="token operator">></span>/<span class="token operator">&lt;</span>username<span class="token operator">></span>.github.io.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>紧接着将博客项目的完整代码拷贝至其中，执行以下命令。</p>
@@ -806,19 +806,23 @@ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span><span
 <p>至此，我们已经可以投入到博客的写作中去了。</p>
 <hr>
 <h2 id="10-设置个人域名"><a href="#10-设置个人域名" class="headerlink" title="10 设置个人域名"></a>10 设置个人域名</h2><p>我觉得 <code>&lt;username&gt;.github.io</code> 这个地址不够逼格，想要一个自己专属的域名，用它来访问我们的博客。</p>
+<div class="anchor" id="gou-mai-yu-ming"></div>
+
 <h3 id="10-1-购买域名"><a href="#10-1-购买域名" class="headerlink" title="10.1 购买域名"></a>10.1 购买域名</h3><p>我们可以在<a href="https://wanwang.aliyun.com/" target="_blank" rel="noopener">阿里云</a>上查询和购买域名。</p>
 <p>最常用的域名是 <code>.com</code>，价格比较昂贵；其次是 <code>.com.cn</code>、<code>.cn</code> 和 <code>.net</code>。然而这些常用的域名大多都已经被注册了。</p>
 <p>剩下的还有 <code>.site</code>、<code>.top</code>、<code>.vip</code> 等域名，只要能备案就行。我买的是 <code>sunyt.site</code>（以我中文名的缩写命名）。</p>
+<div class="anchor" id="yu-ming-bei-an"></div>
+
 <h3 id="10-2-域名备案"><a href="#10-2-域名备案" class="headerlink" title="10.2 域名备案"></a>10.2 域名备案</h3><p>国家要求，即使是个人非商业用途的网站，也需要将域名进行备案。</p>
 <p>我们在阿里云上购买域名后，应该尽快进行<a href="https://beian.aliyun.com/" target="_blank" rel="noopener">备案</a>。备案前需要购买先服务器，我买的是相对便宜的云虚拟主机。</p>
 <p>当然，未备案的域名也可以继续下面的步骤，但回头记得去<a href="https://beian.aliyun.com/" target="_blank" rel="noopener">备案</a>。</p>
 <p><em>在完成备案前，应当尽可能减少域名的解析。</em></p>
 <h3 id="10-3-域名解析"><a href="#10-3-域名解析" class="headerlink" title="10.3 域名解析"></a>10.3 域名解析</h3><p>购买完成后，需要先进行实名认证，再进入<a href="https://dns.console.aliyun.com/" target="_blank" rel="noopener">阿里云控制台</a>的域名解析设置菜单，做域名解析的配置。</p>
 <p>可以直接使用 <code>新手引导</code> 按钮，它会自动添加主机记录为 <code>@</code> 和 <code>www</code>、解析线路为 <code>默认</code> 的两条配置。</p>
-<p><img src="http://q4kbn37nl.bkt.clouddn.com/aliyun-dns-guide.png?e=1579896004&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:IwzoBZ4z-sE66szbZ6VwSiJaXNo" alt="在阿里云配置域名解析"></p>
+<p><img src="http://static.sunyt.site/aliyun-dns-guide.png" alt="在阿里云配置域名解析"></p>
 <p>其中的记录值，我们可以先在命令行中通过 <code>ping &lt;username&gt;.github.io</code> 获取到项目在 GitHub 服务器上所在的 IP 地址，将其填入。</p>
 <h3 id="10-4-修改-GitHub-仓库配置"><a href="#10-4-修改-GitHub-仓库配置" class="headerlink" title="10.4 修改 GitHub 仓库配置"></a>10.4 修改 GitHub 仓库配置</h3><p>在 GitHub 仓库的 <code>Settings</code> 菜单下找到 <code>Custom domain</code>，设置域名并保存。</p>
-<p><img src="http://q4kbn37nl.bkt.clouddn.com/github-settings-custom-domain.png?e=1579896418&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:xBGBLkVCOB_Xqruz4Wvz7iOezqo" alt="在 GitHub 仓库中配置域名"></p>
+<p><img src="http://static.sunyt.site/github-settings-custom-domain.png" alt="在 GitHub 仓库中配置域名"></p>
 <h3 id="10-5-修改项目配置并重新部署"><a href="#10-5-修改项目配置并重新部署" class="headerlink" title="10.5 修改项目配置并重新部署"></a>10.5 修改项目配置并重新部署</h3><p>在项目 <code>source</code> 目录下新建一个名为 <code>CNAME</code> 的文件（注意没有后缀名），在文件内写上自己的域名，比如 <code>sunyt.site</code>。</p>
 <pre><code>.
 ├── .deploy_git
@@ -859,19 +863,28 @@ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span><span
 <p>部署的过程中，我们会看到先往GitHub仓库执行了一次 <code>push</code> 操作，紧接着又往 Coding 项目上也 <code>push</code> 了一次。</p>
 <p>部署完成后，打开 Coding 项目代码，我们会看到与 GitHub 相同的 Hexo 静态文件。</p>
 <p>随即在 Coding 上部署项目，并设置自定义域名为自己的域名 <code>sunyt.site</code>。</p>
-<p><img src="http://q4kbn37nl.bkt.clouddn.com/coding-deploy-setting.png?e=1579899019&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:OyAp31x2qJBjjqs52UNHOhts1H4" alt="在 Coding 部署静态页面"></p>
+<p><img src="http://static.sunyt.site/coding-deploy-setting.png" alt="在 Coding 部署静态页面"></p>
 <h3 id="11-4-修改域名解析配置"><a href="#11-4-修改域名解析配置" class="headerlink" title="11.4 修改域名解析配置"></a>11.4 修改域名解析配置</h3><p>回到<a href="https://dns.console.aliyun.com/" target="_blank" rel="noopener">阿里云控制台</a>，将原来指向 GitHub 配置的解析路线改为 <code>境外</code>，再分别添加主机记录为 <code>@</code> 和 <code>www</code> 的两条记录，记录类型选择 <code>默认</code>，记录值填写 Coding 项目的静态网站域名。</p>
-<p><img src="http://q4kbn37nl.bkt.clouddn.com/aliyun-dns-setting-github-and-coding.png?e=1579899444&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:MqbSUQGDtVH4Uw6vY1sI9PDC0c0" alt="阿里云控制台域名解析"></p>
+<p><img src="http://static.sunyt.site/aliyun-dns-setting-github-and-coding.png" alt="阿里云控制台域名解析"></p>
 <p>不一会儿，我们在国内访问域名 <code>sunyt.site</code> 就会访问到托管至 Coding 的页面了。</p>
 <p>我们可以通过在国内 <code>ping sunyt.site</code> 和 <code>ping ssd38z.coding-pages.com</code>，观察解析到的 IP 地址是不是相同的，来验证域名解析的正确性。</p>
 <p>至此，我们的博客已经在 GitHub 和 Coding 双向部署，并通过域名解析，对国内外进行分流。</p>
+<h2 id="12-小结"><a href="#12-小结" class="headerlink" title="12 小结"></a>12 小结</h2><p>看到这里，博客的搭建过程已经告一段落。但这并不是这篇文章的终结。</p>
+<p>后续我还会在下面的“<a href="#more">更多</a>”一节中，不定期地更新一些内容，包括博客在使用过程中的变更和优化。</p>
+<p>如果以上步骤也能帮助你成功搭建自己的博客，那么恭喜你，很不赖哦~</p>
+<blockquote>
+<p>不过还是得提醒你，如果你在这个过程中申请了新的域名，请记得<a href="#yu-ming-bei-an">备案</a>。</p>
+</blockquote>
+<p>此外，如果你在使用博客的过程中，想知道怎么进一步优化，又或者遇到了困难，也可以在<a href="#more">更多</a>和<a href="/categories/精神时光屋/">相关文章</a>中寻找线索。</p>
 <hr>
+<div class="anchor" id="more"></div>
+
 <h2 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h2><div class="anchor" id="shi-yong-qi-niu-yun-cun-chu-tu-pian"></div>
 
 <h3 id="使用七牛云存储图片-2020-1-24"><a href="#使用七牛云存储图片-2020-1-24" class="headerlink" title="使用七牛云存储图片 2020.1.24"></a>使用七牛云存储图片 2020.1.24</h3><p>Hexo 支持使用 <code>hexo-asset-image</code> 插件内联图片，该插件会在创建文章的同时，在同一目录下创建与其同名的目录，用来存放图片文件，使用非常方便，但缺点也显而易见：<code>source</code> 目录会很庞大，且内联图片会影响页面的渲染速度。</p>
 <p>更好的做法是使用第三方平台来存储图片，我使用的是<a href="https://portal.qiniu.com/" target="_blank" rel="noopener">七牛云</a>。</p>
 <p>创建七牛云账号后，需要先进行实名认证，再在控制台打开 <code>对象存储</code> 下的 <code>空间管理</code> 菜单，去新建空间，否则会报 <code>403：没有权限</code>。</p>
-<p>写作时如果遇到图片，只需将其上传至七牛云，再在需要插入图片的位置添加Markdown标记 <code>![](&lt;url&gt;)</code> 即可。</p>
+<p>写作时如果遇到图片，只需将其上传至七牛云，再在需要插入图片的位置添加 Markdown 标记 <code>![]()</code> 即可。</p>
 <hr>
 <h3 id="代码块样式优化-2020-1-24"><a href="#代码块样式优化-2020-1-24" class="headerlink" title="代码块样式优化 2020.1.24"></a>代码块样式优化 2020.1.24</h3><p>默认的代码块生成会编译出 <code>&lt;table&gt;</code> 元素，使用左右两个 <code>&lt;td&gt;</code> 分别展示行号和代码内容，与 Matery 主题的样式有冲突，非常不美观。</p>
 <p>解决方法是安装 <code>hexo-prism-plugin</code> 插件。</p>
@@ -914,13 +927,13 @@ hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
 <h3 id="开启-Gitalk-评论-2020-1-28"><a href="#开启-Gitalk-评论-2020-1-28" class="headerlink" title="开启 Gitalk 评论 2020.1.28"></a>开启 Gitalk 评论 2020.1.28</h3><p>Matery 主题支持 <a href="https://gitalk.github.io/" target="_blank" rel="noopener">Gitalk</a>、<a href="https://imsun.github.io/gitment/" target="_blank" rel="noopener">Gitment</a>、<a href="https://valine.js.org/" target="_blank" rel="noopener">Valine</a> 和 <a href="https://disqus.com/" target="_blank" rel="noopener">Disqus</a> 评论模块，官方推荐的是 Gitalk。</p>
 <p>开启 Gitalk 评论，首先需要创建一个 GitHub 的 OAuth App。</p>
 <p>登陆 GitHub，在 <code>Settings</code> &gt; <code>Developer settings</code> 下，找到 <code>OAuth Apps</code> 菜单。</p>
-<p><img src="http://q4kbn37nl.bkt.clouddn.com/github-oauth-apps.png?e=1580182303&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:fK9xiyWAbfpRy7JyvjuLncuLqBg" alt="GitHub OAuth Apps"></p>
+<p><img src="http://static.sunyt.site/github-oauth-apps.png" alt="GitHub OAuth Apps"></p>
 <p>点击 <code>New OAuth App</code> 创建一个 OAuth App。其中 <code>Application Name</code> 自定义，<code>Homepage URL</code> 和 <code>Authorization callback URL</code> 填写博客的地址。</p>
-<p><img src="http://q4kbn37nl.bkt.clouddn.com/github-new-oauth-app.png?e=1580182303&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:SExXN6tiR7fGxUY9CMzLUJWid7s" alt="OAuth App 的详细配置"></p>
+<p><img src="http://static.sunyt.site/github-new-oauth-app.png" alt="OAuth App 的详细配置"></p>
 <p>创建完成后，可以点击刚创建的 OAuth App，查看 <code>Client ID</code> 和 <code>Client Secret</code>。</p>
-<p><img src="http://q4kbn37nl.bkt.clouddn.com/github-oauth-app-client-id.png?e=1580185161&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:cv2mSXRTnZUytxZug4M5bkc5QtQ" alt="OAuth App 的秘钥信息"></p>
+<p><img src="http://static.sunyt.site/github-oauth-app-client-id.png" alt="OAuth App 的秘钥信息"></p>
 <p>然后打开博客仓库的 <code>Settings</code> 菜单，确保 <code>Issues</code> 特性已经被勾选。</p>
-<p><img src="http://q4kbn37nl.bkt.clouddn.com/github-repository-settings-issues.png?e=1580183579&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:lGSlq18Y_LMUNSgwoJfNJiDTxf8" alt="在 GitHub 仓库中配置特性"></p>
+<p><img src="http://static.sunyt.site/github-repository-settings-issues.png" alt="在 GitHub 仓库中配置特性"></p>
 <p>接着修改 <code>theme/matery/_config.yml</code> 主题配置文件，开启 gitalk，并填写 GitHub 仓库和 OAuth App 相关信息。</p>
 <pre class="line-numbers language-yaml"><code class="language-yaml"><span class="token comment" spellcheck="true"># the Gitalk config，default disabled</span>
 <span class="token comment" spellcheck="true"># Gitalk 评论模块的配置，默认为不激活</span>
@@ -933,7 +946,7 @@ hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
     <span class="token key atrule">clientSecret</span><span class="token punctuation">:</span> 1530e*****************************<span class="token important">*1ef5b</span> <span class="token comment" spellcheck="true"># OAuth App 的 Client Secret</span>
   <span class="token key atrule">admin</span><span class="token punctuation">:</span> rainstopper <span class="token comment" spellcheck="true"># GitHub用户名</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>重新部署后，滚动至文章底部就能看到久违的评论框了。</p>
-<p><img src="http://q4kbn37nl.bkt.clouddn.com/article-comments.png?e=1580185433&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:I1g1rc1WLuGJDNjEQWwvUPZ49P8" alt="文章评论区"></p>
+<p><img src="http://static.sunyt.site/article-comments.png" alt="文章评论区"></p>
 <p>编辑评论前需要登录自己的 GitHub 账户。</p>
 <p>此时，打开 GitHub 仓库的 <code>Issues</code> 菜单，会发现 Gitalk 对博客的每篇文章都创建了一个独立的 Issue。这给了我们一个线索。如果小伙伴们对评论的实现方式充满好奇，可以自行研究。</p>
 <div class="anchor" id="tian-jia-long-zhu-su-cai"></div>
@@ -941,7 +954,7 @@ hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
 <h3 id="添加《龙珠》素材-2020-1-29"><a href="#添加《龙珠》素材-2020-1-29" class="headerlink" title="添加《龙珠》素材 2020.1.29"></a>添加《龙珠》素材 2020.1.29</h3><p>在内容管理上添加《龙珠》<a href="/tools/map/">素材</a>，用动漫中的概念类比博客的文章和分类，使内容更有趣。</p>
 <p>修改 <code>themes/matery/source/css/matery.css</code> 文件，使主题样式的色调为橙色系，更贴近“龙珠”主题。</p>
 <p>后来还自制了<a href="/design/zi-zhi-svg-tu-biao/">博客 LOGO</a>，使用圆、五角星和简单的曲线组合在一起，绘制了一个“龙珠”的 <code>.svg</code> 图标。</p>
-<p><img src="http://q4kbn37nl.bkt.clouddn.com/my-logo.png?e=1580266436&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:3A5J3iBLHvQAcWutZT5f6OwfULk" alt="LOGO 效果"></p>
+<p><img src="http://static.sunyt.site/my-logo.png" alt="LOGO 效果"></p>
 <h3 id="添加音乐-2020-2-13"><a href="#添加音乐-2020-2-13" class="headerlink" title="添加音乐 2020.2.13"></a>添加音乐 2020.2.13</h3><p>Matery 主题无默认音乐，需要我们人为添加。<a href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md#%E9%85%8D%E7%BD%AE%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%8F%AF%E9%80%89%E7%9A%84" target="_blank" rel="noopener">Matery 官方文档</a>对此有详细的描述。</p>
 <h4 id="1-使用-Matery-主题添加音乐"><a href="#1-使用-Matery-主题添加音乐" class="headerlink" title="1 使用 Matery 主题添加音乐"></a>1 使用 Matery 主题添加音乐</h4><p>先在 <code>source/_data</code> 目录下创建一个名为 <code>musics.json</code> 的文件，项目的目录结构会像下面这样：</p>
 <pre><code>.
@@ -961,8 +974,8 @@ hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
 <pre class="line-numbers language-json"><code class="language-json"><span class="token punctuation">[</span><span class="token punctuation">{</span>
   <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"我的名字"</span><span class="token punctuation">,</span>
   <span class="token property">"artist"</span><span class="token operator">:</span> <span class="token string">"焦迈奇"</span><span class="token punctuation">,</span>
-  <span class="token property">"url"</span><span class="token operator">:</span> <span class="token string">"http://q4kbn37nl.bkt.clouddn.com/music_wo-de-ming-zi_jiao-mai-qi.m4a?e=1581608810&amp;token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:PTZv1m1seTGo-N0ctdJB3Di1ifQ"</span><span class="token punctuation">,</span>
-  <span class="token property">"cover"</span><span class="token operator">:</span> <span class="token string">"http://q4kbn37nl.bkt.clouddn.com/music-cover_wo-de-ming-zi_jiao-mai-qi.jpg?e=1581608810&amp;token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:AKnA5__0hbn7QkvzmW4jrQt0H2M"</span>
+  <span class="token property">"url"</span><span class="token operator">:</span> <span class="token string">"http://q4kbn37nl.bkt.clouddn.com/music_wo-de-ming-zi_jiao-mai-qi.m4a"</span><span class="token punctuation">,</span>
+  <span class="token property">"cover"</span><span class="token operator">:</span> <span class="token string">"http://q4kbn37nl.bkt.clouddn.com/music-cover_wo-de-ming-zi_jiao-mai-qi.jpg"</span>
 <span class="token punctuation">}</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>其中 <code>name</code> 表示歌曲名称，<code>artist</code> 表示歌手/作者，<code>url</code> 表示音乐的 url，<code>cover</code> 表示音乐的封面，<code>lrc</code> 表示歌词。我把音乐文件和封面图片文件都<a href="#shi-yong-qi-niu-yun-cun-chu-tu-pian">上传至七牛云</a>，这里的 url 使用的就是七牛云的 url。</p>
 <p>如上的配置信息允许传入一个数组，这意味着我们还可以继续添加更多的音乐。</p>
@@ -1007,14 +1020,37 @@ hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
 <pre class="line-numbers language-json"><code class="language-json"><span class="token punctuation">[</span><span class="token punctuation">{</span>
   <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"我的名字"</span><span class="token punctuation">,</span>
   <span class="token property">"artist"</span><span class="token operator">:</span> <span class="token string">"焦迈奇"</span><span class="token punctuation">,</span>
-  <span class="token property">"url"</span><span class="token operator">:</span> <span class="token string">"http://q4kbn37nl.bkt.clouddn.com/music_wo-de-ming-zi_jiao-mai-qi.m4a?e=1581608810&amp;token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:PTZv1m1seTGo-N0ctdJB3Di1ifQ"</span><span class="token punctuation">,</span>
-  <span class="token property">"cover"</span><span class="token operator">:</span> <span class="token string">"http://q4kbn37nl.bkt.clouddn.com/music-cover_wo-de-ming-zi_jiao-mai-qi.jpg?e=1581608810&amp;token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:AKnA5__0hbn7QkvzmW4jrQt0H2M"</span><span class="token punctuation">,</span>
-  <span class="token property">"lrc"</span><span class="token operator">:</span> <span class="token string">"http://q4kbn37nl.bkt.clouddn.com/music-lyric_wo-de-ming-zi_jiao-mai-qi.lrc?e=1581612081&amp;token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:Jiine8cwEBR_vnNo1MMGdMWy2eE"</span>
+  <span class="token property">"url"</span><span class="token operator">:</span> <span class="token string">"http://q4kbn37nl.bkt.clouddn.com/music_wo-de-ming-zi_jiao-mai-qi.m4a"</span><span class="token punctuation">,</span>
+  <span class="token property">"cover"</span><span class="token operator">:</span> <span class="token string">"http://q4kbn37nl.bkt.clouddn.com/music-cover_wo-de-ming-zi_jiao-mai-qi.jpg"</span><span class="token punctuation">,</span>
+  <span class="token property">"lrc"</span><span class="token operator">:</span> <span class="token string">"http://q4kbn37nl.bkt.clouddn.com/music-lyric_wo-de-ming-zi_jiao-mai-qi.lrc"</span>
 <span class="token punctuation">}</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>其中，新添加的 <code>lrc</code> 表示歌词文件，它也同样<a href="#shi-yong-qi-niu-yun-cun-chu-tu-pian">使用七牛云存储</a>。</p>
 <p>于是便能在首页播放具有歌词的音乐啦~</p>
-<p><img src="http://q4kbn37nl.bkt.clouddn.com/index-music.png?e=1581613359&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:zYnnEyUqMHom1qkq6tqpnw8IJjo" alt="首页播放音乐"></p>
+<p><img src="http://static.sunyt.site/index-music.png" alt="首页播放音乐"></p>
 <p>更多用法可以参考 <a href="https://aplayer.js.org/#/zh-Hans/" target="_blank" rel="noopener">APlayer 官方文档</a>。</p>
+<h3 id="七牛云使用自定义域名-2020-2-15"><a href="#七牛云使用自定义域名-2020-2-15" class="headerlink" title="七牛云使用自定义域名 2020.2.15"></a>七牛云使用自定义域名 2020.2.15</h3><p>在这之前，我们为了博客能引用图片、音乐等资源，便<a href="#shi-yong-qi-niu-yun-cun-chu-tu-pian">使用七牛云</a>存储和管理它们。</p>
+<p>但在今天，我收到了七牛云发来的一封邮件通知 ——</p>
+<p><img src="http://static.sunyt.site/qi-niu-yun-ce-shi-yu-ming-hui-shou-tong-zhi.png" alt="七牛云测试域名回收通知"></p>
+<p>这封邮件的意图是提醒，七牛云此前提供的测试域名 <code>q4kbn37nl.bkt.clouddn.com</code> 将在一周后被回收。这意味着，届时我们博客内的图片、音乐等资源将无法访问。</p>
+<p>这听上去是个相当可怕的后果。</p>
+<p>别急，邮件里也告知了解决方案 —— 尽快用自定义域名来取代测试域名。</p>
+<p>这篇文章讲到了域名<a href="#gou-mai-yu-ming">申请</a>和<a href="#yu-ming-bei-an">备案</a>的方法，而我此前申请的域名 <code>sunyt.site</code> 也已<a href="https://beian.aliyun.com/" target="_blank" rel="noopener">经由阿里云备案</a>（因为我是在阿里云上购买的域名）通过了。</p>
+<p>只要准备好域名，就可以将七牛云的测试域名替换成自己的域名。</p>
+<p>打开<a href="https://portal.qiniu.com/kodo/bucket" target="_blank" rel="noopener">七牛云控制台</a>，进入空间管理页面，点击右侧操作中的 <code>域名</code> 按钮。</p>
+<p><img src="http://static.sunyt.site/qi-niu-yun-kong-jian-guan-li-yu-ming.png" alt="七牛云控制台空间管理页"></p>
+<p>跳转至域名创建页面，在加速域名一栏中添加自己的域名。比如我用 <code>static.sunyt.site</code> 这个二级域名来表示静态资源。</p>
+<p><img src="http://static.sunyt.site/qi-niu-yun-chuang-jian-yu-ming.png" alt="七牛云创建域名页"></p>
+<p>其余选项可以自行选择，最后点击创建。域名的创建需要等待一段时间。创建完成后，我们在<a href="https://portal.qiniu.com/cdn/domain" target="_blank" rel="noopener">域名管理页</a>就能看到新创建的域名了。</p>
+<p>接下来，我们需要将自定义的二级域名 <code>static.sunyt.site</code> 解析至七牛云。解析值 <code>CNAME</code> 可以通过域名管理页复制得到。</p>
+<p><img src="http://static.sunyt.site/qi-niu-yun-yu-ming-guan-li-fu-zhi-cname.png" alt="七牛云域名管理页"></p>
+<p>接着，打开<a href="https://dns.console.aliyun.com/" target="_blank" rel="noopener">阿里云域名控制台</a>，添加对二级域名的解析。</p>
+<p><img src="http://static.sunyt.site/aliyun-qi-niu-yun-yu-ming-jie-xi.png" alt="阿里云七牛域名解析"></p>
+<p>这样一来，我们就能通过自定义域名访问七牛云上的资源了。</p>
+<p>为了使用方便，回到空间管理，将外链域名设置为自定义域名。这能在复制外链时，使用我们自定义域名作为外链的前缀。</p>
+<p><img src="http://static.sunyt.site/qi-niu-yun-kong-jian-wai-lian-yu-ming.png" alt="七牛云空间外链域名设置页"></p>
+<p>最后，我们需要在博客项目中，把之前用到七牛云测试域名 <code>q4kbn37nl.bkt.clouddn.com</code> 的地方，都更换成新的自定义域名 <code>static.sunyt.site</code>。</p>
+<p>如果你的博客引用了很多的图片、音乐等资源，需要更换的地方也会很多。可以使用编辑器的查找和替换功能，将 <code>http://static.sunyt.site/</code> 批量替换成 <code>http://static.sunyt.site/</code>。</p>
+<p>以上便完成了七牛云从测试域名迁移到自定义域名的过程。</p>
 
             </div>
             <hr/>
