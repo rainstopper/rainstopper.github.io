@@ -5,7 +5,7 @@ categories:
 - [万能胶囊]
 tags: [知识, 公式]
 summary: 知识方程式
-img: http://q4kbn37nl.bkt.clouddn.com/po-ta-la-er-huan.png?e=1580336943&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:pEKaATKgjM6IULGs1ZWRs09lGvk
+img: http://static.sunyt.site/po-ta-la-er-huan.png
 ---
 
 ##### 持续收录的知识公式

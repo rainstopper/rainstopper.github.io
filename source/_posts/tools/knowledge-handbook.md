@@ -5,7 +5,7 @@ categories:
 - [万能胶囊]
 tags: [知识, 手册, 概念, 词条]
 summary: 知识手册
-img: http://q4kbn37nl.bkt.clouddn.com/long-zhu.jpg?e=1580530338&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:GNwZlYzuiA2e2R81-FwjbWfnb6Q
+img: http://static.sunyt.site/long-zhu.jpg
 ---
 
 ##### 持续收录的知识手册
@@ -190,7 +190,7 @@ img: http://q4kbn37nl.bkt.clouddn.com/long-zhu.jpg?e=1580530338&token=0QXSKIUWEa
 
 他认为"保持和遗忘是时间的函数"，他用无意义音节（由若干音节字母组成、能够读出、但无内容意义即不是词的音节）作记忆材料，用节省法计算保持和遗忘的数量。并根据他的实验结果绘成描述遗忘进程的曲线，即著名的“艾宾浩斯记忆遗忘曲线”。
 
-![“记忆曲线”图解](http://q4kbn37nl.bkt.clouddn.com/the-ebbinghaus-forgetting-curve.jpg?e=1580532271&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:RckLgyWG6u_nQmdr2g8rfvlT2lg)
+![“记忆曲线”图解](http://static.sunyt.site/the-ebbinghaus-forgetting-curve.jpg)
 
 这向我们揭示了，学习要勤于复习，并且理解得越深入，遗忘得也越慢。
 
@@ -210,7 +210,7 @@ img: http://q4kbn37nl.bkt.clouddn.com/long-zhu.jpg?e=1580530338&token=0QXSKIUWEa
 
 把一张纸分为左、右、下三栏，如下图所示 ——
 
-![“康奈尔笔记法”图示](http://q4kbn37nl.bkt.clouddn.com/cornell-notes.jpg?e=1580073285&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:LxGvKrXdFsocA_mmjd6jpfr1-9o)
+![“康奈尔笔记法”图示](http://static.sunyt.site/cornell-notes.jpg)
 
 读书或者听课的时候，在右边记下我们看出来的“要点”，复习的时候在左边栏相应位置写下“线索”，在下边栏写下“总结”。
 
@@ -295,7 +295,7 @@ img: http://q4kbn37nl.bkt.clouddn.com/long-zhu.jpg?e=1580530338&token=0QXSKIUWEa
 4. 晚期主流用户（late majority）：从众用户，在产品占领大部分市场后依靠别人推荐购买；
 5. 落伍者（laggards）：对高科技产品没有任何兴趣的人。
 
-![“跨越鸿沟”理论图解](http://q4kbn37nl.bkt.clouddn.com/%E2%80%9C%E8%B7%A8%E8%B6%8A%E9%B8%BF%E6%B2%9F%E2%80%9D%E7%90%86%E8%AE%BA.jpg?e=1579791349&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:wNX-eTWwjujZU8hKvmQaNGX43Fs)
+![“跨越鸿沟”理论图解](http://static.sunyt.site/%E2%80%9C%E8%B7%A8%E8%B6%8A%E9%B8%BF%E6%B2%9F%E2%80%9D%E7%90%86%E8%AE%BA.jpg)
 
 创新者、早期使用者这两类属于早期用户，只占市场总量的 16%。他们不仅懂技术，而且对新产品非常感兴趣，敢为天下先，即使产品不好用，也要先体验。比如，迄今为止，比特币钱包的用户使用体验极差，但很多比特币玩家还是在手机里装着这个应用。
 
@@ -413,7 +413,7 @@ img: http://q4kbn37nl.bkt.clouddn.com/long-zhu.jpg?e=1580530338&token=0QXSKIUWEa
 
 > 重要科技业者宏碁集团创办人施振荣先生在1992年为“再造宏碁”提出的产业理论。
 
-![“微笑曲线”理论图解](http://q4kbn37nl.bkt.clouddn.com/wei-xiao-qv-xian-li-lun.jpg?e=1580340448&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:Mhv9UjZf0etSN-e50-MGM5W1_QY)
+![“微笑曲线”理论图解](http://static.sunyt.site/wei-xiao-qv-xian-li-lun.jpg)
 
 微笑嘴型的一条曲线，两端朝上，在产业链中，附加值更多体现在两端的 `设计` 和 `销售`，处于中间环节的 `制造` 最低。
 

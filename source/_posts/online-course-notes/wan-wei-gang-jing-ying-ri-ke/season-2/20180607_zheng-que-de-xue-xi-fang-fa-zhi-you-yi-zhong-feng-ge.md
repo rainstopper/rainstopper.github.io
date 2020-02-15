@@ -46,7 +46,7 @@ VARK 把学习风格分成四种：视觉（visual）、听觉（aural）、读�
 
 比如一个常见的办法是把单词、公式、各种知识点做成一摞卡片，没事儿拿出来翻看，人们认为这个方法有利于加强记忆。还有些学生喜欢使用外部网站检索一些相关的信息，按理说这有利于开拓视野。
 
-![闪视卡片](http://q4kbn37nl.bkt.clouddn.com/shan-shi-ka-pian.jpg?e=1580546244&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:peR7mrZW9OM9Sk7GFEkRSUndPe0)
+![闪视卡片](http://static.sunyt.site/shan-shi-ka-pian.jpg)
 
 但是研究表明这些方法的效果并不好。闪视卡片只是简单的重复，外部信息可能跟你要学的知识点关系没有那么大 —— 它们不能加深对知识的理解和掌握。
 

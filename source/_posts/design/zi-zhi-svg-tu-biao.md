@@ -5,7 +5,7 @@ categories:
 - [太阳拳]
 tags: [设计, 制作, SVG]
 summary: 自制一个 SVG 格式的专属 LOGO 图标
-img: http://q4kbn37nl.bkt.clouddn.com/desk_20200201095737.jpg?e=1580525893&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:U6hmIS6NJJIdyuGWn40pQwFqFKQ
+img: http://static.sunyt.site/desk_20200201095737.jpg
 ---
 
 新博客搭建的第 N 天，大体上用着还挺顺手，唯一的缺憾就是少一个自己专属的 LOGO。之前因为没有准备，索性把 LOGO 这玩意儿给去掉了，以无 LOGO 状态“裸跑”了好一阵子。可好些天下来了，一想到这茬，还是觉也睡不好，饭也吃不香（主要是让新型冠状病毒给禁足了，在家闲得慌）。
@@ -28,7 +28,7 @@ LOGO 设计的第一原则就是要尽可能贴近主题。
 >
 > 说实话，它刚开始的样子，看上去可真像个红印章。
 >
-> ![红印章](http://q4kbn37nl.bkt.clouddn.com/hong-yin-zhang.png?e=1580422290&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:5HvMM_gPnZdxNJw5rWoFQ_s4Kss)
+> ![红印章](http://static.sunyt.site/hong-yin-zhang.png)
 
 可正当我打算把我的设想实现在电脑屏幕上的时候，我意识到了一个根本性问题：什么样的图片格式才适合用来承载一个 LOGO 呢？
 
@@ -73,7 +73,7 @@ SVG（Scalable Vector Graphics，可缩放矢量图）算是比较最火热的�
 
 于是我在一番百度之后，选择了一款界面简洁的 [SVG 在线编辑工具](https://svg.wxeditor.com/)。
 
-![SVG 作图工具图示](http://q4kbn37nl.bkt.clouddn.com/svg-wxeditor-introduction.png?e=1580424605&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:Ys9YSMTqOkqtzOTugK5tJfHItmM)
+![SVG 作图工具图示](http://static.sunyt.site/svg-wxeditor-introduction.png)
 
 ## 2 LOGO 制作
 
@@ -81,7 +81,7 @@ SVG（Scalable Vector Graphics，可缩放矢量图）算是比较最火热的�
 
 我使用圆、五角星和简单的曲线，绘制了一个“龙珠”的图案。
 
-![SVG 图标制作](http://q4kbn37nl.bkt.clouddn.com/svg-wxeditor.png?e=1580256074&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:keM96mJ9YV3Qhx2MO8a9I2mGHTg)
+![SVG 图标制作](http://static.sunyt.site/svg-wxeditor.png)
 
 画布的大小是 `200px × 200px`。大圆的直径要比 `200px` 稍小一些，线粗 `8px`。位于正中央的五角星最大，线粗 `5px`；周围的 3 个五角星则稍小一些。左下角添加了一段弧线，显得“龙珠”更加立体。
 
@@ -100,7 +100,7 @@ logo: /medias/logo.svg # 添加 LOGO，看我看我！！
 
 这样便自制了一个效果还不错的 LOGO 图标（见网站左上角）。
 
-![自制“龙珠”主题 LOGO 效果图](http://q4kbn37nl.bkt.clouddn.com/my-logo.png?e=1580266436&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:3A5J3iBLHvQAcWutZT5f6OwfULk)
+![自制“龙珠”主题 LOGO 效果图](http://static.sunyt.site/my-logo.png)
 
 ## 3 查看源代码
 

@@ -5,14 +5,14 @@ categories:
 - [精神时光屋]
 tags: [知识, 图谱, 优化]
 summary: 知识图谱优化 —— 支持搜索
-img: http://q4kbn37nl.bkt.clouddn.com/magnifier_20200207185342.jpg?e=1581076491&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:Zjw9UhZIMlMD-UmjaQeP1EBLGVI
+img: http://static.sunyt.site/magnifier_20200207185342.jpg
 ---
 
 ## 1 背景
 
 这些天对博客进行整体地梳理，发现文章里涉及的知识概念和联系竟意外的多。仅仅十余篇文章，却在知识图谱中产生了 300 余个节点、400 余条连线 —— 这已经是一个具有相当体量的知识体系。
 
-![《龙珠雷达》2020.2.7](http://q4kbn37nl.bkt.clouddn.com/knowledge-graph_20200207190230.png?e=1581076982&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:fsfA_8RGVNzuzJ_W44wf2B61jW4)
+![《龙珠雷达》2020.2.7](http://static.sunyt.site/knowledge-graph_20200207190230.png)
 
 在为数众多的节点中，想要凭借肉眼寻找到自己关注的节点实属不易。而且关系紧密的节点可能发生重叠，更为我们的寻找带来困难。
 
@@ -626,13 +626,13 @@ $(function() {
 
 来看看具体的效果：
 
-![关键字搜索效果](http://q4kbn37nl.bkt.clouddn.com/knowledge-graph_20200208040546.png?e=1581109587&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:xmduc8ClE_8Nu3aOH-UTGjxlLLg)
+![关键字搜索效果](http://static.sunyt.site/knowledge-graph_20200208040546.png)
 
 支持按关键字进行搜索，并且匹配的节点会被高亮显示，其余节点则更加透明。
 
 另外，按关联数的搜索过滤了一部分不符合要求的节点，节点的总数也会随之减少：
 
-![关联数搜索效果](http://q4kbn37nl.bkt.clouddn.com/knowledge-graph_20200208040834.png?e=1581109779&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:Hv6nNDcFovNjLk1SEE_OzMo5unI)
+![关联数搜索效果](http://static.sunyt.site/knowledge-graph_20200208040834.png)
 
 这样一来，对知识图谱的日常管理会更加方便。
 

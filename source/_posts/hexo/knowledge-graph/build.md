@@ -5,7 +5,7 @@ categories:
 - [精神时光屋]
 tags: [知识, 图谱]
 summary: 描述知识图谱的构建过程
-img: http://q4kbn37nl.bkt.clouddn.com/desk_20200202120008.jpg?e=1580619646&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:sihJZZErfPmn-KGy2g0HFns0uck
+img: http://static.sunyt.site/desk_20200202120008.jpg
 ---
 
 ## 1 背景
@@ -14,7 +14,7 @@ img: http://q4kbn37nl.bkt.clouddn.com/desk_20200202120008.jpg?e=1580619646&token
 
 我们博客的名字之所以取材于日本动漫《龙珠Z》中的场景“精神时光屋”，就是因为这是一个跨时空的修炼圣地，允许人们忘我地投入进去，使修炼效率得以上百倍地提高。
 
-![精神时光屋](http://q4kbn37nl.bkt.clouddn.com/jing-shen-shi-guang-wu.jpg?e=1580247922&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:Z8FZdNQ7yKUvPUgUIBWdd7_Sadg)
+![精神时光屋](http://static.sunyt.site/jing-shen-shi-guang-wu.jpg)
 
 学习是有法可依的。《万维钢·精英日课2：正确的学习方法只有一种风格》这篇课程告诉我们，什么样的学习方法才是“[有效的学习方法](/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-2/20180607_zheng-que-de-xue-xi-fang-fa-zhi-you-yi-zhong-feng-ge/#you-xiao-de-fang-fa)”，其中提到的“把新学到的知识和以前的知识建立连接”这种做法，就是我认为最重要的。《万维钢·精英日课2：特别放松丨给高手的学习方法建议》中提到了一种高强度的读书方法，叫做“[强力研读](/tools/knowledge-handbook/#qiang-li-yan-du)”。它也提出，读书笔记中应该[包含书与书之间的联系](/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-2/20171110_te-bie-fang-song-gei-gao-shou-de-xue-xi-fang-fa-jian-yi/#fa-xian-lian-xi)，同时使用的记录工具要[便于创造](/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-2/20171110_te-bie-fang-song-gei-gao-shou-de-xue-xi-fang-fa-jian-yi/#chuang-zao)。创造，就是[想法的连接](/tools/knowledge-formula/#chuang-zao)。
 
@@ -38,7 +38,7 @@ img: http://q4kbn37nl.bkt.clouddn.com/desk_20200202120008.jpg?e=1580619646&token
 
 “客观规律的归纳和总结” 似乎有些难以实现。Quora 上有另一种经典的解读，区分“信息”和“知识”。
 
-![信息和知识](http://q4kbn37nl.bkt.clouddn.com/information-and-knowledge.jpg?e=1580631425&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:xGamemhPRMgNiC1aC00CPOF-ZVQ)
+![信息和知识](http://static.sunyt.site/information-and-knowledge.jpg)
 
 有了这样的参考，我们就很容易理解，在信息的基础上，建立实体之间的联系，就能行成 “知识”。
 
@@ -63,7 +63,7 @@ img: http://q4kbn37nl.bkt.clouddn.com/desk_20200202120008.jpg?e=1580619646&token
 >
 > 3. 姚明的配偶是叶莉
 
-![姚明的知识图谱](http://q4kbn37nl.bkt.clouddn.com/knowledge-graph-example-of-yao-ming.webp?e=1580631946&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:DlISW87JlGZobV2Hf21NwzQPdEE)
+![姚明的知识图谱](http://static.sunyt.site/knowledge-graph-example-of-yao-ming.webp)
 
 而每条知识表示为一个 SPO（Subject-Predicate-Object）三元组。比如 ——
 
@@ -375,7 +375,7 @@ loadData(function(response) {
 
 而当我使用上述代码绘制一张关系图时，出现了一个出乎意料的报错 ——
 
-![未加载 graph 组件](http://q4kbn37nl.bkt.clouddn.com/hexo-tag-echart3-unsupport-graph-error.png?e=1580708740&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:Yrmp9F5EJeRSxU0PiWBfxnlPGOs)
+![未加载 graph 组件](http://static.sunyt.site/hexo-tag-echart3-unsupport-graph-error.png)
 
 排查发现，`hexo-tag-echarts3` 插件所引用的 ECharts 库地址是 `https://cdn.bootcss.com/echarts/3.8.0/echarts.common.min.js`，这个 `echarts.common.min.js` 中并未包含对 graph 关系图的支持。
 

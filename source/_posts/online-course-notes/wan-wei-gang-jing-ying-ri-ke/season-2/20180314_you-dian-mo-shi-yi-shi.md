@@ -17,7 +17,7 @@ summary: 《万维钢·精英日课2：有点“模式”意识》课程笔记
 
 再比如《魔兽世界》，就曾经设定战士有三种不同的“姿态”，叫战斗姿态、防御姿态和狂暴姿态。有的强调防守，有的为了快速输出伤害而宁可牺牲防守。这些不同的姿态就好像是汽车的各种模式。
 
-![魔兽世界 —— 战士姿态](http://q4kbn37nl.bkt.clouddn.com/wow-zhan-shi.jpg?e=1581188857&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:jHwfp6NgYim-X7-xuQFNi9Nd2dw)
+![魔兽世界 —— 战士姿态](http://static.sunyt.site/wow-zhan-shi.jpg)
 
 真实世界中的人也有不同的姿态或者模式。比如人有工作模式、休息模式、娱乐模式 —— 娱乐不是休息 —— 还有社交模式等等。
 

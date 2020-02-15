@@ -30,7 +30,7 @@ summary: 《万维钢·精英日课1：忘记是为了更好的记住》课程�
 
 一直到1980年代，人们才算理出一点头绪。*原来这个关键在于记忆的东西是什么*。一般心理学家搞记忆力研究都是让人记若干组没有规律的字母组合，在这种情况下记忆的衰减的确符合遗忘曲线，[巴拉德效应](/tools/knowledge-handbook/#ba-la-de-xiao-ying)不存在。但巴拉德实验用的不是随机字母组合，而是一首诗 —— 诗歌的词句彼此之间有联系，放在一起是有意义的，在这种情况下做实验，巴拉德效应的确存在。
 
-![本尼迪克特·凯里《我们如何学习：关于什么时间学、在哪学、为什么学的令人吃惊的真相》](http://q4kbn37nl.bkt.clouddn.com/how-we-learn-the-surprising-truth-about-when-where-and-why-it-happens.jpg?e=1580566409&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:ZvLdHTv1sWelWvS-FMZZZOgJRds)
+![本尼迪克特·凯里《我们如何学习：关于什么时间学、在哪学、为什么学的令人吃惊的真相》](http://static.sunyt.site/how-we-learn-the-surprising-truth-about-when-where-and-why-it-happens.jpg)
 
 
 <div class="anchor" id="bi-yue-ke-de-ji-yi-li-li-lun-mo-xing"></div>

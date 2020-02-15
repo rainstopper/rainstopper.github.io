@@ -20,13 +20,13 @@ summary: 《万维钢·精英日课2：提高学习成绩的最简单心法》�
 
 德韦克的理论说，人对智能的思维模式可以分为两种。一种是所谓“成长思维模式（growth mindset）”，就是你认为学习不在天赋，而在于努力，只要努力用功，什么东西都能学会。另一种叫“固定思维模式（fixed mindset）”，就是你特别相信天赋的作用，擅长的东西就是擅长，要是不擅长怎么学都没用。
 
-![“思维模式”理论](http://q4kbn37nl.bkt.clouddn.com/growth-mindset-and-fixed-mindset.jpg?e=1580460849&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:THYCZtZBqA5PX-tZbWvTx1OiYKQ)
+![“思维模式”理论](http://static.sunyt.site/growth-mindset-and-fixed-mindset.jpg)
 
 德韦克证明，成长思维模式有利于人的成长。而且她还建立了因果关系，也就是说只要你能向一个孩子灌输成长思维模式，你就能促进他的成长。
 
 这个理论已经非常成熟了，很早之前就出了一本书，这本书的中文版都至少有三个版本，最新的一版叫《终身成长：重新定义成功的思维模式》（MINDSET: THE NEW PSYCHOLOGY OF SUCCESS）。
 
-![德韦克和她的著作《终身成长：重新定义成功的思维模式》](http://q4kbn37nl.bkt.clouddn.com/mindset-the-new-psychology-of-success.jpg?e=1580460741&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:zQrMR_dkyeFKz5YBZ8rv66ium5g)
+![德韦克和她的著作《终身成长：重新定义成功的思维模式》](http://static.sunyt.site/mindset-the-new-psychology-of-success.jpg)
 
 
 <div class="anchor" id="shi-yan"></div>
@@ -107,7 +107,7 @@ summary: 《万维钢·精英日课2：提高学习成绩的最简单心法》�
 
 德韦克的研究表明，这么说，你才能在他心中埋下成长思维模式的种子。他会把每一项任务都当成成长的机会，他会愿意花更长的时间钻研难题，他会主动选择困难的任务。
 
-![“固定思维模式”和“成长思维模式”](http://q4kbn37nl.bkt.clouddn.com/growth-mindset-and-fixed-mindset_2.jpg?e=1580925458&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:S7A7ojsMhTAkartOEgJbxaNvdwk)
+![“固定思维模式”和“成长思维模式”](http://static.sunyt.site/growth-mindset-and-fixed-mindset_2.jpg)
 
 ## 学习心得
 

@@ -5,7 +5,7 @@ categories:
 - [万能胶囊]
 tags: [知识, 图谱, 联系]
 summary: 知识图谱
-img: http://q4kbn37nl.bkt.clouddn.com/long-zhu-lei-da.gif?e=1580245265&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:oneRra2rduP85ExzRj0Fvxkfd4Y
+img: http://static.sunyt.site/long-zhu-lei-da.gif
 top: true
 toc: false
 ---

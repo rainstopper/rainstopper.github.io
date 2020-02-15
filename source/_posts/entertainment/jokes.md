@@ -5,7 +5,7 @@ categories:
 - [吧台]
 tags: [搞笑段子]
 summary: 快乐的源泉
-img: http://q4kbn37nl.bkt.clouddn.com/bo-zi-qi-shui.jpg?e=1580262806&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:stxIFM06Y_atF7MZijUWiyNzWbo
+img: http://static.sunyt.site/bo-zi-qi-shui.jpg
 ---
 
 ## 新型冠状病毒
@@ -16,7 +16,7 @@ img: http://q4kbn37nl.bkt.clouddn.com/bo-zi-qi-shui.jpg?e=1580262806&token=0QXSK
 
 “因新型冠状病毒被迫停工，员工萌苦不堪言”
 
-![](http://q4kbn37nl.bkt.clouddn.com/ku-bu-kan-yan.jpg?e=1580193490&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:ycFNNrGXhxvEfMoPrTZR4cDQVSw)
+![](http://static.sunyt.site/ku-bu-kan-yan.jpg)
 
 > 露出了悲愤欲绝的笑容 /doge
 
@@ -26,6 +26,6 @@ img: http://q4kbn37nl.bkt.clouddn.com/bo-zi-qi-shui.jpg?e=1580262806&token=0QXSK
 
 全网通缉周围的泡面，可能都被传染了，紧急召回碗里量体温！！
 
-![](http://q4kbn37nl.bkt.clouddn.com/wu-han-re-gan-mian.jpg?e=1580359521&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:C7xZWXedzGghvg2_mynKTDghfXg)
+![](http://static.sunyt.site/wu-han-re-gan-mian.jpg)
 
 时间：2020.1.30

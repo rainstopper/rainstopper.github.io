@@ -5,7 +5,7 @@ categories:
 - [万能胶囊]
 tags: [格言, 箴言, 道理, 顿悟]
 summary: 格言金句
-img: http://q4kbn37nl.bkt.clouddn.com/xian-dou.jpg?e=1580351453&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:hEDN46SKRt8Nl9idEgPdAQYr8-0
+img: http://static.sunyt.site/xian-dou.jpg
 ---
 
 ##### 持续收录的格言金句

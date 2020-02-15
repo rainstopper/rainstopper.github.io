@@ -111,7 +111,7 @@ summary: 《万维钢·精英日课3：逻辑思维5：灰度认知和黑白决�
 
 划线要预留一个“缓冲区（buffer zone）”。如下图所示 —— 
 
-![缓冲区图示](http://q4kbn37nl.bkt.clouddn.com/buffer-zone.jpg?e=1580429809&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:XS8S4blcsPJMk-k4qt9gyTXLiQI)
+![缓冲区图示](http://static.sunyt.site/buffer-zone.jpg)
 
 左边是白，右边是黑，中间是灰。你的线要划在非常靠左的位置，以至于过线之后的很大一块灰色区域仍然是比较白的 —— 那块区域就是缓冲区。过了缓冲区，灰色才变得比较黑。
 

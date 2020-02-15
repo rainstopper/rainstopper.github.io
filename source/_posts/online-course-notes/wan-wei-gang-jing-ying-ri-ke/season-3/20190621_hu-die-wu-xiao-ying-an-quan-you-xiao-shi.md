@@ -42,7 +42,7 @@ summary: 《万维钢·精英日课3：蝴蝶无效应，安全有小事》课�
 
 从小到大的一堆多米诺骨牌排在一起，最大的一块有一个人那么大，最小的一块比指甲盖还小，只能用镊子拿。放倒最小的一块，骨牌就会连锁反应，最终把最大的一块也推倒。
 
-![多米诺骨牌](http://q4kbn37nl.bkt.clouddn.com/domino.jpg?e=1580197811&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:XsVUkhsjhq5ozl8KX5uJhFj3WCs)
+![多米诺骨牌](http://static.sunyt.site/domino.jpg)
 
 这不就是蝴蝶效应吗？这不就是小骨牌导致了大骨牌的倒下吗？
 

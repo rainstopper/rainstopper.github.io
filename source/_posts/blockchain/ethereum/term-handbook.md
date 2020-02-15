@@ -5,7 +5,7 @@ categories:
 - [猜猜拳]
 tags: [以太坊, 术语, 手册, 概念]
 summary: 以太坊概念手册
-img: http://q4kbn37nl.bkt.clouddn.com/ethereum_20200209215359.jpg?e=1581260069&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:lKNEVXQdmIPEFg1kibtfHBCTQ8E
+img: http://static.sunyt.site/ethereum_20200209215359.jpg
 mathjax: true
 ---
 

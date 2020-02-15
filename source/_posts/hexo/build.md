@@ -5,7 +5,7 @@ categories:
 - [精神时光屋]
 tags: [Hexo, 博客, 个人博客, 博客搭建]
 summary: 精神時光屋的诞生过程
-img: http://q4kbn37nl.bkt.clouddn.com/jing-shen-shi-guang-wu.jpg?e=1580247922&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:Z8FZdNQ7yKUvPUgUIBWdd7_Sadg
+img: http://static.sunyt.site/jing-shen-shi-guang-wu.jpg
 ---
 今天是2020年的除夕。时光犹如白驹过隙，转眼又将开启崭新的一年。
 
@@ -267,11 +267,11 @@ hexo server
 
 继续执行 `hexo server` 或 `hexo s` 命令，启动 server 服务。
 
-![命令行启动](http://q4kbn37nl.bkt.clouddn.com/hexo-server.png?e=1579882840&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:PQe9BimqgGe37rRNvPFAzHenSGQ)
+![命令行启动](http://static.sunyt.site/hexo-server.png)
 
 执行命令后，打开浏览器，输入 `localhost:4000`，即可访问我们的第一个博客网站。
 
-![Hexo 默认页](http://q4kbn37nl.bkt.clouddn.com/hexo-init-page.png?e=1579883002&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:BHUuNzGjZqACRuo5pctN5FGpKGg)
+![Hexo 默认页](http://static.sunyt.site/hexo-init-page.png)
 
 ---
 
@@ -452,13 +452,13 @@ ssh-keygen -t rsa -C <email>
 
 这个过程中会提示输入文件名，也可以不设置，一路回车。
 
-![命令行生成 SSH Key](http://q4kbn37nl.bkt.clouddn.com/generate-ssh-key.png?e=1579891710&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:JZD8R9_SaZxT5rxAEDAlwVE2iMk)
+![命令行生成 SSH Key](http://static.sunyt.site/generate-ssh-key.png)
 
 最后会提示在用户目录下生成了 `.ssh` 文件夹，里面包含了 `id_rsa` 私钥文件和 `id_rsa.pub` 公钥文件。
 
 在 GitHub 的 `Settings` 中找到 `SSH and GPG keys` 的配置页面，点击 `New SSH key` 按钮，在 `title` 中输入自定义的名称，将 `id_rsa.pub` 文件中的内容拷贝至 `Key`，完成SSH秘钥的创建。
 
-![在 GitHub 中添加 SSH Key](http://q4kbn37nl.bkt.clouddn.com/github-ssh.png?e=1579891366&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:duNvV4Ij1lXBPpJHiVfB2OR42Y8)
+![在 GitHub 中添加 SSH Key](http://static.sunyt.site/github-ssh.png)
 
 使用以下命令验证 SSH 的配置是否生效。
 
@@ -468,7 +468,7 @@ ssh -T git@github.com
 
 出现以下提示信息时，即为配置成功。
 
-![测试 SSH](http://q4kbn37nl.bkt.clouddn.com/test-github-ssh.png?e=1579891976&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:v38GguGs12J7jfuwfowPInGShZc)
+![测试 SSH](http://static.sunyt.site/test-github-ssh.png)
 
 ### 8.3 将 Hexo 生成的静态页面托管至 GitHub
 
@@ -532,7 +532,7 @@ hexo deploy
 
 进入我们之前创建好的 GitHub 仓库，在 `Code` 菜单下点击 `Branch:master` 按钮，新建一个名为 `hexo-source` 的分支，并将其设置为默认分支。
 
-![创建 GitHub 分支](http://q4kbn37nl.bkt.clouddn.com/github-branch-hexo-source.png?e=1579894028&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:p8fSwlsoS5MJA2UTKOVNUg5tJco)
+![创建 GitHub 分支](http://static.sunyt.site/github-branch-hexo-source.png)
 
 ### 9.2 上传源代码
 
@@ -569,6 +569,9 @@ git push
 
 我觉得 `<username>.github.io` 这个地址不够逼格，想要一个自己专属的域名，用它来访问我们的博客。
 
+
+<div class="anchor" id="gou-mai-yu-ming"></div>
+
 ### 10.1 购买域名
 
 我们可以在[阿里云](https://wanwang.aliyun.com/)上查询和购买域名。
@@ -576,6 +579,9 @@ git push
 最常用的域名是 `.com`，价格比较昂贵；其次是 `.com.cn`、`.cn` 和 `.net`。然而这些常用的域名大多都已经被注册了。
 
 剩下的还有 `.site`、`.top`、`.vip` 等域名，只要能备案就行。我买的是 `sunyt.site`（以我中文名的缩写命名）。
+
+
+<div class="anchor" id="yu-ming-bei-an"></div>
 
 ### 10.2 域名备案
 
@@ -593,7 +599,7 @@ git push
 
 可以直接使用 `新手引导` 按钮，它会自动添加主机记录为 `@` 和 `www`、解析线路为 `默认` 的两条配置。
 
-![在阿里云配置域名解析](http://q4kbn37nl.bkt.clouddn.com/aliyun-dns-guide.png?e=1579896004&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:IwzoBZ4z-sE66szbZ6VwSiJaXNo)
+![在阿里云配置域名解析](http://static.sunyt.site/aliyun-dns-guide.png)
 
 其中的记录值，我们可以先在命令行中通过 `ping <username>.github.io` 获取到项目在 GitHub 服务器上所在的 IP 地址，将其填入。
 
@@ -601,7 +607,7 @@ git push
 
 在 GitHub 仓库的 `Settings` 菜单下找到 `Custom domain`，设置域名并保存。
 
-![在 GitHub 仓库中配置域名](http://q4kbn37nl.bkt.clouddn.com/github-settings-custom-domain.png?e=1579896418&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:xBGBLkVCOB_Xqruz4Wvz7iOezqo)
+![在 GitHub 仓库中配置域名](http://static.sunyt.site/github-settings-custom-domain.png)
 
 ### 10.5 修改项目配置并重新部署
 
@@ -681,13 +687,13 @@ hexo deploy
 
 随即在 Coding 上部署项目，并设置自定义域名为自己的域名 `sunyt.site`。
 
-![在 Coding 部署静态页面](http://q4kbn37nl.bkt.clouddn.com/coding-deploy-setting.png?e=1579899019&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:OyAp31x2qJBjjqs52UNHOhts1H4)
+![在 Coding 部署静态页面](http://static.sunyt.site/coding-deploy-setting.png)
 
 ### 11.4 修改域名解析配置
 
 回到[阿里云控制台](https://dns.console.aliyun.com/)，将原来指向 GitHub 配置的解析路线改为 `境外`，再分别添加主机记录为 `@` 和 `www` 的两条记录，记录类型选择 `默认`，记录值填写 Coding 项目的静态网站域名。
 
-![阿里云控制台域名解析](http://q4kbn37nl.bkt.clouddn.com/aliyun-dns-setting-github-and-coding.png?e=1579899444&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:MqbSUQGDtVH4Uw6vY1sI9PDC0c0)
+![阿里云控制台域名解析](http://static.sunyt.site/aliyun-dns-setting-github-and-coding.png)
 
 不一会儿，我们在国内访问域名 `sunyt.site` 就会访问到托管至 Coding 的页面了。
 
@@ -695,7 +701,21 @@ hexo deploy
 
 至此，我们的博客已经在 GitHub 和 Coding 双向部署，并通过域名解析，对国内外进行分流。
 
+## 12 小结
+
+看到这里，博客的搭建过程已经告一段落。但这并不是这篇文章的终结。
+
+后续我还会在下面的“[更多](#more)”一节中，不定期地更新一些内容，包括博客在使用过程中的变更和优化。
+
+如果以上步骤也能帮助你成功搭建自己的博客，那么恭喜你，很不赖哦~
+
+> 不过还是得提醒你，如果你在这个过程中申请了新的域名，请记得[备案](#yu-ming-bei-an)。
+
+此外，如果你在使用博客的过程中，想知道怎么进一步优化，又或者遇到了困难，也可以在[更多](#more)和[相关文章](/categories/精神时光屋/)中寻找线索。
+
 ---
+
+<div class="anchor" id="more"></div>
 
 ## 更多
 
@@ -709,7 +729,7 @@ Hexo 支持使用 `hexo-asset-image` 插件内联图片，该插件会在创建�
 
 创建七牛云账号后，需要先进行实名认证，再在控制台打开 `对象存储` 下的 `空间管理` 菜单，去新建空间，否则会报 `403：没有权限`。
 
-写作时如果遇到图片，只需将其上传至七牛云，再在需要插入图片的位置添加Markdown标记 `![](<url>)` 即可。
+写作时如果遇到图片，只需将其上传至七牛云，再在需要插入图片的位置添加 Markdown 标记 `![]()` 即可。
 
 ---
 
@@ -785,19 +805,19 @@ Matery 主题支持 [Gitalk](https://gitalk.github.io/)、[Gitment](https://imsu
 
 登陆 GitHub，在 `Settings` > `Developer settings` 下，找到 `OAuth Apps` 菜单。
 
-![GitHub OAuth Apps](http://q4kbn37nl.bkt.clouddn.com/github-oauth-apps.png?e=1580182303&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:fK9xiyWAbfpRy7JyvjuLncuLqBg)
+![GitHub OAuth Apps](http://static.sunyt.site/github-oauth-apps.png)
 
 点击 `New OAuth App` 创建一个 OAuth App。其中 `Application Name` 自定义，`Homepage URL` 和 `Authorization callback URL` 填写博客的地址。
 
-![OAuth App 的详细配置](http://q4kbn37nl.bkt.clouddn.com/github-new-oauth-app.png?e=1580182303&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:SExXN6tiR7fGxUY9CMzLUJWid7s)
+![OAuth App 的详细配置](http://static.sunyt.site/github-new-oauth-app.png)
 
 创建完成后，可以点击刚创建的 OAuth App，查看 `Client ID` 和 `Client Secret`。
 
-![OAuth App 的秘钥信息](http://q4kbn37nl.bkt.clouddn.com/github-oauth-app-client-id.png?e=1580185161&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:cv2mSXRTnZUytxZug4M5bkc5QtQ)
+![OAuth App 的秘钥信息](http://static.sunyt.site/github-oauth-app-client-id.png)
 
 然后打开博客仓库的 `Settings` 菜单，确保 `Issues` 特性已经被勾选。
 
-![在 GitHub 仓库中配置特性](http://q4kbn37nl.bkt.clouddn.com/github-repository-settings-issues.png?e=1580183579&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:lGSlq18Y_LMUNSgwoJfNJiDTxf8)
+![在 GitHub 仓库中配置特性](http://static.sunyt.site/github-repository-settings-issues.png)
 
 接着修改 `theme/matery/_config.yml` 主题配置文件，开启 gitalk，并填写 GitHub 仓库和 OAuth App 相关信息。
 
@@ -816,7 +836,7 @@ gitalk:
 
 重新部署后，滚动至文章底部就能看到久违的评论框了。
 
-![文章评论区](http://q4kbn37nl.bkt.clouddn.com/article-comments.png?e=1580185433&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:I1g1rc1WLuGJDNjEQWwvUPZ49P8)
+![文章评论区](http://static.sunyt.site/article-comments.png)
 
 编辑评论前需要登录自己的 GitHub 账户。
 
@@ -833,7 +853,7 @@ gitalk:
 
 后来还自制了[博客 LOGO](/design/zi-zhi-svg-tu-biao/)，使用圆、五角星和简单的曲线组合在一起，绘制了一个“龙珠”的 `.svg` 图标。
 
-![LOGO 效果](http://q4kbn37nl.bkt.clouddn.com/my-logo.png?e=1580266436&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:3A5J3iBLHvQAcWutZT5f6OwfULk)
+![LOGO 效果](http://static.sunyt.site/my-logo.png)
 
 ### 添加音乐 2020.2.13
 
@@ -866,8 +886,8 @@ Matery 主题无默认音乐，需要我们人为添加。[Matery 官方文档](
 [{
   "name": "我的名字",
   "artist": "焦迈奇",
-  "url": "http://q4kbn37nl.bkt.clouddn.com/music_wo-de-ming-zi_jiao-mai-qi.m4a?e=1581608810&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:PTZv1m1seTGo-N0ctdJB3Di1ifQ",
-  "cover": "http://q4kbn37nl.bkt.clouddn.com/music-cover_wo-de-ming-zi_jiao-mai-qi.jpg?e=1581608810&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:AKnA5__0hbn7QkvzmW4jrQt0H2M"
+  "url": "http://q4kbn37nl.bkt.clouddn.com/music_wo-de-ming-zi_jiao-mai-qi.m4a",
+  "cover": "http://q4kbn37nl.bkt.clouddn.com/music-cover_wo-de-ming-zi_jiao-mai-qi.jpg"
 }]
 ```
 
@@ -930,9 +950,9 @@ $(function () {
 [{
   "name": "我的名字",
   "artist": "焦迈奇",
-  "url": "http://q4kbn37nl.bkt.clouddn.com/music_wo-de-ming-zi_jiao-mai-qi.m4a?e=1581608810&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:PTZv1m1seTGo-N0ctdJB3Di1ifQ",
-  "cover": "http://q4kbn37nl.bkt.clouddn.com/music-cover_wo-de-ming-zi_jiao-mai-qi.jpg?e=1581608810&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:AKnA5__0hbn7QkvzmW4jrQt0H2M",
-  "lrc": "http://q4kbn37nl.bkt.clouddn.com/music-lyric_wo-de-ming-zi_jiao-mai-qi.lrc?e=1581612081&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:Jiine8cwEBR_vnNo1MMGdMWy2eE"
+  "url": "http://q4kbn37nl.bkt.clouddn.com/music_wo-de-ming-zi_jiao-mai-qi.m4a",
+  "cover": "http://q4kbn37nl.bkt.clouddn.com/music-cover_wo-de-ming-zi_jiao-mai-qi.jpg",
+  "lrc": "http://q4kbn37nl.bkt.clouddn.com/music-lyric_wo-de-ming-zi_jiao-mai-qi.lrc"
 }]
 ```
 
@@ -940,6 +960,54 @@ $(function () {
 
 于是便能在首页播放具有歌词的音乐啦~
 
-![首页播放音乐](http://q4kbn37nl.bkt.clouddn.com/index-music.png?e=1581613359&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:zYnnEyUqMHom1qkq6tqpnw8IJjo)
+![首页播放音乐](http://static.sunyt.site/index-music.png)
 
 更多用法可以参考 [APlayer 官方文档](https://aplayer.js.org/#/zh-Hans/)。
+
+### 七牛云使用自定义域名 2020.2.15
+
+在这之前，我们为了博客能引用图片、音乐等资源，便[使用七牛云](#shi-yong-qi-niu-yun-cun-chu-tu-pian)存储和管理它们。
+
+但在今天，我收到了七牛云发来的一封邮件通知 ——
+
+![七牛云测试域名回收通知](http://static.sunyt.site/qi-niu-yun-ce-shi-yu-ming-hui-shou-tong-zhi.png)
+
+这封邮件的意图是提醒，七牛云此前提供的测试域名 `q4kbn37nl.bkt.clouddn.com` 将在一周后被回收。这意味着，届时我们博客内的图片、音乐等资源将无法访问。
+
+这听上去是个相当可怕的后果。
+
+别急，邮件里也告知了解决方案 —— 尽快用自定义域名来取代测试域名。
+
+这篇文章讲到了域名[申请](#gou-mai-yu-ming)和[备案](#yu-ming-bei-an)的方法，而我此前申请的域名 `sunyt.site` 也已[经由阿里云备案](https://beian.aliyun.com/)（因为我是在阿里云上购买的域名）通过了。
+
+只要准备好域名，就可以将七牛云的测试域名替换成自己的域名。
+
+打开[七牛云控制台](https://portal.qiniu.com/kodo/bucket)，进入空间管理页面，点击右侧操作中的 `域名` 按钮。
+
+![七牛云控制台空间管理页](http://static.sunyt.site/qi-niu-yun-kong-jian-guan-li-yu-ming.png)
+
+跳转至域名创建页面，在加速域名一栏中添加自己的域名。比如我用 `static.sunyt.site` 这个二级域名来表示静态资源。
+
+![七牛云创建域名页](http://static.sunyt.site/qi-niu-yun-chuang-jian-yu-ming.png)
+
+其余选项可以自行选择，最后点击创建。域名的创建需要等待一段时间。创建完成后，我们在[域名管理页](https://portal.qiniu.com/cdn/domain)就能看到新创建的域名了。
+
+接下来，我们需要将自定义的二级域名 `static.sunyt.site` 解析至七牛云。解析值 `CNAME` 可以通过域名管理页复制得到。
+
+![七牛云域名管理页](http://static.sunyt.site/qi-niu-yun-yu-ming-guan-li-fu-zhi-cname.png)
+
+接着，打开[阿里云域名控制台](https://dns.console.aliyun.com/)，添加对二级域名的解析。
+
+![阿里云七牛域名解析](http://static.sunyt.site/aliyun-qi-niu-yun-yu-ming-jie-xi.png)
+
+这样一来，我们就能通过自定义域名访问七牛云上的资源了。
+
+为了使用方便，回到空间管理，将外链域名设置为自定义域名。这能在复制外链时，使用我们自定义域名作为外链的前缀。
+
+![七牛云空间外链域名设置页](http://static.sunyt.site/qi-niu-yun-kong-jian-wai-lian-yu-ming.png)
+
+最后，我们需要在博客项目中，把之前用到七牛云测试域名 `q4kbn37nl.bkt.clouddn.com` 的地方，都更换成新的自定义域名 `static.sunyt.site`。
+
+如果你的博客引用了很多的图片、音乐等资源，需要更换的地方也会很多。可以使用编辑器的查找和替换功能，将 `http://static.sunyt.site/` 批量替换成 `http://static.sunyt.site/`。
+
+以上便完成了七牛云从测试域名迁移到自定义域名的过程。

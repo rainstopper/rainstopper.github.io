@@ -5,7 +5,7 @@ categories:
 - [万能胶囊]
 tags: [素材]
 summary: 给你一份游览龙珠世界的指南
-img: http://q4kbn37nl.bkt.clouddn.com/long-zhu-di-tu.jpg?e=1580247107&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:2KFjFki_sO79rNvzm0gHyWPKCDs
+img: http://static.sunyt.site/long-zhu-di-tu.jpg
 top: true
 ---
 
@@ -17,7 +17,7 @@ top: true
 
 > 一个位于神殿之上的修炼场所，里面的一年相当于外面的一天，可以用来迅速提升实力。
 
-![精神时光屋](http://q4kbn37nl.bkt.clouddn.com/jing-shen-shi-guang-wu.jpg?e=1580247922&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:Z8FZdNQ7yKUvPUgUIBWdd7_Sadg)
+![精神时光屋](http://static.sunyt.site/jing-shen-shi-guang-wu.jpg)
 
 寓意：一个专门的修炼场所。
 
@@ -29,7 +29,7 @@ top: true
 
 > 悟空在神殿修行期间所学会的招式，通过气来脱离星球引力在空中飞行。
 
-![舞空术](http://q4kbn37nl.bkt.clouddn.com/wu-kong-shu.jpg?e=1580246296&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:CviNbNa1BRgXJjI1uCQJH-Qkww0)
+![舞空术](http://static.sunyt.site/wu-kong-shu.jpg)
 
 寓意：自由、探索，翱翔在知识的海洋。
 
@@ -41,7 +41,7 @@ top: true
 
 > 举起双手向所有生物借取元气，制造一个能量球，制成后扔向敌人。
 
-![元气弹](http://q4kbn37nl.bkt.clouddn.com/yuan-qi-dan.jpg?e=1580247457&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:qiRYeOMpsxA6gwO1iQWjjlTVreU)
+![元气弹](http://static.sunyt.site/yuan-qi-dan.jpg)
 
 寓意：集聚元气，汲取知识。
 
@@ -55,7 +55,7 @@ top: true
 >
 > 其效果就像闪光弹一样，气用的越多光源越强。
 
-![太阳拳](http://q4kbn37nl.bkt.clouddn.com/tai-yang-quan.jpg?e=1580417698&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:D-wGN0veKUrDm1w2VsQ9VbDDJt0)
+![太阳拳](http://static.sunyt.site/tai-yang-quan.jpg)
 
 寓意：`华丽` 的外表、`耀眼` 的辅助，俗称“亮瞎”。
 
@@ -67,7 +67,7 @@ top: true
 
 > 将石头剪刀布的手势融入到里面，先单手和敌人对拳，空出来的一只手戳对方的眼睛，再一掌推开对方。
 
-![悟空猜猜拳](http://q4kbn37nl.bkt.clouddn.com/wu-kong-cai-cai-quan.jpg?e=1581259508&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:QQZDXvCT4cxfLENxXHi2jul4rBk)
+![悟空猜猜拳](http://static.sunyt.site/wu-kong-cai-cai-quan.jpg)
 
 寓意：多项简单技术的高级组合。
 
@@ -79,7 +79,7 @@ top: true
 
 > 布尔玛家族企业所研制开发的一种高科技产品，小小的胶囊可以装下摩托、汽车、飞机和房屋等。
 
-![万能胶囊](http://q4kbn37nl.bkt.clouddn.com/wan-neng-jiao-nang.jpg?e=1580245087&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:3KxR7nLQY_T3Ilx25t9Z2vvs6FU)
+![万能胶囊](http://static.sunyt.site/wan-neng-jiao-nang.jpg)
 
 寓意：知识的 `工具箱`、`百宝箱` 和 `锦囊`。
 
@@ -89,7 +89,7 @@ top: true
 
 > 龙珠世界的地图。
 
-![龙珠地图](http://q4kbn37nl.bkt.clouddn.com/long-zhu-di-tu.jpg?e=1580247107&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:2KFjFki_sO79rNvzm0gHyWPKCDs)
+![龙珠地图](http://static.sunyt.site/long-zhu-di-tu.jpg)
 
 寓意：纵观世界全貌，可供选取 `可塑之才`。
 
@@ -101,7 +101,7 @@ top: true
 >
 > 而龙珠在神龙实现愿望后便会自动飞散并且变成石头，一年后集齐七颗龙珠的话，便可再次实现愿望。
 
-![龙珠](http://q4kbn37nl.bkt.clouddn.com/long-zhu.jpg?e=1580530338&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:GNwZlYzuiA2e2R81-FwjbWfnb6Q)
+![龙珠](http://static.sunyt.site/long-zhu.jpg)
 
 寓意：用来实现愿望的 `宝物`、`知识`、`财富`。
 
@@ -111,7 +111,7 @@ top: true
 
 > 用来寻找龙珠的道具。最精准的是布尔玛所制的龙珠雷达。
 
-![龙珠雷达](http://q4kbn37nl.bkt.clouddn.com/long-zhu-lei-da.gif?e=1580245265&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:oneRra2rduP85ExzRj0Fvxkfd4Y)
+![龙珠雷达](http://static.sunyt.site/long-zhu-lei-da.gif)
 
 寓意：知识的 `指南针`、`仪表盘`、`扫盲` 工具。
 
@@ -131,7 +131,7 @@ top: true
 >
 > 4. **老界王神**：由十五代之前的年轻界王神和一个老巫婆用坡塔拉耳环合体。
 
-![坡塔拉耳环](http://q4kbn37nl.bkt.clouddn.com/po-ta-la-er-huan.png?e=1580336943&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:pEKaATKgjM6IULGs1ZWRs09lGvk)
+![坡塔拉耳环](http://static.sunyt.site/po-ta-la-er-huan.png)
 
 寓意：旧的知识组合成新的知识。
 
@@ -143,7 +143,7 @@ top: true
 >
 > 仙豆由卡林塔的猫仙人所种植，虽然外表只是一颗平凡无奇的绿豆子，但其内含极强能量，即便是超级赛亚人服用，也能立即恢复体力和精神力。
 
-![仙豆](http://q4kbn37nl.bkt.clouddn.com/xian-dou.jpg?e=1580351453&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:hEDN46SKRt8Nl9idEgPdAQYr8-0)
+![仙豆](http://static.sunyt.site/xian-dou.jpg)
 
 寓意：`打鸡血`、`满血复活`的强心剂。
 
@@ -157,7 +157,7 @@ top: true
 >
 > 龟仙人老年变得好色而无法再使用，于是送给了悟空。不怕子弹、炮弹等一切物理攻击，但会被魔族的攻击打散。
 
-![筋斗云](http://q4kbn37nl.bkt.clouddn.com/jin-dou-yun.jpg?e=1580528638&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:lincyH5hAJSaOdRzzzF8MZPvRC0)
+![筋斗云](http://static.sunyt.site/jin-dou-yun.jpg)
 
 寓意：腾云驾雾的赶路神器，我们一直在路上。
 
@@ -175,7 +175,7 @@ top: true
 
 > 尽管不是什么能量饮料，但是快乐的源泉。
 
-![波子汽水](http://q4kbn37nl.bkt.clouddn.com/bo-zi-qi-shui.jpg?e=1580262806&token=0QXSKIUWEaWqa_m3RP0dA04KO2cPXzgzVsWCBGHf:stxIFM06Y_atF7MZijUWiyNzWbo)
+![波子汽水](http://static.sunyt.site/bo-zi-qi-shui.jpg)
 
 寓意：快乐的源泉。
 
