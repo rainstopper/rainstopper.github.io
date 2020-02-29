@@ -10,7 +10,7 @@ img: http://static.sunyt.site/jin-dou-yun.jpg
 
 ##### 待办事项
 
-通常文章写作的优先级为★★☆☆☆。
+通常，文章写作的优先级为★★☆☆☆。
 
 
 <div class="anchor" id="hexo-tag-echarts3-cha-jian-yi-liu-wen-ti"></div>
