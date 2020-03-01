@@ -1314,8 +1314,11 @@ thead {
 }
 
 .chip-container .tag-chips {
+    max-height: 300px;
     margin: 1rem auto 0.5rem;
-    max-width: 850px;
+    padding: 0 20px;
+    overflow-y: auto;
+    /* max-width: 850px; */
     text-align: center;
 }
 
