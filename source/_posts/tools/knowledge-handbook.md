@@ -32,6 +32,16 @@ img: http://static.sunyt.site/long-zhu.jpg
 相关：万维钢 ——《万维钢·精英日课1：忘记是为了更好的记住》[课程笔记](/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-1/20160831_wang-ji-shi-wei-le-geng-hao-de-ji-zhu/)
 收录时间：2020.2.1
 
+
+<div class="anchor" id="bo-ke-sen-bei-lun"></div>
+
+### 伯克森悖论
+
+> 指两个本来无关的变量之间体现出貌似强烈的相关关系的假象。
+
+相关：万维钢 ——《万维钢·精英日课4：伯克森悖论》[课程笔记](/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-4/20200229_bo-ke-sen-bei-lun/)
+收录时间：2020.3.1
+
 ---
 
 ## C
