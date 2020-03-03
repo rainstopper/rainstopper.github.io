@@ -10,6 +10,44 @@ img: http://static.sunyt.site/long-zhu.jpg
 
 ##### 持续收录的知识手册
 
+## A
+
+<div class="anchor" id="alder's-razor"></div>
+
+### 阿尔德剃刀（Alder's razor）
+
+> If something cannot be settled by experiment or observation then it is not worthy of debate.
+>
+> 不能以实验证明的事不值得争论。
+
+又称“牛顿烈焰激光剑（Newton's Flaming Laser Sword）”。
+
+收录时间：2020.3.3
+
+
+<div class="anchor" id="occam's-razor"></div>
+
+### 奥卡姆剃刀（Occam's Razor）
+
+又称“奥康的剃刀（ Ockham's Razor）”。
+
+> When faced with competing hypotheses, select the one that makes the fewest assumptions. Do not multiply entities without necessity.
+>
+> 如果关于同一个问题有许多种理论，每一种都能作出同样准确的预言，那么应该挑选其中使用假定最少的。
+
+奥卡姆剃刀有一个很经典的例子：
+
+> 朋友说他家车库里有一条会喷火的龙，我跑出去看了一眼，没看见龙也没看见火。
+>
+> 问起来时，朋友说：哦是这样的，这条龙无论用什么手段都无法被我们观测到，他会喷火，但是喷出的也是没有热量，完全不发光的火，也什么东西都无法燃烧。balabala可能还有很多类似的解释……。
+>
+> 我没有听他继续说下去，因为根据奥卡姆剃刀，我可以认为这条龙不存在。
+
+出自：奥卡姆的威廉（William of Ockham）
+收录时间：2020.3.3
+
+---
+
 ## B
 
 <div class="anchor" id="ba-la-de-xiao-ying"></div>
@@ -47,6 +85,17 @@ img: http://static.sunyt.site/long-zhu.jpg
 
 相关：王煜全 ——《中国优势》P.26
 收录时间：2020.1.23
+
+
+<div class="anchor" id="popper's-falsifiability-principle"></div>
+
+### 波普尔证伪原则（Popper's falsifiability principle）
+
+> For a theory to be considered scientific, it must be falsifiable.
+>
+> 如果一个理论能被认为是科学的，那么它必须是可证伪的。
+
+收录时间：2020.3.3
 
 
 <div class="anchor" id="bo-ke-sen-bei-lun"></div>
@@ -131,6 +180,16 @@ img: http://static.sunyt.site/long-zhu.jpg
 
 ## G
 
+<div class="anchor" id="grice's-razor"></div>
+
+### 格里斯剃刀（Grice's razor）
+
+> As a principle of parsimony, conversational implications are to be preferred over semantic context for linguistic explanations.
+>
+> 以简约理论为指导，对话的意义或启示要比文字的上下文语境语言解释重要。
+
+收录时间：2020.3.3
+
 ### 工业 4.0
 
 | 阶段     | 描述      |
@@ -157,6 +216,20 @@ img: http://static.sunyt.site/long-zhu.jpg
 ---
 
 ## H
+
+<div class="anchor" id="hanlon's-razor"></div>
+
+### 汉隆剃刀（Hanlon's razor）
+
+> Never attribute to malice that which is adequately explained by stupidity.
+>
+> 能解释为愚蠢的，就不要解释为恶意。
+
+汉隆剃刀原则告诉我们，不要恶意揣测别人。现实生活中绝大多数问题都是因为愚蠢导致的，并不是有人故意和你唱反调。这里的愚蠢可能是因为失误和不小心，是个中性词。
+
+出自：罗伯特·J·汉隆
+相关：万维钢 ——《万维钢·精英日课4：能用愚蠢解释的，就不要用恶意》[课程笔记](/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-4/20200303_neng-yong-yu-chun-jie-shi-de-jiu-bu-yao-yong-e-yi/)
+收录时间：2020.3.3
 
 ### 黄埔军校效应
 
@@ -329,6 +402,18 @@ img: http://static.sunyt.site/long-zhu.jpg
 
 ---
 
+## N
+
+<div class="anchor" id="newton's-flaming-laser-sword"></div>
+
+### 牛顿烈焰激光剑（Newton's Flaming Laser Sword）
+
+同[阿尔德剃刀](#alder's-razor)。
+
+收录时间：2020.3.3
+
+---
+
 ## Q
 
 <div class="anchor" id="qiang-li-yan-du"></div>
@@ -433,6 +518,31 @@ img: http://static.sunyt.site/long-zhu.jpg
 出自：施振荣（宏碁集团创办人）
 相关：王煜全 ——《中国优势》P.33
 收录时间：2020.1.23
+
+---
+
+## X
+
+<div class="anchor" id="hitchens's-razor"></div>
+
+### 希钦斯剃刀（Hitchens's razor）
+
+> What can be asserted without evidence can be dismissed without evidence.
+>
+> 如果一条定律不需要使用证据来证明，那么它无需证据就能反驳。
+
+收录时间：2020.3.3
+
+
+<div class="anchor" id="hume's-razor"></div>
+
+### 休谟剃刀（Hume's razor）
+
+> If the cause, assigned for any effect, be not sufficient to produce it, we must either reject that cause, or add to it such qualities as will give it a just proportion to the effect.
+>
+> 对于能产生某个效应的因素（原因），如果这个因素（原因）不能充分产生这个效应，我们要么剔除这个因素（原因），要么就说多少因素（原因）产生多少合理量的效应。
+
+收录时间：2020.3.3
 
 ---
 

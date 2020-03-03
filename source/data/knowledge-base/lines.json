@@ -482,5 +482,16 @@
   { "subject": "幸存者偏差", "predicate": "是一种", "object": "选择偏差", "date": "2020-03-01 18:15:10" },
   { "subject": "士的三个境界", "predicate": "高级", "object": "Stakeholder", "link": "/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-4/20200229_fa-kan-ci-shi-de-san-ge-jing-jie/", "date": "2020-03-02 10:13:05" },
   { "subject": "士的三个境界", "predicate": "高级", "object": "Player", "link": "/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-4/20200229_fa-kan-ci-shi-de-san-ge-jing-jie/", "date": "2020-03-02 10:13:26" },
-  { "subject": "士的三个境界", "predicate": "高级", "object": "Informed citizen", "link": "/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-4/20200229_fa-kan-ci-shi-de-san-ge-jing-jie/", "date": "2020-03-02 10:13:48" }
+  { "subject": "士的三个境界", "predicate": "高级", "object": "Informed citizen", "link": "/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-4/20200229_fa-kan-ci-shi-de-san-ge-jing-jie/", "date": "2020-03-02 10:13:48" },
+  { "subject": "奥卡姆剃刀", "predicate": "是一种", "object": "剃刀原理", "date": "2020-03-03 22:04:24" },
+  { "subject": "汉隆剃刀", "predicate": "是一种", "object": "剃刀原理", "date": "2020-03-03 22:06:32" },
+  { "subject": "希钦斯剃刀", "predicate": "是一种", "object": "剃刀原理", "date": "2020-03-03 22:07:38" },
+  { "subject": "格里斯剃刀", "predicate": "是一种", "object": "剃刀原理", "date": "2020-03-03 22:08:27" },
+  { "subject": "休谟剃刀", "predicate": "是一种", "object": "剃刀原理", "date": "2020-03-03 22:09:33" },
+  { "subject": "阿尔德剃刀", "predicate": "是一种", "object": "剃刀原理", "date": "2020-03-03 22:10:19" },
+  { "subject": "牛顿烈焰激光剑", "predicate": "是一种", "object": "剃刀原理", "date": "2020-03-03 22:12:52" },
+  { "subject": "牛顿烈焰激光剑", "predicate": "等同于", "object": "阿尔德剃刀", "date": "2020-03-03 22:11:14" },
+  { "subject": "波普尔证伪原则", "predicate": "是一种", "object": "剃刀原理", "date": "2020-03-03 22:12:10" },
+  { "subject": "汉隆剃刀", "predicate": "大概率", "object": "愚蠢", "date": "2020-03-03 22:14:43" },
+  { "subject": "汉隆剃刀", "predicate": "小概率", "object": "恶意", "date": "2020-03-03 22:14:57" }
 ]

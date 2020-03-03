@@ -382,5 +382,16 @@
   { "name": "士的三个境界", "category": "思想", "date": "2020-03-02 10:10:35" },
   { "name": "Stakeholder", "date": "2020-03-02 10:10:55" },
   { "name": "Player", "date": "2020-03-02 10:11:11" },
-  { "name": "Informed citizen", "date": "2020-03-02 10:10:55" }
+  { "name": "Informed citizen", "date": "2020-03-02 10:10:55" },
+  { "name": "剃刀原理", "category": "思想", "date": "2020-03-03 22:03:10" },
+  { "name": "奥卡姆剃刀", "category": "思想", "link": "/tools/knowledge-handbook/#occam's-razor", "date": "2020-03-03 22:03:34" },
+  { "name": "汉隆剃刀", "category": "思想", "link": "/tools/knowledge-handbook/#hanlon's-razor", "date": "2020-03-03 22:06:13" },
+  { "name": "希钦斯剃刀", "category": "思想", "link": "/tools/knowledge-handbook/#hitchens's-razor", "date": "2020-03-03 22:07:16" },
+  { "name": "格里斯剃刀", "category": "思想", "link": "/tools/knowledge-handbook/#grice's-razor", "date": "2020-03-03 22:08:04" },
+  { "name": "休谟剃刀", "category": "思想", "link": "/tools/knowledge-handbook/#hume's-razor", "date": "2020-03-03 22:09:16" },
+  { "name": "阿尔德剃刀", "category": "思想", "link": "/tools/knowledge-handbook/#alder's-razor", "date": "2020-03-03 22:10:01" },
+  { "name": "牛顿烈焰激光剑", "category": "思想", "link": "/tools/knowledge-handbook/#newton's-flaming-laser-sword", "date": "2020-03-03 22:10:48" },
+  { "name": "波普尔证伪原则", "category": "思想", "link": "/tools/knowledge-handbook/#popper's-falsifiability-principle", "date": "2020-03-03 22:11:42" },
+  { "name": "愚蠢", "date": "2020-03-03 22:13:52" },
+  { "name": "恶意", "date": "2020-03-03 22:14:17" }
 ]
