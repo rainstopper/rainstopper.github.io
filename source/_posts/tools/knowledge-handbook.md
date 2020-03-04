@@ -22,6 +22,9 @@ img: http://static.sunyt.site/long-zhu.jpg
 
 又称“牛顿烈焰激光剑（Newton's Flaming Laser Sword）”。
 
+![牛顿的烈焰激光剑](http://static.sunyt.site/newton%27s-flaming-laser-sword.png)
+
+出自：迈克·阿尔德（Mike Alder）—— [Newton's Flaming Laser Sword](https://philosophynow.org/issues/46/Newtons_Flaming_Laser_Sword)
 收录时间：2020.3.3
 
 
