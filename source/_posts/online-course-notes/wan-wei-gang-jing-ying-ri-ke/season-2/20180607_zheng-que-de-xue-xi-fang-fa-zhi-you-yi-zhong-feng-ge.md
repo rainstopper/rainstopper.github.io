@@ -171,4 +171,5 @@ VARK 把学习风格分成四种：视觉（visual）、听觉（aural）、读�
 [1] Cindi May, The Problem with "Learning Styles”, Scientific American, May 29, 2018.
 
 
-课程发布时间：2018.6.7
+课程作者：万维钢
+课程发布日期：2018.6.7

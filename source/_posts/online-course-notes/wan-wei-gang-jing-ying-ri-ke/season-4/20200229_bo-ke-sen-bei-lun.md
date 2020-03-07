@@ -144,4 +144,5 @@ Google 是个非常善于使用统计方法的公司，经常弄个“机器学�
 [5] Erik Bernhardsson, Norvig's claim that programming competitions correlate negatively with being good on the job, erikbern.com, 2015-04-07.
 
 
-课程发布时间：2020.2.29
+课程作者：万维钢
+课程发布日期：2020.2.29

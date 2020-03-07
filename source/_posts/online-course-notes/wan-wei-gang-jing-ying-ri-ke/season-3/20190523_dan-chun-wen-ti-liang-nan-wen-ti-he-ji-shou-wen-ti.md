@@ -136,4 +136,5 @@ summary: 《万维钢·精英日课3：单纯问题、两难问题和“棘手�
 [2] John C. Camillus, Strategy as a Wicked Problem, Harvard Business Review, May 2008.
 
 
+课程作者：万维钢
 课程发布日期：2019.5.23

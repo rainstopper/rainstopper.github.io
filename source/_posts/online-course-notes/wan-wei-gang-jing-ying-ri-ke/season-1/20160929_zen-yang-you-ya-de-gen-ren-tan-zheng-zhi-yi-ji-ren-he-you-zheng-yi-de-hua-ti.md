@@ -86,4 +86,5 @@ summary: 《万维钢·精英日课1：怎样优雅地跟人谈政治...以及�
 [1] Joseph Grenny, David Maxfield, Candace Bertotti, Chase McMillan, How to Talk Politics at Work Without Alienating People（怎样在不疏远别人的情况下谈论政治）
 
 
+课程作者：万维钢
 课程发布日期：2016.9.29
