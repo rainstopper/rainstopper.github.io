@@ -13,7 +13,7 @@ summary: 《万维钢·精英日课2：怎样“调控”快乐》课程笔记
 
 《为什么佛学是真的》中就说过这个道理。快乐总是短暂的，这是自然选择的设定。只有得不到长久的快乐，人才永远有动力去寻找快乐，才能一直为了生存和传播基因而努力奋斗。面对这个设定，佛学的办法是别太把快乐当回事儿：短暂的快乐那都是幻觉，我们活着是为了体验真实的世界。
 
-西北大学神经生物学教授英迪拉·拉曼（Indira M. Raman）于2018年3月15日在鹦鹉螺杂志上发表了一篇文章，叫《不快乐是口感清洁剂》（Unhappiness Is a Palate-Cleanser: Why it's impossible to always be happy），从脑神经科学的角度，说明了为什么快乐总是短暂的。
+西北大学神经生物学教授英迪拉·拉曼（Indira M. Raman）于 2018 年 3 月 15 日在鹦鹉螺杂志上发表了一篇文章，叫《不快乐是口感清洁剂》（Unhappiness Is a Palate-Cleanser: Why it's impossible to always be happy），从脑神经科学的角度，说明了为什么快乐总是短暂的。
 
 
 <div class="anchor" id="ji-zhi"></div>

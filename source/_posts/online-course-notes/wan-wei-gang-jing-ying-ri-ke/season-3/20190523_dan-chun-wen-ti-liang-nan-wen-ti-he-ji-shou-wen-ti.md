@@ -50,7 +50,7 @@ summary: 《万维钢·精英日课3：单纯问题、两难问题和“棘手�
 
 ## 3 棘手问题
 
-1973年，加州大学伯克利分校的两个公共政策专家，霍斯特·里特尔（Horst W.J. Rittel）和梅尔文·韦伯（Melvin M. Webber），提出一个新概念，叫“wicked problem” [[1]](#references)，被称为“棘手问题”，有时候也被翻译成“抗解问题”。
+1973 年，加州大学伯克利分校的两个公共政策专家，霍斯特·里特尔（Horst W.J. Rittel）和梅尔文·韦伯（Melvin M. Webber），提出一个新概念，叫“wicked problem” [[1]](#references)，被称为“棘手问题”，有时候也被翻译成“抗解问题”。
 
 > Wicked 一词的意思是：形容那些邪恶的、怪异的东西。
 
