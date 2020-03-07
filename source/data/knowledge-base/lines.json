@@ -493,5 +493,11 @@
   { "subject": "牛顿烈焰激光剑", "predicate": "等同于", "object": "阿尔德剃刀", "date": "2020-03-03 22:11:14" },
   { "subject": "波普尔证伪原则", "predicate": "是一种", "object": "剃刀原理", "date": "2020-03-03 22:12:10" },
   { "subject": "汉隆剃刀", "predicate": "大概率", "object": "愚蠢", "date": "2020-03-03 22:14:43" },
-  { "subject": "汉隆剃刀", "predicate": "小概率", "object": "恶意", "date": "2020-03-03 22:14:57" }
+  { "subject": "汉隆剃刀", "predicate": "小概率", "object": "恶意", "date": "2020-03-03 22:14:57" },
+  { "subject": "达·芬奇诅咒", "predicate": "描述", "object": "通才", "link": "/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-2/20180822_da-fen-qi-zu-zhou/", "date": "2020-03-07 21:49:10" },
+  { "subject": "专才", "predicate": "有利于", "object": "达·芬奇诅咒", "link": "/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-2/20180822_da-fen-qi-zu-zhou/#zhuan-cai-de-shi-jie", "date": "2020-03-07 21:50:06" },
+  { "subject": "达·芬奇诅咒", "predicate": "相关于", "object": "达·芬奇", "date": "2020-03-07 21:53:59" },
+  { "subject": "达·芬奇", "predicate": "特点", "object": "通才", "link": "/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-2/20180822_da-fen-qi-zu-zhou/", "date": "2020-03-07 21:55:28" },
+  { "subject": "达·芬奇诅咒", "predicate": "相关于", "object": "兴趣", "link": "/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-2/20180822_da-fen-qi-zu-zhou/#xing-qv-de-shen-yu-qian", "date": "2020-03-07 22:00:53" },
+  { "subject": "兴趣", "predicate": "相关于", "object": "学习", "date": "2020-03-07 22:02:35" }
 ]

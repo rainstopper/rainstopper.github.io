@@ -159,6 +159,8 @@ img: http://static.sunyt.site/long-zhu.jpg
 
 ### 达·芬奇诅咒
 
+> 指一个人像达·芬奇那样，是个全才，结果却一事无成。
+
 相关：万维钢 ——《万维钢·精英日课2：达·芬奇诅咒》[课程笔记](/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-2/20180822_da-fen-qi-zu-zhou/)
 收录时间：2020.3.7
 
