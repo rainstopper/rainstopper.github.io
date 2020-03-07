@@ -155,6 +155,14 @@ img: http://static.sunyt.site/long-zhu.jpg
 
 ## D
 
+<div class="anchor" id="the-da-vinci-curse"></div>
+
+### 达·芬奇诅咒
+
+相关：万维钢 ——《万维钢·精英日课2：达·芬奇诅咒》[课程笔记](/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-2/20180822_da-fen-qi-zu-zhou/)
+收录时间：2020.3.7
+
+
 <div class="anchor" id="duo-kan-xiao-ying"></div>
 
 ### 多看效应（Mere Exposure Effect）
