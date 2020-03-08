@@ -82,7 +82,6 @@ function search(keyword, min, max) { // 搜索
   var resultData = JSON.parse(JSON.stringify(data)); // 深拷贝，不改变 data 中的数据
 
   resultData = resultData.filter(function(item) { // 筛选满足关联数的节点
-    console.log(item.value <= parseInt(max))
     return (min === '' || item.value >= parseInt(min)) && (max === '' || item.value <= parseInt(max));
   });
 

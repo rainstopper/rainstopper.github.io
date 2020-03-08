@@ -499,5 +499,9 @@
   { "subject": "达·芬奇诅咒", "predicate": "相关于", "object": "达·芬奇", "date": "2020-03-07 21:53:59" },
   { "subject": "达·芬奇", "predicate": "特点", "object": "通才", "link": "/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-2/20180822_da-fen-qi-zu-zhou/", "date": "2020-03-07 21:55:28" },
   { "subject": "达·芬奇诅咒", "predicate": "相关于", "object": "兴趣", "link": "/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-2/20180822_da-fen-qi-zu-zhou/#xing-qv-de-shen-yu-qian", "date": "2020-03-07 22:00:53" },
-  { "subject": "兴趣", "predicate": "相关于", "object": "学习", "date": "2020-03-07 22:02:35" }
+  { "subject": "兴趣", "predicate": "相关于", "object": "学习", "date": "2020-03-07 22:02:35" },
+  { "subject": "米哈里·契克森米哈赖", "predicate": "提出", "object": "心流", "date": "2020-03-08 19:41:36" },
+  { "subject": "心流", "predicate": "是一种", "object": "状态", "date": "2020-03-08 19:43:03" },
+  { "subject": "对状态有强认知", "predicate": "相关于", "object": "状态", "date": "2020-03-08 19:43:22" },
+  { "subject": "刻意练习", "predicate": "有利于", "object": "心流", "link": "/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-2/20171124_qi-ke-sen-mi-ha-lai-de-xing-fu-ke/#xin-liu-de-hou-xu-yan-jiu", "date": "2020-03-08 20:46:48" }
 ]
