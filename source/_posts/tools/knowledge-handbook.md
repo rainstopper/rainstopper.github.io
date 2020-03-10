@@ -297,6 +297,16 @@ img: http://static.sunyt.site/long-zhu.jpg
 
 ## K
 
+<div class="anchor" id="carl-gustav-jung"></div>
+
+### 卡尔·荣格
+
+> 卡尔·荣格（Carl Gustav Jung）是瑞士的心理学家，是心理分析学派的创始人。他本是心理学家弗洛伊德最器重的弟子，弗洛伊德甚至称他为“王储”，但因为反对弗洛伊德的泛性论等理论，也因为持有神秘主义倾向等，而和弗洛伊德决裂。
+
+相关：武志红 ——《武志红的心理学课：潜意识就是命运》[课程笔记](/online-course-notes/wu-zhi-hong-de-xin-li-xue-ke/20170704_qian-yi-shi-jiu-shi-ming-yun/)
+收录时间：2020.3.9
+
+
 <div class="anchor" id="kang-nai-er-bi-ji-fa"></div>
 
 ### 康奈尔笔记法
