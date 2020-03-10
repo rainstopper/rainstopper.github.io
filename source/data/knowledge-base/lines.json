@@ -503,5 +503,8 @@
   { "subject": "米哈里·契克森米哈赖", "predicate": "提出", "object": "心流", "date": "2020-03-08 19:41:36" },
   { "subject": "心流", "predicate": "是一种", "object": "状态", "date": "2020-03-08 19:43:03" },
   { "subject": "对状态有强认知", "predicate": "相关于", "object": "状态", "date": "2020-03-08 19:43:22" },
-  { "subject": "刻意练习", "predicate": "有利于", "object": "心流", "link": "/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-2/20171124_qi-ke-sen-mi-ha-lai-de-xing-fu-ke/#xin-liu-de-hou-xu-yan-jiu", "date": "2020-03-08 20:46:48" }
+  { "subject": "刻意练习", "predicate": "有利于", "object": "心流", "link": "/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-2/20171124_qi-ke-sen-mi-ha-lai-de-xing-fu-ke/#xin-liu-de-hou-xu-yan-jiu", "date": "2020-03-08 20:46:48" },
+  { "subject": "内在想象", "predicate": "影响", "object": "外在命运", "link": "/online-course-notes/wu-zhi-hong-de-xin-li-xue-ke/20170704_qian-yi-shi-jiu-shi-ming-yun/", "date": "2020-03-10 11:34:23" },
+  { "subject": "内在想象", "predicate": "包括", "object": "意识", "link": "/online-course-notes/wu-zhi-hong-de-xin-li-xue-ke/20170704_qian-yi-shi-jiu-shi-ming-yun/", "date": "2020-03-10 13:31:49" },
+  { "subject": "内在想象", "predicate": "包括", "object": "潜意识", "link": "/online-course-notes/wu-zhi-hong-de-xin-li-xue-ke/20170704_qian-yi-shi-jiu-shi-ming-yun/", "date": "2020-03-10 13:31:57" }
 ]
