@@ -677,7 +677,7 @@ loadData(function(response) {
 });
 ```
 
-## 相关链接
+##### 相关链接
 
 知识图谱[传送门](/tools/knowledge-graph/)
 
