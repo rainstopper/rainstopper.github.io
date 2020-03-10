@@ -329,7 +329,7 @@ mathjax: true
 
 ### finney
 
-> [以太币](#ether)的货币单位。$ 10^{15} $ finney = 1 ether。
+> [以太币](#ether)的货币单位。$ 10 ^ {15} $ finney = 1 ether。
 
 相关：《精通以太坊》P.14
 收录时间：2020.2.10
@@ -862,7 +862,7 @@ mathjax: true
 
 ### szabo
 
-> [以太币](#ether)的货币单位。$ 10^{12} $ szabo = 1 ether。
+> [以太币](#ether)的货币单位。$ 10 ^ {12} $ szabo = 1 ether。
 
 相关：《精通以太坊》P.20
 收录时间：2020.2.11
@@ -959,7 +959,7 @@ mathjax: true
 
 ### wei
 
-> [以太币](#ether)最小货币单位。$ 10^{18} $ wei = 1 ether。
+> [以太币](#ether)最小货币单位。$ 10 ^ {18} $ wei = 1 ether。
 
 相关：《精通以太坊》P.21
 收录时间：2020.2.11
