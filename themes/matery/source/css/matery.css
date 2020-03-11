@@ -60,6 +60,10 @@
   background-color: #ccc;
 } */
 
+html {
+    font-family: not specified;
+}
+
 body {
     background-color: #eaeaea;
     margin: 0;
