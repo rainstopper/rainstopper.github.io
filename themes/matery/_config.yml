@@ -491,8 +491,8 @@ subtitle:
   startDelay: 300 # 开始延迟
   typeSpeed: 100 # 打字速度
   backSpeed: 50 # 删除速度
-  sub1: 身为战斗民族的骄傲，请与我一战高下！
-  sub2: As the pride of the pugnacious nation, I'm always ready for the battle!
+  sub1: 学习和修正的最快方法，是和那些提出不同意见且可信的人进行开诚布公的对话。
+  sub2: Having open-minded conversations with believable people who disagree with you is the quickest way to get an education and to increase your probability of being right.
 
 # 手机二级菜单.
 navMenu:
