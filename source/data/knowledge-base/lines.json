@@ -506,5 +506,9 @@
   { "subject": "刻意练习", "predicate": "有利于", "object": "心流", "link": "/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-2/20171124_qi-ke-sen-mi-ha-lai-de-xing-fu-ke/#xin-liu-de-hou-xu-yan-jiu", "date": "2020-03-08 20:46:48" },
   { "subject": "内在想象", "predicate": "影响", "object": "外在命运", "link": "/online-course-notes/wu-zhi-hong-de-xin-li-xue-ke/20170704_qian-yi-shi-jiu-shi-ming-yun/", "date": "2020-03-10 11:34:23" },
   { "subject": "内在想象", "predicate": "包括", "object": "意识", "link": "/online-course-notes/wu-zhi-hong-de-xin-li-xue-ke/20170704_qian-yi-shi-jiu-shi-ming-yun/", "date": "2020-03-10 13:31:49" },
-  { "subject": "内在想象", "predicate": "包括", "object": "潜意识", "link": "/online-course-notes/wu-zhi-hong-de-xin-li-xue-ke/20170704_qian-yi-shi-jiu-shi-ming-yun/", "date": "2020-03-10 13:31:57" }
+  { "subject": "内在想象", "predicate": "包括", "object": "潜意识", "link": "/online-course-notes/wu-zhi-hong-de-xin-li-xue-ke/20170704_qian-yi-shi-jiu-shi-ming-yun/", "date": "2020-03-10 13:31:57" },
+  { "subject": "金融学第一定理", "predicate": "指的是", "object": "时间的价值", "link": "/online-course-notes/xiang-shuai-de-bei-da-jin-rong-xue-ke/20171211_001-yi-wan-mei-jin-zeng-pin-li-de-mi-mi/", "date": "2020-03-12 13:25:55" },
+  { "subject": "金融学第二定理", "predicate": "指的是", "object": "资金的聚集", "link": "/online-course-notes/xiang-shuai-de-bei-da-jin-rong-xue-ke/20201712_002-nan-bei-zhan-zheng-zhong-de-di-er-zhan-chang/", "date": "2020-03-12 13:26:34" },
+  { "subject": "金融学第一定理", "predicate": "相关于", "object": "金融学", "date": "2020-03-12 13:27:25" },
+  { "subject": "金融学第二定理", "predicate": "相关于", "object": "金融学", "date": "2020-03-12 13:27:54" }
 ]

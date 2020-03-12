@@ -69,3 +69,7 @@ $$ 10000 \div \left( 1 + 0.08 \right) ^ {30} \approx 994 $$
 
 课程作者：香帅
 课程发布时间：2017.12.11
+
+##### 相关链接
+
+下一篇：[资金的聚集](/online-course-notes/xiang-shuai-de-bei-da-jin-rong-xue-ke/20201712_002-nan-bei-zhan-zheng-zhong-de-di-er-zhan-chang/)
