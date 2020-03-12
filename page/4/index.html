@@ -1,0 +1,726 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="精神時光屋">
+    <meta name="description" content="精神時光屋">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>精神時光屋</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    
+    <script src="/libs/jquery/jquery.min.js"></script>
+    
+<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper head-container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.svg" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">精神時光屋</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.svg" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">精神時光屋</div>
+        <div class="logo-desc">
+            
+            
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+    <div class="bg-cover pd-header about-cover">
+    <div class="container">
+    <div class="row">
+    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+        <div class="brand">
+            <div class="title center-align">
+                
+                雨停 の 精神時光屋
+                
+            </div>
+
+            <div class="description center-align">
+                
+                <span id="subtitle"></span>
+                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+                <script>
+                    var typed = new Typed("#subtitle", {
+                        strings: ['学习和修正的最快方法，是和那些提出不同意见且可信的人进行开诚布公的对话。','Having open-minded conversations with believable people who disagree with you is the quickest way to get an education and to increase your probability of being right.'],
+                        startDelay: 300,
+                        typeSpeed: 100,
+                        loop: true,
+                        backSpeed: 50,
+                        showCursor: true
+                    });
+                </script>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    // 每天切换 banner 图.  Switch banner image every day.
+    $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay() + '.jpg)');
+</script>
+
+
+    </div>
+</div>
+
+
+<main class="content">
+
+    
+    <div id="indexCard" class="index-card">
+        <div class="container">
+            <div class="card">
+                <div class="card-content">
+                    
+                        <div class="dream">
+    
+    <div class="title center-align">
+        <i class="far fa-lightbulb"></i>&nbsp;&nbsp;欢迎光临
+    </div>
+    
+    <div class="row">
+        <div class="col l8 offset-l2 m10 offset-m1 s10 offset-s1 center-align text">
+            你现在身处于 <b>雨停 の 精神時光屋</b>，位于神殿之上。这是一个神秘时空中的修炼场所 —— 在这里的一年只相当于外界的一天。这里的食物、水和房间样样俱全，有着和地球一样广阔的空间。但你可得小心了，这儿空气稀薄，闷热异常，重力超过平常的10倍；意志薄弱和精神不集中者容易出现幻觉。<b>此处修炼，应当专注。</b>
+        </div>
+    </div>
+</div>
+                    
+
+                    
+                        
+
+<link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<div class="music-player">
+    
+    <div class="title center-align">
+        <i class="fas fa-music"></i>&nbsp;&nbsp;听听音乐
+    </div>
+    
+    <div class="row">
+        <div class="col l8 offset-l2 m10 offset-m1 s12">
+            <div id="aplayer" class="music"></div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script>
+$(function () {
+    new APlayer({
+        container: document.getElementById('aplayer'),
+        fixed: 'false' === 'true',
+        autoplay: 'true' === 'true',
+        theme: '#E88C30',
+        loop: 'all',
+        order: 'list',
+        preload: 'auto',
+        volume: Number('0.7'),
+        listFolded: 'false' === 'true',
+        listMaxHeight: '',
+        lrcType: 1,
+        audio: eval([{"name":"我的名字","artist":"焦迈奇","url":"http://static.sunyt.site/music_wo-de-ming-zi_jiao-mai-qi.mp3","cover":"http://static.sunyt.site/music-cover_wo-de-ming-zi_jiao-mai-qi.jpg","lrc":"[ti:我的名字][ar:焦迈奇][al:我的名字][by:][offset:0][00:00.10]我的名字 - 焦迈奇[00:00.20]词：焦迈奇[00:00.30]曲：焦迈奇[00:00.40]编曲：李天衣/许蔚天[00:00.50]制作人：许蔚天[00:00.60]鼓：Hayato[00:00.70]贝斯：崔文正[00:00.80]吉他：周坤[00:00.90]录音师：李卓@TC Faders[00:01.00]混音师：李卓@TC Faders[00:01.10]音频编辑：李卓@TC Faders[00:01.20]母带制作：周天澈@TC Faders[00:01.30]录音棚：55 TEC Studio[00:01.31]拜托你轻声重着我的名字[00:09.37]我学大人的语气应着你[00:17.67]庆幸自己没跑太久[00:20.72]还活在弹丸之地[00:24.47]纯粹得以为世界等同于你[00:50.72]拜托你大声怒斥我的名字[00:57.47]我要赌气向远方跑去[01:04.35]如果没有这些声音[01:07.03]我还搞不清[01:09.89]多远才算是离开的距离[01:17.60]在死缠烂打的青春日子里[01:24.51]无非挣扎得也就那么几个问题[01:34.46]我习惯在包里藏一瓶百无聊赖[01:41.04]打发人间的白云和苍狗[01:43.59]设计睡着的未来[01:48.11]我庆幸那些难堪正中我的下怀[01:54.88]让我怀疑我的存在[01:57.31]最后笑了起来[02:16.49]拜托你轻声重着我的名字[02:23.10]我学大人的语气应着你[02:30.07]庆幸自己没跑太久[02:32.75]还活在弹丸之地[02:35.66]纯粹得以为世界等同于你[02:43.13]我习惯在包里藏一瓶百无聊赖[02:49.75]打发人间的白云和苍狗[02:52.16]设计睡着的未来[02:56.76]我庆幸那些难堪正中我的下怀[03:03.60]让我怀疑我的存在[03:05.87]最后笑了起来[03:24.96]我会懂得舍得记得[03:26.39]你是我是你的[03:27.88]我会懂得舍得记得[03:29.60]你是我是你的[03:31.28]我会懂得舍得记得[03:33.01]你是我是你的[03:34.73]我会懂得舍得记得[03:38.27]我会懂得舍得记得[03:39.90]你是我是你的[03:41.56]我会懂得舍得记得[03:43.54]你是我是你的[03:44.99]我会懂得舍得记得h[03:46.79]你是我是你的[03:48.45]我会懂得舍得记得[03:54.37]拜托你轻声重着"},{"name":"我们走了一光年","artist":"史俊威","url":"http://static.sunyt.site/music_wo-men-zou-le-yi-guang-nian_shi-jun-wei.mp3","cover":"http://static.sunyt.site/music-cover_qiu-gu-shi_su-da-lv.jpg","lrc":"[ti:我们走了一光年][ar:史俊威][al:我们走了一光年][by:][offset:0][00:01.84]我们走了一光年[00:06.74]词：吴青峰 曲：史俊威[00:11.16]演唱：苏打绿[00:14.47]你的面容远离了世界尘垢[00:21.14]从来没有天崩塌的担忧[00:27.80]皮肤像冰雪将融[00:31.58]笑起来处子般通红[00:34.83]看人间的失落[00:38.44]你仰了仰头[00:40.49]然后这么说[00:42.86]那未知的灾祸[00:45.39]想得比天地还要重[00:48.81]却从来没有人能够[00:52.13]知道该怎么躲[00:55.46]你哼著[00:56.32]啦答答啦啦答答唔喔喔[01:22.92]我慢慢走[01:26.70]经过了冷言热捧[01:29.99]大多时候[01:33.40]难免被人左右[01:36.08]唱出自然的节奏[01:40.20]流入了世俗的耳朵[01:43.47]回到深林之后[01:46.87]我叹了叹气[01:48.98]然后这么说[01:51.27]那拥有的幸福[01:53.98]看得比羽毛还轻薄[01:57.51]却从来没有人能够[02:00.89]知道如何承受[02:04.05]我哼著 啦答答啦啦答答唔喔喔[02:28.65]走一光年相濡以沫不如相忘却[02:35.35]什么眷恋不都殊途同归[02:42.23]谁也都会安睡在天地的大房间[02:49.27]啦答答啦啦答答唔喔喔[03:05.42]十日为叶化成蝶[03:08.42]千日为鸟终成人[03:11.89]一朝惚恍成灰尘 婴儿 无极[03:19.14]从天地来到世界[03:21.93]在天地游览一遍[03:25.49]回天地这个起点[03:30.30]过客一只"},{"name":"11887","artist":"谢春花","url":"http://static.sunyt.site/music_11887_xie-chun-hua.mp3","cover":"http://static.sunyt.site/music-cover_11887_xie-chun-hua.jpg","lrc":"[ti:11887][ar:谢春花][al:11887][by:][offset:0][00:01.60]11887[00:02.91]作词：谢知非[00:03.60]作曲：谢知非[00:04.34]制作人：谢知非[00:04.98]编曲：小皮[00:05.70]吉他：卢山[00:06.28]键盘：张利波[00:07.05]贝司：倪涛[00:07.54]鼓：陈凯[00:08.06]录音：上海时间音乐工作室[00:08.49]录音师：靳金陵[00:08.92]混音/后期：小皮[00:18.60]白色瀑布 绿光森林[00:22.57]一起作画 在尤克里里[00:26.71]粉色霞光 大海辰星[00:30.95]你很细心贴出我姓名[00:34.98]不小心吃上散伙饭[00:38.05]很难描述此刻心情[00:42.95]雨忽然下直到天明[00:46.88]这么难过怎么才行[00:51.50]你说我们既然欢欣地相遇[00:55.89]也要欢欣地送行[00:59.84]我说你要记住甜蜜的曾经[01:04.26]莫说前路太难行[01:08.23]今天明天像是最后一天[01:12.36]下次相见何时何景[01:16.24]今天明天不是最后一天[01:20.98]有你在心[01:24.61]每天都崭新[01:42.19]偶然迷糊 惹得瞠目[01:45.80]宠溺的笑 漏半拍心跳[01:50.05]黯自神伤 失落扫兴[01:54.33]你的拥抱是蜜饯良药[01:58.46]不能每天都好心情[02:01.64]港口也会风平浪静[02:05.75]大雨之后更盼天晴[02:10.24]转过头身旁还是你[02:15.02]你说我们既然欢欣地相遇[02:19.40]也要欢欣地送行[02:23.11]我说你要记住甜蜜的曾经[02:27.60]莫说前路太难行[02:31.63]今天明天像是最后一天[02:35.75]下次相见何时何景[02:40.00]今天明天不是最后一天[02:44.27]有你在心[02:47.34]每天都崭新[03:05.56]一起作画[03:07.76]画在尤克里里[03:12.28]你的粉红霞光[03:16.52]我的绿光森林[03:38.62]你是如此细心[03:41.56]贴出我的姓名[03:45.78]My name is Rae[03:50.45]And you're my error[03:55.50]I'm your ray[03:56.50]I'm your ray[03:57.50]You'e my error[04:03.96]I'm your ray[04:05.53]I'm your ray[04:06.56]You'e my error[04:12.53]I'm your ray[04:13.53]I'm your ray[04:14.60]You're my error[04:20.91]I'm your ray[04:21.67]I'm your ray[04:22.86]You're my error[04:25.17]You're my little error"}])
+    });
+});
+</script>
+
+                    
+
+                    
+
+                    
+                    <div id="recommend-sections" class="recommend">
+                        
+
+
+
+
+
+<div class="title"><i class="far fa-thumbs-up"></i>&nbsp;&nbsp;推荐文章</div>
+
+<div class="row">
+
+    
+    
+    <div class="col s12 m6" >
+        <div class="post-card" style="background-image: url('http://static.sunyt.site/long-zhu-lei-da.gif')">
+            <div class="post-body">
+                <div class="post-categories">
+                    
+                        
+                            <a href="/categories/%E4%B8%87%E8%83%BD%E8%83%B6%E5%9B%8A/" class="category">万能胶囊</a>
+                        
+                    
+                </div>
+                <a href="/tools/knowledge-graph/">
+                    <h3 class="post-title">龙珠雷达</h3>
+                </a>
+                <p class="post-description">
+                    
+                        知识图谱
+                    
+                </p>
+                <a href="/tools/knowledge-graph/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FF5E3A 0%, #FF2A68 100%)" target="_blank">
+                    <i class="icon far fa-eye fa-fw"></i>阅读更多
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="col s12 m6" >
+        <div class="post-card" style="background-image: url('http://static.sunyt.site/long-zhu-di-tu.jpg')">
+            <div class="post-body">
+                <div class="post-categories">
+                    
+                        
+                            <a href="/categories/%E4%B8%87%E8%83%BD%E8%83%B6%E5%9B%8A/" class="category">万能胶囊</a>
+                        
+                    
+                </div>
+                <a href="/tools/map/">
+                    <h3 class="post-title">龙珠地图</h3>
+                </a>
+                <p class="post-description">
+                    
+                        给你一份游览龙珠世界的指南
+                    
+                </p>
+                <a href="/tools/map/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #EF4DB6 0%, #C643FC 100%)" target="_blank">
+                    <i class="icon far fa-eye fa-fw"></i>阅读更多
+                </a>
+            </div>
+        </div>
+    </div>
+    
+
+</div>
+
+
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    
+
+    
+
+    <!-- 所有文章卡片 -->
+    <article id="articles" class="container articles">
+        <div class="row article-row">
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/tools/knowledge-handbook/">
+                        <div class="card-image">
+                            
+                            <img src="http://static.sunyt.site/long-zhu.jpg" class="responsive-img" alt="龙珠">
+                            
+                            <span class="card-title">龙珠</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        
+                        <div class="summary">
+                        
+                            知识手册
+                        
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-23
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E4%B8%87%E8%83%BD%E8%83%B6%E5%9B%8A/" class="post-category">
+                                    万能胶囊
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E7%9F%A5%E8%AF%86/">
+                            <span class="chip bg-color">知识</span>
+                        </a>
+                        
+                        <a href="/tags/%E6%89%8B%E5%86%8C/">
+                            <span class="chip bg-color">手册</span>
+                        </a>
+                        
+                        <a href="/tags/%E6%A6%82%E5%BF%B5/">
+                            <span class="chip bg-color">概念</span>
+                        </a>
+                        
+                        <a href="/tags/%E8%AF%8D%E6%9D%A1/">
+                            <span class="chip bg-color">词条</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </article>
+
+</main>
+
+
+<div class="container paging">
+    <div class="row">
+        <div class="col s6 m4 l4">
+            
+            <a href="/page/3/"
+               class="left btn-floating btn-large waves-effect waves-light bg-color">
+                <i class="fas fa-angle-left"></i>
+            </a>
+            
+        </div>
+        <div class="page-info col m4 l4 hide-on-small-only">
+            <div class="center-align b-text-gray">4 / 4</div>
+        </div>
+        <div class="col s6 m4 l4">
+            
+            <a class="right btn-floating btn-large disabled">
+                <i class="fas fa-angle-right"></i>
+            </a>
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+    <footer class="page-footer bg-color">
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="https://www.sunyt.site" target="_blank">雨停</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                <i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2020";
+                    var startMonth = "1";
+                    var startDate = "23";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+            <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" />
+                <a href="http://www.beian.miit.gov.cn/" target="_blank">浙ICP备20003707号</a>
+            </span>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/rainstopper" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:501705246@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=501705246" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 501705246" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+    <script type="text/javascript" color="232, 140, 48"
+        pointColor="232, 140, 48" opacity='0.9'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
+
+    
+    
+    <script type="text/javascript" size="150" alpha='0.6'
+        zIndex="-1" src="/libs/background/ribbon-refresh.min.js" async="async"></script>
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
