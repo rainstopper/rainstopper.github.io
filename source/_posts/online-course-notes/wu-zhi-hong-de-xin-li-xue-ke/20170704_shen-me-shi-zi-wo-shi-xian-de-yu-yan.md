@@ -77,4 +77,4 @@ summary: 《武志红的心理学课：什么是自我实现的预言？》课�
 
 ##### 相关链接
 
-上一篇：[潜意识就是命运](/online-course-notes/wu-zhi-hong-de-xin-li-xue-ke/20170704_qian-yi-shi-jiu-shi-ming-yun/)
+上一篇：[《潜意识就是命运》](/online-course-notes/wu-zhi-hong-de-xin-li-xue-ke/20170704_qian-yi-shi-jiu-shi-ming-yun/)

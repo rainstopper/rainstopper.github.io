@@ -121,4 +121,4 @@ summary: 《武志红的心理学课：潜意识就是命运》课程笔记
 
 ##### 相关链接
 
-下一篇：[自我实现的预言](/online-course-notes/wu-zhi-hong-de-xin-li-xue-ke/20170704_shen-me-shi-zi-wo-shi-xian-de-yu-yan/)
+下一篇：[《自我实现的预言》](/online-course-notes/wu-zhi-hong-de-xin-li-xue-ke/20170704_shen-me-shi-zi-wo-shi-xian-de-yu-yan/)
