@@ -193,6 +193,18 @@ img: http://static.sunyt.site/long-zhu.jpg
 
 ## G
 
+<div class="anchor" id="ge-zhi"></div>
+
+### 搁置
+
+心理学中，用于咨询的一种对话技术。
+
+> 搁置即，我们常常陷入矛盾思考中 —— 假如这样会怎样，假如那样又会怎样。这会让思考变得混沌。这时可以这样问：假设某个问题彻底没有了，那你会怎样？
+
+相关：武志红 ——《武志红的心理学课：潜意识就是命运》[课程笔记](/online-course-notes/wu-zhi-hong-de-xin-li-xue-ke/20170704_qian-yi-shi-jiu-shi-ming-yun/)
+收录时间：2020.3.13
+
+
 <div class="anchor" id="grice's-razor"></div>
 
 ### 格里斯剃刀（Grice's razor）
@@ -292,6 +304,20 @@ img: http://static.sunyt.site/long-zhu.jpg
 出自：赫尔曼·艾宾浩斯（Hermann Ebbinghaus，德国心理学家）
 相关：万维钢 ——《万维钢·精英日课1：忘记是为了更好的记住》[课程笔记](/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-1/20160831_wang-ji-shi-wei-le-geng-hao-de-ji-zhu/)
 收录时间：2020.2.1
+
+
+<div class="anchor" id="ju-ti-hua"></div>
+
+### 具体化
+
+心理学中，用于咨询的一种对话技术。
+
+> 具体化即，你必须搞清楚一个人话语中的那些细节，你才能具体知道对方是什么意思，因为词语是非常容易含糊和有歧义的。这是咨询中最常使用的技术之一。
+
+例如，你可以请对方交代时间、地点、人物等线索，以及其中的想法、情感、情绪与身体感受，也可以非常简单地说：“你刚才那句话具体是什么意思呢？请多说说吧。”
+
+相关：武志红 ——《武志红的心理学课：潜意识就是命运》[课程笔记](/online-course-notes/wu-zhi-hong-de-xin-li-xue-ke/20170704_qian-yi-shi-jiu-shi-ming-yun/)
+收录时间：2020.3.13
 
 ---
 
