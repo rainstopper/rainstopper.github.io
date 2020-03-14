@@ -117,6 +117,18 @@ search:
   path: search.xml
   field: post
 
+# hexo renderer marked
+marked:
+  gfm: true
+  pedantic: false
+  breaks: true
+  smartLists: true
+  smartypants: true
+  modifyAnchors: ''
+  autolink: true
+  sanitizeUrl: false
+  headerIds: true
+
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:

@@ -449,6 +449,19 @@ img: http://static.sunyt.site/long-zhu.jpg
 出自：王煜全 ——《中国优势》P.54
 收录时间：2020.1.23
 
+
+<div class="anchor" id="moore's-law"></div>
+
+### 摩尔定律（Moore's Law）
+
+> 当价格不变时，集成电路上可容纳的元器件的数目，约每隔18-24个月便会增加一倍，性能也将提升一倍。
+
+这一定律揭示了信息技术进步的速度。尽管这种趋势已经持续了超过半个世纪，摩尔定律仍应该被认为是观测或推测，而不是一个物理或自然法。
+
+出自：戈登·摩尔（Gordon Moore）
+相关：吴军 —— 《吴军的谷歌方法论：第001封信丨职业天花板来自认知的局限性》[课程笔记](/online-course-notes/wu-jun-de-gu-ge-fang-fa-lun/20171127_di-001-feng-xin-zhi-ye-tian-hua-ban-lai-zi-ren-zhi-de-ju-xian-xing/)
+收录时间：2020.3.14
+
 ---
 
 ## N
