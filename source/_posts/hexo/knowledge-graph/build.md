@@ -3,7 +3,7 @@ title: 构建知识图谱
 date: 2020-02-02 11:50:48
 categories:
 - [精神时光屋]
-tags: [知识, 图谱]
+tags: [知识图谱]
 summary: 描述知识图谱的构建过程
 img: http://static.sunyt.site/desk_20200202120008.jpg
 ---

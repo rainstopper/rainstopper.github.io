@@ -3,7 +3,7 @@ title: 知识图谱支持搜索
 date: 2020-02-07 18:41:13
 categories:
 - [精神时光屋]
-tags: [知识, 图谱, 优化]
+tags: [知识图谱, 搜索]
 summary: 知识图谱优化 —— 支持搜索
 img: http://static.sunyt.site/magnifier_20200207185342.jpg
 ---
