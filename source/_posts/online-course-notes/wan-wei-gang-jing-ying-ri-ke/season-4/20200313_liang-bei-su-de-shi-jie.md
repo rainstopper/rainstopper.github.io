@@ -146,7 +146,7 @@ summary: 《万维钢·精英日课4：两倍速的世界》课程笔记
 
 [2] CLIVE THOMPSON, If You Want to Learn Faster, Overclock Your Audio and Video, wired.com, 02.11.17.
 
-[3] de\'Sperati, C., Baud Bovy, G. Low perceptual sensitivity to altered video speed in viewing a soccer match. Sci Rep 7, 15379 (2017). https://doi.org/10.1038/s41598-017-15619-8  
+[3] de'Sperati, C., Baud Bovy, G. Low perceptual sensitivity to altered video speed in viewing a soccer match. Sci Rep 7, 15379 (2017). https://doi.org/10.1038/s41598-017-15619-8  
 
 [4] Foulke, E., & Sticht, T. G. (1969). Review of research on the intelligibility and comprehension of accelerated speech. Psychological Bulletin, 72(1), 50–62. https://doi.org/10.1037/h0027575
 
