@@ -269,16 +269,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E7%9F%A5%E8%AF%86/">
-                                <span class="chip bg-color">知识</span>
-                            </a>
-                        
-                            <a href="/tags/%E5%9B%BE%E8%B0%B1/">
-                                <span class="chip bg-color">图谱</span>
-                            </a>
-                        
                             <a href="/tags/%E8%81%94%E7%B3%BB/">
                                 <span class="chip bg-color">联系</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/">
+                                <span class="chip bg-color">知识图谱</span>
                             </a>
                         
                     </div>
@@ -334,7 +330,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h5 id="持续构建的知识图谱"><a href="#持续构建的知识图谱" class="headerlink" title="持续构建的知识图谱"></a>持续构建的知识图谱</h5><div class="graph-container" style="height: 520px;"> <!-- 关系图容器 -->
+                <div class="graph-container" style="height: 550px;"> <!-- 关系图容器 -->
   <div id="graph" style="height: 100%;"></div> <!-- 关系图 -->
   <table class="search-tool"> <!-- 搜索工具 -->
     <tr>
@@ -526,8 +522,12 @@ $(function() {
     });
 
     option = {
+      title: {
+        text: '知识图谱'
+      },
       legend: {
         type: 'scroll',
+        top: 30,
         left: 0,
         orient: 'vertical',
         data: legends
@@ -554,7 +554,7 @@ $(function() {
         force: {
           edgeLength: 30,
           repulsion: 50,
-          gravity: 0.5
+          gravity: .56
         },
         roam: true,
         draggable: true,
@@ -601,7 +601,7 @@ $(function() {
 
   // 页面自动滚动至合适位置
   $('html, body').animate({
-    scrollTop: 250
+    scrollTop: 240
   }, 2000);
 
   // 按关键字搜索
@@ -816,16 +816,12 @@ $(function() {
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E7%9F%A5%E8%AF%86/">
-                                    <span class="chip bg-color">知识</span>
-                                </a>
-                            
-                                <a href="/tags/%E5%9B%BE%E8%B0%B1/">
-                                    <span class="chip bg-color">图谱</span>
-                                </a>
-                            
                                 <a href="/tags/%E8%81%94%E7%B3%BB/">
                                     <span class="chip bg-color">联系</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/">
+                                    <span class="chip bg-color">知识图谱</span>
                                 </a>
                             
                         </div>
