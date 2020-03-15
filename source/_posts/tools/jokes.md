@@ -2,7 +2,7 @@
 title: 波子汽水
 date: 2020-01-28 13:28:15
 categories:
-- [吧台]
+- [万能胶囊]
 tags: [搞笑段子]
 summary: 快乐的源泉
 img: http://static.sunyt.site/bo-zi-qi-shui.jpg
