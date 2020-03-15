@@ -61,8 +61,10 @@ summary: 《香帅的北大金融学课：002｜南北战争中的第二战场�
 
 
 课程作者：香帅
-课程发布时间：2017.12.11
+课程发布时间：2017.12.12
 
 ##### 相关链接
 
 上一篇：[《时间的价值》](/online-course-notes/xiang-shuai-de-bei-da-jin-rong-xue-ke/20171211_001-yi-wan-mei-jin-zeng-pin-li-de-mi-mi/)
+
+下一篇：[《利用金融抵御风险》](/online-course-notes/xiang-shuai-de-bei-da-jin-rong-xue-ke/20171213_003-xian-dai-ren-ru-he-di-yu-feng-xian/)

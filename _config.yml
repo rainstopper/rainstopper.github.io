@@ -117,6 +117,10 @@ search:
   path: search.xml
   field: post
 
+# hexo-renderer-marked插件配置
+marked:
+  smartypants: false
+
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
