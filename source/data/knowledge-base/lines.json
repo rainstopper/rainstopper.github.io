@@ -518,5 +518,12 @@
   { "subject": "计算机思维", "predicate": "有利于", "object": "认知的量级", "link": "/online-course-notes/wu-jun-de-gu-ge-fang-fa-lun/20171127_di-001-feng-xin-zhi-ye-tian-hua-ban-lai-zi-ren-zhi-de-ju-xian-xing/", "date": "2020-03-14 21:02:18" },
   { "subject": "计算机思维", "predicate": "是一种", "object": "思维", "date": "2020-03-14 21:02:41" },
   { "subject": "未来视角", "predicate": "有利于", "object": "计算机思维", "link": "/online-course-notes/wu-jun-de-gu-ge-fang-fa-lun/20171127_di-001-feng-xin-zhi-ye-tian-hua-ban-lai-zi-ren-zhi-de-ju-xian-xing/#wei-lai-shi-jiao", "date": "2020-03-14 22:03:39" },
-  { "subject": "内心董事会", "predicate": "包括", "object": "未来视角", "link": "/online-course-notes/luo-ji-si-wei/season-7/20190528_zen-me-chu-li-ji-shou-wen-ti/", "date": "2020-03-14 22:05:22" }
+  { "subject": "内心董事会", "predicate": "包括", "object": "未来视角", "link": "/online-course-notes/luo-ji-si-wei/season-7/20190528_zen-me-chu-li-ji-shou-wen-ti/", "date": "2020-03-14 22:05:22" },
+  { "subject": "金融工具", "predicate": "体现", "object": "时间的价值", "link": "/online-course-notes/xiang-shuai-de-bei-da-jin-rong-xue-ke/20171211_001-yi-wan-mei-jin-zeng-pin-li-de-mi-mi/", "date": "2020-03-15 22:03:22" },
+  { "subject": "金融工具", "predicate": "有利于", "object": "资金的聚集", "link": "/online-course-notes/xiang-shuai-de-bei-da-jin-rong-xue-ke/20201712_002-nan-bei-zhan-zheng-zhong-de-di-er-zhan-chang/", "date": "2020-03-15 22:03:53" },
+  { "subject": "金融工具", "predicate": "有利于", "object": "抵御风险", "link": "/online-course-notes/xiang-shuai-de-bei-da-jin-rong-xue-ke/20171213_003-xian-dai-ren-ru-he-di-yu-feng-xian/", "date": "2020-03-15 22:04:24" },
+  { "subject": "金融工具", "predicate": "包括", "object": "保险", "date": "2020-03-15 22:06:13" },
+  { "subject": "金融工具", "predicate": "包括", "object": "股票", "date": "2020-03-15 22:06:31" },
+  { "subject": "金融工具", "predicate": "包括", "object": "风投", "date": "2020-03-15 22:06:42" },
+  { "subject": "金融工具", "predicate": "包括", "object": "创投", "date": "2020-03-15 22:06:50" }
 ]
