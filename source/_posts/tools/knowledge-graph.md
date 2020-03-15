@@ -3,16 +3,14 @@ title: 龙珠雷达
 date: 2020-02-01 11:14:48
 categories:
 - [万能胶囊]
-tags: [知识, 图谱, 联系]
+tags: [知识图谱, 联系]
 summary: 知识图谱
 img: http://static.sunyt.site/long-zhu-lei-da.gif
 top: true
 toc: false
 ---
 
-##### 持续构建的知识图谱
-
-<div class="graph-container" style="height: 520px;"> <!-- 关系图容器 -->
+<div class="graph-container" style="height: 550px;"> <!-- 关系图容器 -->
   <div id="graph" style="height: 100%;"></div> <!-- 关系图 -->
   <table class="search-tool"> <!-- 搜索工具 -->
     <tr>
@@ -204,8 +202,12 @@ $(function() {
     });
 
     option = {
+      title: {
+        text: '知识图谱'
+      },
       legend: {
         type: 'scroll',
+        top: 30,
         left: 0,
         orient: 'vertical',
         data: legends
@@ -232,7 +234,7 @@ $(function() {
         force: {
           edgeLength: 30,
           repulsion: 50,
-          gravity: 0.5
+          gravity: .56
         },
         roam: true,
         draggable: true,
@@ -279,7 +281,7 @@ $(function() {
 
   // 页面自动滚动至合适位置
   $('html, body').animate({
-    scrollTop: 250
+    scrollTop: 240
   }, 2000);
 
   // 按关键字搜索
