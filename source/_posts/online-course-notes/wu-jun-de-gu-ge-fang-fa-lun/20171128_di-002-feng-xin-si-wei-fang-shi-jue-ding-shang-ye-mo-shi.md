@@ -114,3 +114,5 @@ mathjax: true
 ##### 相关链接
 
 上一篇：[《职业天花板来自认知的局限性》](/online-course-notes/wu-jun-de-gu-ge-fang-fa-lun/20171127_di-001-feng-xin-zhi-ye-tian-hua-ban-lai-zi-ren-zhi-de-ju-xian-xing/)
+
+下一篇：[《直觉和极限》](/online-course-notes/wu-jun-de-gu-ge-fang-fa-lun/20171129_di-003-feng-xin-gong-cheng-si-wei-zhi-jue-he-ji-xian/)

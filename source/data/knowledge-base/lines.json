@@ -524,5 +524,9 @@
   { "subject": "金融工具", "predicate": "包括", "object": "风投", "date": "2020-03-15 22:06:42" },
   { "subject": "金融工具", "predicate": "包括", "object": "创投", "date": "2020-03-15 22:06:50" },
   { "subject": "对量级的认知", "predicate": "决定", "object": "商业模式", "link": "/online-course-notes/wu-jun-de-gu-ge-fang-fa-lun/20171128_di-002-feng-xin-si-wei-fang-shi-jue-ding-shang-ye-mo-shi/#ren-zhi-jue-ding-shang-ye-mo-shi", "date": "2020-03-16 21:39:38" },
-  { "subject": "对量级的认知", "predicate": "有利于", "object": "苟且红利", "link": "/online-course-notes/wu-jun-de-gu-ge-fang-fa-lun/20171128_di-002-feng-xin-si-wei-fang-shi-jue-ding-shang-ye-mo-shi/#wo-de-jing-li", "date": "2020-03-16 21:41:40" }
+  { "subject": "对量级的认知", "predicate": "有利于", "object": "苟且红利", "link": "/online-course-notes/wu-jun-de-gu-ge-fang-fa-lun/20171128_di-002-feng-xin-si-wei-fang-shi-jue-ding-shang-ye-mo-shi/#wo-de-jing-li", "date": "2020-03-16 21:41:40" },
+  { "subject": "工程思维", "predicate": "有利于", "object": "极限", "link": "/online-course-notes/wu-jun-de-gu-ge-fang-fa-lun/20171129_di-003-feng-xin-gong-cheng-si-wei-zhi-jue-he-ji-xian/", "date": "2020-03-18 22:04:10" },
+  { "subject": "极限", "predicate": "有利于", "object": "对上限的认知", "link": "/online-course-notes/wu-jun-de-gu-ge-fang-fa-lun/20171129_di-003-feng-xin-gong-cheng-si-wei-zhi-jue-he-ji-xian/", "date": "2020-03-18 22:37:37" },
+  { "subject": "对上限的认知", "predicate": "有利于", "object": "未来视角", "link": "/online-course-notes/wu-jun-de-gu-ge-fang-fa-lun/20171129_di-003-feng-xin-gong-cheng-si-wei-zhi-jue-he-ji-xian/#gong-cheng-si-wei-de-wei-lai-shi-jiao", "date": "2020-03-18 22:05:48" },
+  { "subject": "直觉", "predicate": "可能误导", "object": "对上限的认知", "link": "/online-course-notes/wu-jun-de-gu-ge-fang-fa-lun/20171129_di-003-feng-xin-gong-cheng-si-wei-zhi-jue-he-ji-xian/", "date": "2020-03-18 22:19:02" }
 ]

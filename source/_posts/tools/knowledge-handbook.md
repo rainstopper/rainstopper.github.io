@@ -297,6 +297,16 @@ img: http://static.sunyt.site/long-zhu.jpg
 
 ## J
 
+<div class="anchor" id="ji-xian"></div>
+
+### 极限
+
+> 广义的“极限”指“无限靠近而永远不能到达”的意思。
+
+相关：吴军 ——《吴军的谷歌方法论：第003封信丨工程思维：直觉和极限》[课程笔记](/online-course-notes/wu-jun-de-gu-ge-fang-fa-lun/20171129_di-003-feng-xin-gong-cheng-si-wei-zhi-jue-he-ji-xian/)
+收录时间：2020.3.18
+
+
 <div class="anchor" id="ji-yi-qv-xian"></div>
 
 ### 记忆曲线
