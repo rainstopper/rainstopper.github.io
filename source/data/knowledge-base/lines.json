@@ -257,9 +257,6 @@
   { "subject": "数学期望", "predicate": "包括", "object": "失败的概率", "link": "/tools/knowledge-formula/#shu-xue-qi-wang", "date": "2020-02-05 01:21:19" },
   { "subject": "成功的收益", "predicate": "相关于", "object": "成功", "date": "2020-02-05 01:21:52" },
   { "subject": "成功的概率", "predicate": "相关于", "object": "成功", "date": "2020-02-05 01:22:10" },
-  { "subject": "失败", "predicate": "相对于", "object": "成功", "date": "2020-02-05 01:22:33" },
-  { "subject": "失败的收益", "predicate": "相关于", "object": "失败", "date": "2020-02-05 01:23:04" },
-  { "subject": "失败的概率", "predicate": "相关于", "object": "失败", "date": "2020-02-05 01:23:13" },
   { "subject": "塑造者", "predicate": "包括", "object": "远见", "link": "/tools/knowledge-formula/#su-zao-zhe", "date": "2020-02-05 01:29:57" },
   { "subject": "塑造者", "predicate": "包括", "object": "实践思想家", "link": "/tools/knowledge-formula/#su-zao-zhe", "date": "2020-02-05 01:30:15" },
   { "subject": "塑造者", "predicate": "包括", "object": "决心", "link": "/tools/knowledge-formula/#su-zao-zhe", "date": "2020-02-05 01:30:25" },
@@ -513,9 +510,9 @@
   { "subject": "具体化", "predicate": "是一种", "object": "心理咨询对话技术", "date": "2020-03-13 13:14:37" },
   { "subject": "搁置", "predicate": "是一种", "object": "心理咨询对话技术", "date": "2020-03-13 13:15:05" },
   { "subject": "职业天花板", "predicate": "原因是", "object": "认知的局限性", "link": "/online-course-notes/wu-jun-de-gu-ge-fang-fa-lun/20171127_di-001-feng-xin-zhi-ye-tian-hua-ban-lai-zi-ren-zhi-de-ju-xian-xing/", "date": "2020-03-14 20:57:32" },
-  { "subject": "认知的量级", "predicate": "有利于", "object": "认知的局限性", "link": "/online-course-notes/wu-jun-de-gu-ge-fang-fa-lun/20171127_di-001-feng-xin-zhi-ye-tian-hua-ban-lai-zi-ren-zhi-de-ju-xian-xing/", "date": "2020-03-14 21:01:38" },
-  { "subject": "认知的量级", "predicate": "相关于", "object": "认知", "date": "2020-03-14 21:00:59" },
-  { "subject": "计算机思维", "predicate": "有利于", "object": "认知的量级", "link": "/online-course-notes/wu-jun-de-gu-ge-fang-fa-lun/20171127_di-001-feng-xin-zhi-ye-tian-hua-ban-lai-zi-ren-zhi-de-ju-xian-xing/", "date": "2020-03-14 21:02:18" },
+  { "subject": "对量级的认知", "predicate": "有利于", "object": "认知的局限性", "link": "/online-course-notes/wu-jun-de-gu-ge-fang-fa-lun/20171127_di-001-feng-xin-zhi-ye-tian-hua-ban-lai-zi-ren-zhi-de-ju-xian-xing/", "date": "2020-03-14 21:01:38" },
+  { "subject": "对量级的认知", "predicate": "相关于", "object": "认知", "date": "2020-03-14 21:00:59" },
+  { "subject": "计算机思维", "predicate": "有利于", "object": "对量级的认知", "link": "/online-course-notes/wu-jun-de-gu-ge-fang-fa-lun/20171127_di-001-feng-xin-zhi-ye-tian-hua-ban-lai-zi-ren-zhi-de-ju-xian-xing/", "date": "2020-03-14 21:02:18" },
   { "subject": "计算机思维", "predicate": "是一种", "object": "思维", "date": "2020-03-14 21:02:41" },
   { "subject": "未来视角", "predicate": "有利于", "object": "计算机思维", "link": "/online-course-notes/wu-jun-de-gu-ge-fang-fa-lun/20171127_di-001-feng-xin-zhi-ye-tian-hua-ban-lai-zi-ren-zhi-de-ju-xian-xing/#wei-lai-shi-jiao", "date": "2020-03-14 22:03:39" },
   { "subject": "内心董事会", "predicate": "包括", "object": "未来视角", "link": "/online-course-notes/luo-ji-si-wei/season-7/20190528_zen-me-chu-li-ji-shou-wen-ti/", "date": "2020-03-14 22:05:22" },
@@ -525,5 +522,7 @@
   { "subject": "金融工具", "predicate": "包括", "object": "保险", "date": "2020-03-15 22:06:13" },
   { "subject": "金融工具", "predicate": "包括", "object": "股票", "date": "2020-03-15 22:06:31" },
   { "subject": "金融工具", "predicate": "包括", "object": "风投", "date": "2020-03-15 22:06:42" },
-  { "subject": "金融工具", "predicate": "包括", "object": "创投", "date": "2020-03-15 22:06:50" }
+  { "subject": "金融工具", "predicate": "包括", "object": "创投", "date": "2020-03-15 22:06:50" },
+  { "subject": "对量级的认知", "predicate": "决定", "object": "商业模式", "link": "/online-course-notes/wu-jun-de-gu-ge-fang-fa-lun/20171128_di-002-feng-xin-si-wei-fang-shi-jue-ding-shang-ye-mo-shi/#ren-zhi-jue-ding-shang-ye-mo-shi", "date": "2020-03-16 21:39:38" },
+  { "subject": "对量级的认知", "predicate": "有利于", "object": "苟且红利", "link": "/online-course-notes/wu-jun-de-gu-ge-fang-fa-lun/20171128_di-002-feng-xin-si-wei-fang-shi-jue-ding-shang-ye-mo-shi/#wo-de-jing-li", "date": "2020-03-16 21:41:40" }
 ]
