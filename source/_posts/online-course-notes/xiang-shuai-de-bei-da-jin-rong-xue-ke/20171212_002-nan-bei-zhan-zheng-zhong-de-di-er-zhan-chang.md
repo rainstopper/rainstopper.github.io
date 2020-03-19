@@ -67,4 +67,4 @@ summary: 《香帅的北大金融学课：002｜南北战争中的第二战场�
 
 上一篇：[《时间的价值》](/online-course-notes/xiang-shuai-de-bei-da-jin-rong-xue-ke/20171211_001-yi-wan-mei-jin-zeng-pin-li-de-mi-mi/)
 
-下一篇：[《利用金融抵御风险》](/online-course-notes/xiang-shuai-de-bei-da-jin-rong-xue-ke/20171213_003-xian-dai-ren-ru-he-di-yu-feng-xian/)
+下一篇：[《风险的分散》](/online-course-notes/xiang-shuai-de-bei-da-jin-rong-xue-ke/20171213_003-xian-dai-ren-ru-he-di-yu-feng-xian/)

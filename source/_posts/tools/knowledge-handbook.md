@@ -462,6 +462,17 @@ img: http://static.sunyt.site/long-zhu.jpg
 
 ## M
 
+<div class="anchor" id="matthew-effect"></div>
+
+### 马太效应（Matthew Effect）
+
+> 指强者愈强、弱者愈弱的现象，广泛应用于社会心理学、教育、金融以及科学领域。
+
+马太效应，是社会学家和经济学家们常用的术语，反映的社会现象是两极分化，富的更富，穷的更穷。
+
+相关：香帅 ——《香帅的北大金融学课：004｜延展话题：构筑完整的“金融世界观”》[课程笔记](/online-course-notes/xiang-shuai-de-bei-da-jin-rong-xue-ke/20171214_004-yan-zhan-hua-ti-gou-zhu-wan-zheng-de-jin-rong-shi-jie-guan/)
+收录时间：2020.3.19
+
 ### 名校效应
 
 > 基于人脉网络的效应：学校越好，到好公司工作的毕业生就越多，出来创业的就越多；学校越好，好的技术就越多，以此创业成功的概率就越大。
