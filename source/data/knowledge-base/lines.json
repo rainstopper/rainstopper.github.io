@@ -541,5 +541,13 @@
   { "subject": "金融学第三定理", "predicate": "指的是", "object": "风险的分散", "link": "/online-course-notes/xiang-shuai-de-bei-da-jin-rong-xue-ke/20171213_003-xian-dai-ren-ru-he-di-yu-feng-xian/", "date": "2020-03-20 00:01:24" },
   { "subject": "金融学三大定理", "predicate": "包括", "object": "金融学第一定理", "date": "2020-03-20 00:01:53" },
   { "subject": "金融学三大定理", "predicate": "包括", "object": "金融学第二定理", "date": "2020-03-20 00:02:15" },
-  { "subject": "金融学三大定理", "predicate": "包括", "object": "金融学第三定理", "date": "2020-03-20 00:02:22" }
+  { "subject": "金融学三大定理", "predicate": "包括", "object": "金融学第三定理", "date": "2020-03-20 00:02:22" },
+  { "subject": "乔纳·伯杰", "predicate": "提出", "object": "催化式说服方法", "date": "2020-03-23 00:54:37" },
+  { "subject": "宾夕法尼亚大学沃顿商学院", "predicate": "市场学教授", "object": "乔纳·伯杰", "date": "2020-03-23 00:58:30" },
+  { "subject": "催化式说服方法", "predicate": "包括", "object": "消除阻抗", "link": "/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-4/20200320_wu-zhong-cui-hua-shi-shuo-fu-fa/#xiao-chu-zu-kang", "date": "2020-03-23 01:00:46" },
+  { "subject": "催化式说服方法", "predicate": "包括", "object": "比较现状", "link": "/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-4/20200320_wu-zhong-cui-hua-shi-shuo-fu-fa/#bi-jiao-xian-zhuang", "date": "2020-03-23 01:03:07" },
+  { "subject": "禀赋效应", "predicate": "相关于", "object": "比较现状", "link": "/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-4/20200320_wu-zhong-cui-hua-shi-shuo-fu-fa/#bi-jiao-xian-zhuang", "date": "2020-03-23 01:05:33" },
+  { "subject": "催化式说服方法", "predicate": "包括", "object": "缩短距离", "link": "/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-4/20200320_wu-zhong-cui-hua-shi-shuo-fu-fa/#suo-duan-ju-li", "date": "2020-03-23 01:07:02" },
+  { "subject": "催化式说服方法", "predicate": "包括", "object": "减轻不确定性", "link": "/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-4/20200320_wu-zhong-cui-hua-shi-shuo-fu-fa/#jian-qing-bu-que-ding-xing", "date": "2020-03-23 01:09:20" },
+  { "subject": "催化式说服方法", "predicate": "包括", "object": "同辈推荐", "link": "/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-4/20200320_wu-zhong-cui-hua-shi-shuo-fu-fa/#tong-bei-tui-jian", "date": "2020-03-23 01:10:58" }
 ]

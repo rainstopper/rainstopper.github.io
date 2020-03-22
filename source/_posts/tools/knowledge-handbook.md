@@ -89,6 +89,16 @@ img: http://static.sunyt.site/long-zhu.jpg
 相关：王煜全 ——《中国优势》P.26
 收录时间：2020.1.23
 
+<div class="anchor" id="endowment-effect"></div>
+
+### 禀赋效应（Endowment Effect）
+
+> 指当个人一旦拥有某项物品，那么他对该物品价值的评价要比未拥有之前大大增加。
+
+出自：理查德·塞勒（Richard Thaler）
+相关：《万维钢·精英日课4：五种“催化式”说服法》[课程笔记](/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-4/20200320_wu-zhong-cui-hua-shi-shuo-fu-fa/)
+收录时间：2020.3.22
+
 
 <div class="anchor" id="popper's-falsifiability-principle"></div>
 
@@ -678,6 +688,16 @@ img: http://static.sunyt.site/long-zhu.jpg
 ---
 
 ## Z
+
+<div class="anchor" id="normalcy-bias"></div>
+
+### 正常化偏误（Normalcy Bias）
+
+> 一种思维惯性，指人们在日常的生活中，通常会对发生的不正常局面给出强行正常化的心理解释。
+
+相关：《万维钢·精英日课4：五种“催化式”说服法》[课程笔记](/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-4/20200320_wu-zhong-cui-hua-shi-shuo-fu-fa/)
+收录时间：2020.3.22
+
 
 <div class="anchor" id="zhi-shi-tu-pu"></div>
 
