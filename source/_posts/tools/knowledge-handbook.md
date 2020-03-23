@@ -276,6 +276,17 @@ img: http://static.sunyt.site/long-zhu.jpg
 相关：万维钢 ——《万维钢·精英日课4：能用愚蠢解释的，就不要用恶意》[课程笔记](/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-4/20200303_neng-yong-yu-chun-jie-shi-de-jiu-bu-yao-yong-e-yi/)
 收录时间：2020.3.3
 
+
+<div class="anchor" id="black-swan-incidents"></div>
+
+### “黑天鹅”事件（"Black swan" incidents）
+
+> 指非常难以预测，且不寻常的事件，通常会引起市场连锁负面反应甚至颠覆。
+>
+> 一般来说，“黑天鹅”事件是指满足以下三个特点的事件：它具有意外性；它产生重大影响；虽然它具有意外性，但人的本性促使我们在事后为它的发生编造理由，并且或多或少认为它是可解释和可预测的。
+
+收录时间：2020.3.23
+
 ### 黄埔军校效应
 
 > 王煜全把一家企业做大之后带动周边创业的现象，称为“黄埔军校效应”。
@@ -695,7 +706,7 @@ img: http://static.sunyt.site/long-zhu.jpg
 
 > 一种思维惯性，指人们在日常的生活中，通常会对发生的不正常局面给出强行正常化的心理解释。
 
-相关：《万维钢·精英日课4：五种“催化式”说服法》[课程笔记](/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-4/20200320_wu-zhong-cui-hua-shi-shuo-fu-fa/)
+相关：万维钢 ——《万维钢·精英日课2：正常化偏误》[课程笔记](/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-2/20171123_zheng-chang-hua-pian-wu/)、《万维钢·精英日课4：五种“催化式”说服法》[课程笔记](/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-4/20200320_wu-zhong-cui-hua-shi-shuo-fu-fa/)
 收录时间：2020.3.22
 
 
