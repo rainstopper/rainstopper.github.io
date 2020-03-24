@@ -154,6 +154,17 @@ img: http://static.sunyt.site/long-zhu.jpg
 相关：万维钢 ——《万维钢·精英日课2：提高学习成绩的最简单心法》[课程笔记](/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-2/20180329_ti-gao-xue-xi-cheng-ji-de-zui-jian-dan-xin-fa/)
 收录时间：2020.1.31
 
+
+<div class="anchor" id="chou-xiao-ya-ding-li"></div>
+
+### 丑小鸭定理
+
+> 世界上不存在分类的客观标准，一切分类的标准都是主观的。
+
+出自：渡边慧
+相关：万维钢 ——《万维钢·精英日课2：丑小鸭定理》[课程笔记](/online-course-notes/wan-wei-gang-jing-ying-ri-ke/season-2/20180316_chou-xiao-ya-ding-li/)
+收录时间：2020.3.24
+
 ### 创新效率
 
 > 一个可以用来衡量经济体或者企业整体的创新能力的指标。它包括三个维度：创新的质量、创新的成功率和创新的数量。

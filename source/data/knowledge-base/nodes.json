@@ -446,5 +446,9 @@
   { "name": "正常化偏误", "category": "正常化偏误", "link": "/tools/knowledge-handbook/#normalcy-bias", "date": "2020-03-23 23:40:58" },
   { "name": "灾难", "category": "正常化偏误", "date": "2020-03-23 23:42:04" },
   { "name": "思维惯性", "category": "正常化偏误", "date": "2020-03-23 23:43:36" },
-  { "name": "全局思维", "category": "正常化偏误", "date": "2020-03-23 23:45:17" }
+  { "name": "全局思维", "category": "正常化偏误", "date": "2020-03-23 23:45:17" },
+  { "name": "丑小鸭定理", "category": "丑小鸭定理", "link": "/tools/knowledge-handbook/#chou-xiao-ya-ding-li", "date": "2020-03-24 22:01:39" },
+  { "name": "分类是主观的", "category": "丑小鸭定理", "date": "2020-03-24 22:02:17" },
+  { "name": "渡边慧", "category": "人物", "date": "2020-03-24 22:16:57" },
+  { "name": "计算机模式识别", "category": "人物", "date": "2020-03-24 22:26:09" }
 ]
