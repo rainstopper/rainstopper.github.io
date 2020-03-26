@@ -126,8 +126,9 @@ Google 过去面试产品经理的时候经常用一道和上面问题类似的�
 
 
 课程作者：吴军
-课程发布时间：2017.11.28
+课程发布时间：2017.11.29
 
 ##### 相关链接
 
 上一篇：[《思维方式决定商业模式》](/online-course-notes/wu-jun-de-gu-ge-fang-fa-lun/20171128_di-002-feng-xin-si-wei-fang-shi-jue-ding-shang-ye-mo-shi/)
+下一篇：[《为什么计算机不是万能的》](/online-course-notes/wu-jun-de-gu-ge-fang-fa-lun/20171130_di-004-feng-xin-wei-shen-me-ji-suan-ji-bu-shi-wan-neng-de/)
