@@ -4,7 +4,7 @@
 
 # 网站的标题
 # 它将会被用作所有页面标题的前缀，同时，默认主题下，它将显示在导航栏（navbar）上
-title: 雨停の精神时光屋
+title: 雨停の精神時光屋
 
 # 网站的描述
 # 它将会以 <meta> 标签渲染到当前页面的 HTML 中
@@ -55,7 +55,7 @@ themeConfig:
           link: /language/chinese/
         -
           text: Japanese
-          link: /language/japanese
+          link: /language/japanese/
 
   # 导航栏开关，false 表示禁用
   # 可以在某个具体的页面中使用 front matter 来禁用导航栏
@@ -63,8 +63,8 @@ themeConfig:
 
   # 侧边栏
   sidebar:
-    - /
-    - /page-a
+    - '/'
+    - '/page-a'
     # -
     #   - /page-b
     #   - Explicit link text

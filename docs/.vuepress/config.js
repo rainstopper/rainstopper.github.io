@@ -1,0 +1,64 @@
+module.exports = {
+  /**
+   * 基础路径，默认 /
+   * 它的值应当总是以斜杠开始，并以斜杠结束
+   * @type {String}
+   */
+  base: '/',
+
+  /**
+   * 网站的标题
+   * 它将会被用作所有页面标题的前缀，同时，默认主题下，它将显示在导航栏（navbar）上
+   * @type {String}
+   */
+  title: '雨停の精神時光屋',
+
+  /**
+   * 网站的描述
+   * 它将会以 <meta> 标签渲染到当前页面的 HTML 中
+   * @type {String}
+   */
+  description: '',
+
+  /**
+   * dev server 的主机名，默认 0.0.0.0
+   * @type {String}
+   */
+  host: '0.0.0.0',
+
+  /**
+   * dev server 的端口，默认 8080
+   * @type {String}
+   */
+  port: '8080',
+
+  /**
+   * 主题配置
+   * @type {Object}
+   */
+  themeConfig: {
+    /**
+     * 导航栏
+     * 如果开启了多语言配置，locales 内部的 nav 会覆盖这里的配置
+     * @type {Array}
+     */
+    nav: [
+      { text: 'Home', link: '/' },
+      { text: 'Guide', link: '/guide/' },
+      { text: 'External', link: 'http://google.com' },
+      {
+        text: 'Languages',
+        items: [
+          { text: 'Chinese', link: '/language/chinese/' },
+          { text: 'Japanese', link: '/language/japanese/' }
+        ]
+      }
+    ],
+
+    sidebar: [
+      '/',
+      '/page-a',
+      ['/page-b', 'Explicit link text']
+    ]
+  }
+}
