@@ -1,6 +1,6 @@
-# 前端
-
-<KnowledgeGraph :nodes="nodes" :edges="edges" height="500px"/>
+<KnowledgeGraph :nodes="nodes"
+                :edges="edges"
+                height="500px"/>
 
 <script>
 export default {

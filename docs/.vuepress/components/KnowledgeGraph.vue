@@ -12,17 +12,6 @@
 import 'echarts/lib/chart/graph' // 按需引入
 import { commonUtil } from './utils'
 
-const CATEGORY_OTHER = '其它'
-const MIN_NODE_SIZE = 10 // 节点大小下限
-const MAX_NODE_SIZE = 50 // 节点大小上限
-const NODE_SIZE_INCREASE_STEP = 2 // 节点大小增长步长
-const DEFAULT_MIN_OPACITY = 0.3 // 透明度下限
-const DEFAULT_MAX_OPACITY = 0.96 // 透明度上限
-const DEFAULT_MAX_OPACITY_VALUE = 7 // 大于等于该值能达到透明度上限
-const OPACITY_INDEX = 2 // 透明度指数，该值越大，透明的节点越多
-const DEFAULT_DEGREE_TO_SHOW_NODE = 1 // 节点的度数大于等于这个数值才展示
-const DEFAULT_DEGREE_TO_SHOW_LABEL = 1 // 节点的度数大于等于这个数值才展示标签
-
 export default {
   props: {
     /**
@@ -74,6 +63,103 @@ export default {
     edges: {
       type: Array,
       default: () => ([])
+    },
+
+    /**
+     * 其它分类，无分类项目的默认分类
+     * @type {Object}
+     */
+    categoryOther: {
+      type: String,
+      default: '其它'
+    },
+
+    /**
+     * 节点大小下限
+     * 用于计算节点大小
+     * @type {Number}
+     */
+    minNodeSize: {
+      type: Number,
+      default: 10
+    },
+
+    /**
+     * 节点大小上限
+     * 用于计算节点大小
+     * @type {Number}
+     */
+    maxNodeSize: {
+      type: Number,
+      default: 50
+    },
+
+    /**
+     * 节点大小步长
+     * 用于计算节点大小
+     * @type {Number}
+     */
+    nodeSizeStep: {
+      type: Number,
+      default: 2
+    },
+
+    /**
+     * 透明度下限
+     * 用于计算节点透明度
+     * @type {Number}
+     */
+    minNodeOpacity: {
+      type: Number,
+      default: 0.3
+    },
+
+    /**
+     * 透明度上限
+     * 用于计算节点透明度
+     * @type {Number}
+     */
+    maxNodeOpacity: {
+      type: Number,
+      default: 1
+    },
+
+    /**
+     * 透明度上限度数
+     * 大于等于该值能达到透明度上限
+     * @type {Object}
+     */
+    maxNodeOpacityDegree: {
+      type: Number,
+      default: 5
+    },
+
+    /**
+     * 透明度指数
+     * 该值越大，透明的节点越多
+     * @type {Number}
+     */
+    nodeOpacityIndex: {
+      type: Number,
+      default: 2
+    },
+
+    /**
+     * 节点的度数大于等于这个数值才展示
+     * @type {Number}
+     */
+    nodeVisibleDegree: {
+      type: Number,
+      default: 1
+    },
+
+    /**
+     * 节点的度数大于等于这个数值才展示标签
+     * @type {Number}
+     */
+    nodeLabelVisibleDegree: {
+      type: Number,
+      default: 1
     }
   },
 
@@ -83,16 +169,17 @@ export default {
      * @return {Object} option
      */
     option () {
+      const { title, legends, categories, _nodes, _edges } = this
       return {
         title: {
-          text: this.title
+          text: title
         },
         legend: {
           type: 'scroll',
-          top: commonUtil.isNotEmpty(this.title) && 30 || 0,
+          top: commonUtil.isNotEmpty(title) && 30 || 0,
           left: 0,
           orient: 'vertical',
-          data: this.legends
+          data: legends
         },
         series: [{
           type: 'graph',
@@ -124,9 +211,9 @@ export default {
               width: 4 // 线宽
             }
           },
-          categories: this.categories,
-          nodes: this._nodes,
-          edges: this._edges
+          categories: categories,
+          nodes: _nodes,
+          edges: _edges
         }]
       }
     },
@@ -138,11 +225,12 @@ export default {
      * @return {Array} 图例
      */
     legends () {
+      const { nodes, categoryOther } = this
       return [
         ...new Set( // 利用 Set 去重
-          this.nodes.map(({ category }) => category).filter(item => commonUtil.isNotEmpty(item) && item !== CATEGORY_OTHER) // 不为空，且不是“其它”
+          nodes.map(({ category }) => category).filter(item => commonUtil.isNotEmpty(item) && item !== categoryOther) // 不为空，且不是“其它”
         ),
-        CATEGORY_OTHER // 补充“其它”分类
+        categoryOther // 补充“其它”分类
       ]
     },
 
@@ -163,25 +251,26 @@ export default {
      * @return {Array} nodes
      */
     _nodes () {
+      const { nodes, edges, legends, getNodeSize, getNodeOpacity, nodeLabelVisibleDegree, nodeVisibleDegree } = this
       const uniqueNameMap = new Map() // 用于 name 属性去重的 Map
-      return this.nodes.filter(({ name }) => !uniqueNameMap.has(name) && uniqueNameMap.set(name, 1)).map(item => { // 组织数据结构
+      return nodes.filter(({ name }) => !uniqueNameMap.has(name) && uniqueNameMap.set(name, 1)).map(item => { // 组织数据结构
         const degree = Math.max( // 节点度数
-          this.edges.reduce((sum, { source, target }) => (item.name === source || item.name === target) && sum + 1 || sum, 0), // 每条相邻边使节点的度数加 1
+          edges.reduce((sum, { source, target }) => (item.name === source || item.name === target) && sum + 1 || sum, 0), // 每条相邻边使节点的度数加 1
           1 // 不小于 1
         )
         return {
           ...item,
           value: degree,
-          category: this.legends.findIndex(category => category === item.category) || this.legends.length - 1, // 节点分类，默认最后一个，对应“其它”分类
-          symbolSize: this.getNodeSize(degree), // 节点大小
+          category: legends.findIndex(category => category === item.category) || legends.length - 1, // 节点分类，默认最后一个，对应“其它”分类
+          symbolSize: getNodeSize(degree), // 节点大小
           itemStyle: { // 图形样式
-            opacity: this.getNodeOpacity(degree) // 透明度
+            opacity: getNodeOpacity(degree) // 透明度
           },
           label: { // 标签
-            show: degree >= DEFAULT_DEGREE_TO_SHOW_LABEL // 度数足够大时展示
+            show: degree >= nodeLabelVisibleDegree // 度数足够大时展示
           }
         }
-      }).filter(({ value }) => value >= DEFAULT_DEGREE_TO_SHOW_NODE)
+      }).filter(({ value }) => value >= nodeVisibleDegree)
     },
 
     /**
@@ -204,18 +293,18 @@ export default {
      * @return {[type]}        节点大小
      */
     getNodeSize (degree) {
-      return Math.min(MIN_NODE_SIZE + (degree - 1) * NODE_SIZE_INCREASE_STEP, MAX_NODE_SIZE)
+      const { minNodeSize, maxNodeSize, nodeSizeStep } = this
+      return Math.min(minNodeSize + (degree - 1) * nodeSizeStep, maxNodeSize)
     },
 
     /**
      * 获取节点透明度
-     * @param  {Number} degree                           节点度数
-     * @param  {Number} [maxOpacity=DEFAULT_MAX_OPACITY] 最大透明度
-     * @param  {Number} [minOpacity=DEFAULT_MIN_OPACITY] 最小透明度
-     * @return {Number}                                  节点透明度
+     * @param  {Number} degree 节点度数
+     * @return {Number}        节点透明度
      */
-    getNodeOpacity (degree, maxOpacity = DEFAULT_MAX_OPACITY, minOpacity = DEFAULT_MIN_OPACITY) {
-      return Math.min(minOpacity + Math.pow(degree / DEFAULT_MAX_OPACITY_VALUE, OPACITY_INDEX) * (1 - minOpacity), maxOpacity)
+    getNodeOpacity (degree) {
+      const { minNodeOpacity, maxNodeOpacity, maxNodeOpacityDegree, nodeOpacityIndex } = this
+      return Math.min(minNodeOpacity + Math.pow(degree / maxNodeOpacityDegree, nodeOpacityIndex) * (1 - minNodeOpacity), maxNodeOpacity)
     }
   }
 }
