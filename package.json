@@ -6,7 +6,10 @@
     "dev": "vuepress dev docs",
     "build": "vuepress build docs"
   },
-  "dependencies": {},
+  "dependencies": {
+    "axios": "^0.19.2",
+    "echarts": "^4.8.0"
+  },
   "devDependencies": {
     "vuepress": "^1.5.2"
   }

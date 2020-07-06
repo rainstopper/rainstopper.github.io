@@ -43,22 +43,12 @@ module.exports = {
      * @type {Array}
      */
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Guide', link: '/guide/' },
-      { text: 'External', link: 'http://google.com' },
-      {
-        text: 'Languages',
-        items: [
-          { text: 'Chinese', link: '/language/chinese/' },
-          { text: 'Japanese', link: '/language/japanese/' }
-        ]
-      }
+      { text: '前端的山', link: '/front-end/' },
+      { text: '后端的海', link: '/back-end/' }
     ],
 
     sidebar: [
-      '/',
-      '/page-a',
-      ['/page-b', 'Explicit link text']
+      '/'
     ]
   }
 }
