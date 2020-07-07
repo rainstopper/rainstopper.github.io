@@ -21,6 +21,15 @@ module.exports = {
   description: '',
 
   /**
+   * 额外的需要被注入到当前页面的 HTML <head> 中的标签
+   * 每个标签都可以以 [tagName, { attrName: attrValue }, innerHTML?] 的格式指定
+   * @type {Array}
+   */
+  head: [
+    ['link', { rel: 'icon', href: '/assets/image/logo.svg' }]
+  ],
+
+  /**
    * dev server 的主机名，默认 0.0.0.0
    * @type {String}
    */

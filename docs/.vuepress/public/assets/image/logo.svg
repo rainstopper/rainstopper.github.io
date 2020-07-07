@@ -1,0 +1,25 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+  <defs>
+    <radialGradient cy="0.25" cx="0.382" spreadMethod="pad" id="svg_8"> <!-- 圆形阴影区域 -->
+      <stop offset="0" stop-color="#3eaf7c"/> <!-- 圆心颜色 -->
+      <stop offset="1" stop-color="rgba(255, 255, 255, .3)"/> <!-- 圆周颜色 -->
+    </radialGradient>
+  </defs>
+  <g>
+    <title>background</title>
+    <rect x="-1" y="-1" width="202" height="202" id="canvas_background" fill="none"/>
+    <g id="canvasGrid" display="none">
+      <rect id="svg_6" width="100%" height="100%" x="0" y="0" stroke-width="0" fill="url(#gridpattern)"/>
+    </g>
+  </g>
+  <g>
+    <title>Layer 1</title>
+    <ellipse fill-opacity="0.6" fill="url(#svg_8)" stroke-width="8" cx="100" cy="100" id="svg_1" rx="90" ry="90" stroke="#3eaf7c"/> <!-- 大圆 -->
+    <path fill="#3eaf7c" stroke-width="5" d="m51.03751,91.14299l37.81491,0l11.6851,-35.92401l11.6851,35.92401l37.81491,0l-30.59285,22.202l11.6857,35.92401l-30.59286,-22.20261l-30.59286,22.20261l11.68571,-35.92401l-30.59286,-22.202z" id="svg_2" fill-opacity="0.3" stroke="#3eaf7c"/> <!-- 中间的大五角星 -->
+    <path fill="#3eaf7c" stroke-width="4" stroke-opacity="null" fill-opacity="0.3" d="m38.77375,53.14875l14.36866,0l4.44003,-13.65017l4.44003,13.65017l14.36866,0l-11.62447,8.43618l4.44026,13.65017l-11.62448,-8.43641l-11.62447,8.43641l4.44026,-13.65017l-11.62448,-8.43618z" id="svg_3" stroke="#3eaf7c"/> <!-- 左上角的小五角星 -->
+    <path fill="#3eaf7c" stroke-width="3" stroke-opacity="null" fill-opacity="0.3" d="m130.74999,42.98297l8.78624,0l2.71501,-8.3469l2.71502,8.3469l8.78624,0l-7.10821,5.1586l2.71516,8.34689l-7.10821,-5.15874l-7.10821,5.15874l2.71516,-8.34689l-7.1082,-5.1586z" id="svg_4" stroke="#3eaf7c"/> <!-- 右上角的小五角星 -->
+    <path fill="#3eaf7c" stroke-width="3" stroke-opacity="null" fill-opacity="0.3" d="m146.24873,128.01l10.06602,0l3.11047,-9.56267l3.11048,9.56267l10.06601,0l-8.14356,5.90998l3.11064,9.56267l-8.14357,-5.91014l-8.14356,5.91014l3.11064,-9.56267l-8.14357,-5.90998z" id="svg_5" stroke="#3eaf7c"/> <!-- 右下角的小五角星 -->
+    <path fill="#3eaf7c" stroke-width="8" stroke-opacity="null" fill-opacity="0.61" opacity="0.5" d="m32.50126,127.10812c12.33775,34.10842 46.26656,44.01087 45.49545,43.89053" id="svg_15" stroke="#3eaf7c"/> <!-- 左下角的弧线 -->
+  </g>
+</svg>
