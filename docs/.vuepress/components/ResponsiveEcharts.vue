@@ -17,6 +17,7 @@ export default {
   props: {
     /**
      * ECharts 的 option
+     * @type {Object}
      */
     option: {
       type: Object,
@@ -44,7 +45,7 @@ export default {
 
   data () {
     return {
-      myChart: null
+      myChart: null // 存放 ECharts 实例
     }
   },
 
