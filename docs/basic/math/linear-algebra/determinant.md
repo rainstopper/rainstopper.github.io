@@ -2,12 +2,29 @@
 
 ## 二阶行列式
 
-用消元法解二元线性方程组
+用“消元法”解二元线性方程组
 
-<!-- $$\begin{cases} a_11 x_1 + a_12 x_2 = b_1 & a_21 x_1 + a_22 x_2 = b_2 & \end{cases}$$ -->
+$$
+\begin{cases} a_{11} x_1 + a_{12} x_2 = b_1 & \\ a_{21} x_1 + a_{22} x_2 = b_2 & \end{cases}
+$$
 
-$$\frac {\partial^r} {\partial \omega^r} \left(\frac {y^{\omega}} {\omega}\right)
-= \left(\frac {y^{\omega}} {\omega}\right) \left\{(\log y)^r + \sum_{i=1}^r \frac {(-1)^i r \cdots (r-i+1) (\log y)^{r-i}} {\omega^i} \right\}$$
+为消去未知数 $x_2$，以 $a_{22}$ 与 $a_{12}$ 分别乘上列两方程的两端，然后两个方程相减，得
+
+$$
+\left( a_{11} a_{22} - a_{12} a_{21} \right) x_1 = b_1 a_{22} - a_{12} b_2
+$$
+
+类似地，消去 $x_1$，得
+
+$$
+\left( a_{11} a_{22} - a_{12} a_{21} \right) x_2 = a_{11} b_2 - b_1 a_{21}
+$$
+
+当 $a_{11} a_{22} - a_{12} a_{21} \neq 0$ 时，求得方程组的解为
+
+$$
+x_1 = \frac{b_1 a_{22} - a_{12} b_2}{a_{11} a_{22} - a_{12} a_{21}} ， x_2 = \frac{a_{11} b_2 - b_1 a_{21}}{a_{11} a_{22} - a_{12} a_{21}}
+$$
 
 ## 排列
 
@@ -19,7 +36,9 @@ n 个不同元素的所有排列的种数，通常用 $P_n$ 表示，可计算�
 从剩下的 n-1 个元素中任取一个放在第二个位置上，有 n-1 中取法；
 以此类推，直到最后只剩下一个元素放在第 n 个位置上，只有 1 中取法。于是
 
-$$P_n = n \cdot (n-1) \ cdot … \cdot 3 \cdot 2 \cdot 1 = n!$$
+$$
+P_n = n \cdot (n-1) \cdot … \cdot 3 \cdot 2 \cdot 1 = n!
+$$
 
 ## 逆序数
 

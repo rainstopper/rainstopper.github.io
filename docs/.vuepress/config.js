@@ -107,6 +107,7 @@ module.exports = {
    * @type {Array}
    */
   plugins: [
+    'vuepress-plugin-latex'
     /**
      * vuepress-plugin-mathjax 插件
      * XXX 不支持方程组和矩阵写法
