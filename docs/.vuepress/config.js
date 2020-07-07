@@ -44,11 +44,38 @@ module.exports = {
      */
     nav: [
       { text: '前端的山', link: '/front-end/' },
-      { text: '后端的海', link: '/back-end/' }
+      { text: '后端的海', link: '/back-end/' },
+      {
+        text: '坚实的路',
+        ariaLabel: '坚实的路',
+        items: [
+          { text: '线性代数', link: '/basic/linear-algebra/' }
+        ]
+      }
     ],
 
-    sidebar: [
-      '/'
-    ]
+    /**
+     * 侧边栏
+     * @type {Object}
+     */
+    sidebar: {
+      '/basic/linear-algebra/': [
+        {
+          title: '线性代数',
+          collapsable: false,
+          sidebarDepth: 2,
+          children: [
+            ['', '介绍'],
+            'determinant'
+          ]
+        }
+      ]
+    },
+
+    /**
+     * 启用页面滚动效果
+     * @type {Boolean}
+     */
+    smoothScroll: true
   }
 }
