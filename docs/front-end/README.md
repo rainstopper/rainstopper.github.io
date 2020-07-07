@@ -12,9 +12,10 @@ export default {
   },
 
   mounted () {
+    const baseUrl = '/data/knowledge/front-end'
     Promise.all([
-      this.$http.get(this.$withBase('/data/knowledge/front-end/nodes.json')),
-      this.$http.get(this.$withBase('/data/knowledge/front-end/edges.json'))
+      this.$http.get(this.$withBase(`${baseUrl}/nodes.json`)),
+      this.$http.get(this.$withBase(`${baseUrl}/edges.json`))
     ]).then(([nodes, edges]) => {
       this.nodes = nodes
       this.edges = edges
