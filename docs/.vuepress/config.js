@@ -58,15 +58,19 @@ module.exports = {
         text: '坚实的路',
         items: [
           {
-            text: '数学',
+            text: '计算机科学',
             items: [
-              { text: '线性代数', link: '/basic/math/linear-algebra/' }
+              { text: '计算机组成原理', link: '/basic/computer-science/computer-organization/' },
+              { text: '计算机操作系统', link: '/basic/computer-science/computer-operating-system/' },
+              { text: '计算机网络', link: '/basic/computer-science/computer-networks/' },
+              { text: '数据结构', link: '/basic/computer-science/data-structures/' }
             ]
           },
           {
-            text: '计算机科学',
+            text: '数学',
             items: [
-              { text: '数据结构', link: '/basic/computer-science/data-structure/' }
+              { text: '高等数学', link: '/basic/math/advanced-mathematics/' },
+              { text: '线性代数', link: '/basic/math/linear-algebra/' }
             ]
           }
         ]
