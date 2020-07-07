@@ -10,7 +10,7 @@
 
 <script>
 import 'echarts/lib/chart/graph' // 按需引入
-import { commonUtil } from './utils'
+import { commonUtil } from '../utils'
 
 export default {
   props: {
