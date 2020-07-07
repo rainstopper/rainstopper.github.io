@@ -107,27 +107,31 @@ module.exports = {
    * @type {Array}
    */
   plugins: [
-    [
-      'vuepress-plugin-mathjax',
-      {
-        /**
-         * 输出格式
-         * 'svg' | 'chtml'，默认 'chtml'
-         * @type {String}
-         */
-        target: 'svg',
-
-        /**
-         * 宏
-         * 输入的宏将与内置的宏进行混合
-         * FIXME 怎么防止冲突？
-         * @type {Object}
-         */
-        macros: {
-          '*': '\\times',
-        },
-      },
-    ],
+    /**
+     * vuepress-plugin-mathjax 插件
+     * XXX 不支持方程组和矩阵写法
+     */
+    // [
+    //   'vuepress-plugin-mathjax',
+    //   {
+    //     /**
+    //      * 输出格式
+    //      * 'svg' | 'chtml'，默认 'chtml'
+    //      * @type {String}
+    //      */
+    //     target: 'svg',
+    //
+    //     /**
+    //      * 宏
+    //      * 输入的宏将与内置的宏进行混合
+    //      * FIXME 怎么防止冲突？
+    //      * @type {Object}
+    //      */
+    //     macros: {
+    //       '*': '\\times',
+    //     },
+    //   },
+    // ]
   ],
 
   /**
