@@ -47,9 +47,19 @@ module.exports = {
       { text: '后端的海', link: '/back-end/' },
       {
         text: '坚实的路',
-        ariaLabel: '坚实的路',
         items: [
-          { text: '线性代数', link: '/basic/linear-algebra/' }
+          {
+            text: '数学',
+            items: [
+              { text: '线性代数', link: '/basic/math/linear-algebra/' }
+            ]
+          },
+          {
+            text: '计算机科学',
+            items: [
+              { text: '数据结构', link: '/basic/computer-science/data-structure/' }
+            ]
+          }
         ]
       }
     ],
@@ -59,7 +69,7 @@ module.exports = {
      * @type {Object}
      */
     sidebar: {
-      '/basic/linear-algebra/': [
+      '/basic/math/linear-algebra/': [
         {
           title: '线性代数',
           collapsable: false,
@@ -77,5 +87,33 @@ module.exports = {
      * @type {Boolean}
      */
     smoothScroll: true
-  }
+  },
+
+  /**
+   * 插件
+   * @type {Array}
+   */
+  plugins: [
+    [
+      'vuepress-plugin-mathjax',
+      {
+        /**
+         * 输出格式
+         * 'svg' | 'chtml'，默认 'chtml'
+         * @type {String}
+         */
+        target: 'svg',
+
+        /**
+         * 宏
+         * 输入的宏将与内置的宏进行混合
+         * FIXME 怎么防止冲突？
+         * @type {Object}
+         */
+        macros: {
+          '*': '\\times',
+        },
+      },
+    ],
+  ]
 }
