@@ -10,6 +10,7 @@
 import echarts from 'echarts/lib/echarts' // 此处不引入具体的 ECharts 组件
 import 'echarts/lib/component/title'
 import 'echarts/lib/component/legend'
+import 'echarts/lib/component/tooltip'
 import 'echarts/lib/component/legendScroll'
 
 export default {
@@ -85,6 +86,9 @@ export default {
       const el = this.$el
       this.myChart = echarts.init(el, '')
       this.myChart.setOption(this.option)
+      this.myChart.on('click', e => { // 绑定点击事件
+        this.$emit('click', e)
+      })
     }
   }
 }

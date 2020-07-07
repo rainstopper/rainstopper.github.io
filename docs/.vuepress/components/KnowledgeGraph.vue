@@ -4,7 +4,7 @@
 
 <template lang="html">
   <div class="knowledge-graph" :style="`width: ${width}; height: ${height};`">
-    <ResponsiveEcharts :option="option"/>
+    <ResponsiveEcharts :option="option" @click="onClick"/>
   </div>
 </template>
 
@@ -111,7 +111,7 @@ export default {
      */
     minNodeOpacity: {
       type: Number,
-      default: 0.3
+      default: 0.7
     },
 
     /**
@@ -160,6 +160,30 @@ export default {
     nodeLabelVisibleDegree: {
       type: Number,
       default: 1
+    },
+
+    /**
+     * 链接边颜色
+     * 用于指定边的样式
+     * @type {Object}
+     */
+    linkEdgeColor: {
+      type: String,
+      default: '#46bd87'
+    },
+
+    /**
+     * 力引导布局相关的配置项
+     *
+     * @type {Object}
+     */
+    force: {
+      type: Object,
+      default: () => ({
+        edgeLength: 10,
+        repulsion: 20,
+        gravity: 0.2
+      })
     }
   },
 
@@ -169,26 +193,38 @@ export default {
      * @return {Object} option
      */
     option () {
-      const { title, legends, categories, _nodes, _edges } = this
+      const { title, legends, force, categories, _nodes, _edges } = this
       return {
-        title: {
+        title: { // 标题
           text: title
         },
-        legend: {
+        legend: { // 图例
           type: 'scroll',
           top: commonUtil.isNotEmpty(title) && 30 || 0,
           left: 0,
           orient: 'vertical',
           data: legends
         },
+        tooltip: { // 提示框
+          position: ['100%', 0],
+          /**
+           * 格式化提示框内容
+           * @param  {String} dataType  数据类型，'node' 表示节点，'edge' 表示边
+           * @param  {Object} [data={}] 数据
+           * @return {String}           提示框内容
+           */
+          formatter ({ dataType, data = {} } = {}) {
+            let str = {
+              node: `${data.name}<br/>关联 ${data.value} 个节点`, // 节点提示框内容
+              edge: `${data.source} ${data.value} ${data.target}` // 边提示框内容
+            }[dataType] || ''
+            return data.link && `${str}${str.length && '<br/>' || ''}点击查看详情` || str; // 附带链接的项目追加“<br/>点击查看详情”
+          }
+        },
         series: [{
           type: 'graph',
           layout: 'force',
-          force: { // 力引导布局相关的配置项
-            edgeLength: 30, // 边的两个节点之间的距离
-            repulsion: 50, // 节点之间的斥力因子
-            gravity: .56 // 节点受到的向中心的引力因子
-          },
+          force, // 力引导布局相关的配置项
           roam: true, // 是否开启鼠标缩放和平移漫游
           draggable: true, // 节点是否可拖拽，只在使用力引导布局的时候有用
           focusNodeAdjacency: true, // 是否在鼠标移到节点上的时候突出显示节点以及节点的边和邻接节点
@@ -279,9 +315,13 @@ export default {
      * @return {Array} edges
      */
     _edges () {
-      return this.edges.map(item => ({
+      const { edges, linkEdgeColor } = this
+      return edges.map(item => ({
         ...item,
-        value: item.predicate
+        value: item.predicate,
+        lineStyle: { // 关系边的线条样式
+          color: item.link && linkEdgeColor // 线的颜色
+        }
       }))
     }
   },
@@ -289,8 +329,8 @@ export default {
   methods: {
     /**
      * 获取节点大小
-     * @param  {[type]} degree 节点度数
-     * @return {[type]}        节点大小
+     * @param  {Number} degree 节点度数
+     * @return {Number}        节点大小
      */
     getNodeSize (degree) {
       const { minNodeSize, maxNodeSize, nodeSizeStep } = this
@@ -305,6 +345,16 @@ export default {
     getNodeOpacity (degree) {
       const { minNodeOpacity, maxNodeOpacity, maxNodeOpacityDegree, nodeOpacityIndex } = this
       return Math.min(minNodeOpacity + Math.pow(degree / maxNodeOpacityDegree, nodeOpacityIndex) * (1 - minNodeOpacity), maxNodeOpacity)
+    },
+
+    /**
+     * 点击操作
+     * 如果项目附带链接，跳转至相应的地址
+     * @param  {Object} [data={}] 点击事件
+     */
+    onClick ({ data = {} } = {}) {
+      const { link } = data
+      link && window.open(this.$withBase(link), '\_blank')
     }
   }
 }
