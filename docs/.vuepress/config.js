@@ -128,5 +128,17 @@ module.exports = {
         },
       },
     ],
-  ]
+  ],
+
+  /**
+   * Markdown 配置
+   * @type {Object}
+   */
+  markdown: {
+    /**
+     * 是否在每个代码块的左侧显示行号，默认 undefined
+     * @type {Boolean}
+     */
+    lineNumbers: true
+  }
 }
