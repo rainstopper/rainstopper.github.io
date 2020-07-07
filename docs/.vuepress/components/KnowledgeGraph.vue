@@ -4,13 +4,24 @@
 
 <template lang="html">
   <div class="knowledge-graph" :style="`width: ${width}; height: ${height};`">
+    <!-- 支持 Vue 响应式的 ECharts 组件 -->
     <ResponsiveEcharts :option="option" @click="onClick"/>
   </div>
 </template>
 
 <script>
-import 'echarts/lib/chart/graph' // 按需引入
+// 按需引入 ECharts 组件
+import 'echarts/lib/chart/graph'
+import 'echarts/lib/component/title'
+import 'echarts/lib/component/legend'
+import 'echarts/lib/component/tooltip'
+import 'echarts/lib/component/legendScroll'
 import { commonUtil } from '../utils'
+
+/**
+ * 高亮颜色
+ */
+const ACTIVE_COLOR = '#46bd87'
 
 export default {
   props: {
@@ -163,13 +174,13 @@ export default {
     },
 
     /**
-     * 链接边颜色
+     * 链接边颜色，默认使用主题高亮颜色
      * 用于指定边的样式
      * @type {Object}
      */
     linkEdgeColor: {
       type: String,
-      default: '#46bd87'
+      default: ACTIVE_COLOR
     },
 
     /**

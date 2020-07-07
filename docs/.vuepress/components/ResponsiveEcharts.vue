@@ -8,10 +8,6 @@
 
 <script>
 import echarts from 'echarts/lib/echarts' // 此处不引入具体的 ECharts 组件
-import 'echarts/lib/component/title'
-import 'echarts/lib/component/legend'
-import 'echarts/lib/component/tooltip'
-import 'echarts/lib/component/legendScroll'
 
 export default {
   props: {
@@ -45,18 +41,26 @@ export default {
 
   data () {
     return {
-      myChart: null // 存放 ECharts 实例
+      /**
+       * 存放 ECharts 实例
+       * @type {Object}
+       */
+      myChart: null
     }
   },
 
   mounted () {
-    this.draw() // 首次绘制
-    window.addEventListener('resize', this.myChart && this.myChart.resize) // 添加 resize 事件监听器
+    // 首次绘制
+    this.draw()
+    // 添加 resize 事件监听器
+    window.addEventListener('resize', this.myChart && this.myChart.resize)
   },
 
   beforeDestroy () {
-    this.myChart && this.myChart.dispose && this.myChart.dispose() // 销毁实例
-    window.removeEventListener('resize', this.myChart && this.myChart.resize) // 移除 resize 事件监听器
+    // 销毁实例
+    this.myChart && this.myChart.dispose && this.myChart.dispose()
+    // 移除 resize 事件监听器
+    window.removeEventListener('resize', this.myChart && this.myChart.resize)
   },
 
   watch: {
@@ -87,7 +91,8 @@ export default {
       const el = this.$el
       this.myChart = echarts.init(el, '')
       this.myChart.setOption(this.option)
-      this.myChart.on('click', e => { // 绑定点击事件
+      // 绑定点击事件
+      this.myChart.on('click', e => {
         this.$emit('click', e)
       })
     }
