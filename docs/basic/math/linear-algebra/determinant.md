@@ -416,14 +416,14 @@ $$
 作出表中位于不同行不同列的 n 个数的乘积, 并冠以符号 $(-1)^t$, 得到形如
 
 $$
-(-1)^t a_{1p_1} a_{2p_2} \cdots a_{np_n}
+(-1)^t a_{1 p_1} a_{2 p_2} \cdots a_{n p_n}
 \tag{7}
 $$
 
 的项, 其中 $p_1 p_2 \cdots p_n$ 为自然数 $1, 2, \cdots, n$ 的一个排列, $t$ 为这个排列的逆序数. 由于这样的排列共有 $n!$ 个, 因而形如 (7) 式的项共有 $n!$ 项. 所有这 $n!$ 项的代数和
 
 $$
-\sum (-1)^t a_{1p_1} a_{2p_2} \cdots a_{np_n}
+\sum (-1)^t a_{1 p_1} a_{2 p_2} \cdots a_{n p_n}
 $$
 
 称为 `n 阶行列式`, 记作
@@ -481,9 +481,99 @@ $$
 $$
 
 ::: details 证
-(1) 由于当 $j>i$ 时, $a_{ij}=0$, 故 $D$ 中可能不为 $0$ 的元素 $a_{ip_i}$, 其下标应有 $p_i \leq i$, 即 $p_1 \leq 1, \cdots, p_n \leq n$, 而 $p_1 + \cdots + p_n = 1 + \cdots + n$, 因此 $p_1 = 1, \cdots, p_n = n$, 所以 $D$ 中可能不为 $0$ 的项只有一项 $(-1)^t a_{11} a_{22} \cdots a_{nn}$, 此项的符号 $(-1)^t = (-1)^0 = 1$, 所以 $D = λ_1 λ_2 \cdots λ_n$.
+(1) 由于当 $j>i$ 时, $a_{ij}=0$, 故 $D$ 中可能不为 $0$ 的元素 $a_{i p_i}$, 其下标应有 $p_i \leq i$, 即 $p_1 \leq 1, \cdots, p_n \leq n$, 而 $p_1 + \cdots + p_n = 1 + \cdots + n$, 因此 $p_1 = 1, \cdots, p_n = n$, 所以 $D$ 中可能不为 $0$ 的项只有一项 $(-1)^t a_{11} a_{22} \cdots a_{nn}$, 此项的符号 $(-1)^t = (-1)^0 = 1$, 所以 $D = λ_1 λ_2 \cdots λ_n$.
 
 (2) 由 (1) 即得.
 :::
 
 ## 行列式的性质
+
+### 转置行列式
+
+记
+
+$$
+D =
+\left|
+\begin{array}{cccc}
+a_{11} & a_{12} & \cdots & a_{1n} \\
+a_{21} & a_{22} & \cdots & a_{2n} \\
+\vdots & \vdots &        & \vdots \\
+a_{n1} & a_{n2} & \cdots & a_{nn}
+\end{array}
+\right|
+,
+\qquad
+D^T =
+\left|
+\begin{array}{cccc}
+a_{11} & a_{21} & \cdots & a_{n1} \\
+a_{12} & a_{22} & \cdots & a_{n2} \\
+\vdots & \vdots &        & \vdots \\
+a_{1n} & a_{2n} & \cdots & a_{nn}
+\end{array}
+\right|
+,
+$$
+
+行列式 $D^T$ 称为行列式 $D$ 的 `转置行列式`.
+
+#### 性质 1
+
+行列式与它的转置行列式相等.
+
+::: details 证
+记 $D = det(a_{ij})$ 的转置行列式 $D^T = det(b_{ij})$, 即 $D^T$ 的 $(i, j)$ 元为 $b_{ij}$, 则 $b_{ij} = a_{ji}（i, j = 1, 2, \cdots, n）$, 按定义
+
+$$
+D^T = \sum (-1)^t b_{1 p_1} b_{2 p_2} \cdots b_{n p_n} = \sum (-1)^t a_{p_1 1} a_{p_2 2} \cdots a_{p_n n} .
+$$
+
+下证 $D = D^T$.
+
+对于行列式 $D$ 的任一项
+
+$$
+(-1)^t a_{1 p_1} \cdots a_{i p_i} \cdots a_{j p_j} \cdots a_{n p_n} ,
+$$
+
+其中 $1 \cdots i \cdots j \cdots n$ 为标准排列, t 为排列 $p_1 \cdots p_i \cdots p_j \cdots p_n$ 的逆序数, 对换元素 $a_{i p_i}$ 与 $a_{j p_j}$ 成
+
+$$
+(-1)^t a_{1 p_1} \cdots a_{j p_j} \cdots a_{i p_i} \cdots a_{n p_n} ,
+$$
+
+这时, 这一项的值不变, 而行标排列与列表排列同时做了一次相应的对换. 设新的行标排列 $1 \cdots j \cdots i \cdots n$ 的逆序数为 r, 则 r 为奇数; 设新的列表排列 $p_1 \cdots p_j \cdots p_i \cdots p_n$ 的逆序数为 $t_1$, 则
+
+$$
+(-1)^{t_1} = - (-1)^t .
+$$
+
+故
+
+$$
+(-1)^t = - (-1)^{t_1} = (-1)^r (-1)^{t_1} = (-1)^{r + t_1} ,
+$$
+
+于是
+
+$$
+(-1)^t a_{1 p_1} \cdots a_{i p_i} \cdots a_{j p_j} \cdots a_{n p_n} = (-1)^{r + t_1} a_{1 p_1} \cdots a_{j p_j} \cdots a_{i p_i} \cdots a_{n p_n} .
+$$
+
+这就表明, 对换乘积中两元素的次序, 从而行标排列与列标排列同时作了相应的对换, 则行标排列与列标排列的逆序数之和并不改变奇偶性. 经一次对换是如此, 经多次对换当然还是如此. 于是, 经过若干次对换, 使
+
+* 列标排列 $p_1 p_2 \cdots p_n$（逆序数为 $t$）变为标准排列（逆序数为 $0$）;
+* 行标排列则相应地从标准排列变为某个新的排列, 设此新排列为 $q_1 q_2 \cdots q_n$, 其逆序数为 $s$, 则有
+  $$
+  (-1)^t a_{1 p_1} a_{2 p_2} \cdots a{n p_n} = (-1)^s a_{q_1 1} a_{q_2 2} \cdots a_{q_n n} .
+  $$
+
+又, 如果上式左边乘积的第 $i$ 个元素 $a_{i p_i}$ 为 $a_{ij}$, 那么塔必定是上式右边乘积的第 $j$ 个元素, 即 $a_{i p_i} = a_{ij} = a_{q_j j}$. 可见排列 $q_1 q_2 \cdots q_n$ 由排列 $p_1 p_2 \cdots p_n$ 所唯一确定.
+
+综上可知: 对于 $D$ 中任一项 $(-1)^t a_{1 p_1} a_{2 p_2} \cdots a_{n p_n}$, 总有且仅有 $D^T$ 中的某一项 $(-1)^s a_{q_1 1} a_{q_2 2} \cdots a_{q_n n}$ 与之对应并相等; 反之, 对于 $D^T$ 中的任一项 $(-1)^t a_{p_1 1} a_{p_2 2} \cdots a_{p_n n}$, 也总有且仅有 $D$ 中的某一项 $(-1)^s a_{1 q_1} a_{2 q_2} \cdots a_{n q_n}$ 与之对应并相等, 于是 $D$ 与 $D^T$ 中的项可以一一对应并相等, 从而 $D = D^T$. 证毕.
+:::
+
+由此性质可知, 行列式中的行与列具有同等的地位, 行列式的性质凡是对行成立的对列也同样成立, 反之亦然.
+
+### 行列式运算
