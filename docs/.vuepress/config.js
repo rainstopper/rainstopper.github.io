@@ -70,7 +70,9 @@ module.exports = {
             text: '数学',
             items: [
               { text: '高等数学', link: '/basic/math/advanced-mathematics/' },
-              { text: '线性代数', link: '/basic/math/linear-algebra/' }
+              { text: '线性代数', link: '/basic/math/linear-algebra/' },
+              { text: '数论', link: '/basic/math/number-theory/' },
+              { text: '奥林匹克数学', link: '/basic/math/olympic-math/' }
             ]
           }
         ]
@@ -86,7 +88,7 @@ module.exports = {
         {
           title: '线性代数',
           collapsable: false,
-          sidebarDepth: 2,
+          sidebarDepth: 2, // 0 | 1 | 2
           children: [
             ['', '介绍'],
             'determinant'
@@ -107,9 +109,14 @@ module.exports = {
    * @type {Array}
    */
   plugins: [
-    'vuepress-plugin-latex'
     /**
-     * vuepress-plugin-mathjax 插件
+     * vuepress-plugin-latex 文档排版插件
+     * 对数学公式支持良好
+     */
+    'vuepress-plugin-latex'
+
+    /**
+     * vuepress-plugin-mathjax 数学公式插件
      * XXX 不支持方程组和矩阵写法
      */
     // [
