@@ -91,7 +91,8 @@ module.exports = {
           sidebarDepth: 2, // 0 | 1 | 2
           children: [
             ['', '介绍'],
-            'determinant'
+            'determinant',
+            'matrix'
           ]
         }
       ]
