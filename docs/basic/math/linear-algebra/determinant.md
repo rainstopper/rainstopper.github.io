@@ -1366,10 +1366,10 @@ $$
 \begin{aligned}
   D & \xlongequal[c_4 + c_3]{c_1 - 2c_3}
       \begin{vmatrix}
-         5  &  1 & -1 &  1 \\
-        -11 &  1 &  3 & -1 \\
-         0  &  0 &  1 &  0 \\
-        -5  & -5 &  3 &  0
+                        5  &                 1 &                -1 &                 1 \\
+                       -11 &                 1 &                 3 &                -1 \\
+        \color{#3eaf7c} 0  & \color{#3eaf7c} 0 & \color{#3eaf7c} 1 & \color{#3eaf7c} 0 \\
+                       -5  &                -5 &                 3 &                 0
       \end{vmatrix} \\
     & = (-1)^{3+3}
       \begin{vmatrix}
@@ -1379,9 +1379,9 @@ $$
       \end{vmatrix}
       \xlongequal[]{r_2 + r_1}
       \begin{vmatrix}
-         5 &  1 & 1 \\
-        -6 &  2 & 0 \\
-        -5 & -5 & 0
+         5 &  1 & \color{#3eaf7c} 1 \\
+        -6 &  2 & \color{#3eaf7c} 0 \\
+        -5 & -5 & \color{#3eaf7c} 0
       \end{vmatrix} \\
     & = (-1)^{1+3}
       \begin{vmatrix}
@@ -1437,11 +1437,11 @@ $$
 \begin{aligned}
 D_n & =
       \begin{vmatrix}
-           1   &           1           &           1           & \cdots &           1           \\
-           0   &       x_2 - x_1       &       x_3 - x_1       & \cdots &       x_n - x_1       \\
-           0   &    x_2 (x_2 - x_1)    &    x_3 (x_3 - x_1)    & \cdots &    x_n (x_n - x_1)    \\
-        \vdots &        \vdots         &        \vdots         &        &        \vdots         \\
-           0   & x_2^{n-2} (x_2 - x_1) & x_3^{n-2} (x_3 - x_1) & \cdots & x_n^{n-2} (x_n - x_1)
+        \color{#3eaf7c}    1   &           1           &           1           & \cdots &           1           \\
+        \color{#3eaf7c}    0   &       x_2 - x_1       &       x_3 - x_1       & \cdots &       x_n - x_1       \\
+        \color{#3eaf7c}    0   &    x_2 (x_2 - x_1)    &    x_3 (x_3 - x_1)    & \cdots &    x_n (x_n - x_1)    \\
+        \color{#3eaf7c} \vdots &        \vdots         &        \vdots         &        &        \vdots         \\
+        \color{#3eaf7c}    0   & x_2^{n-2} (x_2 - x_1) & x_3^{n-2} (x_3 - x_1) & \cdots & x_n^{n-2} (x_n - x_1)
       \end{vmatrix} \\
     & = (-1)^{1+1}
       \begin{vmatrix}
@@ -1477,6 +1477,196 @@ $$
 \begin{aligned}
 D_n & = (x_2 - x_1) (x_3 - x_1) ... (x_n - x_1) \prod_{n \geq i > j \geq 2} (x_i - x_j) \\
     & = \prod_{n \geq i > j \geq 1} (x_i - x_j) .
+\end{aligned}
+$$
+:::
+
+::: tip 提示
+计算 $n$ 阶行列式, 常要使用数学归纳法, 不过在比较简单的情形（如 [例 11](#例-11)）, 可省略归纳法的叙述格式, 但归纳法的主要步骤是不可能省略的. 这主要步骤是: 导出递推公式（例 11 中导出 $D_{2n} = (ad - bc) D_{2(n-1)}$）及检验 $n=1$ 时结论成立（例 11 中最后用到 $D_2 = ad - bc$）.
+:::
+
+下面来推导行列式的另一重要性质, 并将它作为 [定理 2](#定理-2) 的推论.
+
+设有 $n$ 阶行列式 $D = det(a_{ij})$, 我们已得到它的按第 $j$ 行展开式
+
+$$
+D = a_{j1} A_{j1} + a_{j2} A_{j2} + \cdots + a_{jn} A_{jn} .
+$$
+
+因诸 $A_{jk} (k = 1, 2, \cdots, n)$ 都是先划去了 $D$ 中第 $j$ 行再经计算而得, 所以当第 $j$ 行元素依次取为 $b_1, b_2, \cdots, b_n$ 时就有
+
+$$
+D_j =
+\begin{vmatrix}
+                 a_{11}   &                 \cdots &                a_{1n}   \\
+                 \vdots   &                        &                \vdots   \\
+               a_{j-1, 1} &                 \cdots &              a_{j-1, n} \\
+  \color{#3eaf7c} b_1     & \color{#3eaf7c} \cdots & \color{#3eaf7c} b_n     \\
+               a_{j+1, 1} &                 \cdots &              a_{j+1, n} \\
+                 \vdots   &                        &                \vdots   \\
+                 a_{n1}   &                 \cdots &                a_{nn}
+\end{vmatrix}
+= b_1 A_{j1} + b_2 A_{j2} + \cdots + b_n A_{jn} .
+\tag{9}
+$$
+
+这里 $D_j$ 表示除第 $i$ 行外其余各行均与 $D$ 相同的行列式.
+
+特别, 当 $b_1, b_2, \cdots, b_n$ 依次取为 $D = det(a_{ij})$ 的第 $i$ 行 $(i \neq j)$ 各元素时, 上式仍成立. 但此时因 $D_j$ 中第 $j$ 行与第 $i$ 行两行相同, 故 $D_j = 0$, 从而有
+
+$$
+a_{i1} A_{j1} + a_{i2} A_{j2} + \cdots + a_{in} A_{jn} = 0 \qquad (i \neq j) .
+$$
+
+对列作相仿的讨论可知
+
+$$
+\begin{vmatrix}
+  a_{11} & \cdots & a_{1, j-1} & \color{#3eaf7c}  b_1   & a_{1, j+1} & \cdots & a_{1n} \\
+  \vdots &        &   \vdots   & \color{#3eaf7c} \vdots &   \vdots   &        & \vdots \\
+  a_{n1} & \cdots & a_{n, j-1} & \color{#3eaf7c}  b_n   & a_{n, j+1} & \cdots & a_{nn}
+\end{vmatrix}
+= b_1 A_{1j} + b_2 A_{2j} + \cdots + b_n A_{nj} .
+\tag{10}
+$$
+
+特别有
+
+$$
+a_{1i} A_{1j} + a_{2i} A_{2j} + \cdots + a_{ni} A_{nj} = 0 \qquad (i \neq j) .
+$$
+
+这样得到了下述推论.
+
+#### 推论
+
+**行列式某一行（列）的元素与另一行（列）的对应元素的代数余子式乘积之和等于零. 即**
+
+$$
+a_{i1} A_{j1} + a_{i2} A_{j2} + \cdots + a_{in} A_{jn} = 0 , \qquad i \neq j
+$$
+
+**或**
+
+$$
+a_{1i} A_{1j} + a_{2i} A_{2j} + \cdots + a_{ni} A_{nj} = 0 , \qquad i \neq j .
+$$
+
+综合 [定理 2](#定理-2) 及其推论, 有关于代数余子式的重要性质:
+
+$$
+\sum_{k=1}^n a_{ki} A_{kj} =
+\begin{cases}
+D, & 当 i = j, \\
+0, & 当 i \neq j
+\end{cases}
+$$
+
+或
+
+$$
+\sum_{k=1}^n a_{ik} A_{jk} =
+\begin{cases}
+D, & 当 i = j, \\
+0, & 当 i \neq j .
+\end{cases}
+$$
+
+#### 例 13
+
+设
+
+$$
+D =
+\begin{vmatrix}
+   3 & -5 &  2 &  1 \\
+   1 &  1 &  0 & -5 \\
+  -1 &  3 &  1 &  3 \\
+   2 & -4 & -1 & -3
+\end{vmatrix}
+,
+$$
+
+$D$ 的 $(i,j)$ 元的余子式和代数余子式依次记作 $M_{ij}$ 和 $A_{ij}$, 求
+
+$$
+A_{11} + A_{12} + A_{13} + A_{14} \text{及} M_{11} + M_{21} + M_{31} + M_{41} .
+$$
+
+::: details 解
+按 (9) 式可知 $A_{11} + A_{12} + A_{13} + A_{14}$ 等于用 $1, 1, 1, 1$ 代替 $D$ 的第 $1$ 行所得的行列式, 即
+
+$$
+\begin{aligned}
+  & A_{11} + A_{12} + A_{13} + A_{14} \\
+= &
+    \begin{vmatrix}
+      \color{#3eaf7c} 1 & \color{#3eaf7c} 1 & \color{#3eaf7c} 1 & \color{#3eaf7c} 1 \\
+                      1 &                 1 &                 0 &                -5 \\
+                     -1 &                 3 &                 1 &                 3 \\
+                      2 &                -4 &                -1 &                -3
+    \end{vmatrix}
+    \xlongequal[r_3 - r_1]{r_4 + r_3}
+    \begin{vmatrix}
+       1 &  1 & 1 &  1 \\
+       1 &  1 & 0 & -5 \\
+      -2 &  2 & 0 &  2 \\
+       1 & -1 & 0 &  0
+    \end{vmatrix} \\
+= & (-1)^{1+3}
+    \begin{vmatrix}
+       1 &  1 & -5 \\
+      -2 &  2 &  2 \\
+       1 & -1 &  0
+    \end{vmatrix}
+    \xlongequal[]{c_2 + c_1}
+    \begin{vmatrix}
+       1 & 2 & -5 \\
+      -2 & 0 &  2 \\
+       1 & 0 &  0
+    \end{vmatrix}
+    = (-1)^{3+1}
+    \begin{vmatrix}
+      2 & -5 \\
+      0 &  2
+    \end{vmatrix}
+    = 4 .
+\end{aligned}
+$$
+
+按 (10) 式可知
+
+$$
+\begin{aligned}
+  & M_{11} + M_{21} + M_{31} + M_{41} \\
+= & A_{11} - A_{21} + A_{31} - A_{41} \\
+= &
+    \begin{vmatrix}
+      \color{#3eaf7c}  1 & -5 &  2 &  1 \\
+      \color{#3eaf7c} -1 &  1 &  0 & -5 \\
+      \color{#3eaf7c}  1 &  3 &  1 &  3 \\
+      \color{#3eaf7c} -1 & -4 & -1 & -3
+    \end{vmatrix}
+    \xlongequal[]{r_4 + r_3}
+    \begin{vmatrix}
+       1 & -5 &  2 &  1 \\
+      -1 &  1 &  0 & -5 \\
+       1 &  3 &  1 &  3 \\
+       0 & -1 &  0 &  0
+    \end{vmatrix} \\
+= & (-1)^{4+2} \times (-1)
+    \begin{vmatrix}
+       1 &  2 &  1 \\
+      -1 &  0 & -5 \\
+       1 &  1 &  3
+    \end{vmatrix}
+    \xlongequal[]{r_1 - 2r_3} -
+    \begin{vmatrix}
+      -1 &  0 & -5 \\
+      -1 &  0 & -5 \\
+       1 &  1 &  3
+    \end{vmatrix}
+    = 0 .
 \end{aligned}
 $$
 :::
