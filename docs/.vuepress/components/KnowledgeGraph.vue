@@ -200,7 +200,7 @@ export default {
     force: {
       type: Object,
       default: () => ({
-        edgeLength: 20,
+        edgeLength: 50,
         repulsion: 20,
         gravity: 0.2
       })
