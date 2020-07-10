@@ -87,3 +87,84 @@ $$
 \end{matrix}
 .
 $$
+
+## 矩阵的定义
+
+#### 定义 1
+
+由 $m \times n$ 个数 $a_{ij} (i = 1, 2, \cdots, n)$ 排成的 $m$ 行 $n$ 列的数表
+
+$$
+\begin{matrix}
+  a_{11} & a_{12} & \cdots & a_{1n} \\
+  a_{21} & a_{22} & \cdots & a_{2n} \\
+  \vdots & \vdots &        & \vdots \\
+  a_{m1} & a_{m2} & \cdots & a_{mn}
+\end{matrix}
+$$
+
+称为 `m 行 n 列矩阵`, 简称 `m×n 矩阵`. 为表示它是一个整体, 总是加一个括弧, 并用大写黑体字母表示它, 记作
+
+$$
+\boldsymbol{A} =
+\begin{pmatrix}
+  a_{11} & a_{12} & \cdots & a_{1n} \\
+  a_{21} & a_{22} & \cdots & a_{2n} \\
+  \vdots & \vdots &        & \vdots \\
+  a_{m1} & a_{m2} & \cdots & a_{mn}
+\end{pmatrix}
+,
+$$
+
+这 $m \times n$ 个数称为矩阵 $\boldsymbol{A}$ 的 `元素`, 简称为 `元`, 数 $a_{ij}$ 位于矩阵 $\boldsymbol{A}$ 的第 $i$ 行第 $j$ 列, 称为矩阵 $\boldsymbol{A}$ 的 `(i,j) 元`. 以数 $a_{ij}$ 为 $(i,j)$ 元的矩阵可简记作 $(a_{ij})$ 或 $(a_{ij})_{m \times n}$. $m$×$n$ 矩阵 $\boldsymbol{A}$ 也记作 $\boldsymbol{A}_{m \times n}$.
+
+元素是实数的矩阵称为 `实矩阵`, 元素是复数的矩阵称为 `复矩阵`, 这里的矩阵除特殊说明外, 都指实矩阵.
+
+行数与列数都等于 $n$ 的矩阵称为 `n 阶矩阵` 或 `n 阶方阵`. $n$ 阶矩阵 $\boldsymbol{A}$ 也记作 $\boldsymbol{A}_n$.
+
+只有一行的矩阵
+
+$$
+\boldsymbol{A} =
+\begin{pmatrix}
+  a_1 & a_2 & \cdots & a_n
+\end{pmatrix}
+$$
+
+称为 `行矩阵`, 又称 `行向量`. 为避免元素间的混淆, 行矩阵也记作
+
+$$
+\boldsymbol{A} =
+\begin{pmatrix}
+  a_1 , & a_2 , & \cdots , & a_n
+\end{pmatrix}
+.
+$$
+
+只有一列的矩阵
+
+$$
+\boldsymbol{B} =
+\begin{pmatrix}
+  b_1  \\
+  b_2  \\
+\vdots \\
+  b_m
+\end{pmatrix}
+$$
+
+称为 `列矩阵`, 又称 `列向量`.
+
+两个矩阵的行数相等、列数也相等时, 就称它们是 `同型矩阵`. 如果 $\boldsymbol{A} = \begin{pmatrix} a_{ij} \end{pmatrix}$ 与 $\boldsymbol{B} = \begin{pmatrix} b_{ij} \end{pmatrix}$ 是同型矩阵, 并且它们的对应元素相等, 即
+
+$$
+a_{ij} = b_{ij} (i = 1, 2, \cdots, m; j = 1, 2, \cdots, n) ,
+$$
+
+那么就称矩阵 $\boldsymbol{A}$ 与矩阵 $\boldsymbol{B}$ `相等`, 记作
+
+$$
+\boldsymbol{A} = \boldsymbol{B} .
+$$
+
+元素都是零的矩阵称为 `零矩阵`, 记作 $\boldsymbol{O}$. 注意不同型的零矩阵是不同的.
