@@ -216,6 +216,15 @@ export default {
     focusNodeAdjacency: {
       type: Boolean,
       default: false
+    },
+
+    /**
+     * 图例是否按名称首字母重排序
+     * @type {Boolean}
+     */
+    sortLegends: {
+      type: Boolean,
+      default: false
     }
   },
 
@@ -298,13 +307,26 @@ export default {
      * @return {Array} 图例
      */
     legends () {
-      const { nodes, categoryOther } = this
-      if (!nodes || !nodes.length) return []
-      return [
+      const { nodes, categoryOther, sortLegends } = this
+
+      if (!nodes || !nodes.length) {
+        return []
+      }
+
+      const legends = [
         ...new Set( // 利用 Set 去重
           nodes.map(({ category }) => category).filter(item => commonUtil.isNotEmpty(item) && item !== categoryOther) // 不为空，且不是“其它”
-        ),
-        categoryOther // 补充“其它”分类
+        )
+      ]
+
+      // 按名称首字母排序
+      if (sortLegends) {
+        legends.sort((a, b) => a.localeCompare(b))
+      }
+
+      return [
+        ...legends,
+        categoryOther // 在末尾补充“其它”分类
       ]
     },
 
