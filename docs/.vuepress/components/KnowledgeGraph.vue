@@ -25,6 +25,12 @@ import { commonUtil } from '../utils'
  */
 const ACTIVE_COLOR = '#46bd87'
 
+const DEFAULT_FORCE = {
+  edgeLength: 50,
+  repulsion: 20,
+  gravity: 0.2
+}
+
 export default {
   props: {
     /**
@@ -194,16 +200,12 @@ export default {
 
     /**
      * 力引导布局相关的配置项
-     *
+     * 会合并默认配置项
      * @type {Object}
      */
     force: {
       type: Object,
-      default: () => ({
-        edgeLength: 50,
-        repulsion: 20,
-        gravity: 0.2
-      })
+      default: () => ({})
     }
   },
 
@@ -244,7 +246,7 @@ export default {
         series: [{
           type: 'graph',
           layout: 'force',
-          force, // 力引导布局相关的配置项
+          force: Object.assign({}, DEFAULT_FORCE, force), // 力引导布局相关的配置项
           roam: true, // 是否开启鼠标缩放和平移漫游
           draggable: true, // 节点是否可拖拽，只在使用力引导布局的时候有用
           focusNodeAdjacency: true, // 是否在鼠标移到节点上的时候突出显示节点以及节点的边和邻接节点

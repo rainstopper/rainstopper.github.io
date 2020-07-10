@@ -1,1 +1,1 @@
-<KnowledgeGraphAsync height="500px"/>
+<KnowledgeGraphAsync height="500px" :force="{ edgeLength: 10 }"/>

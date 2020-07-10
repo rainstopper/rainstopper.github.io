@@ -10,7 +10,8 @@
                   :title="title"
                   :nodes="nodes"
                   :edges="edges"
-                  :loading="loading"/>
+                  :loading="loading"
+                  :force="force"/>
 </template>
 
 <script>
@@ -57,7 +58,14 @@ export default {
      * 如果不传，默认取 `/data/knowledge${this.$route.path}`
      * @type {String}
      */
-    baseUrl: String
+    baseUrl: String,
+
+    /**
+     * 力引导布局相关的配置项
+     * 透传给知识图谱组件
+     * @type {Object}
+     */
+    force: Object
   },
 
   data () {
