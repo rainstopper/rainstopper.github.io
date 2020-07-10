@@ -137,7 +137,7 @@ export default {
      */
     minNodeOpacity: {
       type: Number,
-      default: 0.7
+      default: 0.6
     },
 
     /**
