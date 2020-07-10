@@ -36,6 +36,15 @@ export default {
     height: {
       type: String,
       default: '100%'
+    },
+
+    /**
+     * 加载状态
+     * @type {Boolean}
+     */
+    loading: {
+      type: Boolean,
+      default: false
     }
   },
 
@@ -65,7 +74,7 @@ export default {
 
   watch: {
     /**
-     * 监听 option 的变化
+     * 监听 option 属性的变化
      */
     option: {
       handler (newVal, oldVal) {
@@ -80,6 +89,17 @@ export default {
         }
       },
       deep: true // 深监听
+    },
+
+    /**
+     * 监听 loading 属性的变化
+     */
+    loading (val) {
+      if (val) { // 开始 loading 态
+        this.myChart.showLoading()
+      } else { // 结束 loading 态
+        this.myChart.hideLoading()
+      }
     }
   },
 
