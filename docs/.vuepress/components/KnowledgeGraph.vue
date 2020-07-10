@@ -231,7 +231,7 @@ export default {
           data: legends
         },
         tooltip: { // 提示框
-          position: ['100%', 0],
+          // position: ['100%', 0],
           /**
            * 格式化提示框内容
            * @param  {String} dataType  数据类型，'node' 表示节点，'edge' 表示边
@@ -239,11 +239,14 @@ export default {
            * @return {String}           提示框内容
            */
           formatter ({ dataType, data = {} } = {}) {
+            const { name, source, value, target, description, link } = data
             let str = {
-              node: `${data.name}<br/>关联 ${data.value} 个节点`, // 节点提示框内容
-              edge: `${data.source} ${data.value} ${data.target}` // 边提示框内容
+              node: `${name}（关联 ${value} 个节点）`, // 节点提示框内容
+              edge: `${source} ${value} ${target}` // 边提示框内容
             }[dataType] || ''
-            return data.link && `${str}${str.length && '<br/>' || ''}点击查看详情` || str; // 附带链接的项目追加“<br/>点击查看详情”
+            if (description) str += `${str.length && '<br/>' || ''}${description}` // 附带描述的项目追加描述
+            if (link) str += `${str.length && '<br/>' || ''}点击查看详情` // 附带链接的项目追加“点击查看详情”
+            return str
           }
         },
         series: [{
