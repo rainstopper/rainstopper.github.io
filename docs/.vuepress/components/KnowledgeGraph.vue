@@ -27,7 +27,7 @@ const ACTIVE_COLOR = '#46bd87'
 
 const DEFAULT_FORCE = {
   edgeLength: 50,
-  repulsion: 20,
+  repulsion: 50,
   gravity: 0.2
 }
 
