@@ -235,7 +235,7 @@ export default {
         legend: { // 图例
           type: 'scroll',
           top: commonUtil.isNotEmpty(title) && 36 || 0,
-          left: 0,
+          left: 8,
           orient: 'vertical',
           data: legends
         },
