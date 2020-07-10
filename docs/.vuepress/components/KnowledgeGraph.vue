@@ -392,5 +392,6 @@ export default {
 
 <style lang="stylus" scoped>
 .knowledge-graph
+  margin: 20px auto
   border: 1px solid #eee
 </style>
