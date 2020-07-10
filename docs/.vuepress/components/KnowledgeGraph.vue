@@ -27,8 +27,8 @@ const ACTIVE_COLOR = '#46bd87'
 
 const DEFAULT_FORCE = {
   edgeLength: 50,
-  repulsion: 20,
-  gravity: 0.2
+  repulsion: 50,
+  gravity: 0.05
 }
 
 export default {
@@ -137,7 +137,7 @@ export default {
      */
     minNodeOpacity: {
       type: Number,
-      default: 0.7
+      default: 0.6
     },
 
     /**
@@ -200,12 +200,22 @@ export default {
 
     /**
      * 力引导布局相关的配置项
+     * 当节点数量很大时，用户可以用此配置项自行调整布局，使图形更美观
      * 会合并默认配置项
      * @type {Object}
      */
     force: {
       type: Object,
       default: () => ({})
+    },
+
+    /**
+     * 是否在鼠标移到节点上的时候突出显示节点以及节点的边和邻接节点，默认 false
+     * @type {Boolean}
+     */
+    focusNodeAdjacency: {
+      type: Boolean,
+      default: false
     }
   },
 
@@ -215,20 +225,22 @@ export default {
      * @return {Object} option
      */
     option () {
-      const { title, legends, force, categories, _nodes, _edges } = this
+      const { title, legends, force, focusNodeAdjacency, categories, _nodes, _edges } = this
       return {
         title: { // 标题
-          text: title
+          text: title,
+          top: 8,
+          left: 8
         },
         legend: { // 图例
           type: 'scroll',
-          top: commonUtil.isNotEmpty(title) && 30 || 0,
-          left: 0,
+          top: commonUtil.isNotEmpty(title) && 36 || 0,
+          left: 8,
           orient: 'vertical',
           data: legends
         },
         tooltip: { // 提示框
-          position: ['100%', 0],
+          // position: ['100%', 0],
           /**
            * 格式化提示框内容
            * @param  {String} dataType  数据类型，'node' 表示节点，'edge' 表示边
@@ -236,11 +248,14 @@ export default {
            * @return {String}           提示框内容
            */
           formatter ({ dataType, data = {} } = {}) {
+            const { name, source, value, target, description, link } = data
             let str = {
-              node: `${data.name}<br/>关联 ${data.value} 个节点`, // 节点提示框内容
-              edge: `${data.source} ${data.value} ${data.target}` // 边提示框内容
+              node: `${name}（关联 ${value} 个节点）`, // 节点提示框内容
+              edge: `${source} ${value} ${target}` // 边提示框内容
             }[dataType] || ''
-            return data.link && `${str}${str.length && '<br/>' || ''}点击查看详情` || str; // 附带链接的项目追加“<br/>点击查看详情”
+            if (description) str += `${str.length && '<br/>' || ''}${description}` // 附带描述的项目追加描述
+            if (link) str += `${str.length && '<br/>' || ''}点击查看详情` // 附带链接的项目追加“点击查看详情”
+            return str
           }
         },
         series: [{
@@ -249,7 +264,7 @@ export default {
           force: Object.assign({}, DEFAULT_FORCE, force), // 力引导布局相关的配置项
           roam: true, // 是否开启鼠标缩放和平移漫游
           draggable: true, // 节点是否可拖拽，只在使用力引导布局的时候有用
-          focusNodeAdjacency: true, // 是否在鼠标移到节点上的时候突出显示节点以及节点的边和邻接节点
+          focusNodeAdjacency, // 是否在鼠标移到节点上的时候突出显示节点以及节点的边和邻接节点
           itemStyle: { // 图形样式
             borderColor: '#fff', // 图形的描边颜色
             borderWidth: 1, // 描边线宽
@@ -384,5 +399,8 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style lang="stylus" scoped>
+.knowledge-graph
+  margin: 20px auto
+  border: 1px solid #eee
 </style>
