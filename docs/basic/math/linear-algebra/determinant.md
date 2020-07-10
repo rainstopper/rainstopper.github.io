@@ -489,7 +489,7 @@ $$
 **行列式与它的转置行列式相等.**
 
 ::: details 证
-记 $D = det(a_{ij})$ 的转置行列式 $D^T = det(b_{ij})$, 即 $D^T$ 的 $(i,j)$ 元为 $b_{ij}$, 则 $b_{ij} = a_{ji}（i, j = 1, 2, \cdots, n）$, 按定义
+记 $D = det(a_{ij})$ 的转置行列式 $D^T = det(b_{ij})$, 即 $D^T$ 的 $(i,j)$ 元为 $b_{ij}$, 则 $b_{ij} = a_{ji} (i, j = 1, 2, \cdots, n)$, 按定义
 
 $$
 D^T = \sum (-1)^t b_{1 p_1} b_{2 p_2} \cdots b_{n p_n} = \sum (-1)^t a_{p_1 1} a_{p_2 2} \cdots a_{p_n n} .
