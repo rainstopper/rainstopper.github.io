@@ -207,6 +207,15 @@ export default {
     force: {
       type: Object,
       default: () => ({})
+    },
+
+    /**
+     * 是否在鼠标移到节点上的时候突出显示节点以及节点的边和邻接节点，默认 false
+     * @type {Boolean}
+     */
+    focusNodeAdjacency: {
+      type: Boolean,
+      default: false
     }
   },
 
@@ -216,7 +225,7 @@ export default {
      * @return {Object} option
      */
     option () {
-      const { title, legends, force, categories, _nodes, _edges } = this
+      const { title, legends, force, focusNodeAdjacency, categories, _nodes, _edges } = this
       return {
         title: { // 标题
           text: title,
@@ -255,7 +264,7 @@ export default {
           force: Object.assign({}, DEFAULT_FORCE, force), // 力引导布局相关的配置项
           roam: true, // 是否开启鼠标缩放和平移漫游
           draggable: true, // 节点是否可拖拽，只在使用力引导布局的时候有用
-          focusNodeAdjacency: true, // 是否在鼠标移到节点上的时候突出显示节点以及节点的边和邻接节点
+          focusNodeAdjacency, // 是否在鼠标移到节点上的时候突出显示节点以及节点的边和邻接节点
           itemStyle: { // 图形样式
             borderColor: '#fff', // 图形的描边颜色
             borderWidth: 1, // 描边线宽
