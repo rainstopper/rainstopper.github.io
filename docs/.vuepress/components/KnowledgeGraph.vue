@@ -219,11 +219,13 @@ export default {
       const { title, legends, force, categories, _nodes, _edges } = this
       return {
         title: { // 标题
-          text: title
+          text: title,
+          top: 8,
+          left: 8
         },
         legend: { // 图例
           type: 'scroll',
-          top: commonUtil.isNotEmpty(title) && 30 || 0,
+          top: commonUtil.isNotEmpty(title) && 36 || 0,
           left: 0,
           orient: 'vertical',
           data: legends
