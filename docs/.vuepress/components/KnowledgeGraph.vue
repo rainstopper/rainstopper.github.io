@@ -384,5 +384,7 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style lang="stylus" scoped>
+.knowledge-graph
+  border: 1px solid #eee
 </style>
