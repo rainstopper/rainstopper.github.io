@@ -71,6 +71,7 @@ module.exports = {
             items: [
               { text: '高等数学', link: '/basic/math/advanced-mathematics/' },
               { text: '线性代数', link: '/basic/math/linear-algebra/' },
+              { text: '概率论与数理统计', link: '/basic/math/probability-and-statistics/' },
               { text: '数论', link: '/basic/math/number-theory/' },
               { text: '奥林匹克数学', link: '/basic/math/olympic-math/' }
             ]

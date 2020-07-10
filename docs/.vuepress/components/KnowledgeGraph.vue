@@ -5,7 +5,9 @@
 <template lang="html">
   <div class="knowledge-graph" :style="`width: ${width}; height: ${height};`">
     <!-- 支持 Vue 响应式的 ECharts 组件 -->
-    <ResponsiveEcharts :option="option" @click="onClick"/>
+    <ResponsiveEcharts :option="option"
+                       :loading="loading"
+                       @click="onClick"/>
   </div>
 </template>
 
@@ -22,6 +24,12 @@ import { commonUtil } from '../utils'
  * 高亮颜色
  */
 const ACTIVE_COLOR = '#46bd87'
+
+const DEFAULT_FORCE = {
+  edgeLength: 50,
+  repulsion: 20,
+  gravity: 0.2
+}
 
 export default {
   props: {
@@ -75,6 +83,13 @@ export default {
       type: Array,
       default: () => ([])
     },
+
+    /**
+     * 加载状态
+     * 透传给响应式的 ECharts 组件
+     * @type {Boolean}
+     */
+    loading: Boolean,
 
     /**
      * 其它分类，无分类项目的默认分类
@@ -185,16 +200,12 @@ export default {
 
     /**
      * 力引导布局相关的配置项
-     *
+     * 会合并默认配置项
      * @type {Object}
      */
     force: {
       type: Object,
-      default: () => ({
-        edgeLength: 10,
-        repulsion: 20,
-        gravity: 0.2
-      })
+      default: () => ({})
     }
   },
 
@@ -235,7 +246,7 @@ export default {
         series: [{
           type: 'graph',
           layout: 'force',
-          force, // 力引导布局相关的配置项
+          force: Object.assign({}, DEFAULT_FORCE, force), // 力引导布局相关的配置项
           roam: true, // 是否开启鼠标缩放和平移漫游
           draggable: true, // 节点是否可拖拽，只在使用力引导布局的时候有用
           focusNodeAdjacency: true, // 是否在鼠标移到节点上的时候突出显示节点以及节点的边和邻接节点
@@ -273,6 +284,7 @@ export default {
      */
     legends () {
       const { nodes, categoryOther } = this
+      if (!nodes || !nodes.length) return []
       return [
         ...new Set( // 利用 Set 去重
           nodes.map(({ category }) => category).filter(item => commonUtil.isNotEmpty(item) && item !== categoryOther) // 不为空，且不是“其它”
@@ -305,10 +317,11 @@ export default {
           edges.reduce((sum, { source, target }) => (item.name === source || item.name === target) && sum + 1 || sum, 0), // 每条相邻边使节点的度数加 1
           1 // 不小于 1
         )
+        const categoryIndex = legends.findIndex(category => category === item.category)
         return {
           ...item,
           value: degree,
-          category: legends.findIndex(category => category === item.category) || legends.length - 1, // 节点分类，默认最后一个，对应“其它”分类
+          category: categoryIndex >= 0 ? categoryIndex : legends.length - 1, // 节点分类，默认最后一个，对应“其它”分类
           symbolSize: getNodeSize(degree), // 节点大小
           itemStyle: { // 图形样式
             opacity: getNodeOpacity(degree) // 透明度
@@ -329,7 +342,7 @@ export default {
       const { edges, linkEdgeColor } = this
       return edges.map(item => ({
         ...item,
-        value: item.predicate,
+        value: item.predicate || '-',
         lineStyle: { // 关系边的线条样式
           color: item.link && linkEdgeColor // 线的颜色
         }
