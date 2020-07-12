@@ -49,5 +49,15 @@
   { "name": "列矩阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#定义-1", "description": "只有一列的矩阵" },
   { "name": "列向量", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#定义-1", "description": "列矩阵" },
   { "name": "同型矩阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#定义-1", "description": "行数、列数都相等的两个矩阵" },
-  { "name": "零矩阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#定义-1", "description": "所有元素都是零的矩阵" }
+  { "name": "零矩阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#定义-1", "description": "所有元素都是零的矩阵" },
+  { "name": "系数矩阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#例-1" },
+  { "name": "未知数矩阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#例-1" },
+  { "name": "常数项矩阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#例-1" },
+  { "name": "增广矩阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#例-1" },
+  { "name": "线性变换", "link": "/basic/math/linear-algebra/matrix.html#例-4" },
+  { "name": "对角线", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#例-4", "description": "方阵中从左上到右下的直线" },
+  { "name": "对角矩阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#例-4", "description": "对角线以外的元素都是 0 的方阵" },
+  { "name": "对角阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#例-4", "description": "对角矩阵的简称" },
+  { "name": "单位矩阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#例-4", "description": "对角线上元素都是 1, 其余元素都是 0 的方阵" },
+  { "name": "单位阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#例-4", "description": "单位矩阵的简称" }
 ]

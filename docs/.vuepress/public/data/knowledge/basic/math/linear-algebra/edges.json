@@ -54,5 +54,19 @@
   { "source": "行矩阵", "target": "行向量" },
   { "source": "列矩阵", "target": "列向量" },
   { "source": "矩阵", "target": "同型矩阵" },
-  { "source": "矩阵", "target": "零矩阵" }
+  { "source": "矩阵", "target": "零矩阵" },
+  { "source": "矩阵", "target": "系数矩阵" },
+  { "source": "矩阵", "target": "未知数矩阵" },
+  { "source": "矩阵", "target": "常数项矩阵" },
+  { "source": "矩阵", "target": "增广矩阵" },
+  { "source": "线性方程组", "target": "系数矩阵" },
+  { "source": "线性方程组", "target": "未知数矩阵" },
+  { "source": "线性方程组", "target": "常数项矩阵" },
+  { "source": "线性方程组", "target": "增广矩阵" },
+  { "source": "矩阵", "target": "线性变换" },
+  { "source": "方阵", "target": "对角线" },
+  { "source": "方阵", "target": "对角矩阵" },
+  { "source": "对角矩阵", "target": "对角阵" },
+  { "source": "方阵", "target": "单位矩阵" },
+  { "source": "单位矩阵", "target": "单位阵" }
 ]
