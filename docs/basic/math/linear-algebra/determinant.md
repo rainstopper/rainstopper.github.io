@@ -154,8 +154,8 @@ $$
 
 $$
 \begin{cases}
-3x_1 - 2x_2 = 12 , \\
-2x_1 + x_2 = 1 .
+  3x_1 - 2x_2 = 12 , \\
+  2x_1 + x_2 = 1 .
 \end{cases}
 $$
 
@@ -1571,8 +1571,8 @@ $$
 $$
 \sum_{k=1}^n a_{ki} A_{kj} =
 \begin{cases}
-D, & \text{当} i = j, \\
-0, & \text{当} i \neq j
+  D, & \text{当} i = j, \\
+  0, & \text{当} i \neq j
 \end{cases}
 $$
 
@@ -1581,8 +1581,8 @@ $$
 $$
 \sum_{k=1}^n a_{ik} A_{jk} =
 \begin{cases}
-D, & \text{当} i = j, \\
-0, & \text{当} i \neq j .
+  D, & \text{当} i = j, \\
+  0, & \text{当} i \neq j .
 \end{cases}
 $$
 
