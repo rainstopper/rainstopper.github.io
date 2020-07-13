@@ -60,11 +60,11 @@ $$
 方程组 ①: 因其系数行列式 $D = \begin{vmatrix} 1 & -1 \\ 1 & 1 \end{vmatrix} \neq 0$, 知其有唯一解 $x$=$y$=$1$; 方程组 ②: 显然不存在数 $x$ 和数 $y$ 使 $x$+$y$=$1$ 和 $x$+$y$=$2$ 同时成立, 故方程组 ② 无解; 方程组 ③: 设 $s$ 为任一数, 那么 $x_1$=$x_2$=$s$ 是 ③ 的解, 从而方程组 ③ 有无限多个解.
 :::
 
-::: danger 问题
+::: warning 问题
 对于线性方程组需要讨论以下问题:（1）它是否有解?（2）在有解是它的解是否唯一?（3）如果有多个解, 如何求出它的所有解?
 :::
 
-对于线性方程组 (1) 上述诸问题的答案完全取决于它的 $m$×$n$ 个系数 $a_{ij}$ ($i$ = $1$, $2$, ⋯, $m$, $j$ = $1$, $2$, ⋯, $n$) 和右端的常数项 $b_1$, $b_2$, ⋯, $b_m$ 所构成的 $m$ 行 $n+1$ 列的矩形数表:
+对于线性方程组 (1) 上述诸问题的答案完全取决于它的 $m$×$n$ 个系数 $a_{ij}$ ($i$ = $1$, $2$, ⋯, $m$, $j$ = $1$, $2$, ⋯, $n$) 和右端的常数项 $b_1$, $b_2$, ⋯, $b_m$ 所构成的 $m$ 行 $n$+$1$ 列的矩形数表:
 
 $$
 \begin{matrix}
@@ -300,7 +300,7 @@ $$
 \tag{3}
 $$
 
-表示一个从变量 $x_1$, $x_2$, ⋯, $x_n$ 到变量 $y_1$, $y_2$, ⋯, $y_nm$ 的 `线性变换`, 其中 $a_{ij}$ 为常数. 线性变换 (3) 的系数 $a_{ij}$ 构成矩阵 $\boldsymbol{A} = \begin{pmatrix} a_{ij} \end{pmatrix} _{m \times n}$.
+表示一个从变量 $x_1$, $x_2$, ⋯, $x_n$ 到变量 $y_1$, $y_2$, ⋯, $y_nm$ 的 `线性变换`, 其中 $a_{ij}$ 为常数. 线性变换 (3) 的系数 $a_{ij}$ 构成矩阵 $\boldsymbol{A}$=$\begin{pmatrix} a_{ij} \end{pmatrix}_{m \times n}$.
 
 给定了线性变换 (3), 它的系数所构成的矩阵（称为 `系数矩阵`）也就确定. 反之, 如果给出一个矩阵作为线性变换的系数矩阵, 则线性变换也就确定. 在这个意义上, 线性变换和矩阵之间存在着一一对应的关系.
 
@@ -372,5 +372,27 @@ $$
 \end{cases}
 $$
 
-可以看做是 $xOy$ 平面上把向量 $\overrightarrow{OP} = \begin{pmatrix} x \\ y \end{pmatrix}$ 变换为向量 $\overrightarrow{OP_1} = \begin{pmatrix} x_1 \\ y_1 \end{pmatrix} = \begin{pmatrix} x \\ 0 \end{pmatrix}$ 的变换（或看作把点 $P$ 变换为点 $P_1$ 的变换）
+可以看做是 $xOy$ 平面上把向量 $\overrightarrow{OP}$=$\begin{pmatrix} x \\ y \end{pmatrix}$ 变换为向量 $\overrightarrow{OP_1}$=$\begin{pmatrix} x_1 \\ y_1 \end{pmatrix}$=$\begin{pmatrix} x \\ 0 \end{pmatrix}$ 的变换（或看作把点 $P$ 变换为点 $P_1$ 的变换）, 由于向量 $\overrightarrow{OP_1}$ 是向量 $\overrightarrow{OP}$ 在 $x$ 轴上的投影向量（即点 $P_1$ 是点 $P$ 在 $x$ 轴上的投影）, 由此这是一个投影变换.
+:::
+
+::: details 又如
+矩阵 $\begin{pmatrix} \cos\varphi & -\sin\varphi \\ \sin\varphi & \cos\varphi \end{pmatrix}$ 对应的线性变换
+
+$$
+\begin{cases}
+  x_1 = x \cos\varphi - y \sin\varphi , \\
+  y_1 =  x\sin\varphi + y \cos\varphi
+\end{cases}
+$$
+
+把 $xOy$ 平面上的向量 $\overrightarrow{OP}$=$\begin{pmatrix} x \\ y \end{pmatrix}$ 变换为向量 $\overrightarrow{OP_1}$=$\begin{pmatrix} x_1 \\ y_1 \end{pmatrix}$. 设 $\overrightarrow{OP}$ 的长度为 $r$, 辐角为 $\theta$, 即设 $x$=$r \cos\theta$, $y$=$r \sin\theta$, 那么
+
+$$
+\begin{aligned}
+  x_1 = & r (\cos\varphi \cos\theta - \sin\varphi \sin\theta) = r \cos(\varphi + \theta) , \\
+  y_1 = & r (\sin\varphi \cos\theta + \cos\varphi \sin\theta) = r \sin(\varphi + \theta) ,
+\end{aligned}
+$$
+
+表明 $\overrightarrow{OP_1}$ 的长度为 $r$ 而辐角为 $\varphi$+$\theta$. 因此, 这是把向量 $\overrightarrow{OP}$（依逆时针方向）旋转 $\varphi$ 角（即把点 $P$ 以原点为中心逆时针旋转 $\varphi$ 角）的旋转变换.
 :::
