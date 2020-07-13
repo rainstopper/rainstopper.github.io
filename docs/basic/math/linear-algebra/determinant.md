@@ -31,7 +31,7 @@ $$
 
 <!-- 式 (2) -->
 $$
-x_1 = \frac{b_1 a_{22} - a_{12} b_2}{a_{11} a_{22} - a_{12} a_{21}} ,  x_2 = \frac{a_{11} b_2 - b_1 a_{21}}{a_{11} a_{22} - a_{12} a_{21}} .
+x_1 = \frac{b_1 a_{22} - a_{12} b_2}{a_{11} a_{22} - a_{12} a_{21}} , \qquad x_2 = \frac{a_{11} b_2 - b_1 a_{21}}{a_{11} a_{22} - a_{12} a_{21}} .
 \tag{2}
 $$
 
@@ -444,12 +444,12 @@ $$
 
 $$
 \begin{vmatrix}
-  λ_1 &     &        &     \\
-      & λ_2 &        &     \\
-      &     & \ddots &     \\
-      &     &        & λ_n
+  \lambda_1 &           &        &           \\
+            & \lambda_2 &        &           \\
+            &           & \ddots &           \\
+            &           &        & \lambda_n
 \end{vmatrix}
-= λ_1 λ_2 \cdots λ_n .
+= \lambda_1 \lambda_2 \cdots \lambda_n .
 $$
 
 ::: details 证
@@ -592,7 +592,7 @@ $$
 
 <!-- vuepress-plugin-latex 插件似乎不支持反对角省略号 \iddots 的写法 -->
 <!-- 副对角线上的省略号只能用符号 ⋰ 代替 -->
-（1）$D = \begin{vmatrix} & & & a_{1n} \\ 0 & & a_{2, n-1} & a_{2n} \\ & ⋰ & \vdots & \vdots \\ a_{n1} & \cdots & a_{n, n-1} & a_{nn} \end{vmatrix}$; &emsp;（2）$\begin{vmatrix} & & & λ_1 \\ & & λ_2 & \\ & ⋰ & & \\ λ_n & & & \end{vmatrix}|$.
+（1）$D = \begin{vmatrix} & & & a_{1n} \\ 0 & & a_{2, n-1} & a_{2n} \\ & ⋰ & \vdots & \vdots \\ a_{n1} & \cdots & a_{n, n-1} & a_{nn} \end{vmatrix}$; &emsp;（2）$\begin{vmatrix} & & & \lambda_1 \\ & & \lambda_2 & \\ & ⋰ & & \\ \lambda_n & & & \end{vmatrix}|$.
 
 ::: details 解
 （1）应注意 $D$ 不是上（下）三角形行列式, 但可以通过行的对换化为上三角形行列式. 先把 $D$ 的第 $n$ 行依次与第 $n$-$1$ 行 ⋯⋯ 第一行对换（共 $n$-$1$ 次对换）, 得行列式 $D_1$. 由 [性质 2](#性质-2), $D_1$=$(-1)^{n-1} D$, 或 $D$=$(-1)^{n-1} D_1$, 这里
@@ -632,12 +632,12 @@ $$
 
 $$
 \begin{vmatrix}
-      &   &     & λ_1 \\
-      &   & λ_2 &     \\
-      & ⋰ &     &     \\
-  λ_n &   &     &
+            &   &           & \lambda_1 \\
+            &   & \lambda_2 &           \\
+            & ⋰ &           &           \\
+  \lambda_n &   &           &
 \end{vmatrix}
-= (-1)^{\frac{n (n-1)}{2}} λ_1 λ_2 \cdots λ_n
+= (-1)^{\frac{n (n-1)}{2}} \lambda_1 \lambda_2 \cdots \lambda_n
 .
 $$
 :::
@@ -1073,7 +1073,7 @@ $$
 证明: $D = D_1 D_2$.
 
 ::: details 证
-对 $D_1$ 作运算 $r_i$+$λr_j$, 把 $D$ 化为下三角形行列式, 设为
+对 $D_1$ 作运算 $r_i$+$\lambda r_j$, 把 $D$ 化为下三角形行列式, 设为
 
 $$
 D_1 =
@@ -1085,7 +1085,7 @@ D_1 =
 ,
 $$
 
-对 $D_2$ 作运算 $c_i$+$λc_j$, 把 $D_2$ 化为下三角形行列式, 设为
+对 $D_2$ 作运算 $c_i$+$\lambda c_j$, 把 $D_2$ 化为下三角形行列式, 设为
 
 $$
 D_2 =
@@ -1097,7 +1097,7 @@ D_2 =
 .
 $$
 
-于是, 对 $D$ 的前 $k$ 行作运算 $c_i$+$λc_j$, 再对后 $n$ 列作运算 $c_i$+$λc_j$, 把 $D$ 化为下三角形行列式
+于是, 对 $D$ 的前 $k$ 行作运算 $c_i$+$\lambda c_j$, 再对后 $n$ 列作运算 $c_i$+$\lambda c_j$, 把 $D$ 化为下三角形行列式
 
 $$
 \begin{vmatrix}
