@@ -1158,3 +1158,135 @@ $$
 $$
 .
 :::
+
+#### 对称矩阵
+
+设 $\boldsymbol{A}$ 为 $n$ 阶方阵, 如果满足 $\boldsymbol{A}^T$=$\boldsymbol{A}$, 即
+
+$$
+a_{ij} = a_{ji} \qquad (i = 1 , 2 , \cdots, n) ,
+$$
+
+那么 $\boldsymbol{A}$ 称为 `对称矩阵`, 简称 `对称阵`. 对称阵的特点是: 它的元素以对角线为对称阵对应相等.
+
+#### 例 9
+
+设列矩阵 $\boldsymbol{X}$=($x_1$, $x_2$, ⋯, $x_n$)$^T$ 满足 $\boldsymbol{X}^T \boldsymbol{X}$=$1$, $\boldsymbol{E}$ 为 $n$ 阶单位矩阵, $\boldsymbol{H}$=$\boldsymbol{E} - 2\boldsymbol{X} \boldsymbol{X}^T$, 证明 $\boldsymbol{H}$ 是对称矩阵, 且 $\boldsymbol{H} \boldsymbol{H}^T$=$\boldsymbol{E}$.
+
+::: tip 提示
+$\boldsymbol{X}^T \boldsymbol{X}$=$x_1^2$+$x_2^2$+⋯+$x_n^2$ 是一阶方阵, 也就是一个数, 而 $\boldsymbol{X} \boldsymbol{X}^T$ 是 $n$ 阶方阵.
+:::
+
+::: details 证
+因为
+
+$$
+\boldsymbol{H}^T = (\boldsymbol{E} - 2\boldsymbol{X} \boldsymbol{X}^T)^T = \boldsymbol{E}^T -2 (\boldsymbol{X} \boldsymbol{X}^T)^T = \boldsymbol{E} - 2 \boldsymbol{X} \boldsymbol{X}^T = \boldsymbol{H} ,
+$$
+
+所以 $\boldsymbol{H}$ 是对称矩阵.
+
+$$
+\begin{aligned}
+  \boldsymbol{H} \boldsymbol{H}^T
+    & = \boldsymbol{H}^2 = (\boldsymbol{E} - 2 \boldsymbol{X} \boldsymbol{X}^T)^2 = \boldsymbol{E} - 4 \boldsymbol{X} \boldsymbol{X}^T + 4 (\boldsymbol{X} \boldsymbol{X}^T) (\boldsymbol{X} \boldsymbol{X}^T) \\
+    & = \boldsymbol{E} - 4 \boldsymbol{X} \boldsymbol{X}^T + 4 \boldsymbol{X} (\boldsymbol{X}^T \boldsymbol{X}) \boldsymbol{X}^T = \boldsymbol{E} - 4 \boldsymbol{X} \boldsymbol{X}^T + 4 \boldsymbol{X} \boldsymbol{X}^T = \boldsymbol{E} .
+\end{aligned}
+$$
+:::
+
+### 方阵的行列式
+
+#### 定义 6
+
+由 $n$ 阶方阵 $\boldsymbol{A}$ 的元素所构成的 [行列式](determinant.html#n-阶行列式)（各元素位置不变）, 称为 `方阵 A 的行列式`, 记作 $det \boldsymbol{A}$ 或 $\begin{vmatrix} \boldsymbol{A} \end{vmatrix}$.
+
+::: warning 注意
+方阵与行列式是两个不同的概念, $n$ 阶方阵是 $n^2$ 个数按一定方式排成的数表, 而 $n$ 阶行列式则是这些数（也就是数表 $\boldsymbol{A}$）按一定的运算法则所确定的一个数.
+:::
+
+由 $\boldsymbol{A}$ 确定 $\begin{vmatrix} \boldsymbol{A} \end{vmatrix}$ 的这个运算满足下述运算规则（设 $\boldsymbol{A}$、$\boldsymbol{B}$ 为 $n$ 阶方阵, λ 是数）:
+
+(i) $\begin{vmatrix} \boldsymbol{A} \end{vmatrix} ^T$=$\begin{vmatrix} \boldsymbol{A} \end{vmatrix}$（行列式 [性质 1](determinant.html#性质-1)）;
+
+(ii) $λ \begin{vmatrix} \boldsymbol{A} \end{vmatrix}$=$λ^n \begin{vmatrix} \boldsymbol{A} \end{vmatrix}$;
+
+(iii) $\begin{vmatrix} \boldsymbol{AB} \end{vmatrix}$=$\begin{vmatrix} \boldsymbol{A} \end{vmatrix} \begin{vmatrix} \boldsymbol{B} \end{vmatrix}$.
+
+::: details 证明 (iii) 当 n=2
+设 $\boldsymbol{A}$=$\begin{pmatrix} a_{ij} \end{pmatrix}$, $\boldsymbol{B}$=$\begin{pmatrix} b_{ij} \end{pmatrix}$. 记四阶行列式
+
+$$
+D =
+\begin{vmatrix}
+  a_{11} & a_{12} &   0    &   0    \\
+  a_{21} & a_{22} &   0    &   0    \\
+    -1   &    0   & b_{11} & b_{12} \\
+     0   &   -1   & b_{21} & b_{22}
+\end{vmatrix}
+=
+\begin{vmatrix}
+   \boldsymbol{A} & \boldsymbol{O} \\
+  -\boldsymbol{E} & \boldsymbol{B}
+\end{vmatrix}
+,
+$$
+
+由 [行列式例 10](determinant.html#例-10) 可知 $D$=$\begin{vmatrix} \boldsymbol{A} \end{vmatrix} \begin{vmatrix} \boldsymbol{B} \end{vmatrix}$. 今在 $D$ 中以 $b_{11}$ 乘第 $1$ 列, $b_{22}$ 乘第 $2$ 列都加到第 $4$ 列上, 即
+
+$$
+\begin{aligned}
+D
+  & \xlongequal[]{c_3 + b_{11} c_1 + b_{21} c_2}
+    \begin{vmatrix}
+      a_{11} & a_{12} & a_{11} b_{11} + a_{12} b_{21} &   0    \\
+      a_{21} & a_{22} & a_{21} b_{11} + a_{22} b_{21} &   0    \\
+        -1   &    0   &               0               & b_{12} \\
+         0   &   -1   &               0               & b_{22}
+    \end{vmatrix} \\
+  & \xlongequal[]{c_4 + b_{12} c_1 + b_{22} c_2}
+    \begin{vmatrix}
+      a_{11} & a_{12} & a_{11} b_{11} + a_{12} b_{21} & a_{11} b_{12} + a_{12} b_{22} \\
+      a_{21} & a_{22} & a_{21} b_{11} + a_{22} b_{21} & a_{21} b_{12} + a_{22} b_{22} \\
+        -1   &    0   &               0               &               0               \\
+         0   &   -1   &               0               &               0
+    \end{vmatrix}
+    =
+    \begin{vmatrix}
+       \boldsymbol{A} & \boldsymbol{X} \\
+      -\boldsymbol{E} & \boldsymbol{O}
+    \end{vmatrix}
+    ,
+\end{aligned}
+$$
+
+其中二阶矩阵 $\boldsymbol{X}$=$\begin{pmatrix} x_{ij} \end{pmatrix}$, 因 $x_{ij}$=$a_{i1} b_{1j}$+$a_{i2} b_{2j}$, 由 [公式 (7)](#定义-4) 知 $\boldsymbol{X}$=$\boldsymbol{AB}$. 再对上式最后一个行列式作两次行对换: $r_1$↔$r_3$, $r_2$↔$r_4$, 得
+
+$$
+D = (-1)^2
+\begin{vmatrix}
+  -\boldsymbol{E} & \boldsymbol{O} \\
+   \boldsymbol{A} & \boldsymbol{X}
+\end{vmatrix}
+= (-1)^2 \begin{vmatrix} -\boldsymbol{E} \end{vmatrix} \begin{vmatrix} \boldsymbol{X} \end{vmatrix}
+= (-1)^2 (-1)^2 \begin{vmatrix} \boldsymbol{X} \end{vmatrix}
+= \begin{vmatrix} \boldsymbol{X} \end{vmatrix}
+= \begin{vmatrix} \boldsymbol{AB} \end{vmatrix}
+.
+$$
+
+于是
+
+$$
+\begin{vmatrix} \boldsymbol{AB} \end{vmatrix} = \begin{vmatrix} \boldsymbol{A} \end{vmatrix} \begin{vmatrix} \boldsymbol{B} \end{vmatrix}
+.
+$$
+
+$n$≥$3$ 的情形类似可证.
+:::
+
+由 (iii) 可知, 对于 $n$ 阶矩阵 $\boldsymbol{A}$、$\boldsymbol{B}$, 一般来说 $\boldsymbol{AB}$≠$\boldsymbol{BA}$, 但总有
+
+$$
+\begin{vmatrix} \boldsymbol{AB} \end{vmatrix} = \begin{vmatrix} \boldsymbol{BA} \end{vmatrix} .
+$$

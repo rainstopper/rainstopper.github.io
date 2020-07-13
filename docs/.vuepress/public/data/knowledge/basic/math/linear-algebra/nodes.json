@@ -72,5 +72,7 @@
   { "name": "可交换", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#例-6" },
   { "name": "纯量阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#例-6", "description": "主对角线上的元素都相同，其余元素都为0的矩阵" },
   { "name": "矩阵的幂", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#矩阵的幂" },
-  { "name": "转置矩阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#定义-5", "description": "将一个矩阵的行换成同序数的列所得的新矩阵" }
+  { "name": "转置矩阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#定义-5", "description": "将一个矩阵的行换成同序数的列所得的新矩阵" },
+  { "name": "对称矩阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#例-8", "description": "转置矩阵等于自身的方阵" },
+  { "name": "对称阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#例-8", "description": "对称矩阵的简称" }
 ]
