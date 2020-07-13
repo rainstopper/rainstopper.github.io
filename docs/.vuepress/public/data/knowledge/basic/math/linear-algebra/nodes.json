@@ -41,6 +41,7 @@
   { "name": "齐次线性方程组", "category": "方程组" },
   { "name": "非齐次线性方程组", "category": "方程组" },
   { "name": "矩阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#定义-1" },
+  { "name": "矩阵-定义", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#定义-1" },
   { "name": "实矩阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#定义-1", "description": "元素是实数的矩阵称" },
   { "name": "复矩阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#定义-1", "description": "元素是复数的矩阵称" },
   { "name": "方阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#定义-1", "description": "行数与列数相等的矩阵" },
@@ -59,5 +60,17 @@
   { "name": "对角矩阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#例-4", "description": "对角线以外的元素都是 0 的方阵" },
   { "name": "对角阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#例-4", "description": "对角矩阵的简称" },
   { "name": "单位矩阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#例-4", "description": "对角线上元素都是 1, 其余元素都是 0 的方阵" },
-  { "name": "单位阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#例-4", "description": "单位矩阵的简称" }
+  { "name": "单位阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#例-4", "description": "单位矩阵的简称" },
+  { "name": "矩阵-运算", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#矩阵的运算" },
+  { "name": "矩阵-线性运算", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#矩阵的加法", "description": "矩阵加法和矩阵数乘的统称" },
+  { "name": "矩阵加法", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#矩阵的加法" },
+  { "name": "负矩阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#矩阵的加法" },
+  { "name": "矩阵数乘", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#数与矩阵相乘" },
+  { "name": "矩阵相乘", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#矩阵与矩阵相乘" },
+  { "name": "左乘", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#例-6" },
+  { "name": "右乘", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#例-6" },
+  { "name": "可交换", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#例-6" },
+  { "name": "纯量阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#例-6", "description": "主对角线上的元素都相同，其余元素都为0的矩阵" },
+  { "name": "矩阵的幂", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#矩阵的幂" },
+  { "name": "转置矩阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#定义-5", "description": "将一个矩阵的行换成同序数的列所得的新矩阵" }
 ]
