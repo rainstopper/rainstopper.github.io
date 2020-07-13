@@ -415,7 +415,8 @@ export default {
      */
     onClick ({ data = {} } = {}) {
       const { link } = data
-      link && window.open(this.$withBase(link), '\_blank')
+      if (link) this.$router.push(link)
+      // link && window.open(this.$withBase(link), '\_blank')
     }
   }
 }
