@@ -11,7 +11,8 @@
                   :nodes="nodes"
                   :edges="edges"
                   :loading="loading"
-                  :force="force"/>
+                  :force="force"
+                  :sort-legends="sortLegends"/>
 </template>
 
 <script>
@@ -65,7 +66,14 @@ export default {
      * 透传给知识图谱组件
      * @type {Object}
      */
-    force: Object
+    force: Object,
+
+    /**
+     * 图例是否按名称首字母重排序
+     * 透传给知识图谱组件
+     * @type {Boolean}
+     */
+    sortLegends: Boolean
   },
 
   data () {

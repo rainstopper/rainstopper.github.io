@@ -4,4 +4,6 @@
 
 ## 知识图谱
 
-<KnowledgeGraphAsync height="500px" title="线性代数"/>
+<KnowledgeGraphAsync height="500px"
+                     title="线性代数"
+                     :force="{ edgeLength: 50, repulsion: 50, gravity: 0.1 }"/>
