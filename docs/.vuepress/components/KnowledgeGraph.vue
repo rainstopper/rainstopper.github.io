@@ -511,7 +511,7 @@ export default {
     handleKeywordInput (e) {
       if (this.search.timer) clearTimeout(this.search.timer) // 重新计时
       this.search.timer = setTimeout(() => {
-        this.search.keyword = e.data
+        this.search.keyword = e.target.value
       }, 300)
     },
 
