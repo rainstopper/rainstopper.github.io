@@ -83,7 +83,8 @@
   { "source": "对角矩阵", "target": "纯量阵" },
   { "source": "矩阵相乘", "target": "矩阵的幂" },
   { "source": "矩阵-运算", "target": "转置矩阵" },
-  { "source": "方阵", "target": "对称矩阵" },
-  { "source": "对称矩阵", "target": "对称阵" },
-  { "source": "转置矩阵", "target": "对称矩阵" }
+  { "source": "方阵", "target": "方阵的行列式" },
+  { "source": "行列式", "target": "方阵的行列式" },
+  { "source": "矩阵", "target": "伴随矩阵" },
+  { "source": "伴随矩阵", "target": "伴随阵" }
 ]
