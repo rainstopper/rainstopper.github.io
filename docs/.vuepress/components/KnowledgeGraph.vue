@@ -8,6 +8,31 @@
     <ResponsiveEcharts :option="option"
                        :loading="loading"
                        @click="onClick"/>
+
+    <!-- 搜索工具栏 -->
+    <div class="search-tool">
+      <div class="item"> <!-- 关键字 -->
+        <label>关键字</label>
+        <div class="content">
+          <div class="input" ref="select">
+            <input type="text"
+                   :value="search.keyword"
+                   @input="handleKeywordInput"
+                   @focus="search.showOptions = true"
+                   @blur="handleKeywordBlur"/>
+            <!-- 选项 -->
+            <ul v-show="search.showOptions" class="options">
+              <li v-show="keywords.length"
+                  v-for="item in keywords"
+                  class="option"
+                  @click.stop="search.keyword = item">
+                {{ item }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -23,7 +48,7 @@ import { commonUtil } from '../utils'
 /**
  * 高亮颜色
  */
-const ACTIVE_COLOR = '#46bd87'
+const ACTIVE_COLOR = '#3eaf7c'
 
 const DEFAULT_FORCE = {
   edgeLength: 50,
@@ -153,7 +178,7 @@ export default {
      */
     minNodeOpacity: {
       type: Number,
-      default: 0.6
+      default: 0.5
     },
 
     /**
@@ -232,6 +257,34 @@ export default {
     focusNodeAdjacency: {
       type: Boolean,
       default: false
+    }
+  },
+
+  data () {
+    return {
+      /**
+       * 搜索工具
+       * @type {Object}
+       */
+      search: {
+        /**
+         * 关键字
+         * @type {String}
+         */
+        keyword: '',
+
+        /**
+         * 是否展示选项
+         * @type {Boolean}
+         */
+        showOptions: false,
+
+        /**
+         * 防抖计时器
+         * @type {Object}
+         */
+        timer: null
+      }
     }
   },
 
@@ -347,26 +400,44 @@ export default {
      * 对 name（名称）属性重复的节点去重
      * 重新组织成 ECharts 关系图接受的数据格式
      * 按照度数过滤
+     * 支持按关键字搜索，触发搜索时，搜索结果中的节点会被高亮展示，其余节点透明化处理
      * @return {Array} nodes
      */
     _nodes () {
-      const { nodes, edges, _legends, getNodeSize, getNodeOpacity, nodeLabelVisibleDegree, nodeVisibleDegree } = this
+      const { nodes, edges, _legends, search = {}, maxNodeOpacity, minNodeOpacity, getNodeSize, getNodeOpacity, nodeLabelVisibleDegree, nodeVisibleDegree } = this
       const uniqueNameMap = new Map() // 用于 name 属性去重的 Map
-      return nodes.filter(({ name }) => !uniqueNameMap.has(name) && uniqueNameMap.set(name, 1)).map(item => { // 组织数据结构
+      return nodes.filter(({ name }) => !uniqueNameMap.has(name) && uniqueNameMap.set(name, 1)).map((item = {}) => { // 组织数据结构
         const degree = Math.max( // 节点度数
           edges.reduce((sum, { source, target }) => (item.name === source || item.name === target) && sum + 1 || sum, 0), // 每条相邻边使节点的度数加 1
           1 // 不小于 1
         )
         const categoryIndex = _legends.findIndex(category => category === item.category)
+        const { keyword } = search // 获取搜索关键字
+        let itemStyle, label = {}
+        if (commonUtil.isNotEmpty(keyword)) { // 关键字不为空时触发搜索
+          if (item.name.includes(keyword)) { // 该节点在搜索结果中
+            itemStyle = {
+              color: ACTIVE_COLOR, // 节点颜色高亮
+              shadowColor: ACTIVE_COLOR, // 阴影颜色高亮
+              opacity: maxNodeOpacity // 节点透明度值最大
+            }
+            label = { color: ACTIVE_COLOR } // 节点标签颜色高亮
+          } else { // 该节点未在搜索结果中
+            itemStyle = {
+              opacity: minNodeOpacity
+            }
+          }
+        } else { // 未触发搜索
+          itemStyle = { opacity: getNodeOpacity(degree) }
+        }
         return {
           ...item,
           value: degree,
           category: categoryIndex >= 0 ? categoryIndex : _legends.length - 1, // 节点分类，默认最后一个，对应“其它”分类
           symbolSize: getNodeSize(degree), // 节点大小
-          itemStyle: { // 图形样式
-            opacity: getNodeOpacity(degree) // 透明度
-          },
+          itemStyle, // 图形样式
           label: { // 标签
+            ...label,
             show: degree >= nodeLabelVisibleDegree // 度数足够大时展示
           }
         }
@@ -375,7 +446,7 @@ export default {
 
     /**
      * ECharts 关系图的 edges
-     *
+     * 带有链接的边高亮显示
      * @return {Array} edges
      */
     _edges () {
@@ -387,6 +458,17 @@ export default {
           color: item.link && linkEdgeColor // 线的颜色
         }
       }))
+    },
+
+    /**
+     * 包含关键字所得的选项列表
+     * @return {Array} 选项列表
+     */
+    keywords () {
+      const { nodes, search = {} } = this
+      const { keyword } = search
+      if (commonUtil.isEmpty(keyword)) return []
+      return nodes.map(({ name }) => name).filter(item => item.includes(keyword))
     }
   },
 
@@ -420,13 +502,120 @@ export default {
       const { link } = data
       if (link) this.$router.push(link)
       // link && window.open(this.$withBase(link), '\_blank')
+    },
+
+    /**
+     * 实现关键字的反向数据流，这里用到了防抖，延时 300ms
+     * @param  {Object} e  事件
+     */
+    handleKeywordInput (e) {
+      if (this.search.timer) clearTimeout(this.search.timer) // 重新计时
+      this.search.timer = setTimeout(() => {
+        this.search.keyword = e.data
+      }, 300)
+    },
+
+    /**
+     * 关键字输入框 blur 事件触发隐藏关键字选项下拉框
+     * 此事件的触发先于选项的 click 事件，隐藏下拉列表后，会阻碍选项的选中
+     * 这里需要等待选项的 click 事件完成后，再隐藏
+     */
+    handleKeywordBlur () {
+      setTimeout(() => {
+        this.search.showOptions = false
+      }, 100)
     }
   }
 }
 </script>
 
 <style lang="stylus" scoped>
+BORDER_RADIUS = 3px
+BORDER_COLOR = #cfd4db
+BORDER_COLOR_LIGHT = #eee
+LABEL_WIDTH = 60px
+
 .knowledge-graph
-  margin: 20px auto
-  border: 1px solid #eee
+  position relative
+  margin 20px auto
+  border 1px solid BORDER_COLOR_LIGHT
+
+  /**
+   * 搜索工具样式
+   */
+  .search-tool
+    position absolute
+    top 0
+    right 0
+    padding 5px
+    background-color rgba(255, 255, 255, 0.6)
+
+    // .search-tool .item
+    .item
+      padding 5px
+      font-size 14px
+
+      // .search-tool .item label
+      label
+        width LABEL_WIDTH
+        height 100%
+        text-align right
+        vertical-align middle
+        float left
+        padding 0 12px 0 0
+        box-sizing border-box
+        line-height 22px
+
+      // .search-tool .item .content
+      .content
+        position relative
+        margin-left LABEL_WIDTH
+
+        // .search-tool .item .content .input
+        .input
+          // .search-tool .item .content .input input
+          input
+            width 10rem
+            border 1px solid BORDER_COLOR
+            border-radius BORDER_RADIUS
+            padding 2px 1.2rem 2px 5px
+            outline none
+            background #fff url("~@vuepress/plugin-search/search.svg") 8.9rem 0.2rem no-repeat // 使用默认主题的搜索 svg 图标
+            box-sizing border-box
+            font-size 14px
+
+            // .search-tool .item .content .input input:focus
+            &:focus
+              border-color #3eaf7c
+
+          // .search-tool .item .content .input .options
+          .options
+            position absolute
+            top 10px
+            left 0
+            max-height 200px
+            overflow-y auto
+            border 1px solid BORDER_COLOR
+            border-radius BORDER_RADIUS
+            padding 0
+            list-style none
+            background-color #fff
+
+            // .search-tool .item .content .input .options .option
+            .option
+              min-width 9.9rem
+              border-bottom 1px solid BORDER_COLOR_LIGHT
+              padding 3px 6px
+              box-sizing border-box
+              line-height 20px
+              font-size 14px
+              cursor pointer
+
+              // .search-tool .item .content .input .options .option:last-of-type
+              &:last-of-type
+                border 0
+
+              // .search-tool .item .content .input .options .option:hover
+              &:hover
+                background-color: #f3f5f7
 </style>
