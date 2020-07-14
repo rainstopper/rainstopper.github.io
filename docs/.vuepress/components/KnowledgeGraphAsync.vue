@@ -11,6 +11,7 @@
                   :nodes="nodes"
                   :edges="edges"
                   :loading="loading"
+                  :legends="legends"
                   :force="force"
                   :sort-legends="sortLegends"/>
 </template>
@@ -38,6 +39,13 @@ export default {
      * @type {String}
      */
     title: String,
+
+    /**
+     * 自定义图例
+     * 透传给知识图谱组件
+     * @type {Array}
+     */
+    legends: Array,
 
     /**
      * 用于加载节点数据的 url

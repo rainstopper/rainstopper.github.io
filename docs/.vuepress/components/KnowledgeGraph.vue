@@ -92,6 +92,22 @@ export default {
     loading: Boolean,
 
     /**
+     * 自定义图例
+     * 若不传，默认根据节点的 category 分类设置图例
+     * @type {Array}
+     */
+    legends: Array,
+
+    /**
+     * 图例是否按名称首字母重排序
+     * @type {Boolean}
+     */
+    sortLegends: {
+      type: Boolean,
+      default: false
+    },
+
+    /**
      * 其它分类，无分类项目的默认分类
      * @type {Object}
      */
@@ -216,15 +232,6 @@ export default {
     focusNodeAdjacency: {
       type: Boolean,
       default: false
-    },
-
-    /**
-     * 图例是否按名称首字母重排序
-     * @type {Boolean}
-     */
-    sortLegends: {
-      type: Boolean,
-      default: false
     }
   },
 
@@ -234,7 +241,7 @@ export default {
      * @return {Object} option
      */
     option () {
-      const { title, legends, force, focusNodeAdjacency, categories, _nodes, _edges } = this
+      const { title, _legends, force, focusNodeAdjacency, categories, _nodes, _edges } = this
       return {
         title: { // 标题
           text: title,
@@ -246,7 +253,7 @@ export default {
           top: commonUtil.isNotEmpty(title) && 36 || 0,
           left: 8,
           orient: 'vertical',
-          data: legends
+          data: _legends
         },
         tooltip: { // 提示框
           // position: ['100%', 0],
@@ -306,26 +313,22 @@ export default {
      * 末尾补充“其它”分类，用于对没有设置分类的项目归类
      * @return {Array} 图例
      */
-    legends () {
-      const { nodes, categoryOther, sortLegends } = this
-
-      if (!nodes || !nodes.length) {
-        return []
+    _legends () {
+      const { nodes, legends, categoryOther, sortLegends } = this
+      if (!nodes || !nodes.length) return [] // 节点为空时返回空
+      let __legends
+      if (legends) { // 优先使用传入的自定义图例属性 legends
+        __legends = legends
+      } else { // 未传入属性 legends 时，默认按节点的 category 分类自动生成图例
+        __legends = [
+          ...new Set( // 利用 Set 去重
+            nodes.map(({ category }) => category).filter(item => commonUtil.isNotEmpty(item) && item !== categoryOther) // 不为空，且不是“其它”
+          )
+        ]
+        if (sortLegends) __legends.sort((a, b) => a.localeCompare(b)) // 按名称首字母排序
       }
-
-      const legends = [
-        ...new Set( // 利用 Set 去重
-          nodes.map(({ category }) => category).filter(item => commonUtil.isNotEmpty(item) && item !== categoryOther) // 不为空，且不是“其它”
-        )
-      ]
-
-      // 按名称首字母排序
-      if (sortLegends) {
-        legends.sort((a, b) => a.localeCompare(b))
-      }
-
       return [
-        ...legends,
+        ...__legends,
         categoryOther // 在末尾补充“其它”分类
       ]
     },
@@ -336,7 +339,7 @@ export default {
      * @return {Array} 分类
      */
     categories () {
-      return this.legends.map(category => ({ name: category }))
+      return this._legends.map(category => ({ name: category }))
     },
 
     /**
@@ -347,18 +350,18 @@ export default {
      * @return {Array} nodes
      */
     _nodes () {
-      const { nodes, edges, legends, getNodeSize, getNodeOpacity, nodeLabelVisibleDegree, nodeVisibleDegree } = this
+      const { nodes, edges, _legends, getNodeSize, getNodeOpacity, nodeLabelVisibleDegree, nodeVisibleDegree } = this
       const uniqueNameMap = new Map() // 用于 name 属性去重的 Map
       return nodes.filter(({ name }) => !uniqueNameMap.has(name) && uniqueNameMap.set(name, 1)).map(item => { // 组织数据结构
         const degree = Math.max( // 节点度数
           edges.reduce((sum, { source, target }) => (item.name === source || item.name === target) && sum + 1 || sum, 0), // 每条相邻边使节点的度数加 1
           1 // 不小于 1
         )
-        const categoryIndex = legends.findIndex(category => category === item.category)
+        const categoryIndex = _legends.findIndex(category => category === item.category)
         return {
           ...item,
           value: degree,
-          category: categoryIndex >= 0 ? categoryIndex : legends.length - 1, // 节点分类，默认最后一个，对应“其它”分类
+          category: categoryIndex >= 0 ? categoryIndex : _legends.length - 1, // 节点分类，默认最后一个，对应“其它”分类
           symbolSize: getNodeSize(degree), // 节点大小
           itemStyle: { // 图形样式
             opacity: getNodeOpacity(degree) // 透明度
