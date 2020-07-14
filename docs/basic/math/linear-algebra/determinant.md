@@ -692,11 +692,11 @@ $$
 $$
 D =
 \begin{vmatrix}
-            a_{11}           &           a_{12}           & \cdots &           a_{1n}           \\
-            \vdots           &           \vdots           &        &           \vdots           \\
-  a_{i1} + a_{i1}^{\text{'}} & a_{i2} + a_{i2}^{\text{'}} & \cdots & a_{in} + a_{in}^{\text{'}} \\
-            \vdots           &           \vdots           &        &           \vdots           \\
-            a_{n1}           &           a_{n2}           & \cdots &           a_{nn}
+           a_{11}          &          a_{12}          & \cdots &          a_{1n}          \\
+           \vdots          &          \vdots          &        &          \vdots          \\
+  a_{i1} + a_{i1}^{\prime} & a_{i2} + a_{i2}^{\prime} & \cdots & a_{in} + a_{in}^{\prime} \\
+           \vdots          &          \vdots          &        &          \vdots          \\
+           a_{n1}          &          a_{n2}          & \cdots &          a_{nn}
 \end{vmatrix}
 ,
 $$
@@ -713,11 +713,11 @@ D =
   a_{n1} & a_{n2} & \cdots & a_{nn}
 \end{vmatrix} +
 \begin{vmatrix}
-        a_{11}      &      a_{12}       & \cdots &      a_{1n}       \\
-        \vdots      &      \vdots       &        &      \vdots       \\
-  a_{i1}^{\text{'}} & a_{i2}^{\text{'}} & \cdots & a_{in}^{\text{'}} \\
-        \vdots      &      \vdots       &        &      \vdots       \\
-        a_{n1}      &      a_{n2}       & \cdots &      a_{nn}
+       a_{11}     &     a_{12}      & \cdots &     a_{1n}      \\
+       \vdots     &     \vdots      &        &     \vdots      \\
+  a_{i1}^{\prime} & a_{i2}^{\prime} & \cdots & a_{in}^{\prime} \\
+       \vdots     &     \vdots      &        &     \vdots      \\
+       a_{n1}     &     a_{n2}      & \cdots &     a_{nn}
 \end{vmatrix}
 .
 $$
