@@ -943,7 +943,7 @@ $$
 
 $$
 \boldsymbol{A}_{m \times n} \boldsymbol{x}_{n \times l} = \boldsymbol{b}_{m \times l} ,
-\tag{1'}
+\tag{$1^\prime$}
 $$
 
 其中 $\boldsymbol{A}$=$\begin{pmatrix} a_{ij} \end{pmatrix}$ 为系数矩阵, $\boldsymbol{x}$=$\begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix}$ 为未知数矩阵, $\boldsymbol{b}$=$\begin{pmatrix} b_1 \\ b_2 \\ \vdots \\ b_n \end{pmatrix}$ 为常数项矩阵. 特别当 $\boldsymbol{b}$=$\boldsymbol{O}$ 时得到 $m$ 个方程的 $n$ 元齐次线性方程组的矩阵形式
@@ -970,7 +970,7 @@ $$
 
 $$
 \boldsymbol{y} = \boldsymbol{Ax} ,
-\tag{3'}
+\tag{$3^\prime$}
 $$
 
 其中
@@ -999,7 +999,7 @@ $$
 .
 $$
 
-这里, 列向量（列矩阵）$\boldsymbol{x}$ 表示 $n$ 个变量 $x_1$, $x_2$, ⋯, $x_n$, 列向量 $\boldsymbol{y}$ 表示 $m$ 个变量 $y_1$, $y_2$, ⋯, $y_m$. 线性变换 (3') 把 $\boldsymbol{x}$ 变成 $\boldsymbol{y}$, 相当于用矩阵 $\boldsymbol{A}$ 去左乘 $\boldsymbol{x}$ 得到 $\boldsymbol{y}$.
+这里, 列向量（列矩阵）$\boldsymbol{x}$ 表示 $n$ 个变量 $x_1$, $x_2$, ⋯, $x_n$, 列向量 $\boldsymbol{y}$ 表示 $m$ 个变量 $y_1$, $y_2$, ⋯, $y_m$. 线性变换 (3$^\prime$) 把 $\boldsymbol{x}$ 变成 $\boldsymbol{y}$, 相当于用矩阵 $\boldsymbol{A}$ 去左乘 $\boldsymbol{x}$ 得到 $\boldsymbol{y}$.
 :::
 
 ::: details 又如
@@ -1158,7 +1158,6 @@ $$
 $$
 .
 :::
-
 #### 对称矩阵
 
 设 $\boldsymbol{A}$ 为 $n$ 阶方阵, 如果满足 $\boldsymbol{A}^T$=$\boldsymbol{A}$, 即
@@ -1290,3 +1289,61 @@ $n$≥$3$ 的情形类似可证.
 $$
 \begin{vmatrix} \boldsymbol{AB} \end{vmatrix} = \begin{vmatrix} \boldsymbol{BA} \end{vmatrix} .
 $$
+
+#### 例 10
+
+行列式 $\begin{vmatrix} \boldsymbol{A} \end{vmatrix}$ 的各个元素的代数余子式 $A_{ij}$ 所构成的如下的矩阵
+
+$$
+\boldsymbol{A}^* =
+\begin{pmatrix}
+  A_{11} & A_{12} & \cdots & A_{n1} \\
+  A_{21} & A_{22} & \cdots & A_{n2} \\
+  \vdots & \vdots &        & \vdots \\
+  A_{n1} & A_{n2} & \cdots & A_{nn}
+\end{pmatrix}
+,
+$$
+
+称为矩阵 $\boldsymbol{A}$ 的 `伴随矩阵`, 简称 `伴随阵`. 试证
+
+$$
+\boldsymbol{AA}^* = \boldsymbol{A}^* \boldsymbol{A} = \begin{vmatrix} \boldsymbol{A} \end{vmatrix} \boldsymbol{E} .
+$$
+
+::: details 证
+设 $\boldsymbol{A}$=$\begin{pmatrix} a_{ij} \end{pmatrix}$, 记 $\boldsymbol{AA}^*$=$\begin{pmatrix} b_{ij} \end{pmatrix}$, 则
+
+$$
+b_{ij} = a_{i1} A_{j1} + a_{i2} A_{j2} + \cdots + a_{in} A_{jn} =
+\begin{cases}
+  \begin{vmatrix} \boldsymbol{A} \end{vmatrix} , & i = j , \\
+  0 ,                                            & i \neq j ,
+\end{cases}
+$$
+
+故
+
+$$
+\boldsymbol{AA}^* =
+\begin{pmatrix}
+  \begin{vmatrix}
+    \boldsymbol{A}
+  \end{vmatrix}    &                  &        &                  \\
+                   & \begin{vmatrix}
+                       \boldsymbol{A}
+                     \end{vmatrix}    &        &                  \\
+                   &                  & \ddots &                  \\
+                   &                  &        & \begin{vmatrix}
+                                                   \boldsymbol{A}
+                                                 \end{vmatrix}
+\end{pmatrix}
+= \begin{vmatrix} \boldsymbol{A} \end{vmatrix} \boldsymbol{E} .
+$$
+
+类似有
+
+$$
+\boldsymbol{A}^* \boldsymbol{A} = \begin{vmatrix} \boldsymbol{A} \end{vmatrix} \boldsymbol{E} .
+$$
+:::
