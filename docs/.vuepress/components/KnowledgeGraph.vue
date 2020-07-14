@@ -322,7 +322,7 @@ export default {
               node: `${name}（关联 ${value} 个节点）`, // 节点提示框内容
               edge: `${source} ${value} ${target}` // 边提示框内容
             }[dataType] || ''
-            if (description) str += `${str.length && '<br/>' || ''}${description}` // 附带描述的项目追加描述
+            if (description) str += `${str.length && '<br/>' || ''}${description.replace(/\n/g, '<br/>')}` // 附带描述的项目追加描述
             if (link) str += `${str.length && '<br/>' || ''}点击查看详情` // 附带链接的项目追加“点击查看详情”
             return str
           }
