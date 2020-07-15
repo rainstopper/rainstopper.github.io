@@ -81,5 +81,13 @@
   { "name": "对称阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#对称矩阵", "description": "对称矩阵的简称" },
   { "name": "方阵的行列式", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#定义-6" },
   { "name": "伴随矩阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#例-10" },
-  { "name": "伴随阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#例-10", "description": "伴随矩阵的简称" }
+  { "name": "伴随阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#例-10", "description": "伴随矩阵的简称" },
+  { "name": "逆矩阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#定义-7", "description": "使矩阵（方阵）相乘后得到单位矩阵的矩阵（方阵）" },
+  { "name": "逆阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#定义-7", "description": "逆矩阵的简称" },
+  { "name": "矩阵可逆", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#定义-7" },
+  { "name": "矩阵-定理1", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#定理-1", "description": "若矩阵可逆, 则其行列式不为零." },
+  { "name": "矩阵-定理2", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#定理-2", "description": "若矩阵的行列式不为零, 则该矩阵可逆, 且逆矩阵等于其伴随矩阵除以其行列式." },
+  { "name": "奇异矩阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#奇异矩阵", "description": "行列式等于零的矩阵" },
+  { "name": "非奇异矩阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#奇异矩阵", "description": "行列式不等于零的矩阵" },
+  { "name": "矩阵-定理2-推论", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#推论", "description": "若两矩阵的乘积是单位矩阵, 则这两个矩阵互为逆矩阵." }
 ]

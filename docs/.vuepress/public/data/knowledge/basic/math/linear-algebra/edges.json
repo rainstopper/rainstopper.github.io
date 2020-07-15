@@ -92,5 +92,15 @@
   { "source": "方阵", "target": "方阵的行列式" },
   { "source": "行列式", "target": "方阵的行列式" },
   { "source": "矩阵", "target": "伴随矩阵" },
-  { "source": "伴随矩阵", "target": "伴随阵" }
+  { "source": "伴随矩阵", "target": "伴随阵" },
+  { "source": "逆矩阵", "target": "矩阵相乘" },
+  { "source": "逆矩阵", "target": "单位矩阵" },
+  { "source": "逆矩阵", "target": "逆阵" },
+  { "source": "逆矩阵", "target": "矩阵可逆" },
+  { "source": "逆矩阵", "target": "矩阵-定理1" },
+  { "source": "逆矩阵", "target": "矩阵-定理2" },
+  { "source": "方阵的行列式", "target": "奇异矩阵" },
+  { "source": "方阵的行列式", "target": "非奇异矩阵" },
+  { "source": "非奇异矩阵", "target": "逆矩阵" },
+  { "source": "矩阵-定理2", "target": "矩阵-定理2-推论" }
 ]
