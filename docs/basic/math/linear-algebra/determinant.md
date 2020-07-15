@@ -37,7 +37,7 @@ $$
 
 <!-- 式 (2) -->
 $$
-x_1 = \frac{b_1 a_{22} - a_{12} b_2}{a_{11} a_{22} - a_{12} a_{21}} , \qquad x_2 = \frac{a_{11} b_2 - b_1 a_{21}}{a_{11} a_{22} - a_{12} a_{21}} .
+x_1 = \frac{b_1 a_{22} - a_{12} b_2}{a_{11} a_{22} - a_{12} a_{21}} , \quad x_2 = \frac{a_{11} b_2 - b_1 a_{21}}{a_{11} a_{22} - a_{12} a_{21}} .
 \tag{2}
 $$
 
@@ -88,7 +88,7 @@ b_1 a_{22} - a_{12} b_2 =
   b_2 & a_{22}
 \end{vmatrix}
 ,
-\qquad
+\quad
 a_{11} b_2 - b_1 a_{21} =
 \begin{vmatrix}
   a_{11} & b_1 \\
@@ -106,14 +106,14 @@ D =
   a_{21} & a_{22}
 \end{vmatrix}
 ,
-\qquad
+\quad
 D_1 =
 \begin{vmatrix}
   b_1 & a_{12} \\
   b_2 & a_{22}
 \end{vmatrix}
 ,
-\qquad
+\quad
 D_2 =
 \begin{vmatrix}
   a_{11} & b_1 \\
@@ -137,7 +137,7 @@ x_1 = \frac{D_1}{D} = \frac{
   \end{vmatrix}
 }
 ,
-\qquad
+\quad
 x_2 = \frac{D_2}{D} = \frac{
   \begin{vmatrix}
     a_{11} & b_1 \\
@@ -196,7 +196,7 @@ $$
 
 $$
 x_1 = \frac{D_1}{D} = \frac{14}{7} = 2 ,
-\qquad
+\quad
 x_2 = \frac{D_2}{D} = \frac{-21}{7} = -3 .
 $$
 :::
@@ -482,7 +482,7 @@ D =
   a_{n1} & a_{n2} & \cdots & a_{nn}
 \end{vmatrix}
 ,
-\qquad
+\quad
 D^T =
 \begin{vmatrix}
   a_{11} & a_{21} & \cdots & a_{n1} \\
@@ -1066,7 +1066,7 @@ $$
     \vdots &        & \vdots \\
     a_{k1} & \cdots & a_{kk}
   \end{vmatrix}
-  , \qquad
+  , \quad
   D_2 = det(b_{ij}) =
   \begin{vmatrix}
     b_{11} & \cdots & b_{1n} \\
@@ -1306,13 +1306,13 @@ $$
 **行列式等于它的任一行（列）的各元素与其对应的代数余子式乘积之和, 即**
 
 $$
-D = a_{i1} A_{i1} + a_{i2} A_{i2} + \cdots + a_{in} A_{in} \qquad (i = 1, 2, \cdots, n)
+D = a_{i1} A_{i1} + a_{i2} A_{i2} + \cdots + a_{in} A_{in} \quad (i = 1, 2, \cdots, n)
 $$
 
 **或**
 
 $$
-D = a_{1j} A_{1j} + a_{2j} A_{2j} + \cdots + a_{nj} A_{nj} \qquad (j = 1, 2, \cdots, n) .
+D = a_{1j} A_{1j} + a_{2j} A_{2j} + \cdots + a_{nj} A_{nj} \quad (j = 1, 2, \cdots, n) .
 $$
 
 ::: details 证
@@ -1355,13 +1355,13 @@ $$
 根据引理, 即得
 
 $$
-D = a_{i1} A_{i1} + a_{i2} A_{i2} + \cdots + a_{in} A_{in} \qquad (i = 1, 2, \cdots, n) .
+D = a_{i1} A_{i1} + a_{i2} A_{i2} + \cdots + a_{in} A_{in} \quad (i = 1, 2, \cdots, n) .
 $$
 
 类似地, 若按列证明, 可得
 
 $$
-D = a_{1j} A_{1j} + a_{2j} A_{2j} + \cdots + a_{nj} A_{nj} \qquad (j = 1, 2, \cdots, n) .
+D = a_{1j} A_{1j} + a_{2j} A_{2j} + \cdots + a_{nj} A_{nj} \quad (j = 1, 2, \cdots, n) .
 $$
 :::
 
@@ -1536,7 +1536,7 @@ $$
 特别, 当 $b_1$, $b_2$, ⋯, $b_n$ 依次取为 $D$=$det$($a_{ij}$) 的第 $i$ 行 ($i$≠$j$) 各元素时, 上式仍成立. 但此时因 $D_j$ 中第 $j$ 行与第 $i$ 行两行相同, 故 $D_j$=$0$, 从而有
 
 $$
-a_{i1} A_{j1} + a_{i2} A_{j2} + \cdots + a_{in} A_{jn} = 0 \qquad (i \neq j) .
+a_{i1} A_{j1} + a_{i2} A_{j2} + \cdots + a_{in} A_{jn} = 0 \quad (i \neq j) .
 $$
 
 对列作相仿的讨论可知
@@ -1554,7 +1554,7 @@ $$
 特别有
 
 $$
-a_{1i} A_{1j} + a_{2i} A_{2j} + \cdots + a_{ni} A_{nj} = 0 \qquad (i \neq j) .
+a_{1i} A_{1j} + a_{2i} A_{2j} + \cdots + a_{ni} A_{nj} = 0 \quad (i \neq j) .
 $$
 
 这样得到了下述推论.
@@ -1564,13 +1564,13 @@ $$
 **行列式某一行（列）的元素与另一行（列）的对应元素的代数余子式乘积之和等于零. 即**
 
 $$
-a_{i1} A_{j1} + a_{i2} A_{j2} + \cdots + a_{in} A_{jn} = 0 , \qquad i \neq j
+a_{i1} A_{j1} + a_{i2} A_{j2} + \cdots + a_{in} A_{jn} = 0 , \quad i \neq j
 $$
 
 **或**
 
 $$
-a_{1i} A_{1j} + a_{2i} A_{2j} + \cdots + a_{ni} A_{nj} = 0 , \qquad i \neq j .
+a_{1i} A_{1j} + a_{2i} A_{2j} + \cdots + a_{ni} A_{nj} = 0 , \quad i \neq j .
 $$
 
 综合 [定理 2](#定理-2) 及其推论, 有关于代数余子式的重要性质:
