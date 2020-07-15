@@ -198,17 +198,17 @@ export default {
      */
     maxNodeOpacityDegree: {
       type: Number,
-      default: 5
+      default: 10
     },
 
     /**
      * 透明度指数
-     * 该值越大，透明的节点越多
+     * 该值越大，不同度数的节点的透明度差异越大
      * @type {Number}
      */
     nodeOpacityIndex: {
       type: Number,
-      default: 2
+      default: 1
     },
 
     /**
