@@ -438,7 +438,7 @@ $$
 
 (i) $\boldsymbol{A}$+$\boldsymbol{B}$=$\boldsymbol{B}$+$\boldsymbol{A}$;
 
-(ii) ($\boldsymbol{A}$+$\boldsymbol{B}$)+$\boldsymbol{C}$=$\boldsymbol{A}$+($\boldsymbol{B}$+$\boldsymbol{C}$).
+(ii) $(\boldsymbol{A}$+$\boldsymbol{B})$+$\boldsymbol{C}$=$\boldsymbol{A}$+$(\boldsymbol{B}$+$\boldsymbol{C})$.
 
 #### 负矩阵
 
@@ -485,11 +485,11 @@ $$
 
 数乘矩阵满足下列运算规则（设 $\boldsymbol{A}$、$\boldsymbol{B}$ 为 $m$×$n$ 矩阵, $\lambda$、$\mu$ 为数）:
 
-(i) ($\lambda \mu$)$\boldsymbol{A}$=$\lambda$($\mu \boldsymbol{A}$);
+(i) $(\lambda \mu) \boldsymbol{A}$=$\lambda (\mu \boldsymbol{A})$;
 
-(ii) ($\lambda$+$\mu$)$\boldsymbol{A}$=$\lambda \boldsymbol{A}$+$\mu \boldsymbol{A}$;
+(ii) $(\lambda$+$\mu) \boldsymbol{A}$=$\lambda \boldsymbol{A}$+$\mu \boldsymbol{A}$;
 
-(iii) $\lambda$($\boldsymbol{A}$+$\boldsymbol{B}$)=$\lambda \boldsymbol{A}$+$\lambda \boldsymbol{B}$.
+(iii) $\lambda (\boldsymbol{A}$+$\boldsymbol{B})$=$\lambda \boldsymbol{A}$+$\lambda \boldsymbol{B}$.
 
 矩阵加法与数乘矩阵统称为 `矩阵的线性运算`.
 
@@ -717,16 +717,16 @@ $\boldsymbol{AB}$ 是 $\boldsymbol{A}$ `左乘` $\boldsymbol{B}$（$\boldsymbol{
 ::: warning 特别注意
 若有两个矩阵 $\boldsymbol{A}$、$\boldsymbol{B}$ 满足 $\boldsymbol{AB}$=$\boldsymbol{O}$, 不能得出 $\boldsymbol{A}$=$\boldsymbol{O}$ 或 $\boldsymbol{B}$=$\boldsymbol{O}$ 的结论;
 
-若 $\boldsymbol{A}$≠$\boldsymbol{O}$ 而 $\boldsymbol{A}$($\boldsymbol{X}$-$\boldsymbol{Y}$)=$\boldsymbol{O}$, 也不能得出 $\boldsymbol{X}$=$\boldsymbol{Y}$ 的结论.
+若 $\boldsymbol{A}$≠$\boldsymbol{O}$ 而 $\boldsymbol{A} (\boldsymbol{X}$-$\boldsymbol{Y})$=$\boldsymbol{O}$, 也不能得出 $\boldsymbol{X}$=$\boldsymbol{Y}$ 的结论.
 :::
 
 矩阵的乘法虽不满足交换律, 但仍满足下列结合律和分配律（假设运算都是可行的）:
 
-(i) ($\boldsymbol{AB}$)$\boldsymbol{C}$=$\boldsymbol{A}$($\boldsymbol{BC}$);
+(i) $(\boldsymbol{AB}) \boldsymbol{C}$=$\boldsymbol{A} (\boldsymbol{BC})$;
 
-(ii) λ($\boldsymbol{AB}$)=(λ$\boldsymbol{A}$)$\boldsymbol{B}$=$\boldsymbol{A}$(λ$\boldsymbol{B}$)（其中 λ 为数）;
+(ii) $\lambda (\boldsymbol{AB})$=$(\lambda \boldsymbol{A}) \boldsymbol{B}$=$\boldsymbol{A} (\lambda \boldsymbol{B})$（其中 $\lambda$ 为数）;
 
-(iii) $\boldsymbol{A}$($\boldsymbol{B}$+$\boldsymbol{C}$)=$\boldsymbol{AB}$+$\boldsymbol{AC}$, ($\boldsymbol{B}$+$\boldsymbol{C}$)$\boldsymbol{A}$=$\boldsymbol{BA}$+$\boldsymbol{CA}$.
+(iii) $\boldsymbol{A} (\boldsymbol{B}$+$\boldsymbol{C})$=$\boldsymbol{AB}$+$\boldsymbol{AC}$, $(\boldsymbol{B}$+$\boldsymbol{C}) \boldsymbol{A}$=$\boldsymbol{BA}$+$\boldsymbol{CA}$.
 
 对于单位矩阵 $\boldsymbol{E}$, 容易验证
 
@@ -749,7 +749,7 @@ $$
 矩阵
 
 $$
-λ\boldsymbol{E} =
+\lambda \boldsymbol{E} =
 \begin{pmatrix}
   \lambda &         &        &         \\
           & \lambda &        &         \\
@@ -758,13 +758,13 @@ $$
 \end{pmatrix}
 $$
 
-称为 `纯量阵`. 由 (λ$\boldsymbol{E}$)$\boldsymbol{A}$=λ$\boldsymbol{A}$, $\boldsymbol{A}$(λ$\boldsymbol{E}$)=λ$\boldsymbol{A}$, 可知纯量阵 λ$\boldsymbol{E}$ 与矩阵 $\boldsymbol{A}$ 的乘积等于数 λ 与 $\boldsymbol{A}$ 的乘积. 当 $\boldsymbol{A}$ 为 $n$ 阶方阵时, 有
+称为 `纯量阵`. 由 $(\lambda \boldsymbol{E}) \boldsymbol{A}$=$\lambda \boldsymbol{A}$, $\boldsymbol{A} (\lambda \boldsymbol{E})$=$\lambda \boldsymbol{A}$, 可知纯量阵 $\lambda \boldsymbol{E}$ 与矩阵 $\boldsymbol{A}$ 的乘积等于数 $\lambda$ 与 $\boldsymbol{A}$ 的乘积. 当 $\boldsymbol{A}$ 为 $n$ 阶方阵时, 有
 
 $$
-(λ \boldsymbol{E}_n) \boldsymbol{A}_n = λ\boldsymbol{A}_n = \boldsymbol{A}_n (λ\boldsymbol{E}_n) ,
+(\lambda \boldsymbol{E}_n) \boldsymbol{A}_n = \lambda \boldsymbol{A}_n = \boldsymbol{A}_n (\lambda \boldsymbol{E}_n) ,
 $$
 
-表明纯量阵 λ$\boldsymbol{E}$ 与任何同阶方阵都是可交换的.
+表明纯量阵 $\lambda \boldsymbol{E}$ 与任何同阶方阵都是可交换的.
 
 ### 矩阵的幂
 
@@ -783,7 +783,7 @@ $$
 (\boldsymbol{A}^k)^l = \boldsymbol{A}^{kl} ,
 $$
 
-其中 $k$、$l$ 为正整数. 又因矩阵乘法一般不满足交换律, 所以对于两个 $n$ 阶矩阵 $\boldsymbol{A}$ 与 $\boldsymbol{B}$, 一般说来 ($\boldsymbol{AB}$)$^k$≠$\boldsymbol{A}^k \boldsymbol{B}^k$, 只有当 $\boldsymbol{A}$ 与 $\boldsymbol{B}$ 可交换时, 才有 ($\boldsymbol{AB}$)$^k$=$\boldsymbol{A}^k \boldsymbol{B}^k$. 类似可知, 例如 ($\boldsymbol{A}$+$\boldsymbol{B}$)$^k$=$\boldsymbol{A}^2$+$2\boldsymbol{AB}$+$\boldsymbol{B}^2$、($\boldsymbol{A}$-$\boldsymbol{B}$)($\boldsymbol{A}$+$\boldsymbol{B}$)=$\boldsymbol{A}^2$-$\boldsymbol{B}^2$ 等公示, 也只有当 $\boldsymbol{A}$ 与 $\boldsymbol{B}$ 可交换时才成立.
+其中 $k$、$l$ 为正整数. 又因矩阵乘法一般不满足交换律, 所以对于两个 $n$ 阶矩阵 $\boldsymbol{A}$ 与 $\boldsymbol{B}$, 一般说来 $(\boldsymbol{AB})^k$≠$\boldsymbol{A}^k \boldsymbol{B}^k$, 只有当 $\boldsymbol{A}$ 与 $\boldsymbol{B}$ 可交换时, 才有 $(\boldsymbol{AB})^k$=$\boldsymbol{A}^k \boldsymbol{B}^k$. 类似可知, 例如 $(\boldsymbol{A}$+$\boldsymbol{B})^k$=$\boldsymbol{A}^2$+$2\boldsymbol{AB}$+$\boldsymbol{B}^2$、$(\boldsymbol{A}$-$\boldsymbol{B}) (\boldsymbol{A}$+$\boldsymbol{B})$=$\boldsymbol{A}^2$-$\boldsymbol{B}^2$ 等公示, 也只有当 $\boldsymbol{A}$ 与 $\boldsymbol{B}$ 可交换时才成立.
 
 #### 例 2（续）
 
@@ -1067,22 +1067,22 @@ $$
 
 矩阵的转置也是一种运算, 满足下述运算规律（假设运算都是可行的）:
 
-(i) ($\boldsymbol{A}^T$)$^T$=$\boldsymbol{A}^T$;
+(i) $(\boldsymbol{A}^T)^T$=$\boldsymbol{A}^T$;
 
-(ii) ($\boldsymbol{A}$+$\boldsymbol{B}$)$^T$=$\boldsymbol{A}^T$+$\boldsymbol{B}^T$;
+(ii) $(\boldsymbol{A}$+$\boldsymbol{B})^T$=$\boldsymbol{A}^T$+$\boldsymbol{B}^T$;
 
-(iii) (λ$\boldsymbol{A}$)$^T$=λ$\boldsymbol{A}^T$;
+(iii) $(\lambda \boldsymbol{A})^T$=$\lambda \boldsymbol{A}^T$;
 
-(iv) ($\boldsymbol{AB}$)$^T$=$\boldsymbol{B}^T$$\boldsymbol{A}^T$.
+(iv) $(\boldsymbol{AB})^T$=$\boldsymbol{B}^T$$\boldsymbol{A}^T$.
 
-::: details 证明 (iv)
+::: details 证 (iv)
 设 $\boldsymbol{A}$=$\begin{pmatrix} a_{ij} \end{pmatrix}_{m \times s}$、$\boldsymbol{b}$=$\begin{pmatrix} b_{ij} \end{pmatrix}_{s \times n}$, 记 $\boldsymbol{AB}$=$\boldsymbol{C}$=$\begin{pmatrix} c_{ij} \end{pmatrix}_{m \times n}$, $\boldsymbol{B}^T \boldsymbol{A}^T$=$\boldsymbol{D}$=$\begin{pmatrix} d_{ij} \end{pmatrix}_{n \times m}$. 于是按 [公式 (7)](#定义-4), 有
 
 $$
 c_{ij} = \sum_{k=1}^s a_{jk} b_{ki} ,
 $$
 
-而 $\boldsymbol{B}^T$ 的第 $i$ 行为 ($b_{1i}$, ⋯, $b_{si}$), $\boldsymbol{A}^T$ 的第 $j$ 列为 ($a_{j1}$, ⋯, $a_{js}$)$^T$, 因此
+而 $\boldsymbol{B}^T$ 的第 $i$ 行为 $(b_{1i}$, ⋯, $b_{si})$, $\boldsymbol{A}^T$ 的第 $j$ 列为 $(a_{j1}$, ⋯, $a_{js})^T$, 因此
 
 $$
 d_{ij} = c_{ji} \qquad (i = 1, 2, \cdots, n; j = 1, 2, \cdots, m) ,
@@ -1186,7 +1186,7 @@ $$
 
 #### 例 9
 
-设列矩阵 $\boldsymbol{X}$=($x_1$, $x_2$, ⋯, $x_n$)$^T$ 满足 $\boldsymbol{X}^T \boldsymbol{X}$=$1$, $\boldsymbol{E}$ 为 $n$ 阶单位矩阵, $\boldsymbol{H}$=$\boldsymbol{E} - 2\boldsymbol{X} \boldsymbol{X}^T$, 证明 $\boldsymbol{H}$ 是对称矩阵, 且 $\boldsymbol{H} \boldsymbol{H}^T$=$\boldsymbol{E}$.
+设列矩阵 $\boldsymbol{X}$=$(x_1$, $x_2$, ⋯, $x_n)^T$ 满足 $\boldsymbol{X}^T \boldsymbol{X}$=$1$, $\boldsymbol{E}$ 为 $n$ 阶单位矩阵, $\boldsymbol{H}$=$\boldsymbol{E} - 2\boldsymbol{X} \boldsymbol{X}^T$, 证明 $\boldsymbol{H}$ 是对称矩阵, 且 $\boldsymbol{H} \boldsymbol{H}^T$=$\boldsymbol{E}$.
 
 ::: tip 提示
 $\boldsymbol{X}^T \boldsymbol{X}$=$x_1^2$+$x_2^2$+⋯+$x_n^2$ 是一阶方阵, 也就是一个数, 而 $\boldsymbol{X} \boldsymbol{X}^T$ 是 $n$ 阶方阵.
@@ -1220,15 +1220,15 @@ $$
 方阵与行列式是两个不同的概念, $n$ 阶方阵是 $n^2$ 个数按一定方式排成的数表, 而 $n$ 阶行列式则是这些数（也就是数表 $\boldsymbol{A}$）按一定的运算法则所确定的一个数.
 :::
 
-由 $\boldsymbol{A}$ 确定 $\begin{vmatrix} \boldsymbol{A} \end{vmatrix}$ 的这个运算满足下述运算规则（设 $\boldsymbol{A}$、$\boldsymbol{B}$ 为 $n$ 阶方阵, λ 是数）:
+由 $\boldsymbol{A}$ 确定 $\begin{vmatrix} \boldsymbol{A} \end{vmatrix}$ 的这个运算满足下述运算规则（设 $\boldsymbol{A}$、$\boldsymbol{B}$ 为 $n$ 阶方阵, $\lambda$ 是数）:
 
 (i) $\begin{vmatrix} \boldsymbol{A} \end{vmatrix} ^T$=$\begin{vmatrix} \boldsymbol{A} \end{vmatrix}$（行列式 [性质 1](determinant.html#性质-1)）;
 
-(ii) $λ \begin{vmatrix} \boldsymbol{A} \end{vmatrix}$=$λ^n \begin{vmatrix} \boldsymbol{A} \end{vmatrix}$;
+(ii) $\lambda \begin{vmatrix} \boldsymbol{A} \end{vmatrix}$=$\lambda^n \begin{vmatrix} \boldsymbol{A} \end{vmatrix}$;
 
 (iii) $\begin{vmatrix} \boldsymbol{AB} \end{vmatrix}$=$\begin{vmatrix} \boldsymbol{A} \end{vmatrix} \begin{vmatrix} \boldsymbol{B} \end{vmatrix}$.
 
-::: details 证明 (iii) 当 n=2
+::: details 证 (iii) 当 n=2
 设 $\boldsymbol{A}$=$\begin{pmatrix} a_{ij} \end{pmatrix}$, $\boldsymbol{B}$=$\begin{pmatrix} b_{ij} \end{pmatrix}$. 记四阶行列式
 
 $$
@@ -1363,3 +1363,222 @@ $$
 \boldsymbol{A}^* \boldsymbol{A} = \begin{vmatrix} \boldsymbol{A} \end{vmatrix} \boldsymbol{E} .
 $$
 :::
+
+## 逆矩阵
+
+在数的乘法中, 对不等于零的数 $a$ 总存在惟一的数 $b$, 使 $ab$=$ba$=$1$, 此数 $b$ 即是 $a$ 的倒数, 即 $b$=$\frac{1}{a}$=$a^{-1}$. 利用倒数, 数的除法可转化为乘积的形式: $x$÷$a$=$x$·$\frac{1}{a}$=$x$·$a^{-1}$, 这里 $a$≠$0$. 把这一思想应用到矩阵的运算中, 并注意到 [单位矩阵](#单位矩阵) $\boldsymbol{E}$ 在矩阵的乘法中的作用与数 $1$ 类似, 由此引入逆矩阵的概念.
+
+#### 定义 7
+
+对于 $n$ 阶矩阵 $\boldsymbol{A}$, 如果有一个 $n$ 阶矩阵 $\boldsymbol{B}$, 使
+
+$$
+\boldsymbol{AB} = \boldsymbol{BA} = \boldsymbol{E} ,
+$$
+
+则说矩阵 $\boldsymbol{A}$ 是 `可逆` 的, 并把矩阵 $\boldsymbol{B}$ 称为 $\boldsymbol{A}$ 的 `逆矩阵`, 简称 `逆阵`.
+
+$\boldsymbol{A}$ 的逆矩阵记作 $\boldsymbol{A}^{-1}$. 即若 $\boldsymbol{AB}$=$\boldsymbol{BA}$=$\boldsymbol{E}$, 则 $\boldsymbol{B}$=$\boldsymbol{A}^{-1}$.
+
+::: tip 提示
+如果矩阵 $\boldsymbol{A}$ 是可逆的, 那么 $\boldsymbol{A}$ 的逆矩阵是惟一的. 这是因为: 若 $\boldsymbol{B}$、$\boldsymbol{C}$ 都是 $\boldsymbol{A}$ 的逆矩阵, 则有
+
+$$
+\boldsymbol{B} = \boldsymbol{BE} = \boldsymbol{B} (\boldsymbol{AC}) = (\boldsymbol{BA}) \boldsymbol{C} = \boldsymbol{EC} = \boldsymbol{C} ,
+$$
+:::
+
+#### 定理 1
+
+**若矩阵 $\boldsymbol{A}$ 可逆, 则 $\begin{vmatrix} \boldsymbol{A} \end{vmatrix}$≠$0$.**
+
+::: details 证
+$\boldsymbol{A}$ 可逆, 即有 $\boldsymbol{A}^{-1}$, 使 $\boldsymbol{A} \boldsymbol{A}^{-1}$=$\boldsymbol{E}$. 故 $\begin{vmatrix} \boldsymbol{A} \end{vmatrix}$·$\begin{vmatrix} \boldsymbol{A}^{-1} \end{vmatrix}$=$\begin{vmatrix} \boldsymbol{E} \end{vmatrix}$=$1$, 所以 $\boldsymbol{A}$≠$0$.
+:::
+
+#### 定理 2
+
+**若 $\begin{vmatrix} \boldsymbol{A} \end{vmatrix}$≠$0$, 则矩阵 $\boldsymbol{A}$ 可逆, 且**
+
+$$
+\boldsymbol{A}^{-1} = \frac{1}{\begin{vmatrix} \boldsymbol{A} \end{vmatrix}} \boldsymbol{A}^* ,
+\tag{8}
+$$
+
+**其中 $\boldsymbol{A}^{*}$ 为矩阵 $\boldsymbol{A}$ 的 [伴随矩阵](#例-10).**
+
+::: details 证
+由 [例 10](#例-10) 知
+
+$$
+\boldsymbol{AA}^* = \boldsymbol{A}^* \boldsymbol{A} = \begin{vmatrix} \boldsymbol{A} \end{vmatrix} \boldsymbol{E} ,
+$$
+
+因 $\begin{vmatrix} \boldsymbol{A} \end{vmatrix}$≠$0$, 故有
+
+$$
+\boldsymbol{A} \frac{1}{\begin{vmatrix} \boldsymbol{A} \end{vmatrix}} \boldsymbol{A}^* = \frac{1}{\begin{vmatrix} \boldsymbol{A} \end{vmatrix}} \boldsymbol{A}^* \boldsymbol{A} = \boldsymbol{E} ,
+$$
+
+所以, 按逆矩阵的定义, 即知 $\begin{vmatrix} \boldsymbol{A} \end{vmatrix}$ 可逆, 且有
+
+$$
+\boldsymbol{A}^{-1} = \frac{1}{\begin{vmatrix} \boldsymbol{A} \end{vmatrix}} \boldsymbol{A}^* .
+$$
+:::
+
+#### 奇异矩阵
+
+当 $\begin{vmatrix} \boldsymbol{A} \end{vmatrix}$=$0$ 时, $\boldsymbol{A}$ 称为 `奇异矩阵`, 否则称 `非奇异矩阵`. 由上面两定义可知: **$\boldsymbol{A}$ 是奇异矩阵的充分必要条件是$\begin{vmatrix} \boldsymbol{A} \end{vmatrix}$≠$0$, 即 [可逆矩阵](#定义-7) 就是非奇异矩阵**.
+
+#### 推论
+
+**若 $\boldsymbol{AB}$=$\boldsymbol{E}$（或 $\boldsymbol{BA}$=$\boldsymbol{E}$）, 则 $\boldsymbol{B}$=$\boldsymbol{A}^{-1}$.**
+
+::: details 证
+$\begin{vmatrix} \boldsymbol{A} \end{vmatrix}$·$\begin{vmatrix} \boldsymbol{B} \end{vmatrix}$=$\begin{vmatrix} \boldsymbol{E} \end{vmatrix}$=$1$, 故 $\begin{vmatrix} \boldsymbol{A} \end{vmatrix}$≠$0$, 因而 $\boldsymbol{A}^{-1}$ 存在, 于是
+
+$$
+\boldsymbol{B} = \boldsymbol{EB} = (\boldsymbol{A}^{-1} \boldsymbol{A}) \boldsymbol{B} = \boldsymbol{A}^{-1} (\boldsymbol{A} \boldsymbol{B}) = \boldsymbol{A}^{-1} \boldsymbol{E} = \boldsymbol{A}^{-1} .
+$$
+:::
+
+逆矩阵满足下述预算规律:
+
+(i) 若 $\boldsymbol{A}$ 可逆, 则 $\boldsymbol{A}^{-1}$ 亦可逆, 且 $(\boldsymbol{A}^{-1})^{-1}$=$\boldsymbol{A}$;
+
+(ii) 若 $\boldsymbol{A}$ 可逆, 数 $\lambda$≠$0$, 则 $\lambda \boldsymbol{A}$ 可逆, 且 $(\lambda \boldsymbol{A})^{-1}$=$\frac{1}{\lambda} \boldsymbol{A}^{-1}$;
+
+(iii) 若 $\boldsymbol{A}$、$\boldsymbol{B}$ 为同阶矩阵且均可逆, 则 $\boldsymbol{AB}$ 亦可逆, 且
+
+$$
+(\boldsymbol{AB})^{-1} = \boldsymbol{B}^{-1} \boldsymbol{A}^{-1} .
+$$
+
+::: details 证 (iii)
+$(\boldsymbol{AB}) (\boldsymbol{B}^{-1} \boldsymbol{A}^{-1})$=$\boldsymbol{A} (\boldsymbol{B} \boldsymbol{B}^{-1}) \boldsymbol{A}^{-1}$=$\boldsymbol{A} \boldsymbol{E} \boldsymbol{A}^{-1}$=$\boldsymbol{A} \boldsymbol{A}^{-1}$=$\boldsymbol{E}$, 由 [推论](#推论), 即有 $(\boldsymbol{AB})^{-1}$=$\boldsymbol{B}^{-1} \boldsymbol{A}^{-1}$.
+:::
+
+(iv) 若 $\boldsymbol{A}$ 可逆, 则 $\boldsymbol{A}^T$ 亦可逆, 且$(\boldsymbol{A}^T)^{-1}$=$(\boldsymbol{A}^{-1})^T$ .
+
+::: details 证 (iv)
+$$
+\boldsymbol{A}^T (\boldsymbol{A}^{-1})^T = (\boldsymbol{A}^{-1} \boldsymbol{A})^T = \boldsymbol{E}^T = \boldsymbol{E} ,
+$$
+
+所以
+
+$$
+(\boldsymbol{A}^T)^{-1} = (\boldsymbol{A}^{-1})^T .
+$$
+:::
+
+当 $\boldsymbol{A}$ 可逆时, 还可定义
+
+$$
+\boldsymbol{A}^0 = \boldsymbol{E} , \qquad \boldsymbol{A}^{-k} = (\boldsymbol{A}^{-1})^k ,
+$$
+
+其中 $k$ 为正整数. 这样, 当 $\boldsymbol{A}$ 可逆, $\lambda$、$\mu$ 为整数时, 有
+
+$$
+\boldsymbol{A}^\lambda \boldsymbol{A}^\mu = \boldsymbol{A}^{\lambda + \mu}, \qquad (\boldsymbol{A}^\lambda)^\mu = \boldsymbol{A}^{\lambda \mu} .
+$$
+
+#### 例 11
+
+求二阶矩阵 $\boldsymbol{A}$=$\begin{pmatrix} a & b \\ c & d \end{pmatrix}$ 的逆矩阵.
+
+::: details 解
+$$
+\begin{vmatrix}
+  \boldsymbol{A}
+\end{vmatrix}
+= ad - bc, \qquad \boldsymbol{A}^* =
+\begin{pmatrix}
+   d & -b \\
+  -c &  a
+\end{pmatrix}
+,
+$$
+
+利用逆矩阵 [公式 (8)](#定理-2), 当 $\begin{vmatrix} \boldsymbol{A} \end{vmatrix}$≠$0$ 时, 有
+
+$$
+\boldsymbol{A}^{-1} = \frac{1}{\begin{vmatrix} \boldsymbol{A} \end{vmatrix}} \boldsymbol{A}^* = \frac{1}{ad - bc}
+\begin{pmatrix}
+   d & -b \\
+  -c &  a
+\end{pmatrix}
+.
+$$
+:::
+
+#### 例 12
+
+求方阵
+
+$$
+\boldsymbol{A} =
+\begin{pmatrix}
+  1 & 2 & 3 \\
+  2 & 2 & 1 \\
+  3 & 4 & 3
+\end{pmatrix}
+$$
+
+的逆矩阵.
+
+::: details 解
+求得 $\begin{vmatrix} \boldsymbol{A} \end{vmatrix}$=$2$≠$0$, 知 $\boldsymbol{A}^{-1}$ 存在. 再计算 $\begin{vmatrix} \boldsymbol{A} \end{vmatrix}$ 的余子式
+
+$$
+\begin{aligned}
+  M_{11} & =  2 , & M_{12} & =  3 , & M_{13} & =  2 , \\
+  M_{21} & = -6 , & M_{22} & = -6 , & M_{23} & = -2 , \\
+  M_{31} & = -4 , & M_{32} & = -5 , & M_{33} & = -2 ,
+\end{aligned}
+$$
+
+得
+
+$$
+\boldsymbol{A}^* =
+\begin{pmatrix}
+   M_{11} & -M_{21} &  M_{31} \\
+  -M_{12} &  M_{22} & -M_{32} \\
+   M_{13} & -M_{23} &  M_{33}
+\end{pmatrix}
+=
+\begin{pmatrix}
+   2 &  6 & -4 \\
+  -3 & -6 &  5 \\
+   2 &  2 & -2
+\end{pmatrix}
+,
+$$
+
+所以
+
+$$
+\boldsymbol{A}^{-1} = \frac{1}{\begin{vmatrix} \boldsymbol{A} \end{vmatrix}} \boldsymbol{A}^* =
+\begin{pmatrix}
+        1      &  3 &     -2      \\
+  -\frac{3}{2} & -3 & \frac{5}{2} \\
+        1      &  1 &     -1
+\end{pmatrix}
+.
+$$
+:::
+
+#### 例 13
+
+略.
+
+#### 例 14
+
+略.
+
+#### 例 15
+
+略.
