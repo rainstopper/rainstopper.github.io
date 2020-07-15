@@ -1,3 +1,9 @@
+---
+tags:
+  - 线性代数
+  - 矩阵
+---
+
 # 矩阵
 
 ## 线性方程组
@@ -158,7 +164,7 @@ $$
 两个矩阵的行数相等、列数也相等时, 就称它们是 `同型矩阵`. 如果 $\boldsymbol{A}$=$\begin{pmatrix} a_{ij} \end{pmatrix}$ 与 $\boldsymbol{B}$=$\begin{pmatrix} b_{ij} \end{pmatrix}$ 是同型矩阵, 并且它们的对应元素相等, 即
 
 $$
-a_{ij} = b_{ij} (i = 1, 2, \cdots, m; j = 1, 2, \cdots, n) ,
+a_{ij} = b_{ij} \qquad (i = 1, 2, \cdots, m; j = 1, 2, \cdots, n) ,
 $$
 
 那么就称矩阵 $\boldsymbol{A}$ 与矩阵 $\boldsymbol{B}$ `相等`, 记作
@@ -308,8 +314,9 @@ $$
 
 给定了线性变换 (3), 它的系数所构成的矩阵（称为 `系数矩阵`）也就确定. 反之, 如果给出一个矩阵作为线性变换的系数矩阵, 则线性变换也就确定. 在这个意义上, 线性变换和矩阵之间存在着一一对应的关系.
 
-::: details 例如
-线性变换
+#### 对角矩阵
+
+例如线性变换
 
 $$
 \begin{cases}
@@ -336,8 +343,10 @@ $$
 这个方阵的特点是: 从左上角到右下角的直线（对角线）以外的元素都是 $0$. 这种方阵称为 `对角矩阵`, 简称 `对角阵`. 对角阵也记作
 
 $$
-\boldsymbol{A} = diag(\lambda_1, \lambda_2, cdots, \lambda_n) ;
+\boldsymbol{A} = diag(\lambda_1, \lambda_2, \cdots, \lambda_n) ;
 $$
+
+#### 单位矩阵
 
 特别当 $\lambda_1$=$\lambda_2$=⋯=$\lambda_n$=$1$ 时的线性变换叫做恒等变换, 它对应的 $n$ 阶方阵
 
@@ -362,7 +371,6 @@ e_{ij} =
 \qquad
 (i, j = 1 , 2 , \cdots , n) .
 $$
-:::
 
 ::: tip 提示
 由于矩阵和线性变换之间存在一一对应的关系, 因此可以利用矩阵来研究线性变换, 也可以利用线性变换来解释矩阵的含义.
@@ -395,8 +403,8 @@ $$
 
 $$
 \begin{aligned}
-  x_1 = & r (\cos\varphi \cos\theta - \sin\varphi \sin\theta) = r \cos(\varphi + \theta) , \\
-  y_1 = & r (\sin\varphi \cos\theta + \cos\varphi \sin\theta) = r \sin(\varphi + \theta) ,
+  x_1 & = r (\cos\varphi \cos\theta - \sin\varphi \sin\theta) = r \cos(\varphi + \theta) , \\
+  y_1 & = r (\sin\varphi \cos\theta + \cos\varphi \sin\theta) = r \sin(\varphi + \theta) ,
 \end{aligned}
 $$
 
@@ -432,6 +440,8 @@ $$
 
 (ii) ($\boldsymbol{A}$+$\boldsymbol{B}$)+$\boldsymbol{C}$=$\boldsymbol{A}$+($\boldsymbol{B}$+$\boldsymbol{C}$).
 
+#### 负矩阵
+
 设矩阵 $\boldsymbol{A}$=$\begin{pmatrix} a_{ij} \end{pmatrix}$, 记
 
 $$
@@ -447,6 +457,8 @@ $$
 $$
 \boldsymbol{A} + (-\boldsymbol{A}) = \boldsymbol{O} ,
 $$
+
+#### 矩阵的减法
 
 由此规定矩阵的减法为
 
@@ -694,7 +706,9 @@ $$
 矩阵的乘法不满足交换律, 必须注意矩阵相乘的顺序.
 :::
 
-$\boldsymbol{AB}$ 是 $\boldsymbol{A}$ `左乘` $\boldsymbol{B}$（$\boldsymbol{B}$ 被$\boldsymbol{A}$ 左乘）的乘积, $\boldsymbol{BA}$ 是 $\boldsymbol{A}$ `右乘` $\boldsymbol{B}$ 的乘积. $\boldsymbol{AB}$ 有意义时, $\boldsymbol{BA}$ 可能没有意义.又若 $\boldsymbol{A}$ 是 $m$×$n$ 矩阵, $\boldsymbol{B}$ 是 $n$×$m$ 矩阵, 则 $\boldsymbol{AB}$ 与 $\boldsymbol{BA}$ 都有意义, 但 $\boldsymbol{AB}$ 是 $m$ 阶方阵, $\boldsymbol{BA}$ 是 $n$ 阶方阵, 当 $m$≠$n$ 时, $\boldsymbol{AB}$≠$\boldsymbol{BA}$. 即使 $m$=$n$, 即 $\boldsymbol{A}$、$\boldsymbol{B}$ 是同阶方阵, 如 [例 6](#例-6), $\boldsymbol{A}$ 与 $\boldsymbol{B}$ 都是 $2$ 阶方阵, 从而 $\boldsymbol{AB}$ 与 $\boldsymbol{BA}$ 也都是 $2$ 阶方阵, 但 $\boldsymbol{AB}$ 与 $\boldsymbol{BA}$ 仍然可以不相等.
+$\boldsymbol{AB}$ 是 $\boldsymbol{A}$ `左乘` $\boldsymbol{B}$（$\boldsymbol{B}$ 被$\boldsymbol{A}$ 左乘）的乘积, $\boldsymbol{BA}$ 是 $\boldsymbol{A}$ `右乘` $\boldsymbol{B}$ 的乘积. $\boldsymbol{AB}$ 有意义时, $\boldsymbol{BA}$ 可能没有意义. 又若 $\boldsymbol{A}$ 是 $m$×$n$ 矩阵, $\boldsymbol{B}$ 是 $n$×$m$ 矩阵, 则 $\boldsymbol{AB}$ 与 $\boldsymbol{BA}$ 都有意义, 但 $\boldsymbol{AB}$ 是 $m$ 阶方阵, $\boldsymbol{BA}$ 是 $n$ 阶方阵, 当 $m$≠$n$ 时, $\boldsymbol{AB}$≠$\boldsymbol{BA}$. 即使 $m$=$n$, 即 $\boldsymbol{A}$、$\boldsymbol{B}$ 是同阶方阵, 如 [例 6](#例-6), $\boldsymbol{A}$ 与 $\boldsymbol{B}$ 都是 $2$ 阶方阵, 从而 $\boldsymbol{AB}$ 与 $\boldsymbol{BA}$ 也都是 $2$ 阶方阵, 但 $\boldsymbol{AB}$ 与 $\boldsymbol{BA}$ 仍然可以不相等.
+
+#### 可交换
 
 对于两个 $n$ 阶方阵 $\boldsymbol{A}$、$\boldsymbol{B}$, 若 $\boldsymbol{AB}$=$\boldsymbol{BA}$, 则称方阵 $\boldsymbol{A}$ 与 $\boldsymbol{B}$ 是 `可交换` 的.
 
@@ -729,6 +743,8 @@ $$
 $$
 
 可见单位矩阵 $\boldsymbol{E}$ 在矩阵乘法中的作用类似于数 $1$.
+
+#### 纯量阵
 
 矩阵
 
@@ -1183,7 +1199,7 @@ $$
 \boldsymbol{H}^T = (\boldsymbol{E} - 2\boldsymbol{X} \boldsymbol{X}^T)^T = \boldsymbol{E}^T -2 (\boldsymbol{X} \boldsymbol{X}^T)^T = \boldsymbol{E} - 2 \boldsymbol{X} \boldsymbol{X}^T = \boldsymbol{H} ,
 $$
 
-所以 $\boldsymbol{H}$ 是对称矩阵.
+所以 $\boldsymbol{H}$ 是对 [称矩阵](#对称矩阵).
 
 $$
 \begin{aligned}
