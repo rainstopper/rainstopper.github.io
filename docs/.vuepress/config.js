@@ -93,7 +93,8 @@ module.exports = {
           children: [
             ['', '介绍'],
             'determinant',
-            'matrix'
+            'matrix',
+            'vector-group'
           ]
         }
       ]

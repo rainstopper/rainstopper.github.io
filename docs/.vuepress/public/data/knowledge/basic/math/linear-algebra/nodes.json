@@ -48,9 +48,9 @@
   { "name": "复矩阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#定义-1", "description": "元素是复数的矩阵称" },
   { "name": "方阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#定义-1", "description": "行数与列数相等的矩阵" },
   { "name": "行矩阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#定义-1", "description": "只有一行的矩阵" },
-  { "name": "行向量", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#定义-1", "description": "行矩阵" },
+  { "name": "行向量", "category": "向量", "link": "/basic/math/linear-algebra/matrix.html#定义-1", "description": "行矩阵" },
   { "name": "列矩阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#定义-1", "description": "只有一列的矩阵" },
-  { "name": "列向量", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#定义-1", "description": "列矩阵" },
+  { "name": "列向量", "category": "向量", "link": "/basic/math/linear-algebra/matrix.html#定义-1", "description": "列矩阵" },
   { "name": "同型矩阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#定义-1", "description": "行数、列数都相等的两个矩阵" },
   { "name": "矩阵相等", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#定义-1", "description": "对应元素完全相等的两个同型矩阵相等" },
   { "name": "零矩阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#定义-1", "description": "所有元素都是零的矩阵\n注意: 不同型的零矩阵是不同的." },
@@ -78,5 +78,10 @@
   { "name": "转置矩阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#定义-5", "description": "将一个矩阵的行换成同序数的列所得的新矩阵" },
   { "name": "方阵的行列式", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#定义-6" },
   { "name": "伴随矩阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#例-10" },
-  { "name": "伴随阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#例-10", "description": "伴随矩阵的简称" }
+  { "name": "伴随阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#例-10", "description": "伴随矩阵的简称" },
+
+  { "name": "向量", "category": "向量", "link": "/basic/math/linear-algebra/vector-group.html#向量" },
+  { "name": "分量", "category": "向量", "link": "/basic/math/linear-algebra/vector-group.html#向量", "description": "向量中的数" },
+  { "name": "实向量", "category": "向量", "link": "/basic/math/linear-algebra/vector-group.html#向量", "description": "分量全为实数的向量" },
+  { "name": "复向量", "category": "向量", "link": "/basic/math/linear-algebra/vector-group.html#向量", "description": "分量为复数的向量" }
 ]
