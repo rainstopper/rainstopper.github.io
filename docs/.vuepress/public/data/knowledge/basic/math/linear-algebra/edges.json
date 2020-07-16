@@ -102,5 +102,8 @@
   { "source": "方阵的行列式", "target": "奇异矩阵" },
   { "source": "方阵的行列式", "target": "非奇异矩阵" },
   { "source": "非奇异矩阵", "target": "逆矩阵" },
-  { "source": "矩阵-定理2", "target": "矩阵-定理2-推论" }
+  { "source": "矩阵-定理2", "target": "矩阵-定理2-推论" },
+  { "source": "克拉默法则", "target": "线性方程组" },
+  { "source": "克拉默法则", "target": "行列式" },
+  { "source": "克拉默法则", "target": "逆矩阵" }
 ]

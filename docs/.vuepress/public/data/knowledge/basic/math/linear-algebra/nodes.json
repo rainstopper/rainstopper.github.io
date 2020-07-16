@@ -89,5 +89,6 @@
   { "name": "矩阵-定理2", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#定理-2", "description": "若矩阵的行列式不为零, 则该矩阵可逆, 且逆矩阵等于其伴随矩阵除以其行列式." },
   { "name": "奇异矩阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#奇异矩阵", "description": "行列式等于零的矩阵" },
   { "name": "非奇异矩阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#奇异矩阵", "description": "行列式不等于零的矩阵" },
-  { "name": "矩阵-定理2-推论", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#推论", "description": "若两矩阵的乘积是单位矩阵, 则这两个矩阵互为逆矩阵." }
+  { "name": "矩阵-定理2-推论", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix.html#推论", "description": "若两矩阵的乘积是单位矩阵, 则这两个矩阵互为逆矩阵." },
+  { "name": "克拉默法则", "link": "/basic/math/linear-algebra/matrix.html#克拉默法则", "description": "线性方程组求解定理" }
 ]
