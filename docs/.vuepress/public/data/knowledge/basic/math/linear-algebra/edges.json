@@ -105,5 +105,11 @@
   { "source": "矩阵-定理2", "target": "矩阵-定理2-推论" },
   { "source": "克拉默法则", "target": "线性方程组" },
   { "source": "克拉默法则", "target": "行列式" },
-  { "source": "克拉默法则", "target": "逆矩阵" }
+  { "source": "克拉默法则", "target": "逆矩阵" },
+
+  { "source": "向量", "target": "分量" },
+  { "source": "向量", "target": "行向量" },
+  { "source": "向量", "target": "列向量" },
+  { "source": "向量", "target": "实向量" },
+  { "source": "向量", "target": "复向量" }
 ]
