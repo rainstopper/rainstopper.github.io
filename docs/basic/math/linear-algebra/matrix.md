@@ -1694,3 +1694,148 @@ $$
 :::
 
 克拉默法则可视为行列式的一个应用, 而所给出的证明又可看作逆矩阵的一个应用. 它解决的是方程个数与未知数个数相等且系数行列式不等于零的线性方程组. 所以它既是 [行列式例 1](determinant.html#方程组的解) 中用二阶行列式求解方程组的推广, 又是求解一般线性方程组的一个特殊的情形.
+
+#### 例 16
+
+分别用克拉默法则和逆矩阵方法求解线性方程组
+
+$$
+\begin{cases}
+  x_1 - x_2 - x_3 = 2 , \\
+  2x_1 - x_2 - 3x_3 = 1 , \\
+  3x_1 + 2x_2 - 5x_3 = 0 .
+\end{cases}
+$$
+
+::: details 解
+（1）用克拉默法则
+
+因方程组的系数矩阵的行列式 $\begin{vmatrix} \boldsymbol{A} \end{vmatrix}$=$\begin{vmatrix} 1 & -1 & -1 \\ 2 & -1 & -3 \\ 3 & 2 & -5 \end{vmatrix}$=$3$≠$0$, 由克拉默法则, 它有惟一解, 并且
+
+$$
+\begin{aligned}
+  x_1
+    & = \frac{1}{\begin{vmatrix} \boldsymbol{A} \end{vmatrix}}
+      \begin{vmatrix}
+        2 & -1 & -1 \\
+        1 & -1 & -3 \\
+        0 &  2 & -5
+      \end{vmatrix}
+      \xlongequal[]{r_1 \leftrightarrow r_2} - \frac{1}{3}
+      \begin{vmatrix}
+        1 & -1 & -3 \\
+        2 & -1 & -1 \\
+        0 &  2 & -5
+      \end{vmatrix}
+      \xlongequal[r_3 - 2r_2]{r_2 - 2r_1} - \frac{1}{3}
+      \begin{vmatrix}
+        1 & -1 & -3  \\
+        0 &  1 &  5  \\
+        0 &  0 & -15
+      \end{vmatrix}
+      = 5 ; \\
+  x_2
+    & = \frac{1}{\begin{vmatrix} \boldsymbol{A} \end{vmatrix}}
+      \begin{vmatrix}
+        1 & 2 & -1 \\
+        2 & 1 & -3 \\
+        3 & 0 & -5
+      \end{vmatrix}
+      \xlongequal[r_3 - 3r_1]{r_2 - 2r_1} \frac{1}{3}
+      \begin{vmatrix}
+        1 &  2 & -1 \\
+        0 & -3 & -1 \\
+        0 & -6 & -2
+      \end{vmatrix}
+      = 0 ; \\
+  x_3
+    & = \frac{1}{\begin{vmatrix} \boldsymbol{A} \end{vmatrix}}
+      \begin{vmatrix}
+        1 & -1 & 2 \\
+        2 & -1 & 1 \\
+        3 &  2 & 0
+      \end{vmatrix}
+      \xlongequal[r_3 - 3r_1]{r_2 - 2r_1} \frac{1}{3}
+      \begin{vmatrix}
+        1 & -1 &  2 \\
+        0 &  1 & -3 \\
+        0 &  5 & -6
+      \end{vmatrix}
+      = \frac{1}{3}
+      \begin{vmatrix}
+        1 & -3 \\
+        5 & -6
+      \end{vmatrix}
+      = 3 .
+\end{aligned}
+$$
+
+（2）用逆矩阵方法
+
+因 $\begin{vmatrix} \boldsymbol{A} \end{vmatrix}$=$3$≠$0$, 故 $\boldsymbol{a}$ 可逆, 于是
+
+$$
+\begin{aligned}
+  x & = \boldsymbol{A}^{-1} \boldsymbol{b} \\
+    & =
+      \begin{pmatrix}
+        1 & -1 & -1 \\
+        2 & -1 & -3 \\
+        3 &  2 & -5
+      \end{pmatrix}^{-1}
+      \begin{pmatrix}
+        2 \\
+        1 \\
+        0
+      \end{pmatrix}
+      = \frac{1}{3}
+      \begin{pmatrix}
+        11 & -7 & 2 \\
+         1 & -2 & 1 \\
+         7 & -5 & 1
+      \end{pmatrix}
+      \begin{pmatrix}
+        2 \\
+        1 \\
+        0
+      \end{pmatrix}
+      = \frac{1}{3}
+      \begin{pmatrix}
+        15 \\
+         0 \\
+         9
+      \end{pmatrix}
+      =
+      \begin{pmatrix}
+        5 \\
+        0 \\
+        3
+      \end{pmatrix}
+      ,
+\end{aligned}
+$$
+
+即有
+
+$$
+\begin{cases}
+  x_1 = 5 , \\
+  x_2 = 0 , \\
+  x_3 = 3 .
+\end{cases}
+$$
+:::
+
+## 矩阵分块法
+
+对于行数和列数较多的矩阵 $\boldsymbol{A}$, 运算时常采用 `分块法`, 使大矩阵的运算化成小矩阵的运算. 将矩阵 $\boldsymbol{A}$ 用若干条纵线和横线分成许多个小矩阵, 每一个小矩阵称为 $\boldsymbol{A}$ 的 `子块`, 以子块为元素的形式上的矩阵称为 `分块矩阵`.
+
+$$
+\left(
+  \begin{array}{cccc}
+    a_{11} & a_{12} & a_{13} & a_{14} \\
+    a_{21} & a_{22} & a_{23} & a_{24} \\
+    a_{31} & a_{32} & a_{33} & a_{34}
+  \end{array}
+\right)
+$$
