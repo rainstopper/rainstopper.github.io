@@ -45,14 +45,14 @@ $$
   x - y = 0 , \\
   x + y = 2 ;
 \end{cases}
-\qquad
+\quad
 \text{②}
 \begin{cases}
   x - y = 0 , \\
   x + y = 1 , \\
   x + y = 2 ;
 \end{cases}
-\qquad
+\quad
 \text{③}
 \begin{cases}
   x_1 - x_2 = 0 , \\
@@ -164,7 +164,7 @@ $$
 两个矩阵的行数相等、列数也相等时, 就称它们是 `同型矩阵`. 如果 $\boldsymbol{A}$=$\begin{pmatrix} a_{ij} \end{pmatrix}$ 与 $\boldsymbol{B}$=$\begin{pmatrix} b_{ij} \end{pmatrix}$ 是同型矩阵, 并且它们的对应元素相等, 即
 
 $$
-a_{ij} = b_{ij} \qquad (i = 1, 2, \cdots, m; j = 1, 2, \cdots, n) ,
+a_{ij} = b_{ij} \quad (i = 1, 2, \cdots, m; j = 1, 2, \cdots, n) ,
 $$
 
 那么就称矩阵 $\boldsymbol{A}$ 与矩阵 $\boldsymbol{B}$ `相等`, 记作
@@ -281,10 +281,10 @@ $$
   \end{matrix}
     &
       \begin{pmatrix}
-        b_{11} \qquad & b_{12} \\
-        b_{21} \qquad & b_{22} \\
-        b_{31} \qquad & b_{32} \\
-        b_{41} \qquad & b_{42}
+        b_{11} \quad & b_{12} \\
+        b_{21} \quad & b_{22} \\
+        b_{31} \quad & b_{32} \\
+        b_{41} \quad & b_{42}
       \end{pmatrix}
       ,
 \end{array}
@@ -368,7 +368,7 @@ e_{ij} =
   1 , \text{当} i = j , \\
   0 , \text{当} i \neq j
 \end{cases}
-\qquad
+\quad
 (i, j = 1 , 2 , \cdots , n) .
 $$
 
@@ -594,7 +594,7 @@ $$
   1 &  1 & 0 & 3 \\
   0 &  3 & 1 & 4
 \end{pmatrix}
-\qquad \text{与} \qquad
+\quad \text{与} \quad
 \boldsymbol{B} =
 \begin{pmatrix}
    1 & 2 \\
@@ -651,7 +651,7 @@ $$
   -2 &  4 \\
    1 & -2
 \end{pmatrix}
-\qquad \text{与} \qquad
+\quad \text{与} \quad
 \boldsymbol{B} =
 \begin{pmatrix}
    2 &  4 \\
@@ -732,7 +732,7 @@ $\boldsymbol{AB}$ 是 $\boldsymbol{A}$ `左乘` $\boldsymbol{B}$（$\boldsymbol{
 
 $$
 \boldsymbol{E}_m \boldsymbol{A}_{m \times n} = \boldsymbol{A}_{m \times n} ,
-\qquad
+\quad
 \boldsymbol{A}_{m \times n} \boldsymbol{E}_n = \boldsymbol{A}_{m \times n} ,
 $$
 
@@ -779,7 +779,7 @@ $$
 由于矩阵乘法适合结合律, 所以矩阵的幂满足以下运算规律:
 
 $$
-\boldsymbol{A}^k \boldsymbol{A}^l = \boldsymbol{A}^{k+l} , \qquad
+\boldsymbol{A}^k \boldsymbol{A}^l = \boldsymbol{A}^{k+l} , \quad
 (\boldsymbol{A}^k)^l = \boldsymbol{A}^{kl} ,
 $$
 
@@ -814,7 +814,7 @@ $$
         a_{31} & a_{32} & a_{33} & a_{34}
       \end{pmatrix}
 \end{array}
-\qquad \text{和} \qquad
+\quad \text{和} \quad
 \begin{array}{rc}
   \text{产品}
     &
@@ -830,10 +830,10 @@ $$
   \end{matrix}
     &
       \begin{pmatrix}
-        b_{11} \qquad & b_{12} \\
-        b_{21} \qquad & b_{22} \\
-        b_{31} \qquad & b_{32} \\
-        b_{41} \qquad & b_{42}
+        b_{11} \quad & b_{12} \\
+        b_{21} \quad & b_{22} \\
+        b_{31} \quad & b_{32} \\
+        b_{41} \quad & b_{42}
       \end{pmatrix}
       ,
 \end{array}
@@ -889,10 +889,10 @@ $$
         \end{matrix}
           &
             \begin{pmatrix}
-              b_{11} \qquad & b_{12} \\
-              b_{21} \qquad & b_{22} \\
-              b_{31} \qquad & b_{32} \\
-              b_{41} \qquad & b_{42}
+              b_{11} \quad & b_{12} \\
+              b_{21} \quad & b_{22} \\
+              b_{31} \quad & b_{32} \\
+              b_{41} \quad & b_{42}
             \end{pmatrix}_{4 \times 2}
       \end{array} \\
     & =
@@ -908,9 +908,9 @@ $$
         \end{matrix}
           &
             \begin{pmatrix}
-              c_{11} \qquad & c_{12} \\
-              c_{21} \qquad & c_{22} \\
-              c_{31} \qquad & c_{32}
+              c_{11} \quad & c_{12} \\
+              c_{21} \quad & c_{22} \\
+              c_{31} \quad & c_{32}
             \end{pmatrix}_{3 \times 2}
             .
       \end{array}
@@ -996,7 +996,7 @@ $$
 \begin{pmatrix}
   a_{ij}
 \end{pmatrix}
-, \qquad
+, \quad
 \boldsymbol{x} =
 \begin{pmatrix}
     x_1  \\
@@ -1004,7 +1004,7 @@ $$
   \vdots \\
     x_n
 \end{pmatrix}
-, \qquad
+, \quad
 \boldsymbol{y} =
 \begin{pmatrix}
     y_1  \\
@@ -1085,7 +1085,7 @@ $$
 而 $\boldsymbol{B}^T$ 的第 $i$ 行为 $(b_{1i}$, ⋯, $b_{si})$, $\boldsymbol{A}^T$ 的第 $j$ 列为 $(a_{j1}$, ⋯, $a_{js})^T$, 因此
 
 $$
-d_{ij} = c_{ji} \qquad (i = 1, 2, \cdots, n; j = 1, 2, \cdots, m) ,
+d_{ij} = c_{ji} \quad (i = 1, 2, \cdots, n; j = 1, 2, \cdots, m) ,
 $$
 
 即 $\boldsymbol{D}$=$\boldsymbol{C}^T$, 亦即
@@ -1105,7 +1105,7 @@ $$
   2 & 0 & -1 \\
   1 & 3 &  2
 \end{pmatrix}
-, \qquad
+, \quad
 \boldsymbol{B} =
 \begin{pmatrix}
   1 & 7 & -1 \\
@@ -1179,7 +1179,7 @@ $$
 设 $\boldsymbol{A}$ 为 $n$ 阶方阵, 如果满足 $\boldsymbol{A}^T$=$\boldsymbol{A}$, 即
 
 $$
-a_{ij} = a_{ji} \qquad (i = 1 , 2 , \cdots, n) ,
+a_{ij} = a_{ji} \quad (i = 1 , 2 , \cdots, n) ,
 $$
 
 那么 $\boldsymbol{A}$ 称为 `对称矩阵`, 简称 `对称阵`. 对称阵的特点是: 它的元素以对角线为对称阵对应相等.
@@ -1476,13 +1476,13 @@ $$
 当 $\boldsymbol{A}$ 可逆时, 还可定义
 
 $$
-\boldsymbol{A}^0 = \boldsymbol{E} , \qquad \boldsymbol{A}^{-k} = (\boldsymbol{A}^{-1})^k ,
+\boldsymbol{A}^0 = \boldsymbol{E} , \quad \boldsymbol{A}^{-k} = (\boldsymbol{A}^{-1})^k ,
 $$
 
 其中 $k$ 为正整数. 这样, 当 $\boldsymbol{A}$ 可逆, $\lambda$、$\mu$ 为整数时, 有
 
 $$
-\boldsymbol{A}^\lambda \boldsymbol{A}^\mu = \boldsymbol{A}^{\lambda + \mu}, \qquad (\boldsymbol{A}^\lambda)^\mu = \boldsymbol{A}^{\lambda \mu} .
+\boldsymbol{A}^\lambda \boldsymbol{A}^\mu = \boldsymbol{A}^{\lambda + \mu}, \quad (\boldsymbol{A}^\lambda)^\mu = \boldsymbol{A}^{\lambda \mu} .
 $$
 
 #### 例 11
@@ -1494,7 +1494,7 @@ $$
 \begin{vmatrix}
   \boldsymbol{A}
 \end{vmatrix}
-= ad - bc, \qquad \boldsymbol{A}^* =
+= ad - bc, \quad \boldsymbol{A}^* =
 \begin{pmatrix}
    d & -b \\
   -c &  a
@@ -1582,3 +1582,113 @@ $$
 #### 例 15
 
 略.
+
+## 克拉默法则
+
+含有 $n$ 个未知数 $x_1$, $x_2$, ⋯, $x_n$ 的 $n$ 个线性方程的方程组
+
+$$
+\begin{cases}
+  a_{11} x_1 + a_{12} x_2 + \cdots + a_{1n} x_n = b_1 , \\
+  a_{21} x_1 + a_{22} x_2 + \cdots + a_{2n} x_n = b_2 , \\
+  \cdots \cdots \cdots \cdots \\
+  a_{n1} x_1 + a_{n2} x_2 + \cdots + a_{nn} x_n = b_n ,
+\end{cases}
+\tag{9}
+$$
+
+它的解可以用 $n$ 阶行列式表示, 即有
+
+**如果线性方程组 (9) 的 [系数矩阵](#例-1) $\boldsymbol{A}$ 的行列式不等于零, 即**
+
+$$
+\begin{vmatrix} \boldsymbol{A} \end{vmatrix} =
+\begin{vmatrix}
+  a_{11} & \cdots & a_{1n} \\
+  \vdots &        & \vdots \\
+  a_{n1} & \cdots & a_{nn}
+\end{vmatrix}
+\neq 0 ,
+$$
+
+**那么, 方程组 (9) 有惟一解**
+
+$$
+x_1 = \frac{\begin{vmatrix} \boldsymbol{A}_1 \end{vmatrix}}{\begin{vmatrix} \boldsymbol{A} \end{vmatrix}} , \quad
+x_2 = \frac{\begin{vmatrix} \boldsymbol{A}_2 \end{vmatrix}}{\begin{vmatrix} \boldsymbol{A} \end{vmatrix}} , \quad
+\cdots , \quad
+x_n = \frac{\begin{vmatrix} \boldsymbol{A}_n \end{vmatrix}}{\begin{vmatrix} \boldsymbol{A} \end{vmatrix}} ,
+$$
+
+**其中 $\boldsymbol{A}_j$ $(j$ = $1$, $2$, ⋯, $n)$ 是把系数矩阵 $\boldsymbol{A}$ 中第 $j$ 列的元素用方程组右端的常数项代替后所得到的的 $n$ 阶矩阵, 即**
+
+$$
+\boldsymbol{A}_j =
+\begin{pmatrix}
+  a_{11} & \cdots & a_{1, j-1} &  b_1   & a_{1, j+1} & \cdots & a_{1n} \\
+  \vdots &        &   \vdots   & \vdots &   \vdots   &        & \vdots \\
+  a_{n1} & \cdots & a_{n, j-1} &  b_n   & a_{n, j+1} & \cdots & a_{nn}
+\end{pmatrix}
+.
+$$
+
+::: details 证
+把方程组 (9) 写成矩阵方程
+
+$$
+\boldsymbol{Ax} = \boldsymbol{b} ,
+$$
+
+这里 $\boldsymbol{A}$=$\begin{pmatrix} a_{ij} \end{pmatrix}_{m \times n}$ 为 $n$ 阶矩阵, 因 $\begin{vmatrix} \boldsymbol{A} \end{vmatrix}$≠$0$, 故 $\boldsymbol{A}^{-1}$ 存在.
+
+令 $\boldsymbol{x}$=$\boldsymbol{A}^{-1} \boldsymbol{b}$, 有
+
+$$
+\boldsymbol{Ax} = \boldsymbol{AA}^{-1} \boldsymbol{b} = \boldsymbol{b} ,
+$$
+
+表明 $\boldsymbol{x}$=$\boldsymbol{A}^{-1} \boldsymbol{b}$ 是方程组 (9) 的解向量.
+
+由 $\boldsymbol{Ax}$=$\boldsymbol{b}$, 有 $\boldsymbol{A}^{-1} \boldsymbol{Ax}$=$\boldsymbol{A}^{-1} \boldsymbol{b}$, 即 $\boldsymbol{x}$=$\boldsymbol{A}^{-1} \boldsymbol{b}$, 根据逆矩阵的惟一性, 知 $\boldsymbol{x}$=$\boldsymbol{A}^{-1} \boldsymbol{b}$ 是方程组 (9) 的惟一的解向量.
+
+由逆矩阵公式 $\boldsymbol{A}^{-1}$=$\frac{1}{\begin{vmatrix} \boldsymbol{A} \end{vmatrix}} \boldsymbol{A}^*$, 有 $\boldsymbol{x}$=$\boldsymbol{A}^{-1} \boldsymbol{b}$=$\frac{1}{\begin{vmatrix} \boldsymbol{A} \end{vmatrix}} \boldsymbol{A}^* \boldsymbol{b}$, 即
+
+$$
+\begin{pmatrix}
+   x_1   \\
+   x_2   \\
+  \vdots \\
+   x_n
+\end{pmatrix}
+= \frac{1}{\begin{vmatrix} \boldsymbol{A} \end{vmatrix}}
+\begin{pmatrix}
+  A_{11} & A_{12} & \cdots & A_{1n} \\
+  A_{21} & A_{22} & \cdots & A_{2n} \\
+  \vdots & \vdots &        & \vdots \\
+  A_{n1} & A_{n2} & \cdots & A_{nn}
+\end{pmatrix}
+\begin{pmatrix}
+   b_1   \\
+   b_2   \\
+  \vdots \\
+   b_n
+\end{pmatrix}
+= \frac{1}{\begin{vmatrix} \boldsymbol{A} \end{vmatrix}}
+\begin{pmatrix}
+  b_1 A_{11} & b_2 A_{12} & \cdots & b_n A_{1n} \\
+  b_1 A_{21} & b_2 A_{22} & \cdots & b_n A_{2n} \\
+    \vdots   &   \vdots   &        &   \vdots   \\
+  b_1 A_{n1} & b_2 A_{n2} & \cdots & b_n A_{nn}
+\end{pmatrix}
+,
+$$
+
+亦即
+
+$$
+x_j
+= \frac{1}{\begin{vmatrix} \boldsymbol{A} \end{vmatrix}} (b_1 A_{1j} + b_2 A_{2j} + \cdots + b_n A_{nj})
+= \frac{1}{\begin{vmatrix} \boldsymbol{A} \end{vmatrix}} \begin{vmatrix} \boldsymbol{A}_j \end{vmatrix} \quad
+(j = 1, 2, \cdots, n) .
+$$
+:::
