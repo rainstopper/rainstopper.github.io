@@ -94,6 +94,7 @@ module.exports = {
             ['', '介绍'],
             'determinant',
             'matrix',
+            'matrix-elementary-transformation',
             'vector-group'
           ]
         }
