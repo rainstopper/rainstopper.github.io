@@ -109,6 +109,7 @@
   { "source": "矩阵-运算", "target": "矩阵分块法" },
   { "source": "矩阵分块法", "target": "分块矩阵" },
   { "source": "分块矩阵", "target": "子块" },
+  { "source": "分块矩阵", "target": "分块对角矩阵" },
 
   { "source": "向量", "target": "分量" },
   { "source": "向量", "target": "行向量" },
