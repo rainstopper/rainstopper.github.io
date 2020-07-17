@@ -161,7 +161,13 @@ $$
 
 称为 `列矩阵`, 又称 `列向量`.
 
-两个矩阵的行数相等、列数也相等时, 就称它们是 `同型矩阵`. 如果 $\boldsymbol{A}$=$\begin{pmatrix} a_{ij} \end{pmatrix}$ 与 $\boldsymbol{B}$=$\begin{pmatrix} b_{ij} \end{pmatrix}$ 是同型矩阵, 并且它们的对应元素相等, 即
+#### 同型矩阵
+
+两个矩阵的行数相等、列数也相等时, 就称它们是 `同型矩阵`.
+
+#### 矩阵相等
+
+如果 $\boldsymbol{A}$=$\begin{pmatrix} a_{ij} \end{pmatrix}$ 与 $\boldsymbol{B}$=$\begin{pmatrix} b_{ij} \end{pmatrix}$ 是同型矩阵, 并且它们的对应元素相等, 即
 
 $$
 a_{ij} = b_{ij} \quad (i = 1, 2, \cdots, m; j = 1, 2, \cdots, n) ,
@@ -172,6 +178,8 @@ $$
 $$
 \boldsymbol{A} = \boldsymbol{B} .
 $$
+
+#### 零矩阵
 
 元素都是零的矩阵称为 `零矩阵`, 记作 $\boldsymbol{O}$.
 
@@ -566,7 +574,7 @@ $$
 
 $$
 \begin{pmatrix}
-  a_{i1} , & a_{i2} , & \cdots , & a_{is}
+  a_{i1} , a_{i2} , \cdots , a_{is}
 \end{pmatrix}
 \begin{pmatrix}
   b_{1j} \\
@@ -1830,12 +1838,586 @@ $$
 
 对于行数和列数较多的矩阵 $\boldsymbol{A}$, 运算时常采用 `分块法`, 使大矩阵的运算化成小矩阵的运算. 将矩阵 $\boldsymbol{A}$ 用若干条纵线和横线分成许多个小矩阵, 每一个小矩阵称为 $\boldsymbol{A}$ 的 `子块`, 以子块为元素的形式上的矩阵称为 `分块矩阵`.
 
+::: details 例如
+将 $3$×$4$ 矩阵
+
 $$
+\begin{pmatrix}
+  a_{11} & a_{12} & a_{13} & a_{14} \\
+  a_{21} & a_{22} & a_{23} & a_{24} \\
+  a_{31} & a_{32} & a_{33} & a_{34}
+\end{pmatrix}
+$$
+
+分成子块的分法很多, 先举出三种分块形式:
+
+$$
+\begin{aligned}
+  & (i)
+    \left(
+      \begin{array}{cc:cc}
+        a_{11} & a_{12} & a_{13} & a_{14} \\
+        a_{21} & a_{22} & a_{23} & a_{24} \\
+        \hdashline
+        a_{31} & a_{32} & a_{33} & a_{34}
+      \end{array}
+    \right)
+    , \quad
+    (ii)
+    \left(
+      \begin{array}{c:cc:c}
+        a_{11} & a_{12} & a_{13} & a_{14} \\
+        a_{21} & a_{22} & a_{23} & a_{24} \\
+        \hdashline
+        a_{31} & a_{32} & a_{33} & a_{34}
+      \end{array}
+    \right)
+    , \\
+  & (iii)
+    \left(
+      \begin{array}{c:c:c:c}
+        a_{11} & a_{12} & a_{13} & a_{14} \\
+        a_{21} & a_{22} & a_{23} & a_{24} \\
+        a_{31} & a_{32} & a_{33} & a_{34}
+      \end{array}
+    \right)
+    .
+\end{aligned}
+$$
+
+分法 (i) 可记为
+
+$$
+\boldsymbol{A} =
+\begin{pmatrix}
+  \boldsymbol{A}_{11} & \boldsymbol{A}_{12} \\
+  \boldsymbol{A}_{21} & \boldsymbol{A}_{22}
+\end{pmatrix}
+,
+$$
+
+其中
+
+$$
+\boldsymbol{A}_{11} =
+\begin{pmatrix}
+  a_{11} & a_{12} \\
+  a_{21} & a_{22}
+\end{pmatrix}
+, \quad
+\boldsymbol{A}_{12} =
+\begin{pmatrix}
+  a_{13} & a_{14} \\
+  a_{23} & a_{24}
+\end{pmatrix}
+, \quad
+\boldsymbol{A}_{21} = \begin{pmatrix} a_{31},  & a_{32} \end{pmatrix} , \quad
+\boldsymbol{A}_{22} = \begin{pmatrix} a_{33},  & a_{34} \end{pmatrix} ,
+$$
+
+即 $\boldsymbol{A}_{11}$, $\boldsymbol{A}_{12}$, $\boldsymbol{A}_{21}$, $\boldsymbol{A}_{22}$ 为 $\boldsymbol{A}$ 的子块, 而 $\boldsymbol{A}$ 形式上成为以这些子块为元的分块矩阵. 分法 (ii) 及 (iii) 类似.
+:::
+
+[方阵的行列式](#方阵的行列式) 中证明公式 $\begin{vmatrix} \boldsymbol{AB} \end{vmatrix}$=$\begin{vmatrix} \boldsymbol{A} \end{vmatrix} \begin{vmatrix} \boldsymbol{B} \end{vmatrix}$ 时出现的矩阵 $\begin{pmatrix} \boldsymbol{A} & \boldsymbol{O} \\ - \boldsymbol{E} & \boldsymbol{B} \end{pmatrix}$ 正是分块矩阵. 在那里是把四个矩阵拼成一个大矩阵, 这与把大矩阵分成多个小矩阵是同一个概念的两个方面.
+
+分块矩阵的运算规则与普通矩阵的运算规则相类似, 分别说明如下:
+
+(i) 设矩阵 $\boldsymbol{A}$ 与 $\boldsymbol{B}$ 的行数相同、列数相同, 采用相同的分块方法, 有
+
+$$
+\boldsymbol{A} =
+\begin{pmatrix}
+  \boldsymbol{A}_{11} & \cdots & \boldsymbol{A}_{1r} \\
+         \vdots       &        &       \vdots        \\
+  \boldsymbol{A}_{s1} & \cdots & \boldsymbol{A}_{sr}
+\end{pmatrix}
+,
+\boldsymbol{B} =
+\begin{pmatrix}
+  \boldsymbol{B}_{11} & \cdots & \boldsymbol{B}_{1r} \\
+         \vdots       &        &       \vdots        \\
+  \boldsymbol{B}_{s1} & \cdots & \boldsymbol{B}_{sr}
+\end{pmatrix}
+,
+ $$
+
+其中 $\boldsymbol{A}_{ij}$ 与 $\boldsymbol{B}_{ij}$ 的行数相同、列数相同, 那么
+
+$$
+\boldsymbol{A} + \boldsymbol{B} =
+\begin{pmatrix}
+  \boldsymbol{A}_{11} + \boldsymbol{B}_{11} & \cdots & \boldsymbol{A}_{1r} + \boldsymbol{B}_{1r} \\
+                    \vdots                  &        &                  \vdots                   \\
+  \boldsymbol{A}_{s1} + \boldsymbol{B}_{s1} & \cdots & \boldsymbol{A}_{sr} + \boldsymbol{B}_{sr}
+\end{pmatrix}
+.
+$$
+
+(ii) 设 $\boldsymbol{A}$=$\begin{pmatrix} \boldsymbol{A}_{11} & \cdots & \boldsymbol{A}_{1r} \\ \vdots & & \vdots \\ \boldsymbol{A}_{s1} & \cdots & \boldsymbol{A}_{sr} \end{pmatrix}$, $\lambda$ 为数, 那么
+
+$$
+\lambda \boldsymbol{A} =
+\begin{pmatrix}
+  \lambda \boldsymbol{A}_{11} & \cdots & \lambda \boldsymbol{A}_{1r} \\
+             \vdots           &        &           \vdots            \\
+  \lambda \boldsymbol{A}_{s1} & \cdots & \lambda \boldsymbol{A}_{sr}
+\end{pmatrix}
+.
+$$
+
+(iii) 设 $\boldsymbol{A}$ 为 $m$×$l$ 矩阵, $\boldsymbol{B}$ 为 $l$×$n$ 矩阵, 分块成
+
+$$
+\boldsymbol{A} =
+\begin{pmatrix}
+  \boldsymbol{A}_{11} & \cdots & \boldsymbol{A}_{1t} \\
+         \vdots       &        &       \vdots        \\
+  \boldsymbol{A}_{s1} & \cdots & \boldsymbol{A}_{st}
+\end{pmatrix}
+,
+\boldsymbol{B} =
+\begin{pmatrix}
+  \boldsymbol{B}_{11} & \cdots & \boldsymbol{B}_{1r} \\
+         \vdots       &        &       \vdots        \\
+  \boldsymbol{B}_{t1} & \cdots & \boldsymbol{B}_{tr}
+\end{pmatrix}
+,
+$$
+
+其中 $\boldsymbol{A}_{i1}$, $\boldsymbol{A}_{i2}$, ⋯, $\boldsymbol{A}_{it}$ 的列数分别等于 $\boldsymbol{B}_{1j}$, $\boldsymbol{B}_{2j}$, ⋯, $\boldsymbol{B}_{tj}$ 的行数, 那么
+
+$$
+\boldsymbol{AB} =
+\begin{pmatrix}
+  \boldsymbol{C}_{11} & \cdots & \boldsymbol{C}_{1r} \\
+         \vdots       &        &       \vdots        \\
+  \boldsymbol{C}_{s1} & \cdots & \boldsymbol{C}_{sr}
+\end{pmatrix}
+,
+$$
+
+其中
+
+$$
+\boldsymbol{C}_{ij} = \sum_{k=1}^t \boldsymbol{A}_{ik} \boldsymbol{B}_{kj} \quad (i = 1, \cdots, s; j = 1, \cdots, r) .
+$$
+
+#### 例 17
+
+设
+
+$$
+\boldsymbol{A} =
+\begin{pmatrix}
+   1 & 0 & 0 & 0 \\
+   0 & 1 & 0 & 0 \\
+  -1 & 2 & 1 & 0 \\
+   1 & 1 & 0 & 1
+\end{pmatrix}
+, \quad
+\boldsymbol{B} =
+\begin{pmatrix}
+   1 &  0 & 1 & 0 \\
+  -1 &  2 & 0 & 1 \\
+   1 &  0 & 4 & 1 \\
+  -1 & -1 & 2 & 0
+\end{pmatrix}
+,
+$$
+
+求 $\boldsymbol{AB}$.
+
+::: details 解
+把 $\boldsymbol{A}$, $\boldsymbol{B}$ 分块成
+
+$$
+\begin{aligned}
+  \boldsymbol{A}
+    & =
+      \left(
+        \begin{array}{cc:cc}
+           1 & 0 & 0 & 0 \\
+           0 & 1 & 0 & 0 \\
+          \hdashline
+          -1 & 2 & 1 & 0 \\
+           1 & 1 & 0 & 1
+        \end{array}
+      \right)
+      =
+      \begin{pmatrix}
+         \boldsymbol{E}  & \boldsymbol{O} \\
+        \boldsymbol{A}_1 & \boldsymbol{E}
+      \end{pmatrix}
+      , \\
+  \boldsymbol{B}
+    & =
+      \left(
+        \begin{array}{cc:cc}
+           1 &  0 & 1 & 0 \\
+          -1 &  2 & 0 & 1 \\
+          \hdashline
+           1 &  0 & 4 & 1 \\
+          -1 & -1 & 2 & 0
+        \end{array}
+      \right)
+      =
+      \begin{pmatrix}
+        \boldsymbol{B}_{11} &   \boldsymbol{E}    \\
+        \boldsymbol{B}_{21} & \boldsymbol{B}_{22}
+      \end{pmatrix}
+      ,
+\end{aligned}
+$$
+
+则
+
+$$
+\boldsymbol{AB} =
+\begin{pmatrix}
+   \boldsymbol{E}  & \boldsymbol{O} \\
+  \boldsymbol{A}_1 & \boldsymbol{E}
+\end{pmatrix}
+\begin{pmatrix}
+  \boldsymbol{B}_{11} &   \boldsymbol{E}    \\
+  \boldsymbol{B}_{21} & \boldsymbol{B}_{22}
+\end{pmatrix}
+=
+\begin{pmatrix}
+                      \boldsymbol{B}_{11}                    &             \boldsymbol{E}             \\
+  \boldsymbol{A}_1 \boldsymbol{B}_{11} + \boldsymbol{B}_{21} & \boldsymbol{A}_1 + \boldsymbol{B}_{22}
+\end{pmatrix}
+,
+$$
+
+而
+
+$$
+\begin{aligned}
+  \boldsymbol{A}_1 \boldsymbol{B}_{11} + \boldsymbol{B}_{21}
+    & =
+      \begin{pmatrix}
+        -1 & 2 \\
+         1 & 1
+      \end{pmatrix}
+      \begin{pmatrix}
+         1 & 0 \\
+        -1 & 2
+      \end{pmatrix}
+      +
+      \begin{pmatrix}
+         1 &  0 \\
+        -1 & -1
+      \end{pmatrix} \\
+    & =
+      \begin{pmatrix}
+        -3 & 4 \\
+         0 & 2
+      \end{pmatrix}
+      +
+      \begin{pmatrix}
+         1 &  0 \\
+        -1 & -1
+      \end{pmatrix}
+      =
+      \begin{pmatrix}
+        -2 & 4 \\
+        -1 & 1
+      \end{pmatrix}
+      , \\
+  \boldsymbol{A}_1 + \boldsymbol{B}_{22}
+    & =
+      \begin{pmatrix}
+        -1 & 2 \\
+         1 & 1
+      \end{pmatrix}
+      +
+      \begin{pmatrix}
+        4 & 1 \\
+        2 & 0
+      \end{pmatrix}
+      =
+      \begin{pmatrix}
+        3 & 3 \\
+        3 & 1
+      \end{pmatrix}
+      ,
+\end{aligned}
+$$
+
+于是
+
+$$
+\boldsymbol{AB} =
 \left(
-  \begin{array}{cccc}
-    a_{11} & a_{12} & a_{13} & a_{14} \\
-    a_{21} & a_{22} & a_{23} & a_{24} \\
-    a_{31} & a_{32} & a_{33} & a_{34}
+  \begin{array}{cc:cc}
+     1 & 0 & 1 & 0 \\
+    -1 & 2 & 0 & 1 \\
+    \hdashline
+    -2 & 4 & 3 & 3 \\
+    -1 & 1 & 3 & 1
   \end{array}
 \right)
+.
 $$
+:::
+
+(iv) 设 $\boldsymbol{A}$=$\begin{pmatrix} \boldsymbol{A}_{11} & \cdots & \boldsymbol{A}_{1r} \\ \vdots & & \vdots \\ \boldsymbol{A}_{s1} & \cdots & \boldsymbol{A}_{sr} \end{pmatrix}$, 则 $\boldsymbol{A}^T$=$\begin{pmatrix} \boldsymbol{A}_{11}^T & \cdots & \boldsymbol{A}_{s1}^T \\ \vdots & & \vdots \\ \boldsymbol{A}_{1r}^T & \cdots & \boldsymbol{A}_{sr}^T \end{pmatrix}$.
+
+(v) 设 $\boldsymbol{A}$ 为 $n$ 阶方阵, 若 $\boldsymbol{A}$ 的分块矩阵只有在对角线上有非零子块, 其余子块都为 [零矩阵](#零矩阵), 且在对角线上的子块都是方阵, 即
+
+$$
+\boldsymbol{A} =
+\begin{pmatrix}
+  \boldsymbol{A}_1 &                  &        &  \boldsymbol{O}  \\
+                   & \boldsymbol{A}_2 &        &                  \\
+                   &                  & \ddots &                  \\
+   \boldsymbol{O}  &                  &        & \boldsymbol{A}_s
+\end{pmatrix}
+,
+$$
+
+其中 $\boldsymbol{A}_i$ ($i$ = $1$, $2$, ⋯, $s$) 都是方阵, 那么称 $\boldsymbol{A}$ 为 `分块对角矩阵`.
+
+分块对角矩阵的行列式具有下述性质
+
+$$
+\begin{vmatrix} \boldsymbol{A} \end{vmatrix} =
+\begin{vmatrix} \boldsymbol{A}_1 \end{vmatrix}
+\begin{vmatrix} \boldsymbol{A}_2 \end{vmatrix}
+\cdots
+\begin{vmatrix} \boldsymbol{A}_s \end{vmatrix}
+.
+$$
+
+由此性质可知, 若 $\begin{vmatrix} \boldsymbol{A}_i \end{vmatrix}$≠$0$ ($i$ = $1$, $2$, ⋯, $s$), 则 $\boldsymbol{A}$≠$0$, 并有
+
+$$
+\boldsymbol{A}^{-1} =
+\begin{pmatrix}
+  \boldsymbol{A}_1^{-1} &                       &        &    \boldsymbol{O}     \\
+                        & \boldsymbol{A}_2^{-1} &        &                       \\
+                        &                       & \ddots &                       \\
+      \boldsymbol{O}    &                       &        & \boldsymbol{A}_s^{-1}
+\end{pmatrix}
+.
+$$
+
+#### 例 18
+
+设 $\boldsymbol{A} = \begin{pmatrix} 5 & 0 & 0 \\ 0 & 3 & 1 \\ 0 & 2 & 1 \end{pmatrix}$, 求 $\boldsymbol{A}^{-1}$.
+
+::: details 解
+因
+
+$$
+\boldsymbol{A} =
+\left(
+  \begin{array}{c:cc}
+    5 & 0 & 0 \\
+    \hdashline
+    0 & 3 & 1 \\
+    0 & 2 & 1
+  \end{array}
+\right)
+=
+\begin{pmatrix}
+  \boldsymbol{A}_1 &  \boldsymbol{O}  \\
+   \boldsymbol{O}  & \boldsymbol{A}_2
+\end{pmatrix}
+,
+$$
+
+$$
+\boldsymbol{A}_1 = \begin{pmatrix} 5 \end{pmatrix} , \quad
+\boldsymbol{A}_1^{-1} = \begin{pmatrix} \frac{1}{5} \end{pmatrix} ; \quad
+\boldsymbol{A}_2 =
+\begin{pmatrix}
+  3 & 1 \\
+  2 & 1
+\end{pmatrix}
+, \quad
+\boldsymbol{A}_2^{-1} =
+\begin{pmatrix}
+   1 & -1 \\
+  -2 &  3
+\end{pmatrix}
+,
+$$
+
+所以
+
+$$
+\boldsymbol{A}^{-1} =
+\left(
+  \begin{array}{c:cc}
+    \frac{1}{5} &  0 &  0 \\
+    \hdashline
+         0      &  1 & -1 \\
+         0      & -2 &  3
+  \end{array}
+\right)
+.
+$$
+:::
+
+对矩阵分块时, 有两种分块法应予特别重视, 这就是按列分块和按行分块.
+
+$m$×$n$ 矩阵 $\boldsymbol{A}$ 有 $n$ 列, 称为矩阵 $\boldsymbol{A}$ 的 $n$ 个列向量, 若第 $j$ 列记作
+
+$$
+\boldsymbol{a}_j =
+\begin{pmatrix}
+  a_{1j} \\
+  a_{2j} \\
+  \vdots \\
+  a_{mj}
+\end{pmatrix}
+,
+$$
+
+则 $\boldsymbol{A}$ 可按列分块为
+
+$$
+\boldsymbol{A} =
+\begin{pmatrix}
+  \boldsymbol{a}_1 , & \boldsymbol{a}_2 , & \cdots , & \boldsymbol{a}_n
+\end{pmatrix}
+;
+$$
+
+$m$×$n$ 矩阵 $\boldsymbol{A}$ 有 $m$ 行, 称为矩阵 $\boldsymbol{A}$ 的 $m$ 个行向量, 若第 $i$ 列记作
+
+$$
+\boldsymbol{\alpha}_i^T =
+\begin{pmatrix}
+  a_{i1} , & a_{i2} , & \cdots , & a_{in}
+\end{pmatrix}
+,
+$$
+
+则 $\boldsymbol{A}$ 可按行分块为
+
+$$
+\boldsymbol{A} =
+\begin{pmatrix}
+  \boldsymbol{\alpha}_1^T \\
+  \boldsymbol{\alpha}_2^T \\
+           \vdots         \\
+  \boldsymbol{\alpha}_m^T
+\end{pmatrix}
+.
+$$
+
+对于矩阵 $\boldsymbol{A}$=$\begin{pmatrix} a_{ij} \end{pmatrix}_{m \times s}$ 与矩阵 $\boldsymbol{B}$=$\begin{pmatrix} b_{ij} \end{pmatrix}_{s \times n}$ 的乘积矩阵 $\boldsymbol{AB}$=$\boldsymbol{C}$=$\begin{pmatrix} c_{ij} \end{pmatrix}_{m \times n}$, 若把 $\boldsymbol{A}$ 按行分成 $m$ 块, 把 $\boldsymbol{B}$ 按列分成 $n$ 块, 便有
+
+$$
+\boldsymbol{AB} =
+\begin{pmatrix}
+  \boldsymbol{\alpha}_1^T \\
+  \boldsymbol{\alpha}_2^T \\
+           \vdots         \\
+  \boldsymbol{\alpha}_m^T
+\end{pmatrix}
+\begin{pmatrix}
+  \boldsymbol{b}_1 , \boldsymbol{b}_2 , \cdots , \boldsymbol{b}_n
+\end{pmatrix}
+=
+\begin{pmatrix}
+  \boldsymbol{\alpha}_1^T \boldsymbol{b}_1 & \boldsymbol{\alpha}_1^T \boldsymbol{b}_2 & \cdots & \boldsymbol{\alpha}_1^T \boldsymbol{b}_n \\
+  \boldsymbol{\alpha}_2^T \boldsymbol{b}_1 & \boldsymbol{\alpha}_2^T \boldsymbol{b}_2 & \cdots & \boldsymbol{\alpha}_2^T \boldsymbol{b}_n \\
+                   \vdots                  &                  \vdots                  &        &                  \vdots                  \\
+  \boldsymbol{\alpha}_m^T \boldsymbol{b}_1 & \boldsymbol{\alpha}_m^T \boldsymbol{b}_2 & \cdots & \boldsymbol{\alpha}_m^T \boldsymbol{b}_n
+\end{pmatrix}
+=
+\begin{pmatrix} c_{ij} \end{pmatrix}_{m \times n}
+,
+$$
+
+其中
+
+$$
+c_{ij} = \boldsymbol{\alpha}_i^T \boldsymbol{b}_j =
+\begin{pmatrix}
+  a_{i1} , a_{i2} , \cdots , a_{is}
+\end{pmatrix}
+\begin{pmatrix}
+  b_{1j} \\
+  b_{2j} \\
+  \vdots \\
+  b_{sj}
+\end{pmatrix}
+= \sum_{k-1}^s a_{ik} b_{kj} ,
+$$
+
+由此可进一步领会矩阵相乘的定义.
+
+#### 例 19
+
+证明矩阵 $\boldsymbol{A}$=$\boldsymbol{O}$ 的充分必要条件是方阵 $\boldsymbol{A}^T \boldsymbol{A}$=$\boldsymbol{O}$.
+
+::: details 证
+条件的必要性是显然的, 下面证明条件的充分性.
+
+设 $\boldsymbol{A}$=$\begin{pmatrix} a_{ij} \end{pmatrix}_{m \times n}$, 把 $\boldsymbol{A}$ 按列分块为 $\boldsymbol{A}$=$\begin{pmatrix} \boldsymbol{a}_1 , \boldsymbol{a}_2 , \cdots , \boldsymbol{a}_n \end{pmatrix}$, 则
+
+$$
+\boldsymbol{A}^T \boldsymbol{A} =
+\begin{pmatrix}
+  a_1^T  \\
+  a_2^T  \\
+  \vdots \\
+  a_n^T
+\end{pmatrix}
+\begin{pmatrix}
+  \boldsymbol{a}_1 , \boldsymbol{a}_2 , \cdots , \boldsymbol{a}_n
+\end{pmatrix}
+=
+\begin{pmatrix}
+  \boldsymbol{a}_1^T \boldsymbol{a}_1 & \boldsymbol{a}_1^T \boldsymbol{a}_2 & \cdots & \boldsymbol{a}_1^T \boldsymbol{a}_n \\
+  \boldsymbol{a}_2^T \boldsymbol{a}_1 & \boldsymbol{a}_2^T \boldsymbol{a}_2 & \cdots & \boldsymbol{a}_2^T \boldsymbol{a}_n \\
+                      \vdots                    &                    \vdots                     &        &                    \vdots                     \\
+  \boldsymbol{a}_n^T \boldsymbol{a}_1 & \boldsymbol{a}_n^T \boldsymbol{a}_2 & \cdots & \boldsymbol{a}_n^T \boldsymbol{a}_n
+\end{pmatrix}
+,
+$$
+
+即 $\boldsymbol{A}^T \boldsymbol{A}$ 的 $(i,j)$ 元为 $\boldsymbol{a}_i^T \boldsymbol{a}_j$, 因 $\boldsymbol{A}^T \boldsymbol{A}$ 的 $(i,j)$=$\boldsymbol{O}$, 故
+
+$$
+\boldsymbol{a}_i^T \boldsymbol{a}_j = 0 \quad (i, j = 1, 2, \cdots, n) ,
+$$
+
+特殊地, 有
+
+$$
+\boldsymbol{a}_j^T \boldsymbol{a}_j = 0 \quad (j = 1, 2, \cdots, n) ,
+$$
+
+而
+
+$$
+\boldsymbol{a}_j^T \boldsymbol{a}_j =
+\begin{pmatrix}
+  a_{1j} , a_{2j} , \cdots , a_{mj}
+\end{pmatrix}
+\begin{pmatrix}
+  a_{1j} \\
+  a_{2j} \\
+  \vdots \\
+  a_{mj}
+\end{pmatrix}
+= a_{1j}^2 + a_{2j}^2 + \cdots + a_{mj}^2 ,
+$$
+
+由 $a_{1j}^2$+$a_{2j}^2$+⋯+$a_{mj}^2$=$0$（因 $a_{ij}$ 为实数）, 得
+
+$$
+a_{1j} = a_{2j} = \cdots = a_{mj} = 0 \quad (j = 1, 2, \cdots, n) ,
+$$
+
+即
+
+$$
+\boldsymbol{A} = \boldsymbol{O} .
+$$
+:::
