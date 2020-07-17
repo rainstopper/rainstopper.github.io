@@ -2421,3 +2421,84 @@ $$
 \boldsymbol{A} = \boldsymbol{O} .
 $$
 :::
+
+本例阐明了矩阵 $\boldsymbol{A}$ 与方阵 $\boldsymbol{A}^T \boldsymbol{A}$ 之间的一种关系. 特别地, 当 $\boldsymbol{A}$=$\boldsymbol{a}$ 为列向量时, 由于 $\boldsymbol{a}^T \boldsymbol{a}$ 为 $1$×$1$ 矩阵, 即 $\boldsymbol{a}^T \boldsymbol{a}$ 是一个数, 本例的结论可叙述为: 列向量 $\boldsymbol{a}$=$0$ 的充分必要条件是 $\boldsymbol{a}^T \boldsymbol{a}$=$0$.
+
+利用矩阵的按列（按行）分块, 还可以给出线性方程组的另一矩阵表示形式.
+
+重新回到线性方程组
+
+$$
+\begin{cases}
+  a_{11} x_1 + a_{12} x_2 + \cdots + a_{1n} x_n = b_1 , \\
+  a_{21} x_1 + a_{22} x_2 + \cdots + a_{2n} x_n = b_2 , \\
+  \cdots \cdots \cdots \cdots \\
+  a_{m1} x_1 + a_{m2} x_2 + \cdots + a_{mn} x_n = b_m ,
+\end{cases}
+\tag{1}
+$$
+
+它的乘积形式为
+
+$$
+\boldsymbol{A}_{m \times n} \boldsymbol{x}_{n \times l} = \boldsymbol{b}_{m \times l} ,
+\tag{$1^\prime$}
+$$
+
+上式中, 把 $\boldsymbol{A}$ 按列分块, 把 $\boldsymbol{x}$ 按行分块, 由分块矩阵的乘法有
+
+$$
+\begin{pmatrix}
+  \boldsymbol{a}_1 , \boldsymbol{a}_2 , \cdots , \boldsymbol{a}_n
+\end{pmatrix}
+\begin{pmatrix}
+    x_1  \\
+    x_2  \\
+  \vdots \\
+    x_n
+\end{pmatrix}
+= \boldsymbol{b} ,
+$$
+
+即
+
+$$
+x_1 \boldsymbol{a}_1 + x_2 \boldsymbol{a}_2 + \cdots + x_n \boldsymbol{a}_n = \boldsymbol{b} .
+\tag{10}
+$$
+
+其实把方程组 (1) 表成
+
+$$
+\begin{pmatrix}
+  a_{11} \\
+  a_{21} \\
+  \vdots \\
+  a_{m1}
+\end{pmatrix}
+x_1 +
+\begin{pmatrix}
+  a_{12} \\
+  a_{22} \\
+  \vdots \\
+  a_{m2}
+\end{pmatrix}
+x_2 + \cdots +
+\begin{pmatrix}
+  a_{1n} \\
+  a_{2n} \\
+  \vdots \\
+  a_{mn}
+\end{pmatrix}
+x_n =
+\begin{pmatrix}
+    b_1  \\
+    b_2  \\
+  \vdots \\
+    b_m
+\end{pmatrix}
+$$
+
+也即是 (10) 式.
+
+(1)、(1$^\prime$) 和 (10) 是线性方程组 (1) 的各种变形. 今后, 它们与 (1) 将混同使用而不加区分, 并都称为线性方程组或线性方程. 解与解向量亦不加区分.
