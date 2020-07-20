@@ -115,5 +115,10 @@
   { "source": "向量", "target": "行向量" },
   { "source": "向量", "target": "列向量" },
   { "source": "向量", "target": "实向量" },
-  { "source": "向量", "target": "复向量" }
+  { "source": "向量", "target": "复向量" },
+  { "source": "向量", "target": "向量组" },
+  { "source": "向量组", "target": "线性组合" },
+  { "source": "线性组合", "target": "线性表示" },
+  { "source": "线性表示", "target": "向量组等价" },
+  { "source": "线性表示", "target": "系数矩阵" }
 ]

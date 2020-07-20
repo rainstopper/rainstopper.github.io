@@ -7,4 +7,4 @@
 <KnowledgeGraphAsync height="500px"
                      title="线性代数"
                      :legends="['行列式', '矩阵', '向量', '方程组', '全排列']"
-                     :force="{ edgeLength: 15, repulsion: 50, gravity: 0.15 }"/>
+                     :force="{ edgeLength: 15, repulsion: 45, gravity: 0.15 }"/>
