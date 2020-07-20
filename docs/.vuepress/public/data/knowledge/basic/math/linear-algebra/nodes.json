@@ -99,5 +99,9 @@
   { "name": "向量", "category": "向量", "link": "/basic/math/linear-algebra/vector-group.html#向量" },
   { "name": "分量", "category": "向量", "link": "/basic/math/linear-algebra/vector-group.html#向量", "description": "向量中的数" },
   { "name": "实向量", "category": "向量", "link": "/basic/math/linear-algebra/vector-group.html#向量", "description": "分量全为实数的向量" },
-  { "name": "复向量", "category": "向量", "link": "/basic/math/linear-algebra/vector-group.html#向量", "description": "分量为复数的向量" }
+  { "name": "复向量", "category": "向量", "link": "/basic/math/linear-algebra/vector-group.html#向量", "description": "分量为复数的向量" },
+  { "name": "向量组", "category": "向量", "link": "/basic/math/linear-algebra/vector-group.html#向量组", "description": "若干个同维数的列向量（或同维数的行向量）所组成的集合" },
+  { "name": "线性组合", "category": "向量", "link": "/basic/math/linear-algebra/vector-group.html#定义-2" },
+  { "name": "线性表示", "category": "向量", "link": "/basic/math/linear-algebra/vector-group.html#定义-2" },
+  { "name": "向量组等价", "category": "向量", "link": "/basic/math/linear-algebra/vector-group.html#定义-3", "description": "两个向量组能互相线性表示" }
 ]
