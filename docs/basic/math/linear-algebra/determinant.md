@@ -907,16 +907,7 @@ D & \xlongequal[]{r_1 + r_2 + r_3 + r_4}
       1 & 1 & 3 & 1 \\
       1 & 1 & 1 & 3
     \end{vmatrix} \\
-  & \xlongequal[
-      \begin{matrix}
-        r_4 - r_1
-      \end{matrix}
-    ]{
-      \begin{matrix}
-        r_2 - r_1 \\
-        r_3 - r_1
-      \end{matrix}
-    }
+  & \xlongequal[r_4 - r_1]{\stackrel{r_2 - r_1}{r_3 - r_1}}
     6
     \begin{vmatrix}
       1 & 1 & 1 & 1 \\
@@ -947,16 +938,7 @@ $$
 ::: details 解
 $$
 \begin{aligned}
-D & \xlongequal[
-      \begin{matrix}
-        r_2 - r_1
-      \end{matrix}
-    ]{
-      \begin{matrix}
-        r_4 - r_3 \\
-        r_3 - r_2
-      \end{matrix}
-    }
+D & \xlongequal[r_2 - r_1]{\stackrel{r_4 - r_3}{r_3 - r_2}}
     \begin{vmatrix}
       a & b &    c   &      d      \\
       0 & a &  a + b &  a + b + c  \\
@@ -1471,17 +1453,8 @@ D_n & =
                \vdots         &        \vdots         &        &        \vdots         \\
         x_2^{n-2} (x_2 - x_1) & x_3^{n-2} (x_3 - x_1) & \cdots & x_n^{n-2} (x_n - x_1)
       \end{vmatrix} \\
-    & \xlongequal[
-        \begin{matrix}
-          \vdots \\
-          c_{n-1} \div {x_n - x_1}
-        \end{matrix}
-      ]{
-        \begin{matrix}
-          c_1 \div (x_2 - x_1) \\
-          c_2 \div (x_3 - x_1)
-        \end{matrix}
-      } (x_2 - x_1) (x_3 - x_1) \cdots (x_n - x_1)
+    & \xlongequal[\stackrel{\vdots}{c_{n-1} \div (x_n - x_1)}]{\stackrel{c_1 \div (x_2 - x_1)}{c_2 \div (x_3 - x_1)}}
+      (x_2 - x_1) (x_3 - x_1) \cdots (x_n - x_1)
       \begin{vmatrix}
             1     &     1     & \cdots &     1     \\
            x_2    &    x_3    & \cdots &    x_n    \\
