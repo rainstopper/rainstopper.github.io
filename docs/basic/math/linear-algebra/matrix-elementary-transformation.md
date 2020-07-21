@@ -13,7 +13,7 @@ tag:
 
 $$
 \begin{cases}
-  2 x_1 -   x_2 -   x_3 +   x_4 = 2 , & ① \\
+  2 x_1 -   x_2 -   x_3 +   x_4 = 2 , & \ding{172} \\
     x_1 +   x_2 - 2 x_3 +   x_4 = 4 , & ② \\
   4 x_1 - 6 x_2 + 2 x_3 - 2 x_4 = 4 , & ③ \\
   3 x_1 + 6 x_2 - 9 x_3 + 7 x_4 = 9 . & ④
@@ -39,21 +39,12 @@ $$
 $$
 \begin{aligned}
   \phantom{(1)}
-    & \xrightarrow[
-        \begin{matrix}
-          ④ - 3①
-        \end{matrix}
-      ]{
-        \begin{matrix}
-          ② -  ③ \\
-          ③ - 2①
-        \end{matrix}
-      }
+    & \xrightarrow[④ - 3①]{\stackrel{② - ③}{③ - 2①}}
       \begin{cases}
-          x_1 +   x_2 - 2 x_3 +   x_4 =  4 , & ① \\
-                2 x_2 - 2 x_3 + 2 x_4 =  0 , & ② \\
-              - 5 x_2 + 5 x_3 - 3 x_4 = -6 , & ③ \\
-                3 x_2 - 3 x_3 + 4 x_4 = -3   & ④
+        x_1 +   x_2 - 2 x_3 +   x_4 =  4 , & ① \\
+              2 x_2 - 2 x_3 + 2 x_4 =  0 , & ② \\
+            - 5 x_2 + 5 x_3 - 3 x_4 = -6 , & ③ \\
+              3 x_2 - 3 x_3 + 4 x_4 = -3   & ④
       \end{cases}
 \end{aligned}
 \tag{$B_2$}
@@ -62,21 +53,12 @@ $$
 $$
 \begin{aligned}
   \phantom{(1)}
-    & \xrightarrow[
-        \begin{matrix}
-          ② \times \frac{1}{2}
-        \end{matrix}
-      ]{
-        \begin{matrix}
-          ③ + 5② \\
-          ④ - 3②
-        \end{matrix}
-      }
+    & \xrightarrow[\stackrel{③ + 5②}{④ - 3②}]{② \div 2}
       \begin{cases}
-          x_1 +   x_2 - 2 x_3 +   x_4 =  4 , & ① \\
-                  x_2 -   x_3 +   x_4 =  0 , & ② \\
-                                2 x_4 = -6 , & ③ \\
-                                  x_4 = -3   & ④
+        x_1 + x_2 - 2 x_3 +   x_4 =  4 , & ① \\
+              x_2 -   x_3 +   x_4 =  0 , & ② \\
+                            2 x_4 = -6 , & ③ \\
+                              x_4 = -3   & ④
       \end{cases}
 \end{aligned}
 \tag{$B_3$}
@@ -85,12 +67,12 @@ $$
 $$
 \begin{aligned}
   \phantom{(1)}
-    & \xrightarrow[④ - 2③]{④ \leftrightarrow ④}
+    & \xrightarrow[④ - 2③]{③ \leftrightarrow ④}
       \begin{cases}
-          x_1 +   x_2 - 2 x_3 +   x_4 =  4 , & ① \\
-                  x_2 -   x_3 +   x_4 =  0 , & ② \\
-                                  x_4 = -3 , & ③ \\
-                                    0 =  0 . & ④
+        x_1 + x_2 - 2 x_3 + x_4 =  4 , & ① \\
+              x_2 -   x_3 + x_4 =  0 , & ② \\
+                            x_4 = -3 , & ③ \\
+                              0 =  0 . & ④
       \end{cases}
 \end{aligned}
 \tag{$B_4$}
