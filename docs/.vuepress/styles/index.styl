@@ -1,0 +1,29 @@
+WIDTH = 8px
+BORDER = 0
+BORDER_RADIUS = 4px
+BACKGROUND_COLOR = #eee
+
+/**
+ * 滚动条样式
+::-webkit-scrollbar-track-piece
+  width WIDTH
+  border BORDER
+  border-radius BORDER_RADIUS
+  background BACKGROUND_COLOR
+
+::-webkit-scrollbar
+  width WIDTH
+  height WIDTH
+  border BORDER
+  border-radius BORDER_RADIUS
+  background BACKGROUND_COLOR
+
+::-webkit-scrollbar-thumb
+  border BORDER
+  border-radius BORDER_RADIUS
+  background-color #ddd
+  cursor pointer
+
+  &:hover
+    background-color #ccc
+*/
