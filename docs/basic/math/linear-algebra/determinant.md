@@ -221,14 +221,17 @@ $$
 记
 
 <!-- 式 (6) -->
+<!-- 可以使用 \phantom 预留空间 -->
 $$
 \begin{aligned}
-    & \begin{vmatrix}
+  & \phantom{=}
+    \begin{vmatrix}
       a_{11} & a_{12} & a_{13} \\
       a_{21} & a_{22} & a_{23} \\
       a_{31} & a_{32} & a_{33}
-      \end{vmatrix} \\
-  = & a_{11} a_{22} a_{33} + a_{12} a_{23} a_{31} + a_{13} a_{21} a_{32} - a_{11} a_{23} a_{32} - a_{12} a_{21} a_{33} - a_{13} a_{22} a_{11} ,
+    \end{vmatrix} \\
+  & =
+    a_{11} a_{22} a_{33} + a_{12} a_{23} a_{31} + a_{13} a_{21} a_{32} - a_{11} a_{23} a_{32} - a_{12} a_{21} a_{33} - a_{13} a_{22} a_{11} ,
 \end{aligned}
 \tag{6}
 $$
@@ -256,9 +259,12 @@ $$
 
 $$
 \begin{aligned}
-  D = & 1 \times 2 \times (-2) + 2 \times 1 \times (-3) + (-4) \times (-2) \times 4 - \\
-      & 1 \times 1 \times 4 - 2 \times (-2) \times (-2) - (-4) \times 2 \times (-3) \\
-    = & -4 + (-6) + 32 - 4 - 8 - 24 = -14 .
+  D & =
+      1 \times 2 \times (-2) + 2 \times 1 \times (-3) + (-4) \times (-2) \times 4 - \\
+    & \phantom{=}
+      1 \times 1 \times 4 - 2 \times (-2) \times (-2) - (-4) \times 2 \times (-3) \\
+    & =
+      -4 + (-6) + 32 - 4 - 8 - 24 = -14 .
 \end{aligned}
 $$
 :::
@@ -576,9 +582,10 @@ $$
 
 $$
 \begin{aligned}
-  D_1 = & \sum (-1)^t b_{1 p_1} \cdots b_{i p_i} \cdots b_{j p_j} \cdots b_{n p_n} \\
-      = & \sum (-1)^t a_{1 p_1} \cdots a_{j p_i} \cdots a_{i p_j} \cdots a_{n p_n} \\
-      = & \sum (-1)^t a_{1 p_1} \cdots a_{i p_j} \cdots a_{j p_i} \cdots a_{n p_n}
+  D_1
+    & = \sum (-1)^t b_{1 p_1} \cdots b_{i p_i} \cdots b_{j p_j} \cdots b_{n p_n} \\
+    & = \sum (-1)^t a_{1 p_1} \cdots a_{j p_i} \cdots a_{i p_j} \cdots a_{n p_n} \\
+    & = \sum (-1)^t a_{1 p_1} \cdots a_{i p_j} \cdots a_{j p_i} \cdots a_{n p_n}
 \end{aligned}
 $$
 
@@ -823,53 +830,53 @@ $$
 ::: details 解
 $$
 \begin{aligned}
-D & \xlongequal[]{c_1 \leftrightarrow c_2}
-    -
-    \begin{vmatrix}
-       1 &  3 & -1 &  2 \\
-       1 & -5 &  3 & -4 \\
-       0 &  2 &  1 & -1 \\
-      -5 &  1 &  3 & -3
-    \end{vmatrix}
-    \xlongequal[r_4 + 5r_1]{r_2 - r_1}
-    -
-    \begin{vmatrix}
-      1 &  3 & -1 &  2 \\
-      0 & -8 &  4 & -6 \\
-      0 &  2 &  1 & -1 \\
-      0 & 16 & -2 &  7
-    \end{vmatrix} \\
-  & \xlongequal[]{r_2 \leftrightarrow r_3}
-    \begin{vmatrix}
-      1 &  3 & -1 &  2 \\
-      0 &  2 &  1 & -1 \\
-      0 & -8 &  4 & -6 \\
-      0 & 16 & -2 &  7
-    \end{vmatrix}
-    \xlongequal[r_4 - 8r_2]{r_3 + 4r_2}
-    \begin{vmatrix}
-      1 & 3  & -1  & 2   \\
-      0 & 2  &  1  & -1  \\
-      0 & 0  &  8  & -10 \\
-      0 & 0  & -10 & 15
-    \end{vmatrix} \\
-  & \xlongequal[r_3 \div 2]{r_4 \div 5}
-    10
-    \begin{vmatrix}
-      1 & 3  & -1 & 2  \\
-      0 & 2  & 1  & -1 \\
-      0 & 0  & 4  & -5 \\
-      0 & 0  & -2 & 3
-    \end{vmatrix}
-    \xlongequal[]{r_4 + \frac{1}{2} r_3}
-    10
-    \begin{vmatrix}
-      1 & 3  & -1 &      2      \\
-      0 & 2  & 1  &     -1      \\
-      0 & 0  & 4  &     -5      \\
-      0 & 0  & 0  & \frac{1}{2}
-    \end{vmatrix}
-    = 10 \times 4 = 40 .
+  D & \xlongequal[]{c_1 \leftrightarrow c_2}
+      -
+      \begin{vmatrix}
+         1 &  3 & -1 &  2 \\
+         1 & -5 &  3 & -4 \\
+         0 &  2 &  1 & -1 \\
+        -5 &  1 &  3 & -3
+      \end{vmatrix}
+      \xlongequal[r_4 + 5r_1]{r_2 - r_1}
+      -
+      \begin{vmatrix}
+        1 &  3 & -1 &  2 \\
+        0 & -8 &  4 & -6 \\
+        0 &  2 &  1 & -1 \\
+        0 & 16 & -2 &  7
+      \end{vmatrix} \\
+    & \xlongequal[]{r_2 \leftrightarrow r_3}
+      \begin{vmatrix}
+        1 &  3 & -1 &  2 \\
+        0 &  2 &  1 & -1 \\
+        0 & -8 &  4 & -6 \\
+        0 & 16 & -2 &  7
+      \end{vmatrix}
+      \xlongequal[r_4 - 8r_2]{r_3 + 4r_2}
+      \begin{vmatrix}
+        1 & 3  & -1  & 2   \\
+        0 & 2  &  1  & -1  \\
+        0 & 0  &  8  & -10 \\
+        0 & 0  & -10 & 15
+      \end{vmatrix} \\
+    & \xlongequal[r_3 \div 2]{r_4 \div 5}
+      10
+      \begin{vmatrix}
+        1 & 3  & -1 & 2  \\
+        0 & 2  & 1  & -1 \\
+        0 & 0  & 4  & -5 \\
+        0 & 0  & -2 & 3
+      \end{vmatrix}
+      \xlongequal[]{r_4 + \frac{1}{2} r_3}
+      10
+      \begin{vmatrix}
+        1 & 3  & -1 &      2      \\
+        0 & 2  & 1  &     -1      \\
+        0 & 0  & 4  &     -5      \\
+        0 & 0  & 0  & \frac{1}{2}
+      \end{vmatrix}
+      = 10 \times 4 = 40 .
 \end{aligned}
 $$
 :::
@@ -892,30 +899,30 @@ $$
 ::: details 解
 $$
 \begin{aligned}
-D & \xlongequal[]{r_1 + r_2 + r_3 + r_4}
-    \begin{vmatrix}
-      6 & 6 & 6 & 6 \\
-      1 & 3 & 1 & 1 \\
-      1 & 1 & 3 & 1 \\
-      1 & 1 & 1 & 3
-    \end{vmatrix}
-    \xlongequal[]{r_1 \div 6}
-    6
-    \begin{vmatrix}
-      1 & 1 & 1 & 1 \\
-      1 & 3 & 1 & 1 \\
-      1 & 1 & 3 & 1 \\
-      1 & 1 & 1 & 3
-    \end{vmatrix} \\
-  & \xlongequal[r_4 - r_1]{\stackrel{r_2 - r_1}{r_3 - r_1}}
-    6
-    \begin{vmatrix}
-      1 & 1 & 1 & 1 \\
-      0 & 2 & 0 & 0 \\
-      0 & 0 & 2 & 0 \\
-      0 & 0 & 0 & 2
-    \end{vmatrix}
-    = 6 \times 8 = 48 .
+  D & \xlongequal[]{r_1 + r_2 + r_3 + r_4}
+      \begin{vmatrix}
+        6 & 6 & 6 & 6 \\
+        1 & 3 & 1 & 1 \\
+        1 & 1 & 3 & 1 \\
+        1 & 1 & 1 & 3
+      \end{vmatrix}
+      \xlongequal[]{r_1 \div 6}
+      6
+      \begin{vmatrix}
+        1 & 1 & 1 & 1 \\
+        1 & 3 & 1 & 1 \\
+        1 & 1 & 3 & 1 \\
+        1 & 1 & 1 & 3
+      \end{vmatrix} \\
+    & \xlongequal[r_4 - r_1]{\stackrel{r_2 - r_1}{r_3 - r_1}}
+      6
+      \begin{vmatrix}
+        1 & 1 & 1 & 1 \\
+        0 & 2 & 0 & 0 \\
+        0 & 0 & 2 & 0 \\
+        0 & 0 & 0 & 2
+      \end{vmatrix}
+      = 6 \times 8 = 48 .
 \end{aligned}
 $$
 :::
@@ -938,28 +945,28 @@ $$
 ::: details 解
 $$
 \begin{aligned}
-D & \xlongequal[r_2 - r_1]{\stackrel{r_4 - r_3}{r_3 - r_2}}
-    \begin{vmatrix}
-      a & b &    c   &      d      \\
-      0 & a &  a + b &  a + b + c  \\
-      0 & a & 2a + b & 3a + 2b + c \\
-      0 & a & 3a + b & 6a + 3b + c
-    \end{vmatrix}
-    \xlongequal[r_3 - r_2]{r_4 - r_3}
-    \begin{vmatrix}
-      a & b &   c   &      d      \\
-      0 & a & a + b &  a + b + c  \\
-      0 & 0 &   a   &   2a + b    \\
-      0 & 0 &   a   &   3a + b
-    \end{vmatrix} \\
-  & \xlongequal[]{r_4 - r_3}
-    \begin{vmatrix}
-      a & b &   c   &      d      \\
-      0 & a & a + b &  a + b + c  \\
-      0 & 0 &   a   &   2a + b    \\
-      0 & 0 &   0   &      a
-    \end{vmatrix}
-    = a^4 .
+  D & \xlongequal[r_2 - r_1]{\stackrel{r_4 - r_3}{r_3 - r_2}}
+      \begin{vmatrix}
+        a & b &    c   &      d      \\
+        0 & a &  a + b &  a + b + c  \\
+        0 & a & 2a + b & 3a + 2b + c \\
+        0 & a & 3a + b & 6a + 3b + c
+      \end{vmatrix}
+      \xlongequal[r_3 - r_2]{r_4 - r_3}
+      \begin{vmatrix}
+        a & b &   c   &      d      \\
+        0 & a & a + b &  a + b + c  \\
+        0 & 0 &   a   &   2a + b    \\
+        0 & 0 &   a   &   3a + b
+      \end{vmatrix} \\
+    & \xlongequal[]{r_4 - r_3}
+      \begin{vmatrix}
+        a & b &   c   &      d      \\
+        0 & a & a + b &  a + b + c  \\
+        0 & 0 &   a   &   2a + b    \\
+        0 & 0 &   0   &      a
+      \end{vmatrix}
+      = a^4 .
 \end{aligned}
 $$
 :::
@@ -1134,7 +1141,6 @@ $$
 ::: details 解
 把 $D_{2n}$ 中的第 $2n$ 行依次与第 $2n$-$1$ 行 ⋯⋯ 第 $2$ 行对换（作 $2n$-$2$ 次相邻两行的对换）, 再把第 $2n$ 列依次与第 $2n$-$1$ 列 ⋯⋯ 第 $2$ 列对换, 得
 
-<!-- 可以使用 \phantom 预留空间 -->
 $$
 \begin{array}{r}
   D_{2n} = (-1)^{2(2n - 2)}
@@ -1438,7 +1444,8 @@ $$
 
 $$
 \begin{aligned}
-D_n & =
+  D_n
+    & =
       \begin{vmatrix}
         \color{#3eaf7c}    1   &           1           &           1           & \cdots &           1           \\
         \color{#3eaf7c}    0   &       x_2 - x_1       &       x_3 - x_1       & \cdots &       x_n - x_1       \\
@@ -1469,7 +1476,8 @@ $$
 
 $$
 \begin{aligned}
-D_n & = (x_2 - x_1) (x_3 - x_1) \cdots (x_n - x_1) \prod_{n \geq i > j \geq 2} (x_i - x_j) \\
+  D_n
+    & = (x_2 - x_1) (x_3 - x_1) \cdots (x_n - x_1) \prod_{n \geq i > j \geq 2} (x_i - x_j) \\
     & = \prod_{n \geq i > j \geq 1} (x_i - x_j) .
 \end{aligned}
 $$
@@ -1592,8 +1600,9 @@ $$
 
 $$
 \begin{aligned}
-  & A_{11} + A_{12} + A_{13} + A_{14} \\
-= &
+  & \phantom{=}
+    A_{11} + A_{12} + A_{13} + A_{14} \\
+  & =
     \begin{vmatrix}
       \color{#3eaf7c} 1 & \color{#3eaf7c} 1 & \color{#3eaf7c} 1 & \color{#3eaf7c} 1 \\
                       1 &                 1 &                 0 &                -5 \\
@@ -1607,7 +1616,7 @@ $$
       -2 &  2 & 0 &  2 \\
        1 & -1 & 0 &  0
     \end{vmatrix} \\
-= & (-1)^{1+3}
+  & = (-1)^{1+3}
     \begin{vmatrix}
        1 &  1 & -5 \\
       -2 &  2 &  2 \\
@@ -1632,9 +1641,10 @@ $$
 
 $$
 \begin{aligned}
-  & M_{11} + M_{21} + M_{31} + M_{41} \\
-= & A_{11} - A_{21} + A_{31} - A_{41} \\
-= &
+  & \phantom{=}
+    M_{11} + M_{21} + M_{31} + M_{41} \\
+  & = A_{11} - A_{21} + A_{31} - A_{41} \\
+  & =
     \begin{vmatrix}
       \color{#3eaf7c}  1 & -5 &  2 &  1 \\
       \color{#3eaf7c} -1 &  1 &  0 & -5 \\
@@ -1648,7 +1658,7 @@ $$
        1 &  3 &  1 &  3 \\
        0 & -1 &  0 &  0
     \end{vmatrix} \\
-= & (-1)^{4+2} \times (-1)
+  & = (-1)^{4+2} \times (-1)
     \begin{vmatrix}
        1 &  2 &  1 \\
       -1 &  0 & -5 \\
