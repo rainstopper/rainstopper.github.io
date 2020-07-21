@@ -1212,8 +1212,11 @@ $$
 $$
 \begin{aligned}
   \boldsymbol{H} \boldsymbol{H}^T
-    & = \boldsymbol{H}^2 = (\boldsymbol{E} - 2 \boldsymbol{X} \boldsymbol{X}^T)^2 = \boldsymbol{E} - 4 \boldsymbol{X} \boldsymbol{X}^T + 4 (\boldsymbol{X} \boldsymbol{X}^T) (\boldsymbol{X} \boldsymbol{X}^T) \\
-    & = \boldsymbol{E} - 4 \boldsymbol{X} \boldsymbol{X}^T + 4 \boldsymbol{X} (\boldsymbol{X}^T \boldsymbol{X}) \boldsymbol{X}^T = \boldsymbol{E} - 4 \boldsymbol{X} \boldsymbol{X}^T + 4 \boldsymbol{X} \boldsymbol{X}^T = \boldsymbol{E} .
+    & = \boldsymbol{H}^2
+      = (\boldsymbol{E} - 2 \boldsymbol{X} \boldsymbol{X}^T)^2
+      = \boldsymbol{E} - 4 \boldsymbol{X} \boldsymbol{X}^T + 4 (\boldsymbol{X} \boldsymbol{X}^T) (\boldsymbol{X} \boldsymbol{X}^T) \\
+    & = \boldsymbol{E} - 4 \boldsymbol{X} \boldsymbol{X}^T + 4 \boldsymbol{X} (\boldsymbol{X}^T \boldsymbol{X}) \boldsymbol{X}^T
+      = \boldsymbol{E} - 4 \boldsymbol{X} \boldsymbol{X}^T + 4 \boldsymbol{X} \boldsymbol{X}^T = \boldsymbol{E} .
 \end{aligned}
 $$
 :::
@@ -1259,27 +1262,26 @@ $$
 
 $$
 \begin{aligned}
-D
-  & \xlongequal[]{c_3 + b_{11} c_1 + b_{21} c_2}
-    \begin{vmatrix}
-      a_{11} & a_{12} & a_{11} b_{11} + a_{12} b_{21} &   0    \\
-      a_{21} & a_{22} & a_{21} b_{11} + a_{22} b_{21} &   0    \\
-        -1   &    0   &               0               & b_{12} \\
-         0   &   -1   &               0               & b_{22}
-    \end{vmatrix} \\
-  & \xlongequal[]{c_4 + b_{12} c_1 + b_{22} c_2}
-    \begin{vmatrix}
-      a_{11} & a_{12} & a_{11} b_{11} + a_{12} b_{21} & a_{11} b_{12} + a_{12} b_{22} \\
-      a_{21} & a_{22} & a_{21} b_{11} + a_{22} b_{21} & a_{21} b_{12} + a_{22} b_{22} \\
-        -1   &    0   &               0               &               0               \\
-         0   &   -1   &               0               &               0
-    \end{vmatrix}
-    =
-    \begin{vmatrix}
-       \boldsymbol{A} & \boldsymbol{X} \\
-      -\boldsymbol{E} & \boldsymbol{O}
-    \end{vmatrix}
-    ,
+  D & \xlongequal[]{c_3 + b_{11} c_1 + b_{21} c_2}
+      \begin{vmatrix}
+        a_{11} & a_{12} & a_{11} b_{11} + a_{12} b_{21} &   0    \\
+        a_{21} & a_{22} & a_{21} b_{11} + a_{22} b_{21} &   0    \\
+          -1   &    0   &               0               & b_{12} \\
+           0   &   -1   &               0               & b_{22}
+      \end{vmatrix} \\
+    & \xlongequal[]{c_4 + b_{12} c_1 + b_{22} c_2}
+      \begin{vmatrix}
+        a_{11} & a_{12} & a_{11} b_{11} + a_{12} b_{21} & a_{11} b_{12} + a_{12} b_{22} \\
+        a_{21} & a_{22} & a_{21} b_{11} + a_{22} b_{21} & a_{21} b_{12} + a_{22} b_{22} \\
+          -1   &    0   &               0               &               0               \\
+           0   &   -1   &               0               &               0
+      \end{vmatrix}
+      =
+      \begin{vmatrix}
+         \boldsymbol{A} & \boldsymbol{X} \\
+        -\boldsymbol{E} & \boldsymbol{O}
+      \end{vmatrix}
+      ,
 \end{aligned}
 $$
 
