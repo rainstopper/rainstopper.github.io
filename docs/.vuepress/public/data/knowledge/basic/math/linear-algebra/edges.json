@@ -128,5 +128,10 @@
   { "source": "向量组-定理2", "target": "向量组-定理2-推论" },
   { "source": "线性表示", "target": "向量组-定理3" },
   { "source": "向量", "target": "单位坐标向量" },
-  { "source": "单位矩阵", "target": "单位坐标向量", "link": "/basic/math/linear-algebra/vector-group.html#例-3", "description": "n维单位矩阵的列向量叫做“n维单位坐标向量”" }
+  { "source": "单位矩阵", "target": "单位坐标向量", "link": "/basic/math/linear-algebra/vector-group.html#例-3", "description": "n维单位矩阵的列向量叫做“n维单位坐标向量”" },
+  { "source": "向量组", "target": "线性相关" },
+  { "source": "向量组", "target": "线性无关" },
+  { "source": "线性相关", "predicate": "相对于", "target": "线性无关" },
+  { "source": "线性无关", "predicate": "又称为", "target": "线性独立" },
+  { "source": "线性相关", "target": "向量组-定理4" }
 ]

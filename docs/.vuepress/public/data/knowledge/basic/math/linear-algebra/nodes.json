@@ -108,5 +108,9 @@
   { "name": "向量组-定理2", "category": "向量", "link": "/basic/math/linear-algebra/vector-group.html#定理-2" },
   { "name": "向量组-定理2-推论", "category": "向量", "link": "/basic/math/linear-algebra/vector-group.html#推论" },
   { "name": "向量组-定理3", "category": "向量", "link": "/basic/math/linear-algebra/vector-group.html#定理-3" },
-  { "name": "单位坐标向量", "category": "向量", "link": "/basic/math/linear-algebra/vector-group.html#例-3", "description": "单位矩阵的列向量" }
+  { "name": "单位坐标向量", "category": "向量", "link": "/basic/math/linear-algebra/vector-group.html#例-3", "description": "单位矩阵的列向量" },
+  { "name": "线性相关", "category": "向量", "link": "/basic/math/linear-algebra/vector-group.html#定义-4" },
+  { "name": "线性无关", "category": "向量", "link": "/basic/math/linear-algebra/vector-group.html#定义-4" },
+  { "name": "线性独立", "category": "向量", "link": "/basic/math/linear-algebra/vector-group.html#定义-4" },
+  { "name": "向量组-定理4", "category": "向量", "link": "/basic/math/linear-algebra/vector-group.html#定理-4" }
 ]
