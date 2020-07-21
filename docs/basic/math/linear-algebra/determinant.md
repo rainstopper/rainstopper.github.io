@@ -582,10 +582,9 @@ $$
 
 $$
 \begin{aligned}
-  D_1
-    & = \sum (-1)^t b_{1 p_1} \cdots b_{i p_i} \cdots b_{j p_j} \cdots b_{n p_n} \\
-    & = \sum (-1)^t a_{1 p_1} \cdots a_{j p_i} \cdots a_{i p_j} \cdots a_{n p_n} \\
-    & = \sum (-1)^t a_{1 p_1} \cdots a_{i p_j} \cdots a_{j p_i} \cdots a_{n p_n}
+  D_1 & = \sum (-1)^t b_{1 p_1} \cdots b_{i p_i} \cdots b_{j p_j} \cdots b_{n p_n} \\
+      & = \sum (-1)^t a_{1 p_1} \cdots a_{j p_i} \cdots a_{i p_j} \cdots a_{n p_n} \\
+      & = \sum (-1)^t a_{1 p_1} \cdots a_{i p_j} \cdots a_{j p_i} \cdots a_{n p_n}
 \end{aligned}
 $$
 
@@ -1476,9 +1475,8 @@ $$
 
 $$
 \begin{aligned}
-  D_n
-    & = (x_2 - x_1) (x_3 - x_1) \cdots (x_n - x_1) \prod_{n \geq i > j \geq 2} (x_i - x_j) \\
-    & = \prod_{n \geq i > j \geq 1} (x_i - x_j) .
+  D_n & = (x_2 - x_1) (x_3 - x_1) \cdots (x_n - x_1) \prod_{n \geq i > j \geq 2} (x_i - x_j) \\
+      & = \prod_{n \geq i > j \geq 1} (x_i - x_j) .
 \end{aligned}
 $$
 :::
