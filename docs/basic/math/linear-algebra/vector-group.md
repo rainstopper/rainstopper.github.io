@@ -336,7 +336,7 @@ $$
   2 & 1 &  4 & 3 \\
   2 & 3 &  0 & 1
 \end{pmatrix}
-\mathop{\sim}\limits_{r_4 - 2r_1}^{\stackrel{r_2 - r_1}{r_3 - 2r_1}}
+\mathop{\sim}\limits_{r_4 - 2r_1 \atop}^{r_2 - r_1 \atop r_3 - 2r_1}
 \begin{pmatrix}
   1 &  1 &  1 &  1 \\
   0 &  1 & -2 & -1 \\
