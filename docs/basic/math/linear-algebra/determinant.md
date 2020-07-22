@@ -895,6 +895,7 @@ D =
 $$
 
 ::: details 解
+<!-- \stackrel 的第 1 个参数会以较小字号显示，但 \atop 会以相同字号排版 -->
 $$
 \begin{aligned}
   D & \xlongequal[]{r_1 + r_2 + r_3 + r_4}
@@ -912,7 +913,7 @@ $$
         1 & 1 & 3 & 1 \\
         1 & 1 & 1 & 3
       \end{vmatrix} \\
-    & \xlongequal[r_4 - r_1]{\stackrel{r_2 - r_1}{r_3 - r_1}}
+    & \xlongequal[r_4 - r_1 \atop]{r_2 - r_1 \atop r_3 - r_1}
       6
       \begin{vmatrix}
         1 & 1 & 1 & 1 \\
@@ -943,7 +944,7 @@ $$
 ::: details 解
 $$
 \begin{aligned}
-  D & \xlongequal[r_2 - r_1]{\stackrel{r_4 - r_3}{r_3 - r_2}}
+  D & \xlongequal[r_2 - r_1 \atop]{r_4 - r_3 \atop r_3 - r_2}
       \begin{vmatrix}
         a & b &    c   &      d      \\
         0 & a &  a + b &  a + b + c  \\
@@ -1458,7 +1459,7 @@ $$
                \vdots         &        \vdots         &        &        \vdots         \\
         x_2^{n-2} (x_2 - x_1) & x_3^{n-2} (x_3 - x_1) & \cdots & x_n^{n-2} (x_n - x_1)
       \end{vmatrix} \\
-    & \xlongequal[\stackrel{\vdots}{c_{n-1} \div (x_n - x_1)}]{\stackrel{c_1 \div (x_2 - x_1)}{c_2 \div (x_3 - x_1)}}
+    & \xlongequal[\vdots \atop c_{n-1} \div (x_n - x_1)]{c_1 \div (x_2 - x_1) \atop c_2 \div (x_3 - x_1)}
       (x_2 - x_1) (x_3 - x_1) \cdots (x_n - x_1)
       \begin{vmatrix}
             1     &     1     & \cdots &     1     \\
