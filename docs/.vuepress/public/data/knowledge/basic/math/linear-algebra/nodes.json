@@ -110,6 +110,7 @@
   { "name": "行最简形矩阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix-elementary-transformation.html#定义-2" },
   { "name": "标准形", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix-elementary-transformation.html#标准形" },
   { "name": "初等矩阵", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix-elementary-transformation.html#定义-3", "description": "由单位矩阵经过一次初等变换得到的矩阵" },
+  { "name": "矩阵初等变换-性质1", "category": "矩阵", "link": "/basic/math/linear-algebra/matrix-elementary-transformation.html#性质-1" },
 
   { "name": "向量", "category": "向量", "link": "/basic/math/linear-algebra/vector-group.html#向量" },
   { "name": "分量", "category": "向量", "link": "/basic/math/linear-algebra/vector-group.html#向量", "description": "向量中的数" },

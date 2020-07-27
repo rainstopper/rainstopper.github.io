@@ -133,6 +133,7 @@
   { "source": "行最简形矩阵", "target": "标准形" },
   { "source": "初等矩阵", "target": "矩阵初等变换", "link": "/basic/math/linear-algebra/matrix-elementary-transformation.html#定义-3", "description": "初等矩阵是由单位矩阵经过一次初等变换得到的矩阵." },
   { "source": "初等矩阵", "target": "单位矩阵", "link": "/basic/math/linear-algebra/matrix-elementary-transformation.html#定义-3", "description": "初等矩阵是由单位矩阵经过一次初等变换得到的矩阵." },
+  { "source": "矩阵初等变换", "target": "矩阵初等变换-性质1" },
 
   { "source": "向量", "target": "分量" },
   { "source": "向量", "target": "行向量" },

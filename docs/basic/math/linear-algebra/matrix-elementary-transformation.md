@@ -390,11 +390,11 @@ $$
              \phantom{1}           \\
           \phantom{\ddots}         \\
              \phantom{1}           \\
-  \leftarrow \text{第} i \text{行} \\
+  \leftarrow \text{第i行} \\
              \phantom{1}           \\
           \phantom{\vdots}         \\
              \phantom{1}           \\
-  \leftarrow \text{第} j \text{行} \\
+  \leftarrow \text{第j行} \\
              \phantom{1}           \\
           \phantom{\ddots}         \\
              \phantom{1}
@@ -417,17 +417,66 @@ $$
   a_{m1} & a_{m2} & \cdots & a_{mn}
 \end{pmatrix}
 \begin{matrix}
-          \phantom{a_{11}}         \\
-          \phantom{\vdots}         \\
-  \leftarrow \text{第} i \text{行} \\
-          \phantom{\vdots}         \\
-  \leftarrow \text{第} j \text{行} \\
-          \phantom{\vdots}         \\
-          \phantom{a_{m1}}
+     \phantom{a_{11}}     \\
+     \phantom{\vdots}     \\
+  \leftarrow \text{第i行} \\
+     \phantom{\vdots}     \\
+  \leftarrow \text{第j行} \\
+     \phantom{\vdots}     \\
+     \phantom{a_{m1}}
 \end{matrix}
 .
 $$
 
 其结果相当于对矩阵 $\boldsymbol{A}$ 施行第一种初等行变换: 把 $\boldsymbol{A}$ 的第 $i$ 行与第 $j$ 行对换（$r_i$↔$r_j$）. 类似地, 以 $n$ 阶初等矩阵 $\boldsymbol{E}_n(i,j)$ 右乘 $\boldsymbol{A}$, 其结果相当于对矩阵 $\boldsymbol{A}$ 施行第一种初等列变换: 把 $\boldsymbol{A}$ 的第 $i$ 列与第 $j$ 列对换（$c_i$↔$c_j$）.
 
-(ii) 
+(ii) 以数 $k$≠$0$ 乘单位矩阵的第 $i$ 行（或第 $i$ 列）, 得初等矩阵
+
+$$
+\boldsymbol{E}(i(k)) =
+\begin{pmatrix}
+  1 &        &   &   &   &        &   \\
+    & \ddots &   &   &   &        &   \\
+    &        & 1 &   &   &        &   \\
+    &        &   & k &   &        &   \\
+    &        &   &   & 1 &        &   \\
+    &        &   &   &   & \ddots &   \\
+    &        &   &   &   &        & 1
+\end{pmatrix}
+\leftarrow \text{第i行} ,
+$$
+
+可以验知: 以 $\boldsymbol{E}(i(k))$ 左乘矩阵 $\boldsymbol{A}$, 其结果相当于以数 $k$ 乘 $\boldsymbol{A}$ 的第 $i$ 行（$r_i$×$k$）; 以 $\boldsymbol{E}(i(k))$ 右乘矩阵 $\boldsymbol{A}$, 其结果相当于以数 $k$ 乘 $\boldsymbol{A}$ 的第 $i$ 列（$c_i$×$k$）.
+
+(iii) 以 $k$ 乘单位矩阵的第 $j$ 行加到第 $i$ 行上或以 $k$ 乘单位矩阵的第 $i$ 列加到第 $j$ 列上, 得初等矩阵
+
+$$
+\boldsymbol{E}(ij(k)) =
+\begin{pmatrix}
+  1 &        &   &        &        &        &   \\
+    & \ddots &   &        &        &        &   \\
+    &        & 1 & \cdots &   k    &        &   \\
+    &        &   & \ddots & \vdots &        &   \\
+    &        &   &        &   1    &        &   \\
+    &        &   &        &        & \ddots &   \\
+    &        &   &        &        &        & 1
+\end{pmatrix}
+\begin{matrix}
+       \phantom{1}       \\
+     \phantom{\ddots}    \\
+  \leftarrow \text{第i行} \\
+     \phantom{\vdots}    \\
+  \leftarrow \text{第j行} \\
+     \phantom{\ddots}    \\
+       \phantom{1}
+\end{matrix}
+.
+$$
+
+可以验知: 以 $\boldsymbol{E}(ij(k))$ 左乘矩阵 $\boldsymbol{A}$, 其结果相当于把 $\boldsymbol{A}$ 的第 $j$ 行乘 $k$ 加到第 $i$ 行上（$r_i$+$kr_j$）; 以 $\boldsymbol{E}(ij(k))$ 右乘矩阵 $\boldsymbol{A}$, 其结果相当于把 $\boldsymbol{A}$ 的第 $i$ 列乘 $k$ 加到第 $j$ 列上（$c_j$×$kc_i$）.
+
+归纳上面的讨论, 可得
+
+#### 性质 1
+
+**设 $\boldsymbol{A}$ 是一个 $m$×$n$ 矩阵, 对 $\boldsymbol{A}$ 施行一次初等行变换, 相当于在 $\boldsymbol{A}$ 的左边乘相应的 $m$ 阶初等矩阵; 对 $\boldsymbol{A}$ 施行一次初等列变换, 相当于在 $\boldsymbol{A}$ 的右边乘相应的 $n$ 阶初等矩阵.**
