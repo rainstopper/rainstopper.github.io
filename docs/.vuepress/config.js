@@ -59,7 +59,7 @@ module.exports = {
           {
             text: 'Java',
             items: [
-              { text: 'JVM', link: '/backend/java/jvm' }
+              { text: 'JVM', link: '/backend/java/jvm/' }
             ]
           }
         ]
