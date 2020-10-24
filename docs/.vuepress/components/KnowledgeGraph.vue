@@ -5,9 +5,11 @@
 <template lang="html">
   <div class="knowledge-graph" :style="`width: ${width}; height: ${height};`">
     <!-- 支持 Vue 响应式的 ECharts 组件 -->
-    <ResponsiveEcharts :option="option"
-                       :loading="loading"
-                       @click="onClick"/>
+    <ResponsiveEcharts
+      :option="option"
+      :loading="loading"
+      @click="onClick"
+    />
 
     <!-- 搜索工具栏 -->
     <div class="search-tool">
@@ -15,17 +17,21 @@
         <label>关键字</label>
         <div class="content">
           <div class="input" ref="select">
-            <input type="text"
-                   :value="search.keyword"
-                   @input="handleKeywordInput"
-                   @focus="search.showOptions = true"
-                   @blur="handleKeywordBlur"/>
+            <input
+              type="text"
+              :value="search.keyword"
+              @input="handleKeywordInput"
+              @focus="search.showOptions = true"
+              @blur="handleKeywordBlur"
+            />
             <!-- 选项 -->
             <ul v-show="search.showOptions" class="options">
-              <li v-show="keywords.length"
-                  v-for="item in keywords"
-                  class="option"
-                  @click.stop="search.keyword = item">
+              <li
+                v-show="keywords.length"
+                v-for="item in keywords"
+                class="option"
+                @click.stop="search.keyword = item"
+              >
                 {{ item }}
               </li>
             </ul>

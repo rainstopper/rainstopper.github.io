@@ -3,7 +3,10 @@
  */
 
 <template lang="html">
-  <div class="responsive-echarts" :style="`width: ${width}; height: ${height};`"></div>
+  <div
+    class="responsive-echarts"
+    :style="`width: ${width}; height: ${height};`"
+  />
 </template>
 
 <script>
