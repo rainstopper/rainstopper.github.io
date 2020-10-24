@@ -236,6 +236,30 @@ export default {
     },
 
     /**
+     * 颜色
+     * @type {Array}
+     */
+    color: {
+      type: Array,
+      default: () => ([
+        // 蓝
+        '#338fcc',
+        // 青
+        '#2bb3d5',
+        // 绿
+        '#33ccae',
+        // 黄
+        '#fedca9',
+        // 橘
+        '#fab36f',
+        // 红
+        '#d96d6f',
+        // 粉
+        '#ff88b8'
+      ])
+    },
+
+    /**
      * 链接边颜色，默认使用主题高亮颜色
      * 用于指定边的样式
      * @type {Object}
@@ -362,7 +386,8 @@ export default {
           categories: categories,
           nodes: _nodes,
           edges: _edges
-        }]
+        }],
+        color: this.color
       }
     },
 
