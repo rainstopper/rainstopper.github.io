@@ -53,31 +53,41 @@ module.exports = {
      */
     nav: [
       { text: '前端的山', link: '/front-end/' },
-      { text: '后端的海', link: '/back-end/' },
       {
-        text: '坚实的路',
+        text: '后端的海',
         items: [
           {
-            text: '计算机科学',
+            text: 'Java',
             items: [
-              { text: '计算机组成原理', link: '/basic/computer-science/computer-organization/' },
-              { text: '计算机操作系统', link: '/basic/computer-science/computer-operating-system/' },
-              { text: '计算机网络', link: '/basic/computer-science/computer-networks/' },
-              { text: '数据结构', link: '/basic/computer-science/data-structures/' }
-            ]
-          },
-          {
-            text: '数学',
-            items: [
-              { text: '高等数学', link: '/basic/math/advanced-mathematics/' },
-              { text: '线性代数', link: '/basic/math/linear-algebra/' },
-              { text: '概率论与数理统计', link: '/basic/math/probability-and-statistics/' },
-              { text: '数论', link: '/basic/math/number-theory/' },
-              { text: '奥林匹克数学', link: '/basic/math/olympic-math/' }
+              { text: 'JVM', link: '/backend/java/jvm' }
             ]
           }
         ]
-      }
+      },
+      // {
+      //   text: '坚实的路',
+      //   items: [
+      //     {
+      //       text: '计算机科学',
+      //       items: [
+      //         { text: '计算机组成原理', link: '/basic/computer-science/computer-organization/' },
+      //         { text: '计算机操作系统', link: '/basic/computer-science/computer-operating-system/' },
+      //         { text: '计算机网络', link: '/basic/computer-science/computer-networks/' },
+      //         { text: '数据结构', link: '/basic/computer-science/data-structures/' }
+      //       ]
+      //     },
+      //     {
+      //       text: '数学',
+      //       items: [
+      //         { text: '高等数学', link: '/basic/math/advanced-mathematics/' },
+      //         { text: '线性代数', link: '/basic/math/linear-algebra/' },
+      //         { text: '概率论与数理统计', link: '/basic/math/probability-and-statistics/' },
+      //         { text: '数论', link: '/basic/math/number-theory/' },
+      //         { text: '奥林匹克数学', link: '/basic/math/olympic-math/' }
+      //       ]
+      //     }
+      //   ]
+      // }
     ],
 
     /**
