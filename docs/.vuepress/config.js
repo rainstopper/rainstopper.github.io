@@ -95,6 +95,17 @@ module.exports = {
      * @type {Object}
      */
     sidebar: {
+      '/backend/java/jvm/': [
+        {
+          title: 'JVM',
+          collapsable: false,
+          sidebarDepth: 2,
+          children: [
+            ['', '介绍'],
+            'bytecode'
+          ]
+        }
+      ],
       '/basic/math/linear-algebra/': [
         {
           title: '线性代数',
