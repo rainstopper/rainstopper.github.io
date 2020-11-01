@@ -1,0 +1,13 @@
+[
+  { "source": "字节码", "target": "指令", "description": "字节码由单字节指令组成" },
+  { "source": "字节码", "predicate": "包含", "target": "助记符" },
+  { "source": "线程", "target": "线程栈", "description": "每个线程都有一个独属于自己的线程栈" },
+  { "source": "线程栈", "target": "栈帧", "description": "线程栈用于存储栈帧" },
+  { "source": "栈帧", "predicate": "包含", "target": "操作数栈", "description": "栈帧由操作数栈、本地变量表以及一个Class引用组成" },
+  { "source": "栈帧", "predicate": "包含", "target": "本地变量表", "description": "栈帧由操作数栈、本地变量表以及一个Class引用组成" },
+  { "source": "栈帧", "predicate": "包含", "target": "Class引用", "description": "栈帧由操作数栈、本地变量表以及一个Class引用组成" },
+  { "source": "Class引用", "target": "常量池", "description": "Class引用指向当前方法在运行时常量池中对应的Class" },
+  { "source": "本地变量表", "predicate": "包含", "target": "槽位" },
+  { "source": "指令", "target": "槽位", "description": "指令操作槽位" },
+  { "source": "指令", "predicate": "相关于", "target": "原子性" }
+]

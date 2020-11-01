@@ -1,4 +1,6 @@
-# JVM
+---
+  title: 介绍
+---
 
 ## 知识图谱
 
@@ -6,5 +8,4 @@
   height="500px"
   title="JVM"
   :legends="[]"
-  :force="{ edgeLength: 12, repulsion: 40, gravity: 0.15 }"
 />

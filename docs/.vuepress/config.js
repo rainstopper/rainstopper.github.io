@@ -95,31 +95,34 @@ module.exports = {
      * @type {Object}
      */
     sidebar: {
+      // JVM
       '/backend/java/jvm/': [
         {
           title: 'JVM',
           collapsable: false,
           sidebarDepth: 2,
           children: [
-            ['', '介绍'],
+            // 介绍
+            '',
+            // 字节码
             'bytecode'
           ]
         }
       ],
-      '/basic/math/linear-algebra/': [
-        {
-          title: '线性代数',
-          collapsable: false,
-          sidebarDepth: 2, // 0 | 1 | 2
-          children: [
-            ['', '介绍'],
-            'determinant',
-            'matrix',
-            'matrix-elementary-transformation',
-            'vector-group'
-          ]
-        }
-      ]
+      // '/basic/math/linear-algebra/': [
+      //   {
+      //     title: '线性代数',
+      //     collapsable: false,
+      //     sidebarDepth: 2, // 0 | 1 | 2
+      //     children: [
+      //       ['', '介绍'],
+      //       'determinant',
+      //       'matrix',
+      //       'matrix-elementary-transformation',
+      //       'vector-group'
+      //     ]
+      //   }
+      // ]
     },
 
     /**

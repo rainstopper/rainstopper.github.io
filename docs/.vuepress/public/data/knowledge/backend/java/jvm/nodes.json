@@ -1,0 +1,14 @@
+[
+  { "name": "字节码", "description": "Java字节码（Java Byte-code）由单字节的指令组成，理论上最多支持256个操作码（opcode）。\n实际上Java只使用了200个左右的操作码，还有一些操作码则保留给调试操作。\n编译指令：javac HelloWorld.java\n查看字节码命令：javap -c -verbose HelloWorld" },
+  { "name": "指令", "description": "Java指令可以根据性质被分成四类：\n1. 栈操作指令，包括与局部变量交互的指令；\n2. 程序流程控制指令；\n3. 对象操作指令，包括方法调用指令；\n4. 算术运算以及类型转换指令。" },
+  { "name": "助记符" },
+  { "name": "线程" },
+  { "name": "线程栈", "description": "JVM线程栈（JVM Stack）" },
+  { "name": "栈帧", "description": "栈帧（Frame）" },
+  { "name": "操作数栈" },
+  { "name": "本地变量表" },
+  { "name": "Class引用" },
+  { "name": "常量池" },
+  { "name": "槽位", "description": "本地变量表中的槽位（Slot）" },
+  { "name": "原子性" }
+]
