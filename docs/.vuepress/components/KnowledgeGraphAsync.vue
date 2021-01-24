@@ -24,42 +24,42 @@ export default {
     /**
      * 宽度
      * 透传给知识图谱组件
-     * @type {String}
+     * @param {String}
      */
     width: String,
 
     /**
      * 高度
      * 透传给知识图谱组件
-     * @type {String}
+     * @param {String}
      */
     height: String,
 
     /**
      * 标题
      * 透传给知识图谱组件
-     * @type {String}
+     * @param {String}
      */
     title: String,
 
     /**
      * 自定义图例
      * 透传给知识图谱组件
-     * @type {Array}
+     * @param {Array}
      */
     legends: Array,
 
     /**
      * 用于加载节点数据的 url
      * 如果不传，默认取 `${baseUrl}/nodes.json`
-     * @type {String}
+     * @param {String}
      */
     nodesUrl: String,
 
     /**
      * 用于加载边数据的 url
      * 如果不传，默认取 `${baseUrl}/edges.json`
-     * @type {String}
+     * @param {String}
      */
     edgesUrl: String,
 
@@ -67,21 +67,21 @@ export default {
      * 用于加载节点和边信息的基础 url
      * 当 nodesUrl 熟悉或 edgesUrl 熟悉未传值时使用
      * 如果不传，默认取 `/data/knowledge${this.$route.path}`
-     * @type {String}
+     * @param {String}
      */
     baseUrl: String,
 
     /**
      * 力引导布局相关的配置项
      * 透传给知识图谱组件
-     * @type {Object}
+     * @param {Object}
      */
     force: Object,
 
     /**
      * 图例是否按名称首字母重排序
      * 透传给知识图谱组件
-     * @type {Boolean}
+     * @param {Boolean}
      */
     sortLegends: Boolean
   },
@@ -90,19 +90,19 @@ export default {
     return {
       /**
        * 存放节点数据
-       * @type {Array}
+       * @param {Array}
        */
       nodes: [],
 
       /**
        * 存放边数据
-       * @type {Array}
+       * @param {Array}
        */
       edges: [],
 
       /**
        * 加载状态
-       * @type {Boolean}
+       * @param {Boolean}
        */
       loading: false
     }

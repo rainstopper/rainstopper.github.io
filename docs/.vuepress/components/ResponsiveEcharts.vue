@@ -16,7 +16,7 @@ export default {
   props: {
     /**
      * ECharts 的 option
-     * @type {Object}
+     * @param {Object}
      */
     option: {
       type: Object,
@@ -25,7 +25,7 @@ export default {
 
     /**
      * 宽度，默认 100%
-     * @type {String}
+     * @param {String}
      */
     width: {
       type: String,
@@ -34,7 +34,7 @@ export default {
 
     /**
      * 高度，默认 100%
-     * @type {String}
+     * @param {String}
      */
     height: {
       type: String,
@@ -43,7 +43,7 @@ export default {
 
     /**
      * 加载状态
-     * @type {Boolean}
+     * @param {Boolean}
      */
     loading: {
       type: Boolean,
@@ -55,7 +55,7 @@ export default {
     return {
       /**
        * 存放 ECharts 实例
-       * @type {Object}
+       * @param {Object}
        */
       myChart: null
     }

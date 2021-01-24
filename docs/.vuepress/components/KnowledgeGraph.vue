@@ -66,7 +66,7 @@ export default {
   props: {
     /**
      * 宽度，默认 100%
-     * @type {String}
+     * @param {String}
      */
     width: {
       type: String,
@@ -75,7 +75,7 @@ export default {
 
     /**
      * 高度，默认 100%
-     * @type {String}
+     * @param {String}
      */
     height: {
       type: String,
@@ -84,7 +84,7 @@ export default {
 
     /**
      * 标题
-     * @type {String}
+     * @param {String}
      */
     title: {
       type: String,
@@ -99,7 +99,7 @@ export default {
      *   category: String,
      *   link: String
      * }
-     * @type {Array}
+     * @param {Array}
      */
     nodes: {
       type: Array,
@@ -108,7 +108,7 @@ export default {
 
     /**
      * 边
-     * @type {Array}
+     * @param {Array}
      */
     edges: {
       type: Array,
@@ -118,20 +118,20 @@ export default {
     /**
      * 加载状态
      * 透传给响应式的 ECharts 组件
-     * @type {Boolean}
+     * @param {Boolean}
      */
     loading: Boolean,
 
     /**
      * 自定义图例
      * 若不传，默认根据节点的 category 分类设置图例
-     * @type {Array}
+     * @param {Array}
      */
     legends: Array,
 
     /**
      * 图例是否按名称首字母重排序
-     * @type {Boolean}
+     * @param {Boolean}
      */
     sortLegends: {
       type: Boolean,
@@ -140,7 +140,7 @@ export default {
 
     /**
      * 其它分类，无分类项目的默认分类
-     * @type {Object}
+     * @param {Object}
      */
     categoryOther: {
       type: String,
@@ -150,7 +150,7 @@ export default {
     /**
      * 节点大小下限
      * 用于计算节点大小
-     * @type {Number}
+     * @param {Number}
      */
     minNodeSize: {
       type: Number,
@@ -160,7 +160,7 @@ export default {
     /**
      * 节点大小上限
      * 用于计算节点大小
-     * @type {Number}
+     * @param {Number}
      */
     maxNodeSize: {
       type: Number,
@@ -170,7 +170,7 @@ export default {
     /**
      * 节点大小步长
      * 用于计算节点大小
-     * @type {Number}
+     * @param {Number}
      */
     nodeSizeStep: {
       type: Number,
@@ -180,7 +180,7 @@ export default {
     /**
      * 透明度下限
      * 用于计算节点透明度
-     * @type {Number}
+     * @param {Number}
      */
     minNodeOpacity: {
       type: Number,
@@ -190,7 +190,7 @@ export default {
     /**
      * 透明度上限
      * 用于计算节点透明度
-     * @type {Number}
+     * @param {Number}
      */
     maxNodeOpacity: {
       type: Number,
@@ -200,7 +200,7 @@ export default {
     /**
      * 透明度上限度数
      * 大于等于该值能达到透明度上限
-     * @type {Object}
+     * @param {Object}
      */
     maxNodeOpacityDegree: {
       type: Number,
@@ -210,7 +210,7 @@ export default {
     /**
      * 透明度指数
      * 该值越大，不同度数的节点的透明度差异越大
-     * @type {Number}
+     * @param {Number}
      */
     nodeOpacityIndex: {
       type: Number,
@@ -219,7 +219,7 @@ export default {
 
     /**
      * 节点的度数大于等于这个数值才展示
-     * @type {Number}
+     * @param {Number}
      */
     nodeVisibleDegree: {
       type: Number,
@@ -228,7 +228,7 @@ export default {
 
     /**
      * 节点的度数大于等于这个数值才展示标签
-     * @type {Number}
+     * @param {Number}
      */
     nodeLabelVisibleDegree: {
       type: Number,
@@ -237,7 +237,7 @@ export default {
 
     /**
      * 颜色
-     * @type {Array}
+     * @param {Array}
      */
     color: {
       type: Array,
@@ -262,7 +262,7 @@ export default {
     /**
      * 链接边颜色，默认使用主题高亮颜色
      * 用于指定边的样式
-     * @type {Object}
+     * @param {Object}
      */
     linkEdgeColor: {
       type: String,
@@ -273,7 +273,7 @@ export default {
      * 力引导布局相关的配置项
      * 当节点数量很大时，用户可以用此配置项自行调整布局，使图形更美观
      * 会合并默认配置项
-     * @type {Object}
+     * @param {Object}
      */
     force: {
       type: Object,
@@ -282,7 +282,7 @@ export default {
 
     /**
      * 是否在鼠标移到节点上的时候突出显示节点以及节点的边和邻接节点，默认 false
-     * @type {Boolean}
+     * @param {Boolean}
      */
     focusNodeAdjacency: {
       type: Boolean,
@@ -294,24 +294,24 @@ export default {
     return {
       /**
        * 搜索工具
-       * @type {Object}
+       * @param {Object}
        */
       search: {
         /**
          * 关键字
-         * @type {String}
+         * @param {String}
          */
         keyword: '',
 
         /**
          * 是否展示选项
-         * @type {Boolean}
+         * @param {Boolean}
          */
         showOptions: false,
 
         /**
          * 防抖计时器
-         * @type {Object}
+         * @param {Object}
          */
         timer: null
       }
