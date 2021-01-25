@@ -10,5 +10,7 @@
   { "name": "Class引用" },
   { "name": "常量池" },
   { "name": "槽位", "description": "本地变量表中的槽位（Slot）" },
-  { "name": "原子性" }
+  { "name": "原子性" },
+  { "name": "类加载器" },
+  { "name": "类的生命周期", "description": "1. 加载（Loading）：找class文件\n2. 验证（Verification）：验证格式、依赖\n3. 准备（Preparation）：静态字段、方法表\n4. 解析（Resolution）：符号解析为引用\n5. 初始化（Initialization）：构造器、静态度量赋值、静态代码块\n6. 使用（Using）\n7. 卸载（Unloading）" }
 ]

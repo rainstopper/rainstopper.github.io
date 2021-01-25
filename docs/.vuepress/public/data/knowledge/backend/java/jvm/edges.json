@@ -9,5 +9,6 @@
   { "source": "Class引用", "target": "常量池", "description": "Class引用指向当前方法在运行时常量池中对应的Class" },
   { "source": "本地变量表", "predicate": "包含", "target": "槽位" },
   { "source": "指令", "target": "槽位", "description": "指令操作槽位" },
-  { "source": "指令", "predicate": "相关于", "target": "原子性" }
+  { "source": "指令", "predicate": "相关于", "target": "原子性" },
+  { "source": "类加载器", "target": "类的生命周期" }
 ]
