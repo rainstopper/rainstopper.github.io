@@ -23,3 +23,11 @@
 | **long**   |   l2i   |    -     |    l2f    |    l2d     |    -     |    -     |     -     |
 | **float**  |   f2i   |   f2l    |     -     |    f2d     |    -     |    -     |     -     |
 | **double** |   d2i   |   d2l    |    d2f    |     -      |    -     |    -     |     -     |
+
+### 方法调用
+
+* **invokestatic**：用来调用某个类的静态方法，这是方法调用指令中最快的一个；
+* **invokespecial**：用来调用构造函数，但也可以用于调用同一个类中的 private 方法，以及可见的超类方法；
+* **invokevirtual**：如果是具体类型的目标对象，用于调用公共、受保护和 package 级的私有方法；
+* **invokeinterface**：通过接口引用来调用方法；
+* **invokedynamic**：JDK7 新增加的指令，是实现“动态类型语言”（Dynamically Typed Language）支持而进行的升级改造，同时也是 JDK8 以后支持 Lambda 表达式的实现基础。
