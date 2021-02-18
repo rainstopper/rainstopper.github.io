@@ -11,6 +11,14 @@
   { "name": "常量池" },
   { "name": "槽位", "description": "本地变量表中的槽位（Slot）" },
   { "name": "原子性" },
+  { "name": "类" },
   { "name": "类加载器" },
-  { "name": "类的生命周期", "description": "1. 加载（Loading）：找class文件\n2. 验证（Verification）：验证格式、依赖\n3. 准备（Preparation）：静态字段、方法表\n4. 解析（Resolution）：符号解析为引用\n5. 初始化（Initialization）：构造器、静态度量赋值、静态代码块\n6. 使用（Using）\n7. 卸载（Unloading）" }
+  { "name": "类的生命周期", "description": "1. 加载（Loading）：找class文件\n2. 验证（Verification）：验证格式、依赖\n3. 准备（Preparation）：静态字段、方法表\n4. 解析（Resolution）：符号解析为引用\n5. 初始化（Initialization）：构造器、静态度量赋值、静态代码块\n6. 使用（Using）\n7. 卸载（Unloading）\n\n初始化的时机：\n1. 当虚拟机启动时，初始化用户指定的主类，就是启动执行的main方法所在的类；\n2. 当遇到用以新建目标实例的new指令时，初始化new指令的目标类，就是new一个类的时候需要初始化；\n3. 当遇到调用静态方法的指令时，初始化该静态方法所在的类；\n4. 当遇到访问静态字段的指令时，初始化该静态字段所在的类；\n5.子类的初始化会触发父类的初始化；\n6. 如果一个接口定义了default方法，那么直接实现或者间接实现该接口的类的初始化，会触发该接口的初始化；\n7. 使用反射API对某个类进行反射调用时，初始化这个类，其实跟前面一样，反射调用要么是已经有实例，要么是静态方法，都需要初始化；\n8. 当初次调用MethodHandle实例时，初始化该MethodHandle指向的方法所在的类。\n\n不会初始化（可能会加载）：\n1. 通过子类引用父类的静态字段，只会触发父类的初始化，而不会触发子类的初始化；\n2. 定义对象数组，不会触发该类的初始化；\n3. 常量在编译期间会存入调用类的常量池中，本质上没有直接引用定义常量的类，不会初始化定义常量所在的类；\n4. 通过类名获取Class对象，不会触发类的初始化；\n5. 通过Class.forName加载指定类时，如果指定参数initial为false时，也不会触发类初始化；\n6. 通过ClassLoader默认的loadClass方法，也不会触发初始化动作（加载了，但是不初始化）。" },
+  { "name": "启动类加载器", "description": "BootstrapClassLoader" },
+  { "name": "扩展类加载器", "description": "ExtClassLoader" },
+  { "name": "应用类加载器", "description": "AppClassLoader" },
+  { "name": "自定义类加载器" },
+  { "name": "双亲委托" },
+  { "name": "负责依赖" },
+  { "name": "缓存加载" }
 ]

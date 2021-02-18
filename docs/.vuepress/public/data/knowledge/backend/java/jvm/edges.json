@@ -10,5 +10,16 @@
   { "source": "本地变量表", "predicate": "包含", "target": "槽位" },
   { "source": "指令", "target": "槽位", "description": "指令操作槽位" },
   { "source": "指令", "predicate": "相关于", "target": "原子性" },
-  { "source": "类加载器", "target": "类的生命周期" }
+  { "source": "类", "predicate": "相关于", "target": "类加载器" },
+  { "source": "类", "predicate": "相关于", "target": "类的生命周期" },
+  { "source": "类加载器", "predicate": "包含", "target": "启动类加载器" },
+  { "source": "类加载器", "predicate": "包含", "target": "扩展类加载器" },
+  { "source": "类加载器", "predicate": "包含", "target": "应用类加载器" },
+  { "source": "类加载器", "predicate": "包含", "target": "自定义类加载器" },
+  { "source": "扩展类加载器", "predicate": "父加载器是", "target": "启动类加载器" },
+  { "source": "应用类加载器", "predicate": "父加载器是", "target": "扩展类加载器" },
+  { "source": "自定义类加载器", "predicate": "父加载器是", "target": "应用类加载器" },
+  { "source": "类加载器", "predicate": "特点", "target": "双亲委托" },
+  { "source": "类加载器", "predicate": "特点", "target": "负责依赖" },
+  { "source": "类加载器", "predicate": "特点", "target": "缓存加载" }
 ]
