@@ -4,8 +4,4 @@
 
 ## 知识图谱
 
-<KnowledgeGraphAsync
-  height="500px"
-  title="JVM"
-  :legends="[]"
-/>
+<KnowledgeGraphAsync height="500px" title="JVM" />
