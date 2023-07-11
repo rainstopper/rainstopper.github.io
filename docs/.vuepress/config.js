@@ -1,3 +1,5 @@
+const sidebar = require('./utils/sidebar');
+
 module.exports = {
   /**
    * 基础路径，默认 /
@@ -52,9 +54,9 @@ module.exports = {
      * @type {Array}
      */
     nav: [
-      { text: '前端的山', link: '/front-end/' },
+      { text: '前端', link: '/front-end/' },
       {
-        text: '后端的海',
+        text: '后端',
         items: [
           {
             text: 'Java',
@@ -63,6 +65,10 @@ module.exports = {
             ]
           }
         ]
+      },
+      {
+        text: '阅读',
+        link: '/read/',
       },
       // {
       //   text: '坚实的路',
@@ -94,36 +100,7 @@ module.exports = {
      * 侧边栏
      * @type {Object}
      */
-    sidebar: {
-      // JVM
-      '/backend/java/jvm/': [
-        {
-          title: 'JVM',
-          collapsable: false,
-          sidebarDepth: 2,
-          children: [
-            // 介绍
-            '',
-            // 字节码
-            'bytecode'
-          ]
-        }
-      ],
-      // '/basic/math/linear-algebra/': [
-      //   {
-      //     title: '线性代数',
-      //     collapsable: false,
-      //     sidebarDepth: 2, // 0 | 1 | 2
-      //     children: [
-      //       ['', '介绍'],
-      //       'determinant',
-      //       'matrix',
-      //       'matrix-elementary-transformation',
-      //       'vector-group'
-      //     ]
-      //   }
-      // ]
-    },
+    sidebar,
 
     /**
      * 启用页面滚动效果
